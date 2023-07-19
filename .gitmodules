@@ -1,0 +1,9 @@
+[submodule "UniformService"]
+	path = Submodules/UniformService
+	url = https://github.com/Fleuronic/UniformService
+[submodule "UniformAPI"]
+	path = Submodules/UniformAPI
+	url = https://github.com/Fleuronic/UniformAPI
+[submodule "UniformDatabase"]
+	path = Submodules/UniformDatabase
+	url = https://github.com/Fleuronic/UniformDatabase
