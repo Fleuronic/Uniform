@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Diesel",
+    name: "Uniform",
 	platforms: [
 		.iOS(.v13),
 		.macOS(.v10_15),
@@ -11,16 +11,16 @@ let package = Package(
 	],
     products: [
         .library(
-            name: "Diesel",
+            name: "Uniform",
             targets: [
-				"Diesel"
+				"Uniform"
 			]
 		)
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "Diesel",
+            name: "Uniform",
             dependencies: []
 		)
     ]
