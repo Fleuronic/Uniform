@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "diesel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/Diesel.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1ea935ca10ec4c82b5705691cb7c834f57ed0f54"
+      }
+    }
+  ],
+  "version" : 2
+}

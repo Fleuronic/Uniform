@@ -17,11 +17,13 @@ let package = Package(
 			]
 		)
     ],
-    dependencies: [],
+    dependencies: [
+		.package(url: "https://github.com/Fleuronic/Diesel.git", branch: "main")
+	],
     targets: [
         .target(
             name: "Uniform",
-            dependencies: []
+            dependencies: ["Diesel"]
 		)
     ]
 )
