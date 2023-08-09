@@ -1,0 +1,15 @@
+insertions:
+  # Single
+  'Bushwackers': 'Princeton, NJ'
+  'Colts Alumni Corps': 'Dubuque, IA'
+  'King Cobras': 'Rosemont, IL'
+  'The Academy Summer Youth Guard': 'Tempe, AZ'
+  # Multiple
+  ? ['U.S. Marine Drum & Bugle Corps', 'U.S. Marine Silent Drill Platoon', 'National Anthem - U.S. Marine Drum & Bugle Corps']
+  : 'Washington, DC'
+edits:
+  'Arsenal Drum & Bugle Corps': 'Arsenal'
+  'Conquest Drum & Bugle Corps': 'Conquest'
+  'IMPACT Drum & Bugle Corps': 'IMPACT'
+  'The Colts': 'Colts'
+  'Zephyrus Drum & Bugle Corps': 'Zephyrus'

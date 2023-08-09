@@ -1,0 +1,15 @@
+edits:
+  # Single
+  'Intermission - SoundSport International Showcase': 'Intermission & SoundSport International Showcase'
+  'Rosemont King Cobras': 'King Cobras'
+  'Academy Summer Youth Guard': 'The Academy Summer Youth Guard'
+  # Multiple
+  ? ['Intermission (40 Minutes)', 'Halftime']
+  : 'Intermission'
+  ? ['Retreat', 'Drum Major Retreat - Scores Announced']
+  : 'Scores Announced'
+  ? ['Welcome', 'Welcome and National Anthem']
+  : 'Welcome & National Anthem'
+deletions:
+  - 'Encore'
+  - 'National Anthem'
