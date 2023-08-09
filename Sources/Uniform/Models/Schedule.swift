@@ -21,6 +21,7 @@ public struct Schedule: Decodable {
 		let displayCity = try container.decodeIfPresent(String.self, forKey: .displayCity)
 		let normalizedUnitName = .deleted(for: unitName, from: .features) ??
 			(displayCity == nil ? unitName.normalized(from: .features) : unitName.normalized(from: .corps))
+		let timeString = try container.decodeIfPresent(String.self, forKey: .time)
 		self.displayCity = .inserted(for: normalizedUnitName, from: .corps) ?? .inserted(for: unitName, from: .corps) ?? displayCity
 
 		let corpsName = unitName.contains("- ") || unitName.contains(":") ? unitName
@@ -28,11 +29,19 @@ public struct Schedule: Decodable {
 			.replacingOccurrences(of: "Encore: ", with: "Encore - ")
 			.components(separatedBy: " - ")[1] : self.displayCity.map { _ in normalizedUnitName }
 
-		self.time = try container.decodeIfPresent(String.self, forKey: .time)
-
 		feature = (
 			["Encore", "National Anthem"].contains(normalizedUnitName) || self.displayCity == nil
 		) ? .init(name: normalizedUnitName) : nil
 		corps = corpsName.map { Corps(name: $0.normalized(from: .corps)) }
+		time = timeString.map {
+			if $0.contains("- ") {
+				let components = $0.components(separatedBy: " - ")
+				let index = Int(components[0])!
+				let amPM = index <= 2 ? "AM" : "PM"
+				return "\(components[1]) \(amPM)"
+			} else {
+				return $0
+			}
+		}
 	}
 }
