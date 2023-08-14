@@ -22,25 +22,42 @@ public struct Schedule: Decodable {
 		let normalizedUnitName = .deleted(for: unitName, from: .features) ??
 			(displayCity == nil ? unitName.normalized(from: .features) : unitName.normalized(from: .corps))
 		let timeString = try container.decodeIfPresent(String.self, forKey: .time)
-		self.displayCity = .inserted(for: normalizedUnitName, from: .corps) ?? .inserted(for: unitName, from: .corps) ?? displayCity
+		self.displayCity = ["Welcome & National Anthem", "Intermission"].contains(unitName) ? nil :
+			.inserted(for: normalizedUnitName, from: .corps) ?? .inserted(for: unitName, from: .corps) ?? displayCity
 
 		let corpsName = unitName.contains("- ") || unitName.contains(":") ? unitName
 			.replacingOccurrences(of: "Encore- ", with: "Encore - ")
 			.replacingOccurrences(of: "Encore: ", with: "Encore - ")
-			.components(separatedBy: " - ")[1] : self.displayCity.map { _ in normalizedUnitName }
+			.replacingOccurrences(of: "Pre-show Entertainment: ", with: "Pre-show Entertainment - ")
+			.replacingOccurrences(of: "Exhibition: ", with: "Exhibition - ")
+			.components(separatedBy: " - ")[1] :
+			displayCity.flatMap { .inserted(for: $0, from: .locations) } ??
+			self.displayCity.map { _ in normalizedUnitName }
 
 		feature = (
-			["Encore", "National Anthem"].contains(normalizedUnitName) || self.displayCity == nil
+			["Encore", "National Anthem", "Open Class Champion Encore", "Pre-show Entertainment"].contains(normalizedUnitName) ||
+			self.displayCity == nil
 		) ? .init(name: normalizedUnitName) : nil
-		corps = corpsName.map { Corps(name: $0.normalized(from: .corps)) }
+		corps = corpsName.map { Corps(name: $0.replacingOccurrences(of: "\"", with: "").normalized(from: .corps)) }
 		time = timeString.map {
-			if $0.contains("- ") {
-				let components = $0.components(separatedBy: " - ")
-				let index = Int(components[0])!
-				let amPM = index <= 2 ? "AM" : "PM"
-				return "\(components[1]) \(amPM)"
+			let components: [String]
+			if $0.contains(" - ") {
+				components = $0.components(separatedBy: " - ")
+			} else if $0.contains(".  ") {
+				components = $0.components(separatedBy: ".  ")
+			} else if $0.contains(") ") {
+				components = $0.components(separatedBy: ") ")
 			} else {
+				components = []
+			}
+
+			if components.isEmpty {
 				return $0
+			} else {
+				let index = Int(components[0])!
+				let time = components[1]
+				let amPM = index <= 2 ? "AM" : "PM"
+				return time.contains(" ") ? time : "\(time) \(amPM)"
 			}
 		}
 	}

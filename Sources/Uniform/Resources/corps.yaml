@@ -1,15 +1,49 @@
 insertions:
   # Single
+  'Blue Stars': 'La Crosse, WI'
+  'Bluecoats Alumni Corps': 'Canton, OH'
   'Bushwackers': 'Princeton, NJ'
   'Colts Alumni Corps': 'Dubuque, IA'
+  'Crossmen': 'San Antonio, TX'
+  'Genesis': 'Austin, TX'
+  'N.C. A&T State University Drumline': 'Greensboro, NC'
+  'INpact Band': 'Indianapolis, IN'
   'King Cobras': 'Rosemont, IL'
+  'Lake Erie Sound': 'Erie, PA'
+  'Madison Scouts': 'Madison, WI'
+  'Marching Ghosts': 'Calgary, AB'
+  'Memphis Youth Arts Initiative': 'Memphis, TN'
+  'Normal Marching Band': 'Normal, IL'
+  'Pre-show Entertainment: Cheyenne Brass Band': 'Cheyenne, WY'
+  'Sonus Brass Theater': 'Woodbridge, VA'
+  'Sound of Sun Prairie': 'Sun Prairie, WI'
+  'The Academy': 'Tempe, AZ'
   'The Academy Summer Youth Guard': 'Tempe, AZ'
+  'The Cadets - Encore': 'Erie, PA'
+  'The Thunder of Roanoke': 'Roanoke, VA'
+  'U.S. Coast Guard Auxiliary Band Arizona': 'Mesa, AZ'
   # Multiple
-  ? ['U.S. Marine Drum & Bugle Corps', 'U.S. Marine Silent Drill Platoon', 'National Anthem - U.S. Marine Drum & Bugle Corps']
+  ? ['U.S. Marine Drum & Bugle Corps', 'U.S. Marine Silent Drill Platoon', 'National Anthem - U.S. Marine Drum & Bugle Corps', 'Exhibition: United States Marine Drum & Bugle Corp']
   : 'Washington, DC'
+  ? ['Welcome & National Anthem - Legends', 'Welcome and National Anthem - Legends']
+  : 'Kalamazoo, MI'
 edits:
+  # Single
+  'Alisal USD All-Star Drum Corps': 'Alisal Union School District All-Star Drumline'
   'Arsenal Drum & Bugle Corps': 'Arsenal'
   'Conquest Drum & Bugle Corps': 'Conquest'
   'IMPACT Drum & Bugle Corps': 'IMPACT'
+  'Lone Star Drum and Bugle Corps': 'Lone Star'
+  'Railmen Drum and Bugle Corps': 'Railmen'
+  'Spirit of Sunyvale SoundSport': 'Spirit of Sunnyvale'
   'The Colts': 'Colts'
+  'The Muchachos': 'Muchachos'
+  'Troopers & Legacy Corps': 'Troopers Legacy Corps'
+  'United States Marine Drum & Bugle Corp': 'U.S. Marine Drum & Bugle Corps'
   'Zephyrus Drum & Bugle Corps': 'Zephyrus'
+  # Multiple
+  ? ['Alisal CAN Marching Band', 'Alisal CAN Marching Band & Drum Corps']
+  : 'Alisal Community Arts Network Marching Band'
+deletions:
+  - 'Intermission'
+  - 'Welcome & National Anthem'

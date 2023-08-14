@@ -46,7 +46,7 @@ public extension Normalization {
 		case corps
 		case features
 		case locations
-		case slugs
+		case events
 	}
 }
 
@@ -109,7 +109,7 @@ private extension String {
 
 	func deletion(for resource: Normalization.Resource) -> Self? {
 		Normalization.resource(resource)[keyPath: \.deletions].first {
-			contains($0) && (contains("-") || contains(":"))
+			starts(with: $0) && (contains("-") || contains(":"))
 		}
 	}
 }

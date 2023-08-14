@@ -33,7 +33,7 @@ let package = Package(
 				.copy("Resources/corps.yaml"),
 				.copy("Resources/features.yaml"),
 				.copy("Resources/locations.yaml"),
-				.copy("Resources/slugs.yaml")
+				.copy("Resources/events.yaml")
 
 			]
 		)
