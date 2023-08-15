@@ -17,7 +17,7 @@ edits:
   'The Thunder of Roanoke': 'Thunder of Roanoke'
   'USCG Auxiliary Arizona Band': 'U.S. Coast Guard Auxiliary Band Arizona'
   # Multiple
-  ? ['Intermission (40 Minutes)', 'Halftime']
+  ? ['Intermission (40 Minutes)', 'Intermission (34 minutes)', 'Halftime']
   : 'Intermission'
   ? ['Retreat', 'Drum Major Retreat - Scores Announced']
   : 'Scores Announced'

@@ -52,7 +52,7 @@ public struct Schedule: Decodable {
 			}
 
 			if components.isEmpty {
-				return $0
+				return $0.contains("M") ? $0 : "\($0) PM"
 			} else {
 				let index = Int(components[0])!
 				let time = components[1]

@@ -1,8 +1,11 @@
 insertions:
   # Single
+  'Avant Garde Alumni Drumline': 'Saratoga Springs, NY'
+  'Appalachian Gold': 'Charleston, WV'
   'Blue Stars': 'La Crosse, WI'
   'Bluecoats Alumni Corps': 'Canton, OH'
   'Bushwackers': 'Princeton, NJ'
+  'Cadets 2': 'Allentown, PA'
   'Colts Alumni Corps': 'Dubuque, IA'
   'Crossmen': 'San Antonio, TX'
   'Genesis': 'Austin, TX'
@@ -19,11 +22,12 @@ insertions:
   'Sound of Sun Prairie': 'Sun Prairie, WI'
   'The Academy': 'Tempe, AZ'
   'The Academy Summer Youth Guard': 'Tempe, AZ'
+  'The Cadets': 'Erie, PA'
   'The Cadets - Encore': 'Erie, PA'
   'The Thunder of Roanoke': 'Roanoke, VA'
   'U.S. Coast Guard Auxiliary Band Arizona': 'Mesa, AZ'
   # Multiple
-  ? ['U.S. Marine Drum & Bugle Corps', 'U.S. Marine Silent Drill Platoon', 'National Anthem - U.S. Marine Drum & Bugle Corps', 'Exhibition: United States Marine Drum & Bugle Corp']
+  ? ['U.S. Marines Drum and Bugle Corps', 'U.S. Marine Silent Drill Platoon', 'National Anthem - U.S. Marine Drum & Bugle Corps', 'Exhibition: United States Marine Drum & Bugle Corp']
   : 'Washington, DC'
   ? ['Welcome & National Anthem - Legends', 'Welcome and National Anthem - Legends']
   : 'Kalamazoo, MI'
@@ -37,13 +41,15 @@ edits:
   'Railmen Drum and Bugle Corps': 'Railmen'
   'Spirit of Sunyvale SoundSport': 'Spirit of Sunnyvale'
   'The Colts': 'Colts'
+  'The Diplomats Drum & Bugle Corps': 'The Diplomats'
   'The Muchachos': 'Muchachos'
   'Troopers & Legacy Corps': 'Troopers Legacy Corps'
-  'United States Marine Drum & Bugle Corp': 'U.S. Marine Drum & Bugle Corps'
   'Zephyrus Drum & Bugle Corps': 'Zephyrus'
   # Multiple
   ? ['Alisal CAN Marching Band', 'Alisal CAN Marching Band & Drum Corps']
   : 'Alisal Community Arts Network Marching Band'
+  ? ['U.S. Marines Drum and Bugle Corps', 'United States Marine Drum & Bugle Corp']
+  : 'U.S. Marine Drum & Bugle Corps'
 deletions:
   - 'Intermission'
   - 'Welcome & National Anthem'
