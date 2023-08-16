@@ -68,9 +68,5 @@ public struct Schedule: Decodable {
 				return time.contains(" ") ? time : "\(time) \(amPM)"
 			}
 		}
-
-		if feature?.name == "U.S. Marine Drum & Bugle Corps" {
-			print("Hi")
-		}
 	}
 }
