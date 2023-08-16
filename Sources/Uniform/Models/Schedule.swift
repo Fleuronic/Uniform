@@ -22,22 +22,30 @@ public struct Schedule: Decodable {
 		let normalizedUnitName = .deleted(for: unitName, from: .features) ??
 			(displayCity == nil ? unitName.normalized(from: .features) : unitName.normalized(from: .corps))
 		let timeString = try container.decodeIfPresent(String.self, forKey: .time)
-		self.displayCity = ["Welcome & National Anthem", "Intermission"].contains(unitName) ? nil :
-			.inserted(for: normalizedUnitName, from: .corps) ?? .inserted(for: unitName, from: .corps) ?? displayCity
+		self.displayCity = .inserted(for: normalizedUnitName, from: .corps) ?? .inserted(for: unitName, from: .corps) ?? displayCity
 
 		let corpsName = unitName.contains("- ") || unitName.contains(":") ? unitName
 			.replacingOccurrences(of: "Encore- ", with: "Encore - ")
 			.replacingOccurrences(of: "Encore: ", with: "Encore - ")
 			.replacingOccurrences(of: "Pre-show Entertainment: ", with: "Pre-show Entertainment - ")
 			.replacingOccurrences(of: "Exhibition: ", with: "Exhibition - ")
+			.replacingOccurrences(of: "  ", with: " ")
 			.components(separatedBy: " - ")[1] :
 			displayCity.flatMap { .inserted(for: $0, from: .locations) } ??
 			self.displayCity.map { _ in normalizedUnitName }
 
 		feature = (
-			["Encore", "National Anthem", "Open Class Champion Encore", "Pre-show Entertainment"].contains(normalizedUnitName) ||
+			[
+				"Encore",
+				"National Anthem",
+				"On Field Encore",
+				"Open Class Champion Encore",
+				"Pre-show Entertainment",
+				"Welcome & National Anthem"
+			].contains(normalizedUnitName) ||
 			self.displayCity == nil
 		) ? .init(name: normalizedUnitName) : nil
+
 		corps = corpsName.map { Corps(name: $0.replacingOccurrences(of: "\"", with: "").normalized(from: .corps)) }
 		time = timeString.map {
 			let components: [String]
@@ -59,6 +67,10 @@ public struct Schedule: Decodable {
 				let amPM = index <= 2 ? "AM" : "PM"
 				return time.contains(" ") ? time : "\(time) \(amPM)"
 			}
+		}
+
+		if feature?.name == "U.S. Marine Drum & Bugle Corps" {
+			print("Hi")
 		}
 	}
 }

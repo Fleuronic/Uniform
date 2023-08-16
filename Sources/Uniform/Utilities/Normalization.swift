@@ -70,10 +70,11 @@ private extension Yaml {
 // MARK: -
 public extension String {
 	func normalized(from resource: Normalization.Resource) -> Self {
-		value(
+		let string = value(
 			resource: resource,
 			keyPath: \.edits
 		) ?? self
+		return string.replacingOccurrences(of: "- ", with: "– ")
 	}
 	
 	static func inserted(for key: String, from resource: Normalization.Resource) -> Self? {

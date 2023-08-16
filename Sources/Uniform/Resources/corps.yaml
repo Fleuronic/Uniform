@@ -2,53 +2,71 @@ insertions:
   # Single
   'Avant Garde Alumni Drumline': 'Saratoga Springs, NY'
   'Appalachian Gold': 'Charleston, WV'
+  'Arsenal': 'El Paso, TX'
   'Blue Stars': 'La Crosse, WI'
   'Bluecoats Alumni Corps': 'Canton, OH'
   'Bushwackers': 'Princeton, NJ'
   'Cadets 2': 'Allentown, PA'
   'Colts Alumni Corps': 'Dubuque, IA'
   'Crossmen': 'San Antonio, TX'
+  'Encorps': 'South Brunswick, NJ'
+  'Exhibition - Petunia City Stix': 'Dixon, IL'
+  'Exhibition - Soundwave': 'Seattle, WA'
+  'Exhibition - Thunder': 'Spokane, WA'
+  'Freelancers Alumni Corps': 'Sacramento, CA'
   'Genesis': 'Austin, TX'
+  'Heat Wave': 'Tampa Bay, FL'
   'N.C. A&T State University Drumline': 'Greensboro, NC'
   'INpact Band': 'Indianapolis, IN'
   'King Cobras': 'Rosemont, IL'
-  'Lake Erie Sound': 'Erie, PA'
   'Madison Scouts': 'Madison, WI'
   'Marching Ghosts': 'Calgary, AB'
   'Memphis Youth Arts Initiative': 'Memphis, TN'
   'Normal Marching Band': 'Normal, IL'
   'Pre-show Entertainment: Cheyenne Brass Band': 'Cheyenne, WY'
+  'Raiders': 'Burlington, NJ'
   'Sonus Brass Theater': 'Woodbridge, VA'
   'Sound of Sun Prairie': 'Sun Prairie, WI'
-  'The Academy': 'Tempe, AZ'
-  'The Academy Summer Youth Guard': 'Tempe, AZ'
-  'The Cadets': 'Erie, PA'
-  'The Cadets - Encore': 'Erie, PA'
   'The Thunder of Roanoke': 'Roanoke, VA'
   'U.S. Coast Guard Auxiliary Band Arizona': 'Mesa, AZ'
   # Multiple
-  ? ['U.S. Marines Drum and Bugle Corps', 'U.S. Marine Silent Drill Platoon', 'National Anthem - U.S. Marine Drum & Bugle Corps', 'Exhibition: United States Marine Drum & Bugle Corp']
+  ? ['U.S. Marine Drum & Bugle Corps', 'U.S. Marines Drum and Bugle Corps', 'U.S. Marine Silent Drill Platoon', 'National Anthem - U.S. Marine Drum & Bugle Corps', 'Exhibition: United States Marine Drum & Bugle Corp', "Exhibition - Commandant's Own Marine Drum & Bugle"]
   : 'Washington, DC'
   ? ['Welcome & National Anthem - Legends', 'Welcome and National Anthem - Legends']
   : 'Kalamazoo, MI'
+  ? ['The Cadets', 'The Cadets - Encore', 'On Field Encore - The Cadets', 'Lake Erie Sound']
+  : 'Erie, PA'
+  ? ['The Academy', 'The Academy Summer Youth Guard']
+  : 'Tempe, AZ'
+  ? ['Welcome & National Anthem -  Marian University', 'Welcome & National Anthem - Univ. of Indianapolis']
+  : 'Indianapolis, IN'
+  ? ['Welcome & National Anthem - Univ. of Cincinnati', 'University of Cincinnati Marching Band']
+  : 'Cincinnati, OH'
 edits:
   # Single
   'Alisal USD All-Star Drum Corps': 'Alisal Union School District All-Star Drumline'
   'Arsenal Drum & Bugle Corps': 'Arsenal'
   'Conquest Drum & Bugle Corps': 'Conquest'
-  'IMPACT Drum & Bugle Corps': 'IMPACT'
   'Lone Star Drum and Bugle Corps': 'Lone Star'
+  'Marian University': 'Marian University Marching Band'
+  'Inbhear Mor': 'Inbhear Mór'
   'Railmen Drum and Bugle Corps': 'Railmen'
+  'Soundwave': 'Sound Wave'
   'Spirit of Sunyvale SoundSport': 'Spirit of Sunnyvale'
   'The Colts': 'Colts'
   'The Diplomats Drum & Bugle Corps': 'The Diplomats'
   'The Muchachos': 'Muchachos'
+  'Thunder': 'Spokane Thunder'
   'Troopers & Legacy Corps': 'Troopers Legacy Corps'
+  'Univ. of Cincinnati': 'University of Cincinnati Marching Band'
+  'Univ. of Indianapolis': 'University of Indianapolis Pep Band'
   'Zephyrus Drum & Bugle Corps': 'Zephyrus'
   # Multiple
   ? ['Alisal CAN Marching Band', 'Alisal CAN Marching Band & Drum Corps']
   : 'Alisal Community Arts Network Marching Band'
-  ? ['U.S. Marines Drum and Bugle Corps', 'United States Marine Drum & Bugle Corp']
+  ? ['IMPACT Drum & Bugle Corps', 'Impact', 'Impact of Orlando']
+  : 'IMPACT'
+  ? ['U.S. Marines Drum and Bugle Corps', 'United States Marine Drum & Bugle Corp', "Commandant's Own Marine Drum & Bugle"]
   : 'U.S. Marine Drum & Bugle Corps'
 deletions:
   - 'Intermission'
