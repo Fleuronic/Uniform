@@ -19,14 +19,14 @@ let package = Package(
     ],
     dependencies: [
 		.package(url: "https://github.com/Fleuronic/Diesel.git", branch: "main"),
-		.package(url: "https://github.com/behrang/YamlSwift", from: "3.4.4")
+		.package(url: "https://github.com/jpsim/Yams", from: "5.0.6")
 	],
     targets: [
         .target(
             name: "Uniform",
             dependencies: [
 				"Diesel",
-				.product(name: "Yaml", package: "YamlSwift")
+				"Yams"
 			],
 			resources: [
 				.copy("Resources/addresses.yaml"),
@@ -34,6 +34,7 @@ let package = Package(
 				.copy("Resources/features.yaml"),
 				.copy("Resources/locations.yaml"),
 				.copy("Resources/events.yaml"),
+				.copy("Resources/shows.yaml"),
 				.copy("Resources/venues.yaml")
 			]
 		)

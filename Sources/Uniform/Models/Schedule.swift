@@ -18,35 +18,43 @@ public struct Schedule: Decodable {
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		let unitName = try container.decode(String.self, forKey: .unitName)
-		let displayCity = try container.decodeIfPresent(String.self, forKey: .displayCity)
-		let normalizedUnitName = .deleted(for: unitName, from: .features) ??
-			(displayCity == nil ? unitName.normalized(from: .features) : unitName.normalized(from: .corps))
-		let timeString = try container.decodeIfPresent(String.self, forKey: .time)
-		self.displayCity = .inserted(for: normalizedUnitName, from: .corps) ?? .inserted(for: unitName, from: .corps) ?? displayCity
-
-		let corpsName = unitName.contains("- ") || unitName.contains(":") ? unitName
-			.replacingOccurrences(of: "Encore- ", with: "Encore - ")
-			.replacingOccurrences(of: "Encore: ", with: "Encore - ")
-			.replacingOccurrences(of: "Pre-show Entertainment: ", with: "Pre-show Entertainment - ")
-			.replacingOccurrences(of: "Exhibition: ", with: "Exhibition - ")
 			.replacingOccurrences(of: "  ", with: " ")
-			.components(separatedBy: " - ")[1] :
-			displayCity.flatMap { .inserted(for: $0, from: .locations) } ??
-			self.displayCity.map { _ in normalizedUnitName }
+			.replacingOccurrences(of: "[:-] ", with: "– ", options: .regularExpression)
+			.replacingOccurrences(of: "([a-z])– ", with: "$1 – ", options: .regularExpression)
+			.normalized(from: .corps)
+			.normalized(from: .features)
+		let displayCity = try container.decodeIfPresent(String.self, forKey: .displayCity)
+		let timeString = try container.decodeIfPresent(String.self, forKey: .time)
 
-		feature = (
-			[
-				"Encore",
-				"National Anthem",
-				"On Field Encore",
-				"Open Class Champion Encore",
-				"Pre-show Entertainment",
-				"Welcome & National Anthem"
-			].contains(normalizedUnitName) ||
-			self.displayCity == nil
-		) ? .init(name: normalizedUnitName) : nil
+		let featureNames: [String] = .init(resource: .features)
+		if let featureName = unitName.deleted(from: .corps) {
+			let components = featureName.components(separatedBy: " – ")
+			let name = components.count > 1 ? components[0].normalized(from: .features) + " – " + components[1] : featureName
+			
+			feature = .init(name: name)
+			corps = nil
+		} else if featureNames.contains(where: unitName.contains) {
+			let components = unitName.components(separatedBy: " – ")
+			var featureName = components[0].normalized(from: .features)
+			var corpsName = components.count > 1 ? components[1].normalized(from: .corps) : nil
 
-		corps = corpsName.map { Corps(name: $0.replacingOccurrences(of: "\"", with: "").normalized(from: .corps)) }
+			if featureName.deleted(from: .features) != nil {
+				(featureName, corpsName) = (corpsName!, nil)
+			} else if let name = corpsName, featureNames.contains(where: name.contains) {
+				(featureName, corpsName) = (name, featureName)
+			}
+
+			feature = .init(name: featureName)
+			corps = corpsName.map(Corps.init)
+		} else {
+			feature = nil
+			corps = .init(name: unitName.normalized(from: .corps))
+		}
+
+		self.displayCity = corps.flatMap {
+			.inserted(for: $0.name, from: .locations) ?? displayCity?.normalized(from: .locations)
+		}
+
 		time = timeString.map {
 			let components: [String]
 			if $0.contains(" - ") {

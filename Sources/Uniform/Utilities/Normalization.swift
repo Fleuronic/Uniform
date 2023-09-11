@@ -1,18 +1,19 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
-import enum Yaml.Yaml
+import Yams
+
 import struct Foundation.Data
 import class Foundation.Bundle
 
 public struct Normalization {
-	fileprivate let contents: [String]
-	fileprivate let insertions: [Yaml: String]
-	fileprivate let edits: [Yaml: String]
-	fileprivate let deletions: [String]
+	fileprivate let contents: [Node]
+	fileprivate let insertions: Node.Mapping
+	fileprivate let edits: Node.Mapping
+	fileprivate let deletions: [Node]
 
 	private init(resource: Resource) {
-		let yaml = try! Yaml.load(
-			.init(
+		let node = try! Yams.compose(
+			yaml: .init(
 				decoding: Data(
 					contentsOf: Bundle.module.url(
 						forResource: resource.rawValue,
@@ -22,12 +23,12 @@ public struct Normalization {
 				),
 				as: UTF8.self
 			)
-		)
+		)!
 
-		contents = yaml[.contents].array?.compactMap(\.string) ?? []
-		insertions = yaml[.insertions].dictionary?.compactMapValues(\.string) ?? [:]
-		edits = yaml[.edits].dictionary?.compactMapValues(\.string) ?? [:]
-		deletions = yaml[.deletions].array?.compactMap(\.string) ?? []
+		contents = node[.contents]?.array() ?? []
+		insertions = node[.insertions]?.mapping ?? .init([])
+		edits = node[.edits]?.mapping ?? .init([])
+		deletions = node[.deletions]?.array() ?? []
 	}
 
 	static func resource(_ resource: Resource) -> Self {
@@ -47,6 +48,7 @@ public extension Normalization {
 		case features
 		case locations
 		case events
+		case shows
 	}
 }
 
@@ -61,9 +63,9 @@ private extension Normalization {
 }
 
 // MARK: -
-private extension Yaml {
-	subscript(key: Normalization.CodingKeys) -> Self {
-		self[Yaml.string(key.rawValue)]
+private extension Node {
+	subscript(key: Normalization.CodingKeys) -> Self? {
+		self[key.rawValue]
 	}
 }
 
@@ -77,15 +79,16 @@ public extension String {
 		return string.replacingOccurrences(of: "- ", with: "– ")
 	}
 	
+	func deleted(from resource: Normalization.Resource) -> Self? {
+		Normalization.resource(resource).deletions.compactMap(\.string).contains(where: contains) ? self : nil
+	}
+
+
 	static func inserted(for key: String, from resource: Normalization.Resource) -> Self? {
 		key.value(
 			resource: resource,
 			keyPath: \.insertions
 		)
-	}
-	
-	static func deleted(for key: String, from resource: Normalization.Resource) -> Self? {
-		key.deletion(for: resource)
 	}
 }
 
@@ -93,32 +96,26 @@ public extension String {
 private extension String {
 	func value(
 		resource: Normalization.Resource,
-		keyPath: KeyPath<Normalization, [Yaml: String]>
+		keyPath: KeyPath<Normalization, Node.Mapping>
 	) -> Self? {
 		for (key, value) in Normalization.resource(resource)[keyPath: keyPath] {
 			switch key {
-			case let .string(string) where string == self:
-				return value
-			case let .array(array) where array.compactMap(\.string).contains(self):
-				return value
+			case let .scalar(scalar) where scalar.string == self:
+				return value.string
+			case let .sequence(sequence) where sequence.compactMap(\.string).contains(self):
+				return value.string
 			default:
 				continue
 			}
 		}
 		return nil
 	}
-
-	func deletion(for resource: Normalization.Resource) -> Self? {
-		Normalization.resource(resource)[keyPath: \.deletions].first {
-			starts(with: $0) && (contains("-") || contains(":"))
-		}
-	}
 }
 
 // MARK: -
 public extension [String] {
 	init(resource: Normalization.Resource) {
-		self = Normalization.resource(resource).contents
+		self = Normalization.resource(resource).contents.compactMap(\.string)
 	}
 }
 

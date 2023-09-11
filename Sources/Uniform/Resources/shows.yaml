@@ -1,0 +1,50 @@
+edits:
+  # Single
+  '’DCI Pittsburgh': 'DCI Pittsburgh'
+  'Celebration In Brass': 'Celebration in Brass'
+  'Corps at the Crest Walnut': 'Corps at the Crest – Walnut'
+  'Corps at the Crest Los Angeles': 'Corps at the Crest – Los Angeles'
+  'DCI All Star Review': 'DCI All-Star Review'
+  'DCI Birmingham @ Joe Lee Griffin Field at Samford University': 'DCI Birmingham'
+  'DCI Southwestern Championships': 'DCI Southwestern Championship'
+  'DCI World Championships Semifinals': 'DCI World Championship Semifinals'
+  'Drum in the Bluegrass': 'Drums in the Bluegrass'
+  'Drums Along the Mississippi River': 'Drums Along the Mississippi'
+  'Fiesta De Musica': 'Fiesta de Musica'
+  'Innovations In Brass': 'Innovations in Brass'
+  'Innovations in Brass: Akron, The 2014 DCI Tour Premiere': 'Innovations in Brass: Akron'
+  'Music On The March': 'Music on the March'
+  'Pacific Proscession': 'Pacific Procession'
+  'River City Rhapsody – La Crosse WI': 'River City Rhapsody – La Crosse'
+  'Shoreman Brass Classic': 'Shoremen Brass Classic'
+  'Show of Shows Waukesha': 'Show of Shows – Waukesha'
+  'Soaring Sounds – 34': 'Soaring Sounds 34'
+  'Three Rivers SUMMER MUSIC GAMES': 'Three Rivers Summer Music Games'
+  'Tour of Champions, PPL Park': 'Tour of Champions – PPL Park'
+  'Tour of Champions – North Illinois': 'Tour of Champions – Northern Illinois'
+  'Tour of Championships – Texas': 'Tour of Champions – Texas'
+  'Tournament Of Drums': 'Tournament of Drums'
+  'WDBJ-7 Summer Music Games of Southwest Virginia': 'Summer Music Games of Southwest Virginia'
+  # Multiple
+  ? ['Corps at the Crest San Diego', 'Corps at the Crest San Diego ']
+  : 'Corps at the Crest – San Diego'
+  ? ['CYO Nationals', 'CYO NATIONALS Tribute']
+  : 'CYO Nationals Tribute'
+  ? ['DCI Atlanta Southeastern Championship', 'The DCI Atlanta Southeastern Championship']
+  : 'DCI Southeastern Championship'
+  ? ['DCI Capital Classic Corps Show', 'DCI Capitol Classic Corps Show']
+  : 'DCI Capital Classic'
+  ? ['DCI Open Class World Championships Finals', 'DCI Championships Open Class Championship Finals', 'DCI World Championships Open Class Championship Finals']
+  : 'DCI Open Class World Championship Finals'
+  ? ['DCI Open Class World Championships Prelims', 'DCI World Championships Open Class Championship Prelims']
+  : 'DCI Open Class World Championship Prelims'
+  ? ['DCI World Championships Finals', 'DCI World Championship World Class Finals', 'DCI World Championships World Class Finals']
+  : 'DCI World Championship Finals'
+  ? ['DCI World Championships Prelims', 'DCI Championships (Prelims)']
+  : 'DCI World Championship Prelims'
+  ? ['Diablo Valley Classic Pacific Open Class Championship', 'Diablo Valley Classic Pacific Open Class Championship Finals']
+  : 'Diablo Valley Classic'
+  ? ['So Cal Classic', 'So Cal Classic Open Class Championship', 'So Cal Classic Open Class Championships']
+  : 'SoCal Classic'
+  ? ['The Beanpot', 'The Beanpot Invitational – A DCI/DCA split event!']
+  : 'The Beanpot Invitational'
