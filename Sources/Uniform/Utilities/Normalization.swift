@@ -78,7 +78,7 @@ public extension String {
 			keyPath: \.edits
 		) ?? self
 	}
-	
+
 	func deleted(from resource: Normalization.Resource) -> Self? {
 		Normalization.resource(resource).deletions.compactMap(\.string).contains(where: contains) ? self : nil
 	}

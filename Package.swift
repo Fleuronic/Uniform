@@ -2,29 +2,29 @@
 import PackageDescription
 
 let package = Package(
-    name: "Uniform",
+	name: "Uniform",
 	platforms: [
 		.iOS(.v13),
 		.macOS(.v13),
 		.tvOS(.v13),
 		.watchOS(.v6)
 	],
-    products: [
-        .library(
-            name: "Uniform",
-            targets: [
+	products: [
+		.library(
+			name: "Uniform",
+			targets: [
 				"Uniform"
 			]
 		)
-    ],
-    dependencies: [
+	],
+	dependencies: [
 		.package(url: "https://github.com/Fleuronic/Diesel.git", branch: "main"),
 		.package(url: "https://github.com/jpsim/Yams", from: "5.0.6")
 	],
-    targets: [
-        .target(
-            name: "Uniform",
-            dependencies: [
+	targets: [
+		.target(
+			name: "Uniform",
+			dependencies: [
 				"Diesel",
 				"Yams"
 			],
@@ -38,5 +38,5 @@ let package = Package(
 				.copy("Resources/venues.yaml")
 			]
 		)
-    ]
+	]
 )

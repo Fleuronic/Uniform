@@ -30,7 +30,7 @@ public struct Schedule: Decodable {
 		if let featureName = unitName.deleted(from: .corps) {
 			let components = featureName.components(separatedBy: " – ")
 			let name = components.count > 1 ? components[0].normalized(from: .features) + " – " + components[1] : featureName
-			
+
 			feature = .init(name: name)
 			corps = nil
 		} else if featureNames.contains(where: unitName.contains) {
