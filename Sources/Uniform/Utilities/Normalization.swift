@@ -49,6 +49,7 @@ public extension Normalization {
 		case locations
 		case events
 		case shows
+		case venues
 	}
 }
 
