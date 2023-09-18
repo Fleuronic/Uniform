@@ -1,58 +1,58 @@
 insertions:
   # Single
-  'Avant Garde Alumni Drumline': 'Saratoga Springs, NY'
-  'Appalachian Gold': 'Charleston, WV'
-  'Arsenal': 'El Paso, TX'
-  'Blue Stars': 'La Crosse, WI'
-  'Bluecoats Alumni Corps': 'Canton, OH'
-  'Bronco Brass & Percussion': 'Denver, CO'
-  'Bushwackers': 'Princeton, NJ'
-  'Cadets 2': 'Allentown, PA'
-  'Cheyenne Brass Band': 'Cheyenne, WY'
-  'Colts Alumni Corps': 'Dubuque, IA'
-  'Columbians': 'Tri-Cities, WA'
-  'Connecticut Hurricanes': 'Seymour, CT'
-  'Crossmen': 'San Antonio, TX'
-  'Encorps': 'South Brunswick, NJ'
-  'Freelancers Alumni Corps': 'Sacramento, CA'
-  'Genesis': 'Austin, TX'
-  'Guardians': 'San Antonio, TX'
-  'Hawthorne Caballeros': 'Hawthorne, NJ'
-  'Heat Wave': 'Tampa Bay, FL'
-  'N.C. A&T State University Drumline': 'Greensboro, NC'
-  'INpact Band': 'Indianapolis, IN'
-  'King Cobras': 'Rosemont, IL'
-  'Madison Scouts': 'Madison, WI'
-  'Marching Ghosts': 'Calgary, AB'
-  'Memphis Youth Arts Initiative': 'Memphis, TN'
-  'Normal Marching Band': 'Normal, IL'
-  'Pacific Crest': 'Diamond Bar, CA'
-  'Petunia City Stix': 'Dixon, IL'
-  'Raiders': 'Burlington, NJ'
-  'Spokane Thunder': 'Spokane, WA'
-  'Sonus Brass Theater': 'Woodbridge, VA'
-  'Sound of Sun Prairie': 'Sun Prairie, WI'
-  'Sound Wave': 'Seattle, WA'
-  'Thunder of Roanoke': 'Roanoke, VA'
-  'University of Cincinnati Marching Band': 'Cincinnati, OH'
-  'U.S. Coast Guard Auxiliary Band Arizona': 'Mesa, AZ'
-  'Vessel': 'San Dimas, CA'
+  Avant Garde Alumni Drumline: Saratoga Springs, NY
+  Appalachian Gold: Charleston, WV
+  Arsenal: El Paso, TX
+  Blue Stars: La Crosse, WI
+  Bluecoats Alumni Corps: Canton, OH
+  Bronco Brass & Percussion: Denver, CO
+  Bushwackers: Princeton, NJ
+  Cadets 2: Allentown, PA
+  Cheyenne Brass Band: Cheyenne, WY
+  Colts Alumni Corps: Dubuque, IA
+  Columbians: Tri-Cities, WA
+  Connecticut Hurricanes: Seymour, CT
+  Crossmen: San Antonio, TX
+  Encorps: South Brunswick, NJ
+  Freelancers Alumni Corps: Sacramento, CA
+  Genesis: Austin, TX
+  Guardians: San Antonio, TX
+  Hawthorne Caballeros: Hawthorne, NJ
+  Heat Wave: Tampa Bay, FL
+  N.C. A&T State University Drumline: Greensboro, NC
+  INpact Band: Indianapolis, IN
+  King Cobras: Rosemont, IL
+  Madison Scouts: Madison, WI
+  Marching Ghosts: Calgary, AB
+  Memphis Youth Arts Initiative: Memphis, TN
+  Normal Marching Band: Normal, IL
+  Pacific Crest: Diamond Bar, CA
+  Petunia City Stix: Dixon, IL
+  Raiders: Burlington, NJ
+  Spokane Thunder: Spokane, WA
+  Sonus Brass Theater: Woodbridge, VA
+  Sound of Sun Prairie: Sun Prairie, WI
+  Sound Wave: Seattle, WA
+  Thunder of Roanoke: Roanoke, VA
+  University of Cincinnati Marching Band: Cincinnati, OH
+  U.S. Coast Guard Auxiliary Band Arizona: Mesa, AZ
+  Vessel: San Dimas, CA
   # Multiple
-  ? ['U.S. Marine Drum & Bugle Corps', 'U.S. Marine Silent Drill Platoon', 'U.S. Marine Brass Ensemble', 'U.S. Army Band']
-  : 'Washington, DC'
-  ? ['The Cadets', 'Lake Erie Sound']
-  : 'Erie, PA'
-  ? ['The Academy', 'The Academy Summer Youth Guard']
-  : 'Tempe, AZ'
-  ? ['Marian University Marching Band', 'University of Indianapolis Pep Band']
-  : 'Indianapolis, IN'
+  ? [U.S. Marine Drum & Bugle Corps, U.S. Marine Silent Drill Platoon, U.S. Marine Brass Ensemble, U.S. Army Band]
+  : Washington, DC
+  ? [The Cadets, Lake Erie Sound]
+  : Erie, PA
+  ? [The Academy, The Academy Summer Youth Guard]
+  : Tempe, AZ
+  ? [Marian University Marching Band, University of Indianapolis Pep Band]
+  : Indianapolis, IN
 edits:
-  'Calgary, Canada': 'Calgary, AB'
-  'Ft. Worth, TX': 'Fort Worth, TX'
-  'Dixon - Rock Falls': 'Rock Falls'
-  'LaCrosse': 'La Crosse'
-  "Papa John's Cardinal Stadium": 'Louisville, KY'
-  'Paw Paw MI': 'Paw Paw, MI'
-  'Scaramento CA': 'Sacramento, CA'
-  'St. Paul, MN': 'Saint Paul, MN'
-  'Tri Cities': 'Tri-Cities'
+  Calgary, Canada: Calgary, AB
+  Ft. Worth, TX: Fort Worth, TX
+  Dixon - Rock Falls: Rock Falls
+  LaCrosse: La Crosse
+  "Papa John's Cardinal Stadium": Louisville, KY
+  Paw Paw MI: Paw Paw, MI
+  Scaramento CA: Sacramento, CA
+  St. Paul, MN: Saint Paul, MN
+  Tri Cities: Tri-Cities

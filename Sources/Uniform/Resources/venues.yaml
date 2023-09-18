@@ -1,1 +1,136 @@
-
+insertions:
+  # Single
+  Ames Field: Michigan City High School
+  Apogee Stadium: University of North Texas
+  Ankeny Stadium: Northview Middle School
+  Antimarino Stadium: Gateway High School
+  Avon Lake Memorial Stadium: Avon Lake High School
+  Atrium Stadium: Mason High School
+  Blakeslee Stadium: Minnesota State University
+  Breitenbach Stadium: Middleton High School
+  Bronco Stadium: Mustang High School
+  BG Products Veterans Sports Complex: Butler Community College
+  Broken Arrow Memorial Stadium: Broken Arrow High School
+  Cajun Field: University of Louisiana at Lafayette
+  Cameron Stadium: Cameron University
+  Campus Field: Sacred Heart University
+  Canvas Stadium: Colorado State University
+  Center Parc Stadium: Georgia State University
+  Centerville Stadium: Centerville High School
+  Cheney Alumni Field: Natrona County High School
+  Clem Lemire Athletic Complex: Memorial High School
+  Dalzell Field: Clarke University
+  Don and Nona Williams Stadium: University of Wisconsin–Stout
+  Eddie Courtney Stadium: Farragut High School
+  Eddie S. Henderson Stadium: Midtown High School
+  Falcon Field: Cerritos College
+  Five Star Stadium: Macon University
+  Foshee-Henderson Stadium: Stanhope Elmore High School
+  Golden Wave Stadium: Tupelo High School
+  Grappone Stadium: Saint Anselm College
+  Herb Meyer Stadium: El Camino High School
+  Hewitt-Trussville Stadium: Hewitt-Trussville High School
+  Hughes Stadium: Sacramento City College
+  Husky Stadium: Groversville High School
+  J. Leslie Rollins Stadium: Buena Vista University
+  Joan C. Edwards Stadium: Marshall University
+  Johnny “Red” Floyd Stadium: Middle Tennessee State University
+  Linn-Mar Stadium: Linn-Mar High School
+  M. M. Roberts Stadium: University of Southern Mississippi
+  Malone Stadium: University of Louisiana at Monroe
+  Navy-Marine Corps Memorial Stadium: United States Naval Academy
+  Paul Brawn Tiger Stadium: Massillon Washington High School
+  Perkins Stadium: University of Wisconsin–Whitewater
+  Raider Stadium: Oregon State University
+  Red Rider Stadium: Orrville High School
+  Reitz Bowl: F.J. Reitz High School
+  Renton Memorial Stadium: Renton High School
+  Rice–Eccles Stadium: University of Utah
+  Rome Free Academy Stadium: Rome Free Academy
+  Rochester Regonial Stadium: Rochester Community and Technical College
+  Ron Yary Stadium: Bellflower Middle/High School
+  Salem Stadium: Salem High School
+  Scheumann Stadium: Ball State University
+  Sox Harrison Stadium: PennWest Edinboro
+  Seibert Stadium: Samford University
+  Stanford Stadium: Stanford University
+  Stiehm Stadium: D.C. Everest Junior High School
+  TCF Bank Stadium: University of Minnesota
+  Tiger Athletic Complex: Bentonville High School
+  Tiger Stadium: Farmington High School
+  Tigers Stadium: Cape Central High School
+  University of Charleston Stadium: University of Charleston
+  Veterans Memorial Field Sports Complex: University of Wisconsin–La Crosse
+  Veterans Memorial Stadium: Lawrence High School
+  Virgil Schwarm Stadium: Hamilton High School
+  Warrior Stadium: Elizabeth Forward High School
+  Wheelock Stadium: Riverside City College
+  Wildcat Stadium: Indiana Wesleyan University
+  # Multiple
+  ? [Allegacy Federal Credit Union Stadium, BB&T Field]
+  : Wake Forest University
+edits:
+  # Single
+  Alta High School Stadium: Hawk Fieldhouse
+  Bakersfield College Stadium: Memorial Stadium
+  Bank of Sun Prairie Stadium at Ashley Field: Bank of Sun Prairie Stadium
+  Blakeslee Field: Blakeslee Stadium
+  Belleville West High School Stadium: Belleville West Stadium
+  Bentonville Tiger Athletic Complex: Tiger Athletic Complex
+  Bill Clabo Field: Eddie Courtney Stadium
+  Center Parc Credit Union Stadium: Center Parc Stadium
+  Centerville High School Stadium: Centerville Stadium
+  Dover Area High School Stadium: Eagles Stadium
+  Eagle High School Stadium: Thunder Stadium
+  East Field-Ft. Edward/Glens Falls,NY: East Field
+  EIU: Eastern Illinois University
+  Etowah High School Stadium: Etowah High School Football Stadium
+  Evansville FJ Reitz High School: Reitz Bowl
+  F. Page Seibert Stadium: Seibert Stadium
+  Farmington High School Stadium: Tiger Stadium
+  Golden Valley High School Stadium: Veterans Stadium
+  Hewitt Trussville Football Stadium: Hewitt-Trussville Stadium
+  Hiram High School Stadium: Hornet Stadium at Hiram High School
+  Husky Football Stadium: Husky Stadium
+  InfoCision Stadium-Summa Field: InfoCision Stadium–Summa Field
+  Johnston High School Stadium: Dragon Stadium
+  Kelly Reeves Athletic Complex-Austin,TX: Kelly Reeves Athletic Complex
+  Lowndes High School Stadium: Martin Stadium
+  Linn-Mar High School Stadium: Linn-Mar Stadium
+  Lucas Oil Stadium – Semifinals Seating (OLD): Lucas Oil Stadium
+  Mesquite Memorial Stadium: Memorial Stadium at West Mesquite High School
+  MetLife Stadium-East Rutherford,NJ: MetLife Stadium
+  Mill Creek High School Stadium: Mill Creek Community Stadium
+  Monterey Trail High School Stadium: Macres Stadium
+  Navy-Marine Corps Memorial Stadium-Annapolis,MD: Navy-Marine Corps Memorial Stadium
+  Orrville High School Stadium: Red Rider Stadium
+  Renton Memorial Stadium-Renton,WA: Renton Memorial Stadium
+  Rice Eccles Stadium: Rice–Eccles Stadium
+  Riverside City College Stadium: Wheelock Stadium
+  SOU Raider Stadium: Raider Stadium
+  Sacramento State - Hornet Stadium: Hornet Stadium at Sacramento State University
+  San Bernardino Valley College Stadium: SBVC Stadium
+  Sheffield High School Stadium: Wolverine Mountain
+  Simmons Bank Liberty Stadium in Liberty Park: Simmons Bank Liberty Stadium
+  Spartan Stadium - Lima, OH: Spartan Stadium
+  Stellos Stadium-Nashua,NH: Stellos Stadium
+  The City of Wetumpka Sports Complex: Wetumpka Sports Complex
+  The East Side Centre: EastSide Centre
+  The Sports Complex: Village of Lisle-Benedictine University Sports Complex
+  the Lacey Complex: Lacey Sports Complex
+  Tiger Event Stadium: Tigers Stadium
+  Tom Benson Stadium at the Pro Football Hall of Fame: Tom Benson Hall of Fame Stadium
+  Valhalla High School Stadium: Valhalla Stadium
+  Virgil M. Schwarm Stadium: Virgil Schwarm Stadium
+  W.F. Andrews Field: Rehobeth High School
+  Washington Township High School Stadium: Tom Brown Field
+  West Texas A&M: West Texas A&M University
+  West Park High School Stadium: West Park High School Football Stadium
+  Williams Stadium: Don and Nona Williams Stadium
+  Zionsville Community High School Stadium: Zionsville Football Stadium
+  # Multiple
+  ? [Johnny "Red" Floyd Stadium, MTSU Stadium]
+  : Johnny “Red” Floyd Stadium
+deletions:
+  - Empower Field at Mile High
+  - The Dome at America's Center

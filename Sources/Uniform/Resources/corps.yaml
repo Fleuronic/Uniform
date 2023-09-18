@@ -1,44 +1,45 @@
 edits:
   # Single
-  'Academy Summer Youth Guard': 'The Academy Summer Youth Guard'
-  'Alisal USD All-Star Drum Corps': 'Alisal Union School District All-Star Drumline'
-  'Arsenal Drum & Bugle Corps': 'Arsenal'
-  'Blue Devils "B"': 'Blue Devils B'
-  'Blue Devils "C"': 'Blue Devils C'
-  'Conquest Drum & Bugle Corps': 'Conquest'
-  'Lone Star Drum and Bugle Corps': 'Lone Star'
-  'Marian University': 'Marian University Marching Band'
-  'NC A&T University Drumline': 'N.C. A&T State University Drumline'
-  'Inbhear Mor': 'Inbhear Mór'
-  'Railmen Drum and Bugle Corps': 'Railmen'
-  'Rosemont King Cobras': 'King Cobras'
-  'Soundwave': 'Sound Wave'
-  'Spirit of Sunyvale SoundSport': 'Spirit of Sunnyvale'
-  'The Thunder of Roanoke': 'Thunder of Roanoke'
-  'USCG Auxiliary Arizona Band': 'U.S. Coast Guard Auxiliary Band Arizona'
-  'The Colts': 'Colts'
-  'The Diplomats Drum & Bugle Corps': 'The Diplomats'
-  'The Muchachos': 'Muchachos'
-  'Thunder': 'Spokane Thunder'
-  'Troopers & Legacy Corps': 'Troopers Legacy Corps'
-  'US Army Band': 'U.S. Army Band'
-  'Univ. of Arkansas Percussion': 'University of Arkansas Percussion'
-  'Univ. of Cincinnati': 'University of Cincinnati Marching Band'
-  'Univ. of Indianapolis': 'University of Indianapolis Pep Band'
-  'Zephyrus Drum & Bugle Corps': 'Zephyrus'
+  Academy Summer Youth Guard: The Academy Summer Youth Guard
+  Alisal USD All-Star Drum Corps: Alisal Union School District All-Star Drumline
+  Ankeny Stadium: Northview Middle School
+  Arsenal Drum & Bugle Corps: Arsenal
+  Blue Devils "B": Blue Devils B
+  Blue Devils "C": Blue Devils C
+  Conquest Drum & Bugle Corps: Conquest
+  Lone Star Drum and Bugle Corps: Lone Star
+  Marian University: Marian University Marching Band
+  NC A&T University Drumline: N.C. A&T State University Drumline
+  Inbhear Mor: Inbhear Mór
+  Railmen Drum and Bugle Corps: Railmen
+  Rosemont King Cobras: King Cobras
+  Soundwave: Sound Wave
+  Spirit of Sunyvale SoundSport: Spirit of Sunnyvale
+  The Thunder of Roanoke: Thunder of Roanoke
+  USCG Auxiliary Arizona Band: U.S. Coast Guard Auxiliary Band Arizona
+  The Colts: Colts
+  The Diplomats Drum & Bugle Corps: The Diplomats
+  The Muchachos: Muchachos
+  Thunder: Spokane Thunder
+  Troopers & Legacy Corps: Troopers Legacy Corps
+  US Army Band: U.S. Army Band
+  Univ. of Arkansas Percussion: University of Arkansas Percussion
+  Univ. of Cincinnati: University of Cincinnati Marching Band
+  Univ. of Indianapolis: University of Indianapolis Pep Band
+  Zephyrus Drum & Bugle Corps: Zephyrus
   # Multiple
-  ? ['Alisal CAN Marching Band', 'Alisal CAN Marching Band & Drum Corps']
-  : 'Alisal Community Arts Network Marching Band'
-  ? ['IMPACT Drum & Bugle Corps', 'Impact', 'Impact of Orlando']
-  : 'IMPACT'
-  ? ['U.S. Marines Drum and Bugle Corps', 'United States Marine Drum & Bugle Corp', "Commandant's Own Marine Drum & Bugle"]
-  : 'U.S. Marine Drum & Bugle Corps'
+  ? [Alisal CAN Marching Band, Alisal CAN Marching Band & Drum Corps]
+  : Alisal Community Arts Network Marching Band
+  ? [IMPACT Drum & Bugle Corps, Impact, Impact of Orlando]
+  : IMPACT
+  ? [U.S. Marines Drum and Bugle Corps, United States Marine Drum & Bugle Corp, "Commandant's Own Marine Drum & Bugle"]
+  : U.S. Marine Drum & Bugle Corps
 deletions:
 - ','
-- 'Crossmen & Spirit of Atlanta'
-- 'DrumLine Battle'
-- 'Bluecoats Trombone Quartet'
-- 'Sextet'
-- 'Special'
-- 'The Cavaliers and The Cavaliers Alumni'
-- 'Video'
+- Crossmen & Spirit of Atlanta
+- DrumLine Battle
+- Bluecoats Trombone Quartet
+- Sextet
+- Special
+- The Cavaliers and The Cavaliers Alumni
+- Video

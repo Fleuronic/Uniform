@@ -1,55 +1,55 @@
 contents:
-  - 'Announcement'
-  - 'BKXperience'
-  - 'Ceremony'
-  - 'Clinic'
-  - 'Encore'
-  - 'Endzone'
-  - 'DrumLine'
-  - 'Entertainment'
-  - 'Exhibition'
-  - 'Gates'
-  - 'Intermission'
-  - 'Kick Start'
-  - 'National Anthem'
-  - 'Performance'
-  - 'Pre-show'
-  - 'Presentation'
-  - 'Recognition'
-  - 'Retreat'
-  - 'Score'
-  - 'SoundSport'
-  - 'Stage'
-  - 'Standstill'
-  - 'Welcome'
+  - Announcement
+  - BKXperience
+  - Ceremony
+  - Clinic
+  - Encore
+  - Endzone
+  - DrumLine
+  - Entertainment
+  - Exhibition
+  - Gates
+  - Intermission
+  - Kick Start
+  - National Anthem
+  - Performance
+  - Pre-show
+  - Presentation
+  - Recognition
+  - Retreat
+  - Score
+  - SoundSport
+  - Stage
+  - Standstill
+  - Welcome
 edits:
   # Single
-  'Age Out Recognition': 'Age-Out Recognition'
-  'Doors Open': 'Gates Open'
-  'Drum Line Battle': 'DrumLine Battle'
-  'Drumline Jam': 'DrumLine Jam'
-  'Encore – TBD': 'Encore'
-  'Exhibition': 'Exhibition Unit'
-  'FJM Endzone': 'FJM Endzone Performance'
-  'GPG Music Stage Performance': 'GPG Music Stage'
-  'Intermission – SoundSport International Showcase': 'Intermission & SoundSport International Showcase'
-  'Intermission – US Old Guard Exhib.': 'Intermission & U.S. Old Guard Exhibition'
-  'KICK START': 'Kick Start'
-  'SoundSport': 'SoundSport Exhibition'
-  'Videoboard Feature – Univ. of Arkansas Percussion': 'Videoboard Feature – University of Arkansas Percussion'
-  'Videoboard Featured Performance': 'Videoboard Feature'
+  Age Out Recognition: Age-Out Recognition
+  Doors Open: Gates Open
+  Drum Line Battle: DrumLine Battle
+  Drumline Jam: DrumLine Jam
+  Encore – TBD: Encore
+  Exhibition: Exhibition Unit
+  FJM Endzone: FJM Endzone Performance
+  GPG Music Stage Performance: GPG Music Stage
+  Intermission – SoundSport International Showcase: Intermission & SoundSport International Showcase
+  Intermission – US Old Guard Exhib.: Intermission & U.S. Old Guard Exhibition
+  KICK START: Kick Start
+  SoundSport: SoundSport Exhibition
+  Videoboard Feature – Univ. of Arkansas Percussion: Videoboard Feature – University of Arkansas Percussion
+  Videoboard Featured Performance: Videoboard Feature
   # Multiple
-  ? ['Awards', 'Award Ceremony']
-  : 'Awards Ceremony'
-  ? ['Intermission (40 Minutes)', 'Intermission (34 minutes)', 'Intermission – 30 minutes', 'Halftime']
-  : 'Intermission'
-  ? ['On Field Encore', 'The Cadets - Encore']
-  : 'Encore'
-  ? ['Pre-show', 'Pre-show Entertainment']
-  : 'Pre-Show Entertainment'
-  ? ['Retreat', 'Drum Major Retreat - Scores Announced']
-  : 'Scores Announced'
-  ? ['Welcome', 'Welcome and National Anthem']
-  : 'Welcome & National Anthem'
+  ? [Awards, Award Ceremony]
+  : Awards Ceremony
+  ? [Intermission (40 Minutes), Intermission (34 minutes), Intermission – 30 minutes, Halftime]
+  : Intermission
+  ? [On Field Encore, The Cadets - Encore]
+  : Encore
+  ? [Pre-show, Pre-show Entertainment]
+  : Pre-Show Entertainment
+  ? [Retreat, Drum Major Retreat - Scores Announced]
+  : Scores Announced
+  ? [Welcome, Welcome and National Anthem]
+  : Welcome & National Anthem
 deletions:
-  - 'Drum Major Retreat'
+  - Drum Major Retreat
