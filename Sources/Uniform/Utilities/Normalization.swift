@@ -73,11 +73,10 @@ private extension Node {
 // MARK: -
 public extension String {
 	func normalized(from resource: Normalization.Resource) -> Self {
-		let string = value(
+		value(
 			resource: resource,
 			keyPath: \.edits
 		) ?? self
-		return string.replacingOccurrences(of: "- ", with: "– ")
 	}
 	
 	func deleted(from resource: Normalization.Resource) -> Self? {
