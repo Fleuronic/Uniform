@@ -10,12 +10,15 @@ public struct Event: Decodable {
 	public let venueCity: String
 	public let venueState: String
 	public let venueName: String?
+	public let venueHost: String?
 	public let schedules: [Schedule]?
 
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
-
 		let name: String
+		var venueName: String?
+		var venueCity: String
+
 		if let timeZone = try? container.decode(String.self, forKey: .timeZone) {
 			let venueContainer = try? container.nestedContainer(keyedBy: VenueKeys.self, forKey: .venue)
 			let venue = try container.decodeIfPresent(Venue.self, forKey: .venues)
@@ -26,7 +29,7 @@ public struct Event: Decodable {
 			startDate = try container.decode(String.self, forKey: .startDate)
 			venueAddress = try container.decodeIfPresent(String.self, forKey: .venueAddress) ?? venueContainer!.decode(String.self, forKey: .address)
 			venueZIP = try container.decodeIfPresent(String.self, forKey: .venueZIP) ?? venueContainer?.decode(String.self, forKey: .zipCode)
-			venueCity = try container.decodeIfPresent(String.self, forKey: .venueCity) ?? container.decode(String.self, forKey: .locationCity).normalized(from: .locations)
+			venueCity = try container.decodeIfPresent(String.self, forKey: .venueCity) ?? container.decode(String.self, forKey: .locationCity)
 			venueState = try container.decodeIfPresent(String.self, forKey: .venueState) ?? container.decode(String.self, forKey: .locationState)
 			venueName = try venue.map(\.name) ?? venueContainer!.decode(String.self, forKey: .name)
 			schedules = try container.decodeIfPresent([Schedule].self, forKey: .schedules)
@@ -48,6 +51,33 @@ public struct Event: Decodable {
 			schedules = nil
 		}
 
+		let deletedName = venueName?.deleted(from: .venues)
+		if var name = deletedName ?? venueName?
+			.normalized(from: .venues)
+			.replacingOccurrences(of: "  ", with: " ")
+			.replacingOccurrences(of: " - ", with: " at ")
+			.replacingOccurrences(of: "Univ.", with: "University")
+			.replacingOccurrences(of: "(HS|H\\.S\\.)", with: "High School", options: .regularExpression)
+			.replacingOccurrences(of: "State$", with: "State University", options: .regularExpression)
+			.replacingOccurrences(of: " ([A-Z]) ", with: " $1. ", options: .regularExpression) {
+
+			if !name.contains(" at ") {
+				name = name.replacingOccurrences(of: "^(.*) (High School|College|University).*$", with: "$1 $2 Stadium at $1 $2", options: .regularExpression)
+			}
+
+			let components = name.components(separatedBy: " at ")
+			if let host = String.inserted(for: name.normalized(from: .venues), from: .venues) {
+				venueHost = host
+			} else if components.count > 1 && deletedName == nil {
+				venueName = components[0].normalized(from: .venues)
+				venueHost = components[1].normalized(from: .venues)
+			} else {
+				venueHost = nil
+			}
+		} else {
+			venueHost = nil
+		}
+
 		self.name = name
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "  ", with: " ")
@@ -59,10 +89,11 @@ public struct Event: Decodable {
 			.replacingOccurrences(of: "(, )?[Pp]resented.*", with: "", options: .regularExpression)
 			.replacingOccurrences(of: "[ \t]+$", with: "", options: .regularExpression)
 			.normalized(from: .shows)
-
-		if self.name.contains("Denton ") {
-			print("Hi")
-		}
+		self.venueName = venueName?
+			.replacingOccurrences(of: "'", with: "’")
+			.normalized(from: .venues)
+		self.venueCity = venueCity
+			.normalized(from: .locations)
 	}
 }
 
