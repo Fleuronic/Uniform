@@ -1,0 +1,17 @@
+{
+  "actions" : {
+    "build" : {
+      "postActions" : [
+        {
+          "script" : "#!\/bin\/sh\nxcodebuild -scheme Uniform -destination 'platform=macOS'",
+          "type" : "runScript"
+        }
+      ]
+    }
+  },
+  "extension" : {
+    "identifier" : "panic.Icarus",
+    "name" : "Icarus"
+  },
+  "extensionTemplate" : "lldbDebug"
+}
