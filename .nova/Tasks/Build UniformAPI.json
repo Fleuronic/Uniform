@@ -3,7 +3,7 @@
     "build" : {
       "postActions" : [
         {
-          "script" : "#!\/bin\/sh\ncd Submodules\/UniformAPI; xcodebuild -scheme UniformAPI -destination 'platform=macOS'",
+          "script" : "#!\/bin\/sh\nswift build --package-path Submodules\/UniformAPI",
           "type" : "runScript"
         }
       ]

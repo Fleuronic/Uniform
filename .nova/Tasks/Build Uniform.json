@@ -3,7 +3,7 @@
     "build" : {
       "postActions" : [
         {
-          "script" : "#!\/bin\/sh\nxcodebuild -scheme Uniform -destination 'platform=macOS'",
+          "script" : "#!\/bin\/sh\nswift build",
           "type" : "runScript"
         }
       ]

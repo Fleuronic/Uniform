@@ -3,7 +3,7 @@
     "build" : {
       "postActions" : [
         {
-          "script" : "#!\/bin\/sh\ncd Submodules\/UniformService; xcodebuild -scheme UniformService -destination 'platform=macOS'",
+          "script" : "#!\/bin\/sh\nswift build --package-path Submodules\/UniformService",
           "type" : "runScript"
         }
       ]
