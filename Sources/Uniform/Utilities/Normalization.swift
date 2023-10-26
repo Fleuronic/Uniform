@@ -24,7 +24,7 @@ public struct Normalization {
 				as: UTF8.self
 			)
 		)!
-
+		
 		contents = node[.contents]?.array() ?? []
 		insertions = node[.insertions]?.mapping ?? .init([])
 		edits = node[.edits]?.mapping ?? .init([])
@@ -82,7 +82,6 @@ public extension String {
 	func deleted(from resource: Normalization.Resource) -> Self? {
 		Normalization.resource(resource).deletions.compactMap(\.string).contains(where: contains) ? self : nil
 	}
-
 
 	static func inserted(for key: String, from resource: Normalization.Resource) -> Self? {
 		key.value(

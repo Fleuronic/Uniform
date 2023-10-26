@@ -18,9 +18,9 @@ public struct Site {
 	) async {
 		let url = URL(string: "\(domain.urlString)/\(domain.string(for: path, in: year)!)/\(slug)")!
 		guard let (data, _) = try? await URLSession.shared.data(from: url) else { return nil }
-
+		
 		contents = .init(decoding: data, as: UTF8.self)
-
+		
 		self.domain = domain
 		self.path = path
 		self.year = year
@@ -74,7 +74,7 @@ private extension Site.Domain {
 		case (.dci, .scores):
 			string = "current\":(\\[\\{\"categories.*?),\"listing"
 		}
-
+		
 		return try! Regex(string)
 	}
 }

@@ -18,12 +18,12 @@ public struct Event: Decodable {
 		let name: String
 		var venueName: String?
 		var venueCity: String
-
+		
 		if let timeZone = try? container.decode(String.self, forKey: .timeZone) {
 			let venueContainer = try? container.nestedContainer(keyedBy: VenueKeys.self, forKey: .venue)
 			let venue = try container.decodeIfPresent(Venue.self, forKey: .venues)
 			self.timeZone = timeZone
-
+			
 			name = try container.decode(String.self, forKey: .name)
 			slug = try container.decode(String.self, forKey: .slug)
 			startDate = try container.decode(String.self, forKey: .startDate)
@@ -38,7 +38,7 @@ public struct Event: Decodable {
 			let location = try container.decode(String.self, forKey: .location).normalized(from: .locations)
 			let dateComponents = date.components(separatedBy: "T")
 			let locationComponents = location.components(separatedBy: ", ")
-
+			
 			name = try container.decode(String.self, forKey: .eventName).normalized(from: .shows)
 			slug = try container.decode(String.self, forKey: .slug)
 			startDate = dateComponents[0]
@@ -50,7 +50,7 @@ public struct Event: Decodable {
 			venueName = nil
 			schedules = nil
 		}
-
+		
 		let deletedName = venueName?.deleted(from: .venues)
 		if var name = deletedName ?? venueName?
 			.normalized(from: .venues)
@@ -60,11 +60,11 @@ public struct Event: Decodable {
 			.replacingOccurrences(of: "(HS|H\\.S\\.)", with: "High School", options: .regularExpression)
 			.replacingOccurrences(of: "State$", with: "State University", options: .regularExpression)
 			.replacingOccurrences(of: " ([A-Z]) ", with: " $1. ", options: .regularExpression) {
-
+			
 			if !name.contains(" at ") {
 				name = name.replacingOccurrences(of: "^(.*) (High School|College|University).*$", with: "$1 $2 Stadium at $1 $2", options: .regularExpression)
 			}
-
+			
 			let components = name.components(separatedBy: " at ")
 			if let host = String.inserted(for: name.normalized(from: .venues), from: .venues) {
 				venueHost = host
@@ -77,7 +77,7 @@ public struct Event: Decodable {
 		} else {
 			venueHost = nil
 		}
-
+		
 		self.name = name
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "  ", with: " ")

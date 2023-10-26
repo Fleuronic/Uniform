@@ -30,31 +30,31 @@ public struct Schedule: Decodable {
 		if let featureName = unitName.deleted(from: .corps) {
 			let components = featureName.components(separatedBy: " – ")
 			let name = components.count > 1 ? components[0].normalized(from: .features) + " – " + components[1] : featureName
-
+			
 			feature = .init(name: name)
 			corps = nil
 		} else if featureNames.contains(where: unitName.contains) {
 			let components = unitName.components(separatedBy: " – ")
 			var featureName = components[0].normalized(from: .features)
 			var corpsName = components.count > 1 ? components[1].normalized(from: .corps) : nil
-
+			
 			if featureName.deleted(from: .features) != nil {
 				(featureName, corpsName) = (corpsName!, nil)
 			} else if let name = corpsName, featureNames.contains(where: name.contains) {
 				(featureName, corpsName) = (name, featureName)
 			}
-
+			
 			feature = .init(name: featureName)
 			corps = corpsName.map(Corps.init)
 		} else {
 			feature = nil
 			corps = .init(name: unitName.normalized(from: .corps))
 		}
-
+		
 		self.displayCity = corps.flatMap {
 			.inserted(for: $0.name, from: .locations) ?? displayCity?.normalized(from: .locations)
 		}
-
+		
 		time = timeString.map {
 			let components: [String]
 			if $0.contains(" - ") {
@@ -66,7 +66,7 @@ public struct Schedule: Decodable {
 			} else {
 				components = []
 			}
-
+			
 			if components.isEmpty {
 				return $0.contains("M") ? $0 : "\($0) PM"
 			} else {

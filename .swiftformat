@@ -2,6 +2,7 @@
 
 --enable indent
 --enable isEmpty
+--enable consecutiveBlankLines
 
 --indent tab
 --tabwidth 4
