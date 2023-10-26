@@ -39,17 +39,17 @@ edits:
   Videoboard Feature – Univ. of Arkansas Percussion: Videoboard Feature – University of Arkansas Percussion
   Videoboard Featured Performance: Videoboard Feature
   # Multiple
-  ? [Awards, Award Ceremony]
-  : Awards Ceremony
-  ? [Intermission (40 Minutes), Intermission (34 minutes), Intermission – 30 minutes, Halftime]
+  [Awards, Award Ceremony]: Awards Ceremony
+  ? [
+      Intermission (40 Minutes),
+      Intermission (34 minutes),
+      Intermission – 30 minutes,
+      Halftime
+    ]
   : Intermission
-  ? [On Field Encore, The Cadets - Encore]
-  : Encore
-  ? [Pre-show, Pre-show Entertainment]
-  : Pre-Show Entertainment
-  ? [Retreat, Drum Major Retreat - Scores Announced]
-  : Scores Announced
-  ? [Welcome, Welcome and National Anthem]
-  : Welcome & National Anthem
+  [On Field Encore, The Cadets - Encore]: Encore
+  [Pre-show, Pre-show Entertainment]: Pre-Show Entertainment
+  [Retreat, Drum Major Retreat - Scores Announced]: Scores Announced
+  [Welcome, Welcome and National Anthem]: Welcome & National Anthem
 deletions:
   - Drum Major Retreat

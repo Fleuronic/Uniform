@@ -38,14 +38,17 @@ insertions:
   U.S. Coast Guard Auxiliary Band Arizona: Mesa, AZ
   Vessel: San Dimas, CA
   # Multiple
-  ? [U.S. Marine Drum & Bugle Corps, U.S. Marine Silent Drill Platoon, U.S. Marine Brass Ensemble, U.S. Army Band]
+  ? [
+      U.S. Marine Drum & Bugle Corps,
+      U.S. Marine Silent Drill Platoon,
+      U.S. Marine Brass Ensemble,
+      U.S. Army Band
+    ]
   : Washington, DC
-  ? [The Cadets, Lake Erie Sound]
-  : Erie, PA
-  ? [The Academy, The Academy Summer Youth Guard]
-  : Tempe, AZ
-  ? [Marian University Marching Band, University of Indianapolis Pep Band]
-  : Indianapolis, IN
+  [The Cadets, Lake Erie Sound]: Erie, PA
+  [The Academy, The Academy Summer Youth Guard]: Tempe, AZ
+  [Marian University Marching Band, University of Indianapolis Pep Band]:
+    Indianapolis, IN
 edits:
   Calgary, Canada: Calgary, AB
   Ft. Worth, TX: Fort Worth, TX

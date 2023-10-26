@@ -28,18 +28,21 @@ edits:
   Univ. of Indianapolis: University of Indianapolis Pep Band
   Zephyrus Drum & Bugle Corps: Zephyrus
   # Multiple
-  ? [Alisal CAN Marching Band, Alisal CAN Marching Band & Drum Corps]
-  : Alisal Community Arts Network Marching Band
-  ? [IMPACT Drum & Bugle Corps, Impact, Impact of Orlando]
-  : IMPACT
-  ? [U.S. Marines Drum and Bugle Corps, United States Marine Drum & Bugle Corp, "Commandant's Own Marine Drum & Bugle"]
+  [Alisal CAN Marching Band, Alisal CAN Marching Band & Drum Corps]:
+    Alisal Community Arts Network Marching Band
+  [IMPACT Drum & Bugle Corps, Impact, Impact of Orlando]: IMPACT
+  ? [
+      U.S. Marines Drum and Bugle Corps,
+      United States Marine Drum & Bugle Corp,
+      Commandant's Own Marine Drum & Bugle
+    ]
   : U.S. Marine Drum & Bugle Corps
 deletions:
-- ','
-- Crossmen & Spirit of Atlanta
-- DrumLine Battle
-- Bluecoats Trombone Quartet
-- Sextet
-- Special
-- The Cavaliers and The Cavaliers Alumni
-- Video
+  - ","
+  - Crossmen & Spirit of Atlanta
+  - DrumLine Battle
+  - Bluecoats Trombone Quartet
+  - Sextet
+  - Special
+  - The Cavaliers and The Cavaliers Alumni
+  - Video

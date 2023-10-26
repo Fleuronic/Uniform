@@ -12,7 +12,7 @@ edits:
   Drums Along the Mississippi River: Drums Along the Mississippi
   Fiesta De Musica: Fiesta de Musica
   Innovations In Brass: Innovations in Brass
-  'Innovations in Brass: Akron, The 2014 DCI Tour Premiere': 'Innovations in Brass: Akron'
+  "Innovations in Brass: Akron, The 2014 DCI Tour Premiere": "Innovations in Brass: Akron"
   Music On The March: Music on the March
   Pacific Proscession: Pacific Procession
   River City Rhapsody – La Crosse WI: River City Rhapsody – La Crosse
@@ -26,25 +26,45 @@ edits:
   Tournament Of Drums: Tournament of Drums
   WDBJ-7 Summer Music Games of Southwest Virginia: Summer Music Games of Southwest Virginia
   # Multiple
-  ? [Corps at the Crest San Diego, Corps at the Crest San Diego ]
-  : Corps at the Crest – San Diego
-  ? [CYO Nationals, CYO NATIONALS Tribute]
-  : CYO Nationals Tribute
-  ? [DCI Atlanta Southeastern Championship, The DCI Atlanta Southeastern Championship]
+  [Corps at the Crest San Diego, Corps at the Crest San Diego]:
+    Corps at the Crest – San Diego
+  [CYO Nationals, CYO NATIONALS Tribute]: CYO Nationals Tribute
+  ? [
+      DCI Atlanta Southeastern Championship,
+      The DCI Atlanta Southeastern Championship
+    ]
   : DCI Southeastern Championship
-  ? [DCI Capital Classic Corps Show, DCI Capitol Classic Corps Show]
-  : DCI Capital Classic
-  ? [DCI Open Class World Championships Finals, DCI Championships Open Class Championship Finals, DCI World Championships Open Class Championship Finals]
+  [DCI Capital Classic Corps Show, DCI Capitol Classic Corps Show]:
+    DCI Capital Classic
+  ? [
+      DCI Open Class World Championships Finals,
+      DCI Championships Open Class Championship Finals,
+      DCI World Championships Open Class Championship Finals
+    ]
   : DCI Open Class World Championship Finals
-  ? [DCI Open Class World Championships Prelims, DCI World Championships Open Class Championship Prelims]
+  ? [
+      DCI Open Class World Championships Prelims,
+      DCI World Championships Open Class Championship Prelims
+    ]
   : DCI Open Class World Championship Prelims
-  ? [DCI World Championships Finals, DCI World Championship World Class Finals, DCI World Championships World Class Finals]
+  ? [
+      DCI World Championships Finals,
+      DCI World Championship World Class Finals,
+      DCI World Championships World Class Finals
+    ]
   : DCI World Championship Finals
-  ? [DCI World Championships Prelims, DCI Championships (Prelims)]
-  : DCI World Championship Prelims
-  ? [Diablo Valley Classic Pacific Open Class Championship, Diablo Valley Classic Pacific Open Class Championship Finals]
+  [DCI World Championships Prelims, DCI Championships (Prelims)]:
+    DCI World Championship Prelims
+  ? [
+      Diablo Valley Classic Pacific Open Class Championship,
+      Diablo Valley Classic Pacific Open Class Championship Finals
+    ]
   : Diablo Valley Classic
-  ? [So Cal Classic, So Cal Classic Open Class Championship, So Cal Classic Open Class Championships]
+  ? [
+      So Cal Classic,
+      So Cal Classic Open Class Championship,
+      So Cal Classic Open Class Championships
+    ]
   : SoCal Classic
-  ? [The Beanpot, The Beanpot Invitational – A DCI/DCA split event!]
-  : The Beanpot Invitational
+  [The Beanpot, The Beanpot Invitational – A DCI/DCA split event!]:
+    The Beanpot Invitational

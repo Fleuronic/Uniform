@@ -67,8 +67,7 @@ insertions:
   Wheelock Stadium: Riverside City College
   Wildcat Stadium: Indiana Wesleyan University
   # Multiple
-  ? [Allegacy Federal Credit Union Stadium, BB&T Field]
-  : Wake Forest University
+  [Allegacy Federal Credit Union Stadium, BB&T Field]: Wake Forest University
 edits:
   # Single
   Alta High School Stadium: Hawk Fieldhouse
@@ -129,8 +128,7 @@ edits:
   Williams Stadium: Don and Nona Williams Stadium
   Zionsville Community High School Stadium: Zionsville Football Stadium
   # Multiple
-  ? [Johnny "Red" Floyd Stadium, MTSU Stadium]
-  : Johnny “Red” Floyd Stadium
+  [Johnny "Red" Floyd Stadium, MTSU Stadium]: Johnny “Red” Floyd Stadium
 deletions:
   - Empower Field at Mile High
   - The Dome at America's Center
