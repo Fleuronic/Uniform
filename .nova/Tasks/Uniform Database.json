@@ -3,6 +3,10 @@
     "build" : {
       "enabled" : true,
       "script" : "#!\/bin\/sh\nswift build --package-path Submodules\/UniformDatabase"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nswift package update"
     }
   }
 }

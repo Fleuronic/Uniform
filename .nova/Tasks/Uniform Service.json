@@ -3,6 +3,10 @@
     "build" : {
       "enabled" : true,
       "script" : "#!\/bin\/sh\nswift build --package-path Submodules\/UniformService"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nswift package update"
     }
   }
 }
