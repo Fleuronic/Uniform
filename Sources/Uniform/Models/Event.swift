@@ -16,6 +16,7 @@ public struct Event: Decodable {
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		let name: String
+		var venueAddress: String?
 		var venueName: String?
 		var venueCity: String
 		
@@ -27,7 +28,7 @@ public struct Event: Decodable {
 			name = try container.decode(String.self, forKey: .name)
 			slug = try container.decode(String.self, forKey: .slug)
 			startDate = try container.decode(String.self, forKey: .startDate)
-			venueAddress = try container.decodeIfPresent(String.self, forKey: .venueAddress) ?? venueContainer!.decode(String.self, forKey: .address)
+			venueAddress = try container.decodeIfPresent(String.self, forKey: .venueAddress) ?? venueContainer?.decode(String.self, forKey: .address)
 			venueZIP = try container.decodeIfPresent(String.self, forKey: .venueZIP) ?? venueContainer?.decode(String.self, forKey: .zipCode)
 			venueCity = try container.decodeIfPresent(String.self, forKey: .venueCity) ?? container.decode(String.self, forKey: .locationCity)
 			venueState = try container.decodeIfPresent(String.self, forKey: .venueState) ?? container.decode(String.self, forKey: .locationState)
@@ -89,6 +90,18 @@ public struct Event: Decodable {
 			.replacingOccurrences(of: "(, )?[Pp]resented.*", with: "", options: .regularExpression)
 			.replacingOccurrences(of: "[ \t]+$", with: "", options: .regularExpression)
 			.normalized(from: .shows)
+		self.venueAddress = venueAddress?
+			.replacingOccurrences(of: "Road", with: "Rd")
+			.replacingOccurrences(of: "Lane", with: "Ln")
+			.replacingOccurrences(of: "Drive", with: "Dr")
+			.replacingOccurrences(of: "Place", with: "Pl")
+			.replacingOccurrences(of: "Street", with: "St")
+			.replacingOccurrences(of: "Avenue", with: "Ave")
+			.replacingOccurrences(of: "Highway", with: "Hwy")
+			.replacingOccurrences(of: "Parkway", with: "Pkwy")
+			.replacingOccurrences(of: "Boulevard", with: "Blvd")
+			.replacingOccurrences(of: "(\\.| \\(.*\\))", with: "", options: .regularExpression)
+			.normalized(from: .addresses)
 		self.venueName = venueName?
 			.replacingOccurrences(of: "'", with: "’")
 			.normalized(from: .venues)
