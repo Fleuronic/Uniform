@@ -4,6 +4,7 @@ public struct Event: Decodable {
 	public let name: String
 	public let slug: String
 	public let startDate: String
+	public let startTime: String?
 	public let timeZone: String?
 	public let venueAddress: String?
 	public let venueZIP: String?
@@ -28,6 +29,7 @@ public struct Event: Decodable {
 			name = try container.decode(String.self, forKey: .name)
 			slug = try container.decode(String.self, forKey: .slug)
 			startDate = try container.decode(String.self, forKey: .startDate)
+			startTime = try container.decodeIfPresent(String.self, forKey: .startTime)
 			venueAddress = try container.decodeIfPresent(String.self, forKey: .venueAddress) ?? venueContainer?.decode(String.self, forKey: .address)
 			venueZIP = try container.decodeIfPresent(String.self, forKey: .venueZIP) ?? venueContainer?.decode(String.self, forKey: .zipCode)
 			venueCity = try container.decodeIfPresent(String.self, forKey: .venueCity) ?? container.decode(String.self, forKey: .locationCity)
@@ -43,6 +45,7 @@ public struct Event: Decodable {
 			name = try container.decode(String.self, forKey: .eventName).normalized(from: .shows)
 			slug = try container.decode(String.self, forKey: .slug)
 			startDate = dateComponents[0]
+			startTime = try container.decodeIfPresent(String.self, forKey: .startTime)
 			timeZone = nil
 			venueAddress = nil
 			venueZIP = nil
@@ -117,6 +120,7 @@ private extension Event {
 		case slug
 		case date
 		case startDate
+		case startTime
 		case timeZone
 		case venueAddress
 		case venueZIP

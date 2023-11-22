@@ -72,7 +72,8 @@ public struct Schedule: Decodable {
 			} else {
 				let index = Int(components[0])!
 				let time = components[1]
-				let amPM = index <= 2 ? "AM" : "PM"
+				let hour = Int(time.components(separatedBy: ":")[0].replacingOccurrences(of: " ", with: ""))!
+				let amPM = (hour < 12) && index <= 12 ? "AM" : "PM"
 				return time.contains(" ") ? time : "\(time) \(amPM)"
 			}
 		}
