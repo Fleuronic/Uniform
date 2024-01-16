@@ -6,7 +6,25 @@
       "location" : "https://github.com/Fleuronic/Diesel.git",
       "state" : {
         "branch" : "main",
-        "revision" : "1a193403ac38da40898798ef6a1b8e28e6c40b2a"
+        "revision" : "302d8cf2dd5b4b2081ab15508bd97659b5d78c63"
+      }
+    },
+    {
+      "identity" : "initmacro",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/LeonardoCardoso/InitMacro.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6b1488c4b540c70e1952dd2ece985dbe266e8964"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax",
+      "state" : {
+        "revision" : "74203046135342e4a4a627476dd6caf8b28fe11b",
+        "version" : "509.0.0"
       }
     },
     {
