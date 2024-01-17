@@ -2,11 +2,12 @@
   "actions" : {
     "build" : {
       "enabled" : true,
-      "script" : "#!\/bin\/sh\nswift build --package-path Submodules\/UniformAPI"
+      "script" : "#!\/bin\/sh\nswift build \\\n--package-path Submodules\/UniformAPI \\\n-Xswiftc \"-target\" \\\n-Xswiftc \"arm64-apple-macosx14.0\""
     },
     "clean" : {
       "enabled" : true,
       "script" : "#!\/bin\/sh\nswift package update"
     }
-  }
+  },
+  "openLogOnRun" : "start"
 }
