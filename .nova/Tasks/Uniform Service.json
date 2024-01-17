@@ -6,7 +6,7 @@
     },
     "clean" : {
       "enabled" : true,
-      "script" : "#!\/bin\/sh\nswift package update"
+      "script" : "#!\/bin\/sh\nswift package update --package-path Submodules\/UniformService"
     }
   },
   "openLogOnRun" : "start"
