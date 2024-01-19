@@ -9,5 +9,5 @@
       "script" : "#!\/bin\/sh\nswift package update"
     }
   },
-  "openLogOnRun" : "start"
+  "openLogOnRun" : "fail"
 }
