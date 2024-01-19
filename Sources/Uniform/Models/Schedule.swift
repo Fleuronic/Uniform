@@ -25,7 +25,7 @@ public struct Schedule: Decodable {
 			.normalized(from: .features)
 		let displayCity = try container.decodeIfPresent(String.self, forKey: .displayCity)
 		let timeString = try container.decodeIfPresent(String.self, forKey: .time)
-
+		
 		let featureNames: [String] = .init(resource: .features)
 		if let featureName = unitName.deleted(from: .corps) {
 			let components = featureName.components(separatedBy: " – ")
