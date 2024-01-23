@@ -8,6 +8,5 @@
       "enabled" : true,
       "script" : "#!\/bin\/sh\nswift package update"
     }
-  },
-  "openLogOnRun" : "fail"
+  }
 }
