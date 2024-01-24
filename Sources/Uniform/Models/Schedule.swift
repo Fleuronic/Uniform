@@ -1,7 +1,7 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
-import struct Diesel.Feature
 import struct Diesel.Corps
+import struct Diesel.Feature
 
 public struct Schedule: Decodable {
 	public let feature: Feature?

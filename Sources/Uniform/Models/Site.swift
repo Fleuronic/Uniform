@@ -51,8 +51,7 @@ public extension Site {
 private extension Site.Domain {
 	var urlString: String {
 		switch self {
-		case .dci:
-			return "https://dci.org"
+		case .dci: "https://dci.org"
 		}
 	}
 
