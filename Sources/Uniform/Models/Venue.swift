@@ -1,5 +1,7 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
-public struct Venue: Decodable {
+import InitMacro
+
+@Init public struct Venue {
 	public let name: String
 }
