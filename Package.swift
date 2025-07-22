@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:6.0
 import PackageDescription
 
 let package = Package(
@@ -12,16 +12,22 @@ let package = Package(
 	products: [
 		.library(
 			name: "Uniform",
-			targets: [
-				"Uniform"
-			]
-		)
+			targets: ["Uniform"]
+		),
 	],
-	dependencies: [],
+	dependencies: [.package(url: "https://github.com/gohanlon/swift-memberwise-init-macro", from: "0.5.2"),],
 	targets: [
 		.target(
 			name: "Uniform",
-			dependencies: []
+			dependencies: [.product(name: "MemberwiseInit", package: "swift-memberwise-init-macro")]
 		)
-	]
+	],
+	swiftLanguageModes: [.v6]
 )
+
+for target in package.targets {
+	target.swiftSettings = [
+		.enableExperimentalFeature("StrictConcurrency"),
+		.enableUpcomingFeature("ExistentialAny")
+	]
+}
