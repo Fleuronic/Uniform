@@ -2,26 +2,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "Diesel",
+	name: "Uniform",
 	platforms: [
-		.iOS(.v13),
-		.macOS(.v10_15),
-		.tvOS(.v13),
-		.watchOS(.v6)
+		.iOS(.v15),
+		.macOS(.v12),
+		.tvOS(.v15),
+		.watchOS(.v8)
 	],
-    products: [
-        .library(
-            name: "Diesel",
-            targets: [
-				"Diesel"
+	products: [
+		.library(
+			name: "Uniform",
+			targets: [
+				"Uniform"
 			]
 		)
-    ],
-    dependencies: [],
-    targets: [
-        .target(
-            name: "Diesel",
-            dependencies: []
+	],
+	dependencies: [],
+	targets: [
+		.target(
+			name: "Uniform",
+			dependencies: []
 		)
-    ]
+	]
 )
