@@ -1,7 +1,7 @@
 import struct DrumKit.Location
 
 public extension Location {
-	static func info(forLocationNamed name: String) -> (String, String, String)? {
+	static func info(for name: String) -> (String, String, String)? {
 		guard 
 			case let components = name.split(separator: " "),
 			let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else { return nil }
