@@ -15,11 +15,17 @@ let package = Package(
 			targets: ["Uniform"]
 		),
 	],
-	dependencies: [.package(url: "https://github.com/gohanlon/swift-memberwise-init-macro", from: "0.5.2"),],
+	dependencies: [
+		.package(url: "https://github.com/Fleuronic/DrumKit", branch: "main"),
+		.package(url: "https://github.com/gohanlon/swift-memberwise-init-macro", from: "0.5.2")
+	],
 	targets: [
 		.target(
 			name: "Uniform",
-			dependencies: [.product(name: "MemberwiseInit", package: "swift-memberwise-init-macro")]
+			dependencies: [
+				"DrumKit",
+				.product(name: "MemberwiseInit", package: "swift-memberwise-init-macro")
+			]
 		)
 	],
 	swiftLanguageModes: [.v6]

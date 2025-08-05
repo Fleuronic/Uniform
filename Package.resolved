@@ -1,6 +1,15 @@
 {
-  "originHash" : "1be46faa0c649579fa742273823967ef5a8b3b99464058a51b9047e72a9caa18",
+  "originHash" : "a601e595c3b903a3a102cddf55ff896a984e692944a99eb7aff7c21e1b438c21",
   "pins" : [
+    {
+      "identity" : "drumkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/DrumKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6a6d60fdc386b006034bfb2bcc82d250f0797b8c"
+      }
+    },
     {
       "identity" : "swift-memberwise-init-macro",
       "kind" : "remoteSourceControl",
