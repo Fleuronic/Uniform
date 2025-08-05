@@ -13,7 +13,7 @@ public extension Circuit {
 		case "VFW": "Veterans of Foreign Wars"
 		case "CAMQ": "Circuit des associations musicales du Québec"
 		case "FAMQ": "Fédération des Associations Musicales du Québec"
-		default: fatalError()
+		default: abbreviation
 		}
 	}
 }
