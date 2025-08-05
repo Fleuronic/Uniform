@@ -1,9 +1,9 @@
 import struct DrumKit.Circuit
 
 public extension Circuit {
-	static func abbreviation(for name: String) -> String {
-		let abbreviation = name.components(separatedBy: "/").first!
-
+	static func abbreviation(for record: String) -> String {
+		let abbreviation = record.components(separatedBy: "/").first!
+	
 		return switch abbreviation {
 		case "", "DCI Division II & III": "DCI"
 		case "American Legion": "AL"
