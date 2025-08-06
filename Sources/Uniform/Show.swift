@@ -3,9 +3,9 @@ import struct DrumKit.Show
 public extension Show {
 	static func name(for record: String) -> String {
 		let name = record
-			.replacingOccurrences(of: " - ", with: " — ")
-			.replacingOccurrences(of: "--", with: "—")
-			.replacingOccurrences(of: "?", with: "—")
+			.replacingOccurrences(of: " - ", with: " – ")
+			.replacingOccurrences(of: "--", with: "–")
+			.replacingOccurrences(of: "?", with: "–")
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "&amp;", with: "&")
 			.replacingOccurrences(of: "SUMMER MUSIC GAMES;", with: "Summer Music Games")
