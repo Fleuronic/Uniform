@@ -8,7 +8,11 @@ public extension Show {
 			.replacingOccurrences(of: "?", with: "—")
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "&amp;", with: "&")
-		return name.components(separatedBy: " presented by ").first!
+			.replacingOccurrences(of: "SUMMER MUSIC GAMES;", with: "Summer Music Games")
+
+		return name
+			.components(separatedBy: " @ ").first!
+			.components(separatedBy: " presented by ").first!
 	}
 
 	static func isValid(with record: String?)  -> Bool {
