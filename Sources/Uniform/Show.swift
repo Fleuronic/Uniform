@@ -11,8 +11,10 @@ public extension Show {
 		return name.components(separatedBy: " presented by ").first!
 	}
 
-	static func isValid(with record: String)  -> Bool {
-		!record.contains("SoundSport") &&
+	static func isValid(with record: String?)  -> Bool {
+		guard let record else { return true }
+		
+		return !record.contains("SoundSport") &&
 			!record.contains("Battle") &&
 			!record.contains("Virtual") &&
 			!record.contains("Rain") &&
