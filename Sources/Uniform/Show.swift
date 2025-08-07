@@ -10,13 +10,14 @@ public extension Show {
 			.replacingOccurrences(of: "&amp;", with: "&")
 			.replacingOccurrences(of: "Jerset", with: "Jersey")
 			.replacingOccurrences(of: "Mid-Cal", with: "MidCal")
+			.replacingOccurrences(of: "Northwest Music Games", with: "Northwest Youth Music Games")
 			.replacingOccurrences(of: "SUMMER MUSIC GAMES;", with: "Summer Music Games")
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
 
 		name = switch name {
 		case "DCI All Age Class Finals": "DCI All-Age World Championship"
-		case "DCI Masters": "Masters of the Summer Music Games"
+		case "DCI Masters": "The Masters of the Summer Music Games"
 		case "DCI Open Class Finals": "DCI Open Class World Championship Finals"
 		case "DCI Open Class Prelims": "DCI Open Class World Championship Prelims"
 		case "DCI World Class Finals": "DCI World Championship Finals"
@@ -26,7 +27,6 @@ public extension Show {
 		case "DCI Southwestern": "DCI Southwestern Championship"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
 		case "March On": "March On!"
-		case "Northwest Music Games": "Northwest Youth Music Games"
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
 		case "Tour Premiere": "Midwest Premiere"
 		default: name
