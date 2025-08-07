@@ -10,13 +10,13 @@ public extension Show {
 			.replacingOccurrences(of: "&amp;", with: "&")
 			.replacingOccurrences(of: "Jerset", with: "Jersey")
 			.replacingOccurrences(of: "Mid-Cal", with: "MidCal")
-			.replacingOccurrences(of: "Northwest Music Games", with: "Northwest Youth Music Games")
 			.replacingOccurrences(of: "SUMMER MUSIC GAMES;", with: "Summer Music Games")
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
 
 		name = switch name {
-		case "DCI All Age Class Finals": "DCI All-Age World Championship Finals"
+		case "DCI All Age Class Finals": "DCI All-Age World Championship"
+		case "DCI Masters": "Masters of the Summer Music Games"
 		case "DCI Open Class Finals": "DCI Open Class World Championship Finals"
 		case "DCI Open Class Prelims": "DCI Open Class World Championship Prelims"
 		case "DCI World Class Finals": "DCI World Championship Finals"
@@ -24,8 +24,11 @@ public extension Show {
 		case "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
 		case "DCI Southeastern": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
+		case "Drums Across the Columbia": "Drums Along the Columbia"
 		case "March On": "March On!"
-		case "The Whitewater Classic": "Whitewater Classic"
+		case "Northwest Music Games": "Northwest Youth Music Games"
+		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
+		case "Tour Premiere": "Midwest Premiere"
 		default: name
 		}
 
@@ -36,21 +39,23 @@ public extension Show {
 		return name
 	}
 
-	static func slug(forShowNamed name: String) -> String {
-		name
+	static func slug(forShowNamed name: String) -> String? {
+		guard isValid(with: name) else { return nil }
+		
+		return name
 			.lowercased()
 			.replacingOccurrences(of: ":", with: "")
-			.replacingOccurrences(of: " - ", with: " ")
+			.replacingOccurrences(of: " – ", with: " ")
 			.replacingOccurrences(of: " ", with: "-")
 	}
 
-	static func isValid(with record: String?)  -> Bool {
-		guard let record else { return true }
-		
-		return !record.contains("SoundSport") &&
-			!record.contains("Battle") &&
-			!record.contains("Virtual") &&
-			!record.contains("Rain") &&
-			!record.contains("Mini Corps")
+	static func isValid(with name: String?)  -> Bool {
+		guard let name else { return true }
+
+		return !name.contains("SoundSport") &&
+			!name.contains("Battle") &&
+			!name.contains("Virtual") &&
+			!name.contains("Rain") &&
+			!name.contains("Mini Corps")
 	}
 }
