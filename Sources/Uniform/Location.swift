@@ -1,9 +1,9 @@
 import struct DrumKit.Location
 
 public extension Location {
-	static func info(for name: String) -> (String, String, String)? {
-		guard 
-			case let components = name.replacingOccurrences(of: ",", with: "").split(separator: " "),
+	static func info(for record: String) -> (String, String, String)? {
+		guard
+			case let components = record.replacingOccurrences(of: ",", with: "").split(separator: " "),
 			let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else { return nil }
 		
 		let city = components[0..<stateIndex].joined(separator: " ")
