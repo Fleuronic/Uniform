@@ -19,9 +19,9 @@ public extension Show {
 		case "DCI All Age Class Finals": "DCI All-Age World Championship Finals"
 		case "DCI Open Class Finals": "DCI Open Class World Championship Finals"
 		case "DCI Open Class Prelims": "DCI Open Class World Championship Prelims"
-		case "DCI World Class Finals": "DCI World Class World Championship Finals"
-		case "DCI World Class Prelims": "DCI World Class World Championship Prelims"
-		case "DCI World Class Semi-Finals": "DCI World Class World Championship Semifinals"
+		case "DCI World Class Finals": "DCI World Championship Finals"
+		case "DCI World Class Prelims": "DCI World Championship Prelims"
+		case "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
 		case "DCI Southeastern": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
 		case "March On": "March On!"
@@ -34,6 +34,14 @@ public extension Show {
 		}
 
 		return name
+	}
+
+	static func slug(forShowNamed name: String) -> String {
+		name
+			.lowercased()
+			.replacingOccurrences(of: ":", with: "")
+			.replacingOccurrences(of: " - ", with: " ")
+			.replacingOccurrences(of: " ", with: "-")
 	}
 
 	static func isValid(with record: String?)  -> Bool {
