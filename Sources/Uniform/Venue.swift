@@ -8,8 +8,7 @@ public extension Venue {
 		}
 
 		var name = components[0]
-
-		let host: String? = switch name {
+		var host: String? = switch name {
 		case "Scheumann Stadium": "Ball State University"
 		case "Canvas Stadium": "Colorado State University"
 		case "Neil F. Lampson Stadium": "Kennewick High School"
@@ -17,10 +16,15 @@ public extension Venue {
 		default: nil
 		}
 		
-		name = switch host {
+		let stadiumName: String? = switch name {
 		case "Shelton High School": "Finn Stadium"
 		case "Cedarburg High School": "Alumni Field"
-		default: name
+		default: nil
+		}
+
+		if let stadiumName {
+			host = name
+			name = stadiumName
 		}
 
 		return (name, host)
