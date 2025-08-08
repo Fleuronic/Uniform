@@ -8,18 +8,23 @@ public extension Venue {
 		}
 
 		var name = components[0]
+			.components(separatedBy: "-")[0]
+			.replacingOccurrences(of: "Cedarburg High School Stadium", with: "Cedarburg High School")
+
 		var host: String? = switch name {
 		case "Scheumann Stadium": "Ball State University"
 		case "Canvas Stadium": "Colorado State University"
 		case "Neil F. Lampson Stadium": "Kennewick High School"
 		case "Hillsboro Stadium": "Portland State University"
+		case "Perkins Stadium": "University of Wisconsin–Whitewater"
+		case "Stanford Stadium": "Stanford University"
 		default: nil
 		}
 		
 		let stadiumName: String? = switch name {
 		case "Shelton High School": "Finn Stadium"
 		case "Cedarburg High School": "Alumni Field"
-		default: nil
+		default: name.hasSuffix("High School") ? "\(name) Stadium" : nil
 		}
 
 		if let stadiumName {
@@ -31,15 +36,6 @@ public extension Venue {
 	}
 }
 
-// "Cedarburg High School Stadium" "Cedarburg High School Stadium" 
-// "Everett Memorial Stadium" "Everett Memorial Stadium" 
-// "Swanson Stadium at Guilford High School Stadium" "Swanson Stadium at Guilford High School" 
-// "Hillsboro Stadium" "Hillsboro Stadium" 
-// "Oxnard High School Stadium" "Oxnard High School" 
-// "Inderkum High School Stadium" "Inderkum High School" 
-// "Perkins Stadium" "Perkins Stadium" 
-// "River Bluff High School-Lexington,SC Stadium" "River Bluff High School-Lexington,SC" 
-// "Stanford Stadium" "Stanford Stadium" 
 // "Veterans Memorial Field Sports Complex Stadium" "Veterans Memorial Field Sports Complex" 
 // "Lon C Burchfield Stadium at Sevier County HS Stadium" "Lon C Burchfield Stadium at Sevier County HS" 
 // "Blakeslee Stadium" "Blakeslee Stadium" 
