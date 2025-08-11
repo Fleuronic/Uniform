@@ -18,6 +18,7 @@ public extension Venue {
 		name = components[0]
 			.components(separatedBy: "-")[0]
 			.replacingOccurrences(of: "HS", with: "High School")
+			.replacingOccurrences(of: "High School Stadium", with: "High School")
 		
 		name = switch name {
 		case "Breitenbach Stadium": "Otto Breitenbach Stadium"
@@ -60,6 +61,7 @@ public extension Venue {
 		case "Otto Breitenbach Stadium": "Middleton High School"
 		case "Perkins Stadium": "University of Wisconsin–Whitewater"
 		case "Rebel Stadium": "Champlin Park High School"
+		case "Rio Rancho Ram Stadium": "Rio Rancho High School"
 		case "Salem Football Stadium": "Salem High School"
 		case "Scheumann Stadium": "Ball State University"
 		case "Sox Harrison Stadium": "Pennsylvania Western University, Edinboro"
