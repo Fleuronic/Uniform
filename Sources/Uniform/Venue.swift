@@ -17,7 +17,7 @@ public extension Venue {
 
 		name = components[0]
 			.components(separatedBy: "-")[0]
-			.replacingOccurrencesOf("HS", with: "High School")
+			.replacingOccurrences(of: "HS", with: "High School")
 		
 		name = switch name {
 		case "Breitenbach Stadium": "Otto Breitenbach Stadium"
@@ -29,8 +29,7 @@ public extension Venue {
 		case "Dwire Field": "Atrium Stadium"
 		case "Lon C Burchfield Stadium": "Lon C. Burchfield Stadium"
 		case "Salem Stadium": "Salem Football Stadium"
-		case "Veterans Memorial "
-		     case "Vikings Stadium": "Northgate Vikings Stadium"
+		case "Vikings Stadium": "Northgate Vikings Stadium"
 		default: name
 		}
 
