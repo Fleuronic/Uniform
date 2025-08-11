@@ -5,7 +5,7 @@ public extension Venue {
 		var name: String
 		var host: String? = nil
 		let components = record
-			.trimmingCharacters(in: .whitespacesAndNewlines)
+			.replacingOccurrences(of: "  ", with: " ")
 			.replacingOccurrences(of: "&amp;", with: "&")
 			.replacingOccurrences(of: " at the ", with: " at ")
 			.components(separatedBy: " at ")
