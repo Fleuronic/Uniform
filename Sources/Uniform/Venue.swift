@@ -2,105 +2,94 @@ import struct DrumKit.Venue
 
 public extension Venue {
 	static func info(for record: String) -> (String, String?) {
-		let components = record.components(separatedBy: " at ")
+		var name: String
+		var host: String? = nil
+		let components = record
+			.trimmingCharacters(in: .whitespacesAndNewlines)
+			.replacingOccurrences(of: "&amp;", with: "&")
+			.replacingOccurrences(of: " at the ", with: " at ")
+			.components(separatedBy: " at ")
+
 		if components.count == 2 {
-			return (components[0], components[1])
+			name = components[0]
+			host = components[1]
 		}
 
-		var name = components[0]
+		name = components[0]
 			.components(separatedBy: "-")[0]
-			.replacingOccurrences(of: "Cedarburg High School Stadium", with: "Cedarburg High School")
+			.replacingOccurrencesOf("HS", with: "High School")
+		
+		name = switch name {
+		case "Breitenbach Stadium": "Otto Breitenbach Stadium"
+		case "Broken Arrow Memorial Stadium": "Tiger Stadium"
+		case "Central High School Stadium": "Central High School Football Stadium"
+		case "Centerville High School Stadium": "Centerville Stadium"
+		case "Champlin Park High School Football Field": "Rebel Stadium"
+		case "Clifton School Stadium": "Clifton Stadium"
+		case "Dwire Field": "Atrium Stadium"
+		case "Lon C Burchfield Stadium": "Lon C. Burchfield Stadium"
+		case "Salem Stadium": "Salem Football Stadium"
+		case "Veterans Memorial "
+		     case "Vikings Stadium": "Northgate Vikings Stadium"
+		default: name
+		}
 
-		var host: String? = switch name {
-		case "Scheumann Stadium": "Ball State University"
+		host = switch name {
+		case "Allegacy Federal Credit Union Stadium": "Wake Forest University"
+		case "Ankeny Stadium": "Northview Middle School"
+		case "Atrium Stadium": "Mason High School"
+		case "Blakeslee Stadium": "Minnesota State University, Mankato"
+		case "Brunswick Auto Mart Stadium": "Brunswick High School"
+		case "Bob Goalby Field": "Belleville West High School"
 		case "Canvas Stadium": "Colorado State University"
-		case "Neil F. Lampson Stadium": "Kennewick High School"
+		case "Cedarburg High School Stadium": "Cedarburg High School"
+		case "Centerville Stadium": "Centerville High School"
+		case "Central High School Football Stadium": "Central High School"
+		case "College Boulevard Activity Center": "Olathe Northwest High School"
+		case "DATCU Stadium": "University of North Texas"
+		case "Dalzell Field": "Clarke University"
+		case "Delaware Stadium": "University of Delaware"
+		case "Georgelis Law Firm Stadium": "Hempfield High School"
+		case "Golden Wave Stadium": "Tupelo High School"
 		case "Hillsboro Stadium": "Portland State University"
+		case "Joan C. Edwards Stadium": "Marshall University"
+		case "Lon C. Burchfield Stadium": "Sevier County High School"
+		case "M. M. Roberts Stadium": "University of Southern Mississippi"
+		case "Marion Harding Football Stadium": "Marion Harding High School"
+		case "Neil F. Lampson Stadium": "Kennewick High School"
+		case "Northgate Vikings Stadium": "Northgate High School"
+		case "Otto Breitenbach Stadium": "Middleton High School"
 		case "Perkins Stadium": "University of Wisconsin–Whitewater"
+		case "Rebel Stadium": "Champlin Park High School"
+		case "Salem Football Stadium": "Salem High School"
+		case "Scheumann Stadium": "Ball State University"
+		case "Sox Harrison Stadium": "Pennsylvania Western University, Edinboro"
 		case "Stanford Stadium": "Stanford University"
-		default: nil
+		case "TDECU Stadium": "University of Houston"
+		case "Tiger Stadium": "Broken Arrow High School"
+		case "Veterans Memorial Stadium": "Lawrence High School"
+		case "Veterans Memorial Field Sports Complex": "University of Wisconsin–La Crosse"
+		case "Wildcat Stadium": "Indiana Wesleyan University"
+		default: host
 		}
 		
 		let stadiumName: String? = switch name {
 		case "Shelton High School": "Finn Stadium"
 		case "Cedarburg High School": "Alumni Field"
+		case "Dover Area High School": "Eagles Stadium"
 		default: name.hasSuffix("High School") ? "\(name) Stadium" : nil
 		}
 
 		if let stadiumName {
 			host = name
 			name = stadiumName
+		} else {
+			host = switch host {
+			case "Texas A&M": "Texas A&M University"
+			default: host
+			}
 		}
 
 		return (name, host)
 	}
 }
-
-// "Veterans Memorial Field Sports Complex Stadium" "Veterans Memorial Field Sports Complex" 
-// "Lon C Burchfield Stadium at Sevier County HS Stadium" "Lon C Burchfield Stadium at Sevier County HS" 
-// "Blakeslee Stadium" "Blakeslee Stadium" 
-// "Vikings Stadium" "Vikings Stadium" 
-// "Memorial Stadium at Bakersfield College Stadium" "Memorial Stadium at Bakersfield College" 
-// "Cougar Stadium at College of Canyons Stadium" "Cougar Stadium at College of Canyons" 
-// "Ankeny Stadium" "Ankeny Stadium" 
-// "Golden Wave Stadium" "Golden Wave Stadium" 
-// "Hilmer Lodge Stadium at Mt. San Antonio College Stadium" "Hilmer Lodge Stadium at Mt. San Antonio College" 
-// "Dalzell Field Stadium" "Dalzell Field" 
-// "Rose Bowl Stadium" "Rose Bowl Stadium" 
-// "Clifton School Stadium" "Clifton School Stadium" 
-// "The Sports Complex at Benedictine University Stadium" "The Sports Complex at Benedictine University" 
-// "War Memorial Stadium" "War Memorial Stadium" 
-// "Buena Park High School Stadium" "Buena Park High School" 
-// "John D. Riggs Stadium at Mesa Community College Stadium" "John D. Riggs Stadium at Mesa Community College" 
-// "College Boulevard Activity Center Stadium" "College Boulevard Activity Center" 
-// "Broken Arrow Memorial Stadium" "Broken Arrow Memorial Stadium" 
-// "Rio Rancho Ram Stadium" "Rio Rancho Ram Stadium" 
-// "Buffalo Stadium at West Texas A&amp;M Stadium" "Buffalo Stadium at West Texas A&amp;M" 
-// "Panther Stadium at Midway High School Stadium" "Panther Stadium at Midway High School" 
-// "DATCU Stadium" "DATCU Stadium" 
-// "TDECU Stadium" "TDECU Stadium" 
-// "Alamodome Stadium" "Alamodome" 
-// "Georgelis Law Firm Stadium" "Georgelis Law Firm Stadium" 
-// "Champlin Park High School Football Field Stadium" "Champlin Park High School Football Field" 
-// "Pennington Field at HEB ISD Stadium" "Pennington Field at HEB ISD" 
-// "McKinney ISD Stadium" "McKinney ISD Stadium" 
-// "Miami Valley South Stadium at Bellbrook High School Stadium" "Miami Valley South Stadium at Bellbrook High School" 
-// "Bob Goalby Field Stadium" "Bob Goalby Field" 
-// "Central High School Stadium" "Central High School Stadium" 
-// "Brunswick Auto Mart Stadium" "Brunswick Auto Mart Stadium" 
-// "M. M. Roberts Stadium" "M. M. Roberts Stadium" 
-// "Breitenbach Stadium" "Breitenbach Stadium" 
-// "Jaguar Stadium at Spain Park High School Stadium" "Jaguar Stadium at Spain Park High School" 
-// "Nissan Stadium" "Nissan Stadium" 
-// "Dover Area High School Stadium" "Dover Area High School" 
-// "Center Parc Stadium" "Center Parc Stadium" 
-// "Roxbury HS Stadium" "Roxbury HS Stadium" 
-// "Huskie Stadium at Northern Illinois University Stadium" "Huskie Stadium at Northern Illinois University" 
-// "War Memorial Field Stadium" "War Memorial Field" 
-// "Allegacy Federal Credit Union Stadium" "Allegacy Federal Credit Union Stadium" 
-// "Norton High School Stadium" "Norton High School Stadium" 
-// "Dwire Field Stadium" "Dwire Field" 
-// "Centerville High School Stadium" "Centerville High School Stadium" 
-// "Delaware Stadium" "Delaware Stadium" 
-// "Doug Shaw Memorial Stadium" "Doug Shaw Memorial Stadium" 
-// "Richard Wackar Stadium at Rowan University Stadium" "Richard Wackar Stadium at Rowan University" 
-// "Salem Stadium" "Salem Stadium" 
-// "Joan C. Edwards Stadium" "Joan C. Edwards Stadium" 
-// "Marion Harding Football Stadium" "Marion Harding Football Stadium" 
-// "Veterans Memorial Stadium" "Veterans Memorial Stadium" 
-// "J. Birney Crum Stadium" "J. Birney Crum Stadium" 
-// "J. Birney Crum Stadium" "J. Birney Crum Stadium" 
-// "STA Stadium at Williamsport Area High School Stadium" "STA Stadium at Williamsport Area High School" 
-// "Lubbers Stadium at Grand Valley State University Stadium" "Lubbers Stadium at Grand Valley State University" 
-// "Walter E. Kottmeyer Stadium at Downingtown West High School Stadium" "Walter E. Kottmeyer Stadium at Downingtown West High School" 
-// "Sox Harrison Stadium" "Sox Harrison Stadium" 
-// "Wildcat Stadium" "Wildcat Stadium" 
-// "Tom Benson Stadium at the Pro Football Hall of Fame Stadium" "Tom Benson Stadium at the Pro Football Hall of Fame" 
-// "Baldwin  High School Stadium" "Baldwin  High School Stadium" 
-// "Wildcat Stadium" "Wildcat Stadium" 
-// "Lucas Oil Stadium" "Lucas Oil Stadium" 
-// "Monument Circle Stadium" "Monument Circle" 
-// "Lucas Oil Stadium" "Lucas Oil Stadium" 
-// "Lucas Oil Stadium" "Lucas Oil Stadium" 
-// "Lucas Oil Stadium" "Lucas Oil Stadium" 
-// "Lucas Oil Stadium" "Lucas Oil Stadium" 
