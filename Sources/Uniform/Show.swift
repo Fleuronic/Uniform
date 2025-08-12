@@ -45,6 +45,8 @@ public extension Show {
 		return name
 			.lowercased()
 			.replacingOccurrences(of: ":", with: "")
+			.replacingOccurrences(of: "!", with: "")
+			.replacingOccurrences(of: ".", with: "")
 			.replacingOccurrences(of: " – ", with: " ")
 			.replacingOccurrences(of: " ", with: "-")
 	}
