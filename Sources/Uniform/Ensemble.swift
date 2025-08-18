@@ -4,7 +4,7 @@ public extension Ensemble {
 	typealias Info = (String, String?)
 
 	static func info(for record: String) -> Info? {
-		let components = record.split(separator: " - ")
+		let components = record.components(separatedBy: " - ")
 		let name = components[0]
 		let ensembles = [
 			"Alisal Union School District All-Star Academy",
