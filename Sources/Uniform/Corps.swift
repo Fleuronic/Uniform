@@ -1,7 +1,7 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
 import MemberwiseInit
-import DrumKit.Corps
+import struct DrumKit.Corps
 
 @MemberwiseInit(.public)
 public struct Corps: Equatable, Sendable {
