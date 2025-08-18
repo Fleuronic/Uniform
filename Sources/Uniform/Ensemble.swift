@@ -1,7 +1,11 @@
 import struct DrumKit.Ensemble
 
 public extension Ensemble {
-	static func name(for record: String) -> String? {
+	typealias Info = (String, String?)
+
+	static func info(for record: String) -> Info? {
+		let components = record.split(separator: " - ")
+		let name = components[0]
 		let ensembles = [
 			"Alisal Union School District All-Star Academy",
 			"Alisal Union School District Marching Band",
@@ -14,13 +18,19 @@ public extension Ensemble {
 			"Lutheran Vanguard",
 			"Minnesota State University Clinic Band",
 			"One More Time Around Again Marching Band",
+			"PHANtastic",
 			"Rocky Mountain Brassworks",
 			"Rosemont King Cobras",
 			"Sound Wave",
 			"Sound of Sun Prairie",
 			"Sparta Ignite"
 		]
-		
-		return ensembles.contains(record) ? record : nil
+
+		if ensembles.contains(name)  {
+			let location = components.count > 1 ? components[1] : nil
+			return (name, location)
+		} else {
+			return nil
+		}
 	}
 }
