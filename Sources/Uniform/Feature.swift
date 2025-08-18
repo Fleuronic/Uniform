@@ -12,6 +12,6 @@ public extension Feature {
 			"Welcome & National Anthem"
 		]
 		
-		return features.contains(record) ? record : nil
+		return features.first { record.contains($0) }
 	}
 }

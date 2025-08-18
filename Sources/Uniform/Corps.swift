@@ -12,8 +12,11 @@ public struct Corps: Equatable, Sendable {
 public extension DrumKit.Corps {
 	typealias Info = (String, String)
 
-	static func info(for record: String) -> Info {
-		let components = record.components(separatedBy: " - ")
+	static func info?(for record: String) -> Info? {
+		guard 
+			case let components = record.components(separatedBy: " - "),
+			components.count == 2 else { return nil }
+		
 		let name = components[0]
 		let location = components[1]
 
