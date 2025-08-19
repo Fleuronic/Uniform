@@ -23,6 +23,7 @@ public extension Ensemble {
 			"Buccaneer Banner Brass",
 			"DrumSpirit",
 			"Experience",
+			"High School",
 			"Lake Erie Sound",
 			"Lutheran Vanguard",
 			"PHANtastic",
