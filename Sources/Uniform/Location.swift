@@ -14,6 +14,11 @@ public extension Location {
 			return ("Dadizele", "West Flanders", "Belgium")
 		}
 
+		switch record {
+		case "Washington, D.C.": ("Washington", "D.C.", "United States")
+		default: break
+		}
+
 		guard
 			case let components = record.replacingOccurrences(of: ",", with: "").split(separator: " "),
 			let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else { return nil }
