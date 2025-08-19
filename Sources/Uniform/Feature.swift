@@ -13,6 +13,6 @@ public extension Feature {
 			"Welcome"
 		]
 		
-		return features.contains(record.contains) ? record : nil
+		return features.contains(where: record.contains) ? record : nil
 	}
 }
