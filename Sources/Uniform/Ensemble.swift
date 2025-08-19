@@ -6,6 +6,7 @@ public extension Ensemble {
 	static func info(for record: String) -> Info? {
 		let components = record.components(separatedBy: " - ")
 		var name = components[0]
+			.replacingOccurrences(of: " Performance", with: "")
 
 		name = switch name {
 		case "Sound Wave Sounders FC": "Sound Wave"
