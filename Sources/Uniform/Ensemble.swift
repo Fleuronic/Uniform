@@ -5,7 +5,13 @@ public extension Ensemble {
 
 	static func info(for record: String) -> Info? {
 		let components = record.components(separatedBy: " - ")
-		let name = components[0]
+		var name = components[0]
+
+		name = switch name {
+		case "Sound Wave Sounders FC": "Sound Wave"
+		default: name
+		}
+
 		let ensembles = [
 			"Alisal Union School District All-Star Academy",
 			"Alisal Union School District Marching Band",

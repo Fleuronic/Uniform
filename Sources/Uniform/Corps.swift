@@ -23,6 +23,7 @@ public extension DrumKit.Corps {
 
 		name = switch name {
 		case "Conquest Drum & Bugle Corps": "Conquest"
+		case "Hurricanes": "Connecticut Hurricanes"
 		default: name
 		}
 
