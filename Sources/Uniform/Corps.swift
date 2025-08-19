@@ -17,8 +17,14 @@ public extension DrumKit.Corps {
 			case let components = record.components(separatedBy: " - "),
 			components.count == 2 else { return nil }
 		
-		let name = components[0]
+		var name = components[0]
+			.replacingOccurrences(of: "The ", with: "")
 		let location = components[1]
+
+		name = switch name {
+		case "Conquest Drum & Bugle Corps": "Conquest"
+		default: name
+		}
 
 		return (name, location)
 	}
