@@ -3,16 +3,16 @@ import struct DrumKit.Feature
 public extension Feature {
 	static func name(for record: String) -> String? {
 		let features = [
-			"Blue Knights Awards Presentation",
+			"Award",
 			"Encore",
 			"Gates Open",
 			"Intermission",
 			"Opening Remarks",
 			"Retreat",
 			"Scores Announced",
-			"Welcome & National Anthem"
+			"Welcome"
 		]
 		
-		return features.first { record.contains($0) }
+		return features.contains(record.contains) ? record : nil
 	}
 }
