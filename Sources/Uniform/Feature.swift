@@ -4,12 +4,14 @@ public extension Feature {
 	static func name(for record: String) -> String? {
 		let features = [
 			"Award",
+			"Ceremony",
+			"Championship",
 			"Encore",
 			"Gates Open",
 			"Intermission",
 			"Opening Remarks",
 			"Retreat",
-			"Scores Announced",
+			"Score",
 			"Welcome"
 		]
 		

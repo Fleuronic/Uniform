@@ -9,6 +9,7 @@ public extension Ensemble {
 			.replacingOccurrences(of: " Performance", with: "")
 
 		name = switch name {
+		case "High School 57": "Beijing 57 High School"
 		case "Black Star DrumLine": "Black Star Drum Line"
 		case "Sound Wave Sounders FC": "Sound Wave"
 		default: name

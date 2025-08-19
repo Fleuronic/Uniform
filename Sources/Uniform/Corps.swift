@@ -13,6 +13,10 @@ public extension DrumKit.Corps {
 	typealias Info = (String, String)
 
 	static func info(for record: String) -> Info? {
+		if record.contains("Marine") {
+			return ("U.S. Marine Drum & Bugle Corps", "Washington, D.C.")
+		}
+
 		guard 
 			case let components = record.components(separatedBy: " - "),
 			components.count == 2 else { return nil }
