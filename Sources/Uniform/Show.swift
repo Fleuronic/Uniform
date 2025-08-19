@@ -56,6 +56,7 @@ public extension Show {
 
 		return !name.contains("SoundSport") &&
 			!name.contains("Battle") &&
+			!name.contains("Education") &&
 			!name.contains("Virtual") &&
 			!name.contains("Rain") &&
 			!name.contains("Mini Corps")

@@ -16,7 +16,7 @@ public extension Ensemble {
 		}
 
 		let ensembles = [
-			"Academy",
+			"Alisal",
 			"Band",
 			"BKXperience",
 			"Black Star Drum Line",

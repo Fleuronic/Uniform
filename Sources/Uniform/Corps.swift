@@ -22,7 +22,8 @@ public extension DrumKit.Corps {
 			components.count == 2 else { return nil }
 		
 		var name = components[0]
-			.replacingOccurrences(of: "The ", with: "")
+			.replacingOccurrences(of: "The Cadets", with: "Cadets")
+			.replacingOccurrences(of: "The Cavaliers", with: "Cavaliers")
 			.replacingOccurrences(of: " Drum & Bugle Corps", with: "")
 		let location = components[1]
 
