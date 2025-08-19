@@ -7,6 +7,7 @@ public extension Feature {
 			"Encore",
 			"Gates Open",
 			"Intermission",
+			"Opening Remarks",
 			"Retreat",
 			"Scores Announced",
 			"Welcome & National Anthem"

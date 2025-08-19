@@ -9,22 +9,19 @@ public extension Ensemble {
 			.replacingOccurrences(of: " Performance", with: "")
 
 		name = switch name {
+		case "Black Star DrumLine": "Black Star Drum Line"
 		case "Sound Wave Sounders FC": "Sound Wave"
 		default: name
 		}
 
 		let ensembles = [
-			"Alisal Union School District All-Star Academy",
-			"Alisal Union School District Marching Band",
-			"BANDtastic Honor Band",
+			"Academy",
+			"Band",
 			"BKXperience",
-			"Bands of America & Carolina Crown",
+			"Black Star Drum Line",
 			"Bram Brata Steel Drums",
-			"Columbians Experience",
-			"Green Beret Marching Band",
+			"Experience",
 			"Lutheran Vanguard",
-			"Minnesota State University Clinic Band",
-			"One More Time Around Again Marching Band",
 			"PHANtastic",
 			"Rocky Mountain Brassworks",
 			"Rosemont King Cobras",
@@ -33,7 +30,7 @@ public extension Ensemble {
 			"Sparta Ignite"
 		]
 
-		if ensembles.contains(name)  {
+		if ensembles.contains(where: name.contains) {
 			let location = components.count > 1 ? components[1] : nil
 			return (name, location)
 		} else {
