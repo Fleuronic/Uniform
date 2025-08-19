@@ -15,7 +15,7 @@ public extension Location {
 		}
 
 		switch record {
-		case "Washington, D.C.": ("Washington", "D.C.", "United States")
+		case "Washington, D.C.": return ("Washington", "D.C.", "United States")
 		default: break
 		}
 
