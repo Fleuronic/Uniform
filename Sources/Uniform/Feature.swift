@@ -19,6 +19,8 @@ public extension Feature {
 		
 		return if features.contains(where: record.contains) {
 			record
+				.components(separatedBy: " - ")
+				.first!
 				.replacingOccurrences(of: "Award ", with: "Awards")
 		} else { nil }
 	}
