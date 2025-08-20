@@ -25,6 +25,7 @@ public extension Ensemble {
 			"Black Star Drum Line",
 			"Bram Brata Steel Drums",
 			"Buccaneer Banner Brass",
+			"Central Florida Sounds of Freedom",
 			"DrumSpirit",
 			"Experience",
 			"High School",
