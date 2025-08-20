@@ -12,6 +12,7 @@ public extension Feature {
 			"Giveaway",
 			"Intermission",
 			"Opening Remarks",
+			"Pre-show",
 			"Retreat",
 			"Score",
 			"Welcome"
@@ -19,13 +20,13 @@ public extension Feature {
 		
 		return if features.contains(where: record.contains) {
 			record
-				.components(separatedBy: " - ")
-				.first!
 				.replacingOccurrences(of: "Encore- ", with: "Encore - ")
 				.replacingOccurrences(of: "Encore: ", with: "Encore - ")
 				.replacingOccurrences(of: " and ", with: " & ")
 				.replacingOccurrences(of: "Award ", with: "Awards")
 				.replacingOccurrences(of: "AwardsCeremony", with: "Awards Ceremony")
+				.components(separatedBy: " - ")
+				.first!
 		} else { nil }
 	}
 }

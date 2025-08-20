@@ -39,7 +39,8 @@ public extension Ensemble {
 			"Sound of Sun Prairie",
 			"Sparta Ignite",
 			"Spirit of Sunnyvale",
-			"The Cavaliers and The Cavaliers Alumni"
+			"The Cavaliers and The Cavaliers Alumni",
+			"Troopers & Legacy Corps"
 		]
 
 		if ensembles.contains(where: name.contains) {
