@@ -22,9 +22,13 @@ public extension DrumKit.Corps {
 			components.count == 2 else { return nil }
 		
 		var name = components[0]
-			.replacingOccurrences(of: "The Cadets", with: "Cadets")
-			.replacingOccurrences(of: "The Cavaliers", with: "Cavaliers")
+			.replacingOccurrences(of: "Blue Stars 60th Anniv. Corps", with: "Blue Stars 60th Alumni Corps")
+			.replacingOccurrences(of: "New York Skyliners", with: "Skyliners")
+			.replacingOccurrences(of: "Phantom Regiment Alumni Association", with: "Phantom Regiment Alumni Corps")
+			.replacingOccurrences(of: "Sacramento Freelancers Alumni", with: "Freelancers Alumni")
+			.replacingOccurrences(of: "The Colts", with: "Colts")
 			.replacingOccurrences(of: " Drum & Bugle Corps", with: "")
+			.replacingOccurrences(of: " Drum and Bugle Corps", with: "")
 		let location = components[1]
 
 		name = switch name {

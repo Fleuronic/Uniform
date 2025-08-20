@@ -21,7 +21,11 @@ public extension Feature {
 			record
 				.components(separatedBy: " - ")
 				.first!
+				.replacingOccurrences(of: "Encore- ", with: "Encore - ")
+				.replacingOccurrences(of: "Encore: ", with: "Encore - ")
+				.replacingOccurrences(of: " and ", with: " & ")
 				.replacingOccurrences(of: "Award ", with: "Awards")
+				.replacingOccurrences(of: "AwardsCeremony", with: "Awards Ceremony")
 		} else { nil }
 	}
 }

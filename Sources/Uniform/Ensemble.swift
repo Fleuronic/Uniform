@@ -9,13 +9,15 @@ public extension Ensemble {
 			.replacingOccurrences(of: " Performance", with: "")
 
 		name = switch name {
-		case "High School 57": "Beijing 57 High School"
+		case "Banner Brass": "Buccaneer Banner Brass"
 		case "Black Star DrumLine": "Black Star Drum Line"
+		case "High School 57": "Beijing 57 High School"
 		case "Sound Wave Sounders FC": "Sound Wave"
 		default: name
 		}
 
 		let ensembles = [
+			"& Alumni",
 			"Alisal",
 			"Band",
 			"BKXperience",
@@ -35,7 +37,9 @@ public extension Ensemble {
 			"Showband",
 			"Sound Wave",
 			"Sound of Sun Prairie",
-			"Sparta Ignite"
+			"Sparta Ignite",
+			"Spirit of Sunnyvale",
+			"The Cavaliers and The Cavaliers Alumni"
 		]
 
 		if ensembles.contains(where: name.contains) {
