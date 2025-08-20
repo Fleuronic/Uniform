@@ -17,7 +17,7 @@ public extension Feature {
 			"Welcome"
 		]
 		
-		if features.contains(where: record.contains) {
+		return if features.contains(where: record.contains) {
 			record
 				.replacingOccurrences(of: "Award ", with: "Awards")
 		} else { nil }
