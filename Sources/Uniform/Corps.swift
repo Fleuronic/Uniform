@@ -23,6 +23,8 @@ public extension DrumKit.Corps {
 		
 		var name = components[0]
 			.replacingOccurrences(of: "Blue Stars 60th Anniv. Corps", with: "Blue Stars 60th Alumni Corps")
+			.replacingOccurrences(of: "Impact of Orlando", with: "IMPACT")
+			.replacingOccurrences(of: "Inbhear Mor", with: "Inbhear Mór")
 			.replacingOccurrences(of: "New York Skyliners", with: "Skyliners")
 			.replacingOccurrences(of: "Phantom Regiment Alumni Association", with: "Phantom Regiment Alumni Corps")
 			.replacingOccurrences(of: "Sacramento Freelancers Alumni", with: "Freelancers Alumni")

@@ -13,6 +13,7 @@ public extension Ensemble {
 		case "Black Star DrumLine": "Black Star Drum Line"
 		case "High School 57": "Beijing 57 High School"
 		case "Sound Wave Sounders FC": "Sound Wave"
+		case "Spirit of Sunyvale SoundSport: "Spirit of Sunnyvale"
 		default: name
 		}
 

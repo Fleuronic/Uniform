@@ -12,6 +12,8 @@ public extension Location {
 			return ("Haidian", "Beijing", "China")
 		} else if record.contains("Dadizele") {
 			return ("Dadizele", "West Flanders", "Belgium")
+		} else if record.contains("Arklow") {
+			return ("Arklow", "Co. Wicklow", "Ireland")
 		}
 
 		switch record {
