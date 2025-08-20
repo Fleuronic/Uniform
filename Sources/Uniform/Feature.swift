@@ -12,9 +12,11 @@ public extension Feature {
 			"Giveaway",
 			"Intermission",
 			"Opening Remarks",
+			"Performance",
 			"Pre-show",
 			"Retreat",
 			"Score",
+			"Video",
 			"Welcome"
 		]
 		
