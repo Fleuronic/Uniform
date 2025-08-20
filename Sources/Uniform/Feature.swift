@@ -17,6 +17,9 @@ public extension Feature {
 			"Welcome"
 		]
 		
-		return features.contains(where: record.contains) ? record.components(separatedBy: " - ")[0] : nil
+		if features.contains(where: record.contains) {
+			record
+				.replacingOccurrences(of: "Award ", with: "Awards")
+		} else { nil }
 	}
 }
