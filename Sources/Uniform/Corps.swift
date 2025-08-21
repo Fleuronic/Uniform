@@ -20,6 +20,7 @@ public extension DrumKit.Corps {
 		switch record {
 		case "Bluecoats Alumni Corps": return (record, "Canton, OH")
 		case "Colts Alumni Corps": return (record, "Dubuque, IA")
+		case "Crossmen Alumni Corps": return (record, "San Antonio, TX")
 		case "Madison Scouts": return (record, "Madison, WI")
 		case "Blue Stars": return (record, "La Crosse, WI")
 		case "Sonus Brass Theater": return (record, "Woodbridge, VA")

@@ -2,10 +2,12 @@ import struct DrumKit.Feature
 
 public extension Feature {
 	static func name(for record: String) -> String? {
-		var record = record
 		if record.contains("Presentation -") {
 			return record.replacingOccurrences(of: " -", with: ":")
 		}
+
+		var record = record
+			.replacingOccurrences(of: "Givaway", with: "Giveaway")
 
 		let features = [
 			"Announcement",
@@ -25,10 +27,12 @@ public extension Feature {
 			"Opening Remarks",
 			"Pre-",
 			"Presentation",
+			"Quintet",
 			"Retreat",
 			"Score",
 			"SoundSport",
 			"Special",
+			"Stadium Closed to Spectators",
 			"Ultimate Drill Book",
 			"University",
 			"Video",
