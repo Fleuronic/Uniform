@@ -24,6 +24,7 @@ public extension Feature {
 			record
 				.replacingOccurrences(of: "Encore- ", with: "Encore - ")
 				.replacingOccurrences(of: "Encore: ", with: "Encore - ")
+				.replacingOccurrences(of: "Entertainment: ", with: "Entertainment - ")
 				.replacingOccurrences(of: " and ", with: " & ")
 				.replacingOccurrences(of: "Award ", with: "Awards")
 				.replacingOccurrences(of: "AwardsCeremony", with: "Awards Ceremony")

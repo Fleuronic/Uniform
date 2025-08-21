@@ -6,11 +6,16 @@ public extension Ensemble {
 	static func info(for record: String) -> Info? {
 		let components = record.components(separatedBy: " - ")
 		var name = components[0]
+			.replacingOccurrences(of: " & Drum Carps", with: "")
 			.replacingOccurrences(of: " Performance", with: "")
+			.replacingOccurrences(of: "Community Arts Network", with: "CAN")
+			.replacingOccurrences(of: "Union School District", with: "USD")
 
 		name = switch name {
+		case "BANDtastic Honor Band", "BANDtastic Canton Honor Band": "BANDtastic! Honor Band"
 		case "Banner Brass": "Buccaneer Banner Brass"
 		case "Black Star DrumLine": "Black Star Drum Line"
+		case "Fairfield High School Marching b": "Fairfield High School Marching Band"
 		case "High School 57": "Beijing 57 High School"
 		case "Sound Wave Sounders FC": "Sound Wave"
 		case "Spirit of Sunyvale SoundSport": "Spirit of Sunnyvale"
