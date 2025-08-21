@@ -7,7 +7,7 @@ public extension Feature {
 		} 
 
 		var record = record
-			.trimmingCharacters(in: .whitespaces)
+			.replacingOccurrences(of: "  ", with: " ")
 			.replacingOccurrences(of: "Age Out", with: "Age-Out")
 			.replacingOccurrences(of: "Drum Line Battle", with: "DrumLine Battle")
 			.replacingOccurrences(of: "Drumline Jam", with: "DrumLine Jam")
