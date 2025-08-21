@@ -7,33 +7,41 @@ public extension Feature {
 		}
 
 		let features = [
+			"Announcement",
 			"Anthem",
 			"Award",
 			"Battle",
 			"Ceremony",
 			"Championship",
 			"Encore",
+			"Exhibition Unit",
 			"Gates Open",
 			"Giveaway",
+			"Hall of Fame",
 			"Intermission",
+			"Kick Start",
 			"Opening Remarks",
-			"Pre-show",
+			"Pre-",
+			"Presentation",
 			"Retreat",
 			"Score",
+			"SoundSport",
 			"Special",
 			"Ultimate Drill Book",
+			"University",
 			"Video",
 			"Welcome"
 		]
 		
 		return if features.contains(where: record.contains) {
 			record
-				.replacingOccurrences(of: "Encore- ", with: "Encore - ")
-				.replacingOccurrences(of: "Encore: ", with: "Encore - ")
-				.replacingOccurrences(of: "Entertainment: ", with: "Entertainment - ")
 				.replacingOccurrences(of: " and ", with: " & ")
 				.replacingOccurrences(of: "Award ", with: "Awards")
 				.replacingOccurrences(of: "AwardsCeremony", with: "Awards Ceremony")
+				.replacingOccurrences(of: "Encore- ", with: "Encore - ")
+				.replacingOccurrences(of: "Encore: ", with: "Encore - ")
+				.replacingOccurrences(of: "Entertainment: ", with: "Entertainment - ")
+				.replacingOccurrences(of: "Pre-show", with: "Pre-Show")
 				.components(separatedBy: " - ")
 				.first!
 		} else { nil }

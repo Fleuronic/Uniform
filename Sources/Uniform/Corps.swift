@@ -19,6 +19,8 @@ public extension DrumKit.Corps {
 
 		switch record {
 		case "Bluecoats Alumni Corps": return (record, "Canton, OH")
+		case "Sonus Brass Theater": return (record, "Woodbridge, VA")
+		case "The Thunder of Roanoke": return (record, "Roanoke, VA")
 		default: break
 		}
 
