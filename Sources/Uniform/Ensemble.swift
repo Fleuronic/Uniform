@@ -6,7 +6,7 @@ public extension Ensemble {
 	static func info(for record: String) -> Info? {
 		let components = record.components(separatedBy: " - ")
 		var name = components[0]
-			.replacingOccurrences(of: " & Drum Carps", with: "")
+			.replacingOccurrences(of: " & Drum Corps", with: "")
 			.replacingOccurrences(of: " Performance", with: "")
 			.replacingOccurrences(of: "Community Arts Network", with: "CAN")
 			.replacingOccurrences(of: "Union School District", with: "USD")
