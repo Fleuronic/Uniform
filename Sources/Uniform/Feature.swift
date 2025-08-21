@@ -7,17 +7,20 @@ public extension Feature {
 		}
 
 		var record = record
+			.replacingOccurrences(of: "Age Out", with: "Age-Out")
+			.replacingOccurrences(of: "Drum Line Battle", with: "DrumLine Battle")
+			.replacingOccurrences(of: "Drumline Jam", with: "DrumLine Jam")
 			.replacingOccurrences(of: "Givaway", with: "Giveaway")
+			.replacingOccurrences(of: "On Fields", with: "On-Field")
 
 		let features = [
 			"Announcement",
 			"Anthem",
 			"Award",
-			"Battle",
 			"Ceremony",
 			"Championship",
 			"Doors Open",
-			"Drumline Jam",
+			"DrumLine",
 			"Encore",
 			"Exhibition Unit",
 			"Gates Open",
@@ -26,6 +29,7 @@ public extension Feature {
 			"Hall of Fame",
 			"Intermission",
 			"Kick Start",
+			"Music Stage",
 			"Opening Remarks",
 			"Pre-",
 			"Presentation",
@@ -33,7 +37,6 @@ public extension Feature {
 			"Recognition",
 			"Retreat",
 			"Score",
-			"SoundSport",
 			"Special",
 			"Stadium Closed to Spectators",
 			"Standstill",

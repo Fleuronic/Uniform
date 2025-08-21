@@ -11,6 +11,7 @@ public extension Ensemble {
 			.replacingOccurrences(of: " Exhibition", with: "")
 			.replacingOccurrences(of: "Community Arts Network", with: "CAN")
 			.replacingOccurrences(of: "Union School District", with: "USD")
+			.replacingOccurrences(of: "Univ.", with: "University")
 
 		name = switch name {
 		case "BANDtastic Honor Band", "BANDtastic Canton Honor Band": "BANDtastic! Honor Band"
@@ -59,6 +60,7 @@ public extension Ensemble {
 			"The Cavaliers and The Cavaliers Alumni",
 			"Troopers & Legacy Corps",
 			"U.S. Marine Silent Drill Platoon",
+			"University",
 			"Youth"
 		]
 
