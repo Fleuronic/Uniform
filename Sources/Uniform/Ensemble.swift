@@ -8,6 +8,7 @@ public extension Ensemble {
 		var name = components[0]
 			.replacingOccurrences(of: " & Drum Corps", with: "")
 			.replacingOccurrences(of: " Performance", with: "")
+			.replacingOccurrences(of: " Exhibition", with: "")
 			.replacingOccurrences(of: "Community Arts Network", with: "CAN")
 			.replacingOccurrences(of: "Union School District", with: "USD")
 
@@ -35,6 +36,7 @@ public extension Ensemble {
 			"DrumSpirit",
 			"Experience",
 			"High School",
+			"Joyfull",
 			"Lake Erie Sound",
 			"Lutheran Vanguard",
 			"Marching",
@@ -50,6 +52,7 @@ public extension Ensemble {
 			"Spirit of Sunnyvale",
 			"The Cavaliers and The Cavaliers Alumni",
 			"Troopers & Legacy Corps",
+			"U.S. Marine Silent Drill Platoon",
 			"Youth"
 		]
 

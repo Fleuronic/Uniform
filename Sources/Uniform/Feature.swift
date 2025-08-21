@@ -18,6 +18,7 @@ public extension Feature {
 			"Exhibition Unit",
 			"Gates Open",
 			"Giveaway",
+			"Halftime",
 			"Hall of Fame",
 			"Intermission",
 			"Kick Start",
