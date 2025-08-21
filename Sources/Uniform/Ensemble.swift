@@ -24,6 +24,7 @@ public extension Ensemble {
 		}
 
 		let ensembles = [
+			", ",
 			"& Alumni",
 			"Alisal",
 			"Band",
@@ -43,10 +44,13 @@ public extension Ensemble {
 			"Lutheran Vanguard",
 			"Marching",
 			"PHANtastic",
+			"Quartet",
+			"Quintet",
 			"RCR Street Club",
 			"Rocky Mountain Brassworks",
 			"Rosemont King Cobras",
 			"Rhythm IN BLUE",
+			"Sextet",
 			"Showband",
 			"Sound Wave",
 			"Sound of Sun Prairie",
