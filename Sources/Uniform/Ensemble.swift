@@ -49,7 +49,8 @@ public extension Ensemble {
 			"Sparta Ignite",
 			"Spirit of Sunnyvale",
 			"The Cavaliers and The Cavaliers Alumni",
-			"Troopers & Legacy Corps"
+			"Troopers & Legacy Corps",
+			"Youth"
 		]
 
 		if ensembles.contains(where: name.contains) {
