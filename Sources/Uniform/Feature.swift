@@ -49,6 +49,7 @@ public extension Feature {
 
 		record = switch record {
 		case "SoundSport": "SoundSport Exhibition"
+		case "FJM Endzone": "FJM Endzone Performance"
 		default: record
 		}
 		
