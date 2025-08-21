@@ -26,11 +26,18 @@ public extension Location {
 			let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else { return nil }
 		
 		let city = components[0..<stateIndex].joined(separator: " ")
-		let state = String(components[stateIndex]).uppercased()
+		var state = String(components[stateIndex]).uppercased()
 		let country = if stateIndex == components.count - 1 {
 			"United States"
 		} else {
 			components[(stateIndex + 1)...].joined(separator: " ")
+		}
+
+		state = switch state {
+		case "DC": "D.C."
+		case "ONT": "ON"
+		case "QUE": "QC"
+		default: state
 		}
 
 		return (city, state, country)
