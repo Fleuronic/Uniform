@@ -25,7 +25,7 @@ public extension Location {
 			case let components = record.replacingOccurrences(of: ",", with: "").split(separator: " "),
 			let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else { return nil }
 		
-		let city = components[0..<stateIndex].joined(separator: " ")
+		var city = components[0..<stateIndex].joined(separator: " ")
 		var state = String(components[stateIndex]).uppercased()
 		let country = if stateIndex == components.count - 1 {
 			"United States"

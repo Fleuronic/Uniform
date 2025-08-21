@@ -17,6 +17,11 @@ public extension DrumKit.Corps {
 			return ("U.S. Marine Drum & Bugle Corps", "Washington, D.C.")
 		}
 
+		switch record {
+		case "Bluecoats Alumni Corps": return (record, "Canton, OH")
+		default: break
+		}
+
 		guard 
 			case let components = record.components(separatedBy: " - "),
 			components.count == 2 else { return nil }
