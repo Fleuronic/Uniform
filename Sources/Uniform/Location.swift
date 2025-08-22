@@ -33,6 +33,11 @@ public extension Location {
 			components[(stateIndex + 1)...].joined(separator: " ")
 		}
 
+		city = switch city {
+		case "City of Industry": "Diamond Bar"
+		default: city
+		}
+
 		state = switch state {
 		case "DC": "D.C."
 		case "ONT": "ON"
