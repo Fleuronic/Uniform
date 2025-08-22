@@ -2,7 +2,7 @@ import struct DrumKit.Feature
 
 public extension Feature {
 	static func name(for record: String) -> String? {
-		if ["Presentation -", " - Special Presentation", "Videoboard Feature"].contains(where: record.contains) {
+		if ["Presentation -", " - Special", "Videoboard Feature"].contains(where: record.contains) {
 			return record
 				.replacingOccurrences(of: " -", with: ":")
 				.replacingOccurrences(of: "Univ.", with: "University")
@@ -14,6 +14,7 @@ public extension Feature {
 			.replacingOccurrences(of: "Drum Line Battle", with: "DrumLine Battle")
 			.replacingOccurrences(of: "Drumline Jam", with: "DrumLine Jam")
 			.replacingOccurrences(of: "FJM Endzone -", with: "FJM Endzone Performance -")
+			.replacingOccurrences(of: "Music Stage -", with: "Music Stage Performance -")
 			.replacingOccurrences(of: "Givaway", with: "Giveaway")
 			.replacingOccurrences(of: "On Field", with: "On-Field")
 

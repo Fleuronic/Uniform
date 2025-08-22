@@ -22,8 +22,16 @@ public extension DrumKit.Corps {
 		case "Bluecoats Alumni Corps": return (record, "Canton, OH")
 		case "Colts Alumni Corps": return (record, "Dubuque, IA")
 		case "Crossmen Alumni Corps": return (record, "San Antonio, TX")
+		case "Gold": return (record, "San Diego, CA")
 		case "Madison Scouts": return (record, "Madison, WI")
+		case "Music City": return (record, "Nashville, TN")
+		case "Pacific Crest": return (record, "Diamond Bar, CA")
+		case "Phantom Regiment": return (record, "Rockford, IL")
+		case "Spirit of Atlanta": return (record, "Atlanta, GA")
+		case "The Academy": return (record, "Tempe, AZ")
+		case "The Cadets": return (record, "Erie, PA")
 		case "The Thunder of Roanoke": return (record, "Roanoke, VA")
+		case "Troopers": return (record, "Casper, WY")
 		default: break
 		}
 
