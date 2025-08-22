@@ -13,6 +13,7 @@ public extension Feature {
 			.replacingOccurrences(of: "Age Out", with: "Age-Out")
 			.replacingOccurrences(of: "Drum Line Battle", with: "DrumLine Battle")
 			.replacingOccurrences(of: "Drumline Jam", with: "DrumLine Jam")
+			.replacingOccurrences(of: "FJM Endzone -", with: "FJM Endzone Performance -")
 			.replacingOccurrences(of: "Givaway", with: "Giveaway")
 			.replacingOccurrences(of: "On Field", with: "On-Field")
 
@@ -52,7 +53,6 @@ public extension Feature {
 
 		record = switch record {
 		case "SoundSport": "SoundSport Exhibition"
-		case "FJM Endzone": "FJM Endzone Performance"
 		default: record
 		}
 		
