@@ -15,6 +15,7 @@ public extension Feature {
 			.replacingOccurrences(of: "Drumline Jam", with: "DrumLine Jam")
 			.replacingOccurrences(of: "FJM Endzone -", with: "FJM Endzone Performance -")
 			.replacingOccurrences(of: "Music Stage -", with: "Music Stage Performance -")
+			.replacingOccurrences(of: "INPact", with: "INpact")
 			.replacingOccurrences(of: "Givaway", with: "Giveaway")
 			.replacingOccurrences(of: "On Field", with: "On-Field")
 
@@ -47,7 +48,6 @@ public extension Feature {
 			"Stadium Closed to Spectators",
 			"Standstill",
 			"Ultimate Drill Book",
-			"University",
 			"Video",
 			"Welcome"
 		]
