@@ -38,6 +38,7 @@ public extension Ensemble {
 			"Central Florida Sounds of Freedom",
 			"Crossmen & Spirit of Atlanta",
 			"DrumSpirit",
+			"Ensemble",
 			"Experience",
 			"High School",
 			"Jack Greenlee",

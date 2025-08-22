@@ -2,7 +2,7 @@ import struct DrumKit.Feature
 
 public extension Feature {
 	static func name(for record: String) -> String? {
-		if record.contains("Presentation -") || record.contains(" - Special Presentation") {
+		if ["Presentation -", " - Special Presentation", "Videoboard Feature"].contains(where: record.contains) {
 			return record.replacingOccurrences(of: " -", with: ":")
 		} 
 
