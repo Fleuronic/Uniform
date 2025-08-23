@@ -8,11 +8,16 @@ public extension Show {
 			.replacingOccurrences(of: "?", with: "–")
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "&amp;", with: "&")
+			.replacingOccurrences(of: "Drum Along;", with: "Drums Along")
 			.replacingOccurrences(of: "Games Portland;", with: "Games – Portland")
 			.replacingOccurrences(of: "Games Seattle;", with: "Games – Seattle")
 			.replacingOccurrences(of: "Jerset", with: "Jersey")
+			.replacingOccurrences(of: "Lacrosse", with: "La Crosse")
+			.replacingOccurrences(of: "Masters Summer", with: "Masters of the Summer")
 			.replacingOccurrences(of: "Mid-Cal", with: "MidCal")
 			.replacingOccurrences(of: "Northwest Music Games", with: "Northwest Youth Music Games")
+			.replacingOccurrences(of: "Southeastern Regional", with: "Southeastern Championship")
+			.replacingOccurrences(of: "Southwestern Regional", with: "Southwestern Championship")
 			.replacingOccurrences(of: "SUMMER MUSIC GAMES", with: "Summer Music Games")
 			.replacingOccurrences(of: "Tradition–", with: "Tradition –")
 			.components(separatedBy: " @ ").first!
@@ -21,15 +26,20 @@ public extension Show {
 		name = switch name {
 		case "CrownBeat": "CrownBEAT"
 		case "DCI All Age Class Finals": "DCI All-Age World Championship"
+		case "DCI Manchester, NH": "DCI New Hampshire"
 		case "DCI Masters": "The Masters of the Summer Music Games"
-		case "DCI Open Class Finals": "DCI Open Class World Championship Finals"
+		case "DCI Open Prelims": "DCI Open Class World Championship Prelims"
+		case "DCI Open Finals", "DCI Open Class Finals": "DCI Open Class World Championship Finals"
 		case "DCI Open Class Prelims": "DCI Open Class World Championship Prelims"
-		case "DCI World Class Finals": "DCI World Championship Finals"
-		case "DCI World Class Prelims": "DCI World Championship Prelims"
-		case "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
+		case "DCI Finals", "DCI World Class Finals": "DCI World Championship Finals"
+		case "DCI Prelims", "DCI World Class Prelims": "DCI World Championship Prelims"
+		case "DCI Semifinals", "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
 		case "DCI Southeastern": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
+		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
+		case "Drum Corps Preview": "DCI Tour Preview"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
+		case "Drums at the Rose Bowl": "Drums Corps at the Rose Bowl"
 		case "March On": "March On!"
 		case "Nightbeat", "NightBeat": "NightBEAT"
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
