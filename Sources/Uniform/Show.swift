@@ -8,11 +8,12 @@ public extension Show {
 			.replacingOccurrences(of: "?", with: "–")
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "&amp;", with: "&")
+			.replacingOccurrences(of: "Brigadiers", with: "Brigadier’s")
 			.replacingOccurrences(of: "Drum Along;", with: "Drums Along")
 			.replacingOccurrences(of: "Games Portland;", with: "Games – Portland")
 			.replacingOccurrences(of: "Games Seattle;", with: "Games – Seattle")
 			.replacingOccurrences(of: "Jerset", with: "Jersey")
-			.replacingOccurrences(of: "Lacrosse", with: "La Crosse")
+			.replacingOccurrences(of: "LaCrosse", with: "La Crosse")
 			.replacingOccurrences(of: "Masters Summer", with: "Masters of the Summer")
 			.replacingOccurrences(of: "Mid-Cal", with: "MidCal")
 			.replacingOccurrences(of: "Northwest Music Games", with: "Northwest Youth Music Games")
@@ -25,7 +26,7 @@ public extension Show {
 
 		name = switch name {
 		case "CrownBeat": "CrownBEAT"
-		case "DCI All Age Class Finals": "DCI All-Age World Championship"
+		case "DCI All Age Class Finals", "DCI All Age World Championship Finals": "DCI All-Age World Championship"
 		case "DCI Manchester, NH": "DCI New Hampshire"
 		case "DCI Masters": "The Masters of the Summer Music Games"
 		case "DCI Open Prelims": "DCI Open Class World Championship Prelims"
@@ -62,6 +63,7 @@ public extension Show {
 			.replacingOccurrences(of: ":", with: "")
 			.replacingOccurrences(of: "!", with: "")
 			.replacingOccurrences(of: ".", with: "")
+			.replacingOccurrences(of: "’", with: "")
 			.replacingOccurrences(of: " – ", with: " ")
 			.replacingOccurrences(of: " ", with: "-")
 	}
