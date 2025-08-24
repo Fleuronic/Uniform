@@ -1,7 +1,7 @@
 import struct DrumKit.Show
 
 public extension Show {
-	static func name(for record: String) -> String {
+	static func name(for record: String, in year: Int) -> String {
 		var name = record
 			.replacingOccurrences(of: "- ", with: "– ")
 			.replacingOccurrences(of: "--", with: "–")
@@ -9,7 +9,7 @@ public extension Show {
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "&amp;", with: "&")
 			.replacingOccurrences(of: "Brigadiers", with: "Brigadier’s")
-			.replacingOccurrences(of: "Drum Along;", with: "Drums Along")
+			.replacingOccurrences(of: "Drum Along", with: "Drums Along")
 			.replacingOccurrences(of: "Games Portland;", with: "Games – Portland")
 			.replacingOccurrences(of: "Games Seattle;", with: "Games – Seattle")
 			.replacingOccurrences(of: "Jerset", with: "Jersey")
@@ -26,7 +26,7 @@ public extension Show {
 
 		name = switch name {
 		case "CrownBeat": "CrownBEAT"
-		case "DCI All Age Class Finals", "DCI All Age World Championship Finals": "DCI All-Age World Championship"
+		case "DCI All Age Class Finals", "DCI All-Age World Championship Finals": "DCI All-Age World Championship"
 		case "DCI Manchester, NH": "DCI New Hampshire"
 		case "DCI Masters": "The Masters of the Summer Music Games"
 		case "DCI Open Prelims": "DCI Open Class World Championship Prelims"
@@ -38,9 +38,8 @@ public extension Show {
 		case "DCI Southeastern": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
 		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
-		case "Drum Corps Preview": "DCI Tour Preview"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
-		case "Drums at the Rose Bowl": "Drums Corps at the Rose Bowl"
+		case "Drums at the Rose Bowl": "Drum Corps at the Rose Bowl"
 		case "March On": "March On!"
 		case "Nightbeat", "NightBeat": "NightBEAT"
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
@@ -55,7 +54,7 @@ public extension Show {
 		return name
 	}
 
-	static func slug(forShowNamed name: String) -> String? {
+	static func slug(forShowNamed name: String, in year: Int) -> String? {
 		guard isValid(with: name) else { return nil }
 		
 		return name
@@ -63,7 +62,7 @@ public extension Show {
 			.replacingOccurrences(of: ":", with: "")
 			.replacingOccurrences(of: "!", with: "")
 			.replacingOccurrences(of: ".", with: "")
-			.replacingOccurrences(of: "’", with: "")
+			.replacingOccurrences(of: "’", with: "-")
 			.replacingOccurrences(of: " – ", with: " ")
 			.replacingOccurrences(of: " ", with: "-")
 	}
