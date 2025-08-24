@@ -47,6 +47,12 @@ public extension Show {
 		default: name
 		}
 
+		name = switch (name, year) {
+		case ("Drums Across America", 2019): "Drums Across America – Atlanta"
+		case ("Innovations in Brass: Massillon", 2019): "Innovations in Brass: North Canton"
+		default: name
+		}
+
 		for word in ["in", "on", "the", "with"] {
 			name = name.replacingOccurrences(of: " \(word.capitalized) ", with: " \(word) ")
 		}
@@ -65,6 +71,13 @@ public extension Show {
 			.replacingOccurrences(of: "’", with: "-")
 			.replacingOccurrences(of: " – ", with: " ")
 			.replacingOccurrences(of: " ", with: "-")
+	}
+
+	static func scoreSlug(for slug: String) -> String {
+		switch slug {
+		case "2022-dci-open-class-world-championship-finals": "2022-open-class-world-championship-finals"
+		default: slug
+		}
 	}
 
 	static func isValid(with name: String?)  -> Bool {
