@@ -26,7 +26,6 @@ public extension Show {
 
 		name = switch name {
 		case "CrownBeat": "CrownBEAT"
-		case "DCI All Age Class Finals", "DCI All-Age World Championship Finals": "DCI All-Age World Championship"
 		case "DCI Manchester, NH": "DCI New Hampshire"
 		case "DCI Masters": "The Masters of the Summer Music Games"
 		case "DCI Open Prelims": "DCI Open Class World Championship Prelims"
@@ -48,6 +47,7 @@ public extension Show {
 		}
 
 		name = switch (name, year) {
+		case ("DCI All Age Class Finals", 2024): "DCI All-Age World Championship"
 		case ("Drums Across America", 2019): "Drums Across America – Atlanta"
 		case ("Innovations in Brass: Massillon", 2019): "Innovations in Brass: North Canton"
 		default: name
@@ -73,9 +73,9 @@ public extension Show {
 			.replacingOccurrences(of: " ", with: "-")
 	}
 
-	static func scoreSlug(for slug: String) -> String {
-		switch slug {
-		case "2022-dci-open-class-world-championship-finals": "2022-open-class-world-championship-finals"
+	static func scoreSlug(for slug: String, in year: Int) -> String {
+		switch (slug, year) {
+		case ("dci-open-class-world-championship-finals", 2022): "open-class-world-championship-finals"
 		default: slug
 		}
 	}
