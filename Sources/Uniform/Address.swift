@@ -2,6 +2,11 @@ import struct DrumKit.Address
 
 public extension Address {
 	static func info(for records: [String]) -> (String, String) {
+		switch records {
+		case ["Apple Valley, MN"]: return ("6200 140th St W", "55124")
+		default: break
+		}
+
 		let streetAddress = records[0]
 			.replacingOccurrences(of: ".", with: "")
 			.replacingOccurrences(of: "#", with: "")
