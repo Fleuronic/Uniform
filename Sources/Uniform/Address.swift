@@ -10,6 +10,7 @@ public extension Address {
 		let streetAddress = records[0]
 			.replacingOccurrences(of: ".", with: "")
 			.replacingOccurrences(of: "#", with: "")
+			.replacingOccurrences(of: "Drive", with: "Dr")
 			.replacingOccurrences(of: "Road", with: "Rd")
 			.replacingOccurrences(of: "Street", with: "St")
 			.replacingOccurrences(of: "Avenue", with: "Ave")
