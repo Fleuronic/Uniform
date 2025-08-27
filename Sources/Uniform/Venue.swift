@@ -46,6 +46,7 @@ public extension Venue {
 		case "2213 Summit St": return ("Dix Stadium", nil)
 		case "24 High School Dr": return ("EHTHS Football Stadium", "Egg Harbor Township High School")
 		case "2401 Panther Pl": return ("West Park Stadium", "West Park High School")
+		case "2411 W Scyene Rd": return ("Mesquite Memorial Stadium", "West Mesquite High School")
 		case "2521 Walnut Ave": return ("Mattoon High School Stadium", "Mattoon High School")
 		case "2800 W Gore Blvd": return ("Cameron University Stadium", "Cameron University")
 		case "3000 Gateway Campus Blvd": return ("Antimarino Stadium", "Gateway High School")
@@ -76,9 +77,10 @@ public extension Venue {
 		case "500 Turin St": return ("Rome Free Academy Stadium", "Rome Free Academy")
 		case "5151 Park Ave": return ("Campus Field", "Sacred Heart University")
 		case "5175 Franz Rd": return ("Legacy Stadium", nil)
-		case "525 7th St NE": return ("Memorial Stadium", "Washington")
+		case "525 7th St NE": return ("Memorial Stadium", "Hoover High School")
 		case "529 Hurffville - Cross Keys Rd 2831": return ("Tom Brown Field", "Washington Township High School")
 		case "5469 Trussville Clay Rd": return ("Hewitt-Trussville Football Stadium", "Hewitt-Trussville High School")
+		case "574 N Park Ln": return ("Eagle High School Football Field", "Eagle High School")
 		case "600 Lake Rd": return ("Tiger Field", "Belton High School")
 		case "600 Lincoln Ave": return ("O’Brien Field", "Eastern Illinois University")
 		case "600 W North Bend Rd": return ("St. Xavier Stadium", "St. Xavier High School")
@@ -190,6 +192,7 @@ public extension Venue {
 		} else {
 			host = switch host {
 			case "Texas A&M": "Texas A&M University"
+			case "West Texas A&M": "West Texas A&M University"
 			default: host
 			}
 		}

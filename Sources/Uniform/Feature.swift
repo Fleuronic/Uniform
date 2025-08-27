@@ -66,9 +66,9 @@ public extension Feature {
 				.replacingOccurrences(of: "Encore: ", with: "Encore - ")
 				.replacingOccurrences(of: "Entertainment: ", with: "Entertainment - ")
 				.replacingOccurrences(of: "Pre-show", with: "Pre-Show")
-				.components(separatedBy: " - ").first!
-				.components(separatedBy: " (")
+				.components(separatedBy: " - ")
 				.first { features.contains(where: $0.contains) }!
+				.components(separatedBy: " (").first!
 		} else { nil }
 	}
 }
