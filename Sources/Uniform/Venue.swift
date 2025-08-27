@@ -68,6 +68,7 @@ public extension Venue {
 		case "4001 Wildcat Dr": return ("Wildcat Stadium", "Calallen High School")
 		case "405 Logan Ave N": return ("Renton Memorial Stadium", nil)
 		case "4100 Kroes St NE": return ("Carlson-Munger Stadium", "Rockford High School")
+		case "4300 Main St": return ("Foshee-Henderson Stadium", "Stanhope Elmore High School")
 		case "44 School Dr": return ("Paul V. Moore High School Stadium", "Paul V. Moore High School")
 		case "4400 Braselton Hwy": return ("Mill Creek Community Stadium", "Mill Creek High School")
 		case "4800 Magnolia Ave": return ("Wheelock Stadium", "Riverside City College")
@@ -95,9 +96,9 @@ public extension Venue {
 		case "930 S Elm St": return ("Natona County High School Stadium", "Natona County High School")
 		case "98 Rundlett Hill Rd": return ("Grappone Stadium", "Saint Anselm College")
 		case "9300 Lawson Rd": return ("Jubilee Stadium", "Daphne High School")
-		case "Oliver Jackson Blvd": return ("Wildcat Stadium", "Abilene Christian University")
+		case "2225 Oliver Jackson Blvd": return ("Wildcat Stadium", "Abilene Christian University")
 		case "Rte 111-West Hollis St": return ("Stellos Stadium", nil)
-		case "SW Haverhill Rd": return ("Butler Football Stadium", "Butler Community College of El Dorado")
+		case "400 S Haverhill Rd": return ("Butler Football Stadium", "Butler Community College of El Dorado")
 		default: break
 		}
 
@@ -127,6 +128,7 @@ public extension Venue {
 		case "Champlin Park High School Football Field": "Rebel Stadium"
 		case "Clifton School Stadium": "Clifton Stadium"
 		case "Dwire Field": "Atrium Stadium"
+		case "Foshee": "Foshee-Henderson Stadium"
 		case "Lon C Burchfield Stadium": "Lon C. Burchfield Stadium"
 		case "Salem Stadium": "Salem Football Stadium"
 		case "Vikings Stadium": "Northgate Vikings Stadium"
@@ -148,6 +150,7 @@ public extension Venue {
 		case "DATCU Stadium": "University of North Texas"
 		case "Dalzell Field": "Clarke University"
 		case "Delaware Stadium": "University of Delaware"
+		case "Foshee-Henderson Stadium": "Stanhope Elmore High School"
 		case "Georgelis Law Firm Stadium": "Hempfield High School"
 		case "Golden Wave Stadium": "Tupelo High School"
 		case "Hillsboro Stadium": "Portland State University"

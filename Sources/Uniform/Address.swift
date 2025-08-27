@@ -24,6 +24,8 @@ public extension Address {
 			.replacingOccurrences(of: "Oliver Jackson Blvd", with: "2225 Oliver Jackson Blvd")
 			.replacingOccurrences(of: "Millenium", with: "Millennium")
 			.replacingOccurrences(of: "Rinehardt", with: "Reinhardt")
+			.replacingOccurrences(of: "Stanhope Elmore High School", with: "4300 Main Street")
+			.replacingOccurrences(of: "SW Haverhill Rd", with: "400 S Haverhill Rd")
 			.components(separatedBy: " (").first!
 		let zipCode = records[1].components(separatedBy: " ").last!
 		return (streetAddress, zipCode)
