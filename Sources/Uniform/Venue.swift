@@ -91,6 +91,7 @@ public extension Venue {
 		case "6200 140th St W": return ("Lightning Stadium", "East View High School")
 		case "684 Starr Rd": return ("Streidl Field", "Plainwell High School")
 		case "701 South Mount Vernon Ave": return ("SBVC Stadium", "San Bernardino Valley College")
+		case "725 N 18th Ave": return ("Edgar Brown Memorial Stadium", "Pasco High School")
 		case "801 Hosking Ave": return ("Golden Valley Football Field", "Golden Valley High School")
 		case "8135 S Westnedge Ave": return ("McCamley Field", "Portage Central High School")
 		case "850 Hancock St": return ("Veterans Memorial Stadium", nil)
