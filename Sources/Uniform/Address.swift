@@ -4,6 +4,7 @@ public extension Address {
 	static func info(for records: [String]) -> (String, String) {
 		switch records {
 		case ["Apple Valley, MN"]: return ("6200 140th St W", "55124")
+		case ["Apple Valley, MN"]: return ("6200 140th St W", "55124")
 		default: break
 		}
 
@@ -18,6 +19,11 @@ public extension Address {
 			.replacingOccurrences(of: "Lane", with: "Ln")
 			.replacingOccurrences(of: "Highway", with: "Hwy")
 			.replacingOccurrences(of: "Route", with: "Rte")
+			.replacingOccurrences(of: "One ", with: "1 ")
+			.replacingOccurrences(of: "Lawson Rd", with: "9300 Lawson Rd")
+			.replacingOccurrences(of: "Oliver Jackson Blvd", with: "2225 Oliver Jackson Blvd")
+			.replacingOccurrences(of: "Millenium", with: "Millennium")
+			.replacingOccurrences(of: "Rinehardt", with: "Reinhardt")
 			.components(separatedBy: " (").first!
 		let zipCode = records[1].components(separatedBy: " ").last!
 		return (streetAddress, zipCode)
