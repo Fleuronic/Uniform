@@ -177,6 +177,7 @@ public extension Venue {
 		case "Shelton High School": "Finn Stadium"
 		case "Cedarburg High School": "Alumni Field"
 		case "Dover Area High School": "Eagles Stadium"
+		case "Los Medanos College": "Los Medanos College Football Stadium"
 		default: name.hasSuffix("High School") ? "\(name) Stadium" : nil
 		}
 
