@@ -135,6 +135,7 @@ public extension Venue {
 		case "Dwire Field": "Atrium Stadium"
 		case "Foshee": "Foshee-Henderson Stadium"
 		case "Lon C Burchfield Stadium": "Lon C. Burchfield Stadium"
+		case "Orrville High School Stadium": "Red Rider Stadium"
 		case "Salem Stadium": "Salem Football Stadium"
 		case "Vikings Stadium": "Northgate Vikings Stadium"
 		default: name
@@ -168,6 +169,7 @@ public extension Venue {
 		case "Otto Breitenbach Stadium": "Middleton High School"
 		case "Perkins Stadium": "University of Wisconsin–Whitewater"
 		case "Rebel Stadium": "Champlin Park High School"
+		case "Red Rider Stadium": "Orrville High School"
 		case "Rio Rancho Ram Stadium": "Rio Rancho High School"
 		case "Salem Football Stadium": "Salem High School"
 		case "Scheumann Stadium": "Ball State University"
@@ -182,10 +184,15 @@ public extension Venue {
 		}
 		
 		let stadiumName: String? = switch name {
+		case "Alta High School": "Alta High School Football Field"
 		case "Shelton High School": "Finn Stadium"
 		case "Cedarburg High School": "Alumni Field"
 		case "Dover Area High School": "Eagles Stadium"
+		case "Inderkum High School": "Inderkum High School Football Stadium"
+		case "Lakeland High School": "Bryant Stadium"
 		case "Los Medanos College": "Los Medanos College Football Stadium"
+		case "Monterey Trail High School Stadium": "Mark Macres Memorial Stadium"
+		case "Plymouth High School": "Rockpile Stadium"
 		default: name.hasSuffix("High School") ? "\(name) Stadium" : nil
 		}
 
