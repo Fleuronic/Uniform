@@ -28,6 +28,7 @@ public extension DrumKit.Corps {
 		case "Music City": return (record, "Nashville, TN")
 		case "Pacific Crest": return (record, "Diamond Bar, CA")
 		case "Phantom Regiment": return (record, "Rockford, IL")
+		case "Sonus Brass Theater": return (record, "Woodbridge, VA")
 		case "Spirit of Atlanta": return (record, "Atlanta, GA")
 		case "The Academy": return (record, "Tempe, AZ")
 		case "The Cadets": return (record, "Erie, PA")
