@@ -3,7 +3,7 @@ import struct DrumKit.Feature
 public extension Feature {
 	static func name(for record: String) -> String? {
 		switch record {
-		case "SoundSport": return "SoundSport Exhibition"
+		case "SoundSport", "SoundSport Exhibition": return "SoundSport Exhibition"
 		default: break
 		}
 
