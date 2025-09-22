@@ -35,6 +35,7 @@ public extension Location {
 
 		city = switch city {
 		case "City of Industry": "Diamond Bar"
+		case "Winston Salem": "Winston-Salem"
 		default: city
 		}
 

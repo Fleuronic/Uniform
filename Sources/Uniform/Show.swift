@@ -76,6 +76,7 @@ public extension Show {
 	static func scoreSlug(for slug: String, in year: Int) -> String {
 		switch (slug, year) {
 		case ("dci-open-class-world-championship-finals", 2022): "open-class-world-championship-finals"
+		case ("dci-all-age-world-championship-finals", 2025): "dci-all-age-world-championship"
 		default: slug
 		}
 	}
