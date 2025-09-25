@@ -17,6 +17,7 @@ public extension Show {
 			.replacingOccurrences(of: "Masters Summer", with: "Masters of the Summer")
 			.replacingOccurrences(of: "Mid-Cal", with: "MidCal")
 			.replacingOccurrences(of: "Northwest Music Games", with: "Northwest Youth Music Games")
+			.replacingOccurrences(of: "SoCal", with: "So Cal")
 			.replacingOccurrences(of: "Southeastern Regional", with: "Southeastern Championship")
 			.replacingOccurrences(of: "Southwestern Regional", with: "Southwestern Championship")
 			.replacingOccurrences(of: "SUMMER MUSIC GAMES", with: "Summer Music Games")
