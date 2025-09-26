@@ -81,6 +81,7 @@ public extension Show {
 		case ("drum-corps-an-american-tradition", 2018): "drum-corps-an-america-tradition"
 		case ("drum-corps-an-american-tradition-2", 2018): "drum-corps-an-american-tradition"
 		case ("drum-corps-an-american-tradition-3", 2018): "drum-corps-an-american-tradition-annapolis"
+		case ("gold-showcase-(drum-corps-at-the-glen)", 2018): "gold-showcase"
 		default: slug
 		}
 	}
