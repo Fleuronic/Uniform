@@ -1,7 +1,7 @@
 import struct DrumKit.Show
 
 public extension Show {
-	static func name(for record: String, in city: String, year: Int) -> String {
+	static func name(for record: String, in city: String?, year: Int) -> String {
 		var name = record
 			.replacingOccurrences(of: "- ", with: "– ")
 			.replacingOccurrences(of: "--", with: "–")
