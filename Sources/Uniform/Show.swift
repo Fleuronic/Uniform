@@ -50,6 +50,7 @@ public extension Show {
 
 		name = switch (name, city) {
 		case ("Drum Corps: An American Tradition", "Annapolis"): "Drum Corps: An American Tradition – Annapolis"
+		default: name
 		}
 
 		name = switch (name, year) {
