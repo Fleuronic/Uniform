@@ -1,7 +1,7 @@
 import struct DrumKit.Show
 
 public extension Show {
-	static func name(for record: String, in year: Int) -> String {
+	static func name(for record: String, in city: String, year: Int) -> String {
 		var name = record
 			.replacingOccurrences(of: "- ", with: "– ")
 			.replacingOccurrences(of: "--", with: "–")
@@ -40,11 +40,16 @@ public extension Show {
 		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
 		case "Drums Across the Columbia": "Drums Along the Columbia"
 		case "Drums at the Rose Bowl": "Drum Corps at the Rose Bowl"
+		case "Gold Showcase (Drum Corps at the Glen)": "Gold Showcase"
 		case "March On": "March On!"
 		case "Nightbeat", "NightBeat": "NightBEAT"
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
 		case "Tour Premiere": "Midwest Premiere"
 		default: name
+		}
+
+		name = switch (name, city) {
+		case ("Drum Corps: An American Tradition", "Annapolis"): "Drum Corps: An American Tradition – Annapolis"
 		}
 
 		name = switch (name, year) {
@@ -80,8 +85,6 @@ public extension Show {
 		case ("dci-all-age-world-championship-finals", 2025): "dci-all-age-world-championship"
 		case ("drum-corps-an-american-tradition", 2018): "drum-corps-an-america-tradition"
 		case ("drum-corps-an-american-tradition-2", 2018): "drum-corps-an-american-tradition"
-		case ("drum-corps-an-american-tradition-3", 2018): "drum-corps-an-american-tradition-annapolis"
-		case ("gold-showcase-(drum-corps-at-the-glen)", 2018): "gold-showcase"
 		default: slug
 		}
 	}

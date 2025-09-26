@@ -13,7 +13,7 @@ public extension Feature {
 				.replacingOccurrences(of: "Univ.", with: "University")
 		} 
 
-		var record = record
+		let record = record
 			.replacingOccurrences(of: "  ", with: " ")
 			.replacingOccurrences(of: "Age Out", with: "Age-Out")
 			.replacingOccurrences(of: "Drum Line Battle", with: "DrumLine Battle")
