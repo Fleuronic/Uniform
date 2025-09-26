@@ -80,6 +80,7 @@ public extension Show {
 		case ("dci-all-age-world-championship-finals", 2025): "dci-all-age-world-championship"
 		case ("drum-corps-an-american-tradition", 2018): "drum-corps-an-america-tradition"
 		case ("drum-corps-an-american-tradition-2", 2018): "drum-corps-an-american-tradition"
+		case ("drum-corps-an-american-tradition-3", 2018): "drum-corps-an-american-tradition-annapolis"
 		default: slug
 		}
 	}
