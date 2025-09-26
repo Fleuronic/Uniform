@@ -78,6 +78,8 @@ public extension Show {
 		switch (slug, year) {
 		case ("dci-open-class-world-championship-finals", 2022): "open-class-world-championship-finals"
 		case ("dci-all-age-world-championship-finals", 2025): "dci-all-age-world-championship"
+		case ("drum-corps-an-american-tradition", 2018): "drum-corps-an-america-tradition"
+		case ("drum-corps-an-american-tradition-2", 2018): "drum-corps-an-american-tradition"
 		default: slug
 		}
 	}
