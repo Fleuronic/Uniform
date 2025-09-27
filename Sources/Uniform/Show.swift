@@ -37,7 +37,7 @@ public extension Show {
 		case "DCI Semifinals", "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
 		case "DCI Southeastern": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
-		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
+		case "Diablo Valley Classic": "Diablo Valley Classic Pacific Open Class Championship Finals"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
 		case "Drums at the Rose Bowl": "Drum Corps at the Rose Bowl"
 		case "Gold Showcase (Drum Corps at the Glen)": "Gold Showcase"
@@ -45,6 +45,7 @@ public extension Show {
 		case "Nightbeat", "NightBeat": "NightBEAT"
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
 		case "Tour Premiere": "Midwest Premiere"
+		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
 		default: name
 		}
 
@@ -56,6 +57,8 @@ public extension Show {
 		name = switch (name, year) {
 		case ("DCI All Age Class Finals", 2024): "DCI All-Age World Championship"
 		case ("Drums Across America", 2019): "Drums Across America – Atlanta"
+		case ("Drums of Summer", 2017): "Tour of Champions – Oklahoma"
+		case ("DCI Denton", 2017): "DCI North Texas"
 		case ("Innovations in Brass: Massillon", 2019): "Innovations in Brass: North Canton"
 		default: name
 		}
@@ -86,6 +89,8 @@ public extension Show {
 		case ("dci-all-age-world-championship-finals", 2025): "dci-all-age-world-championship"
 		case ("drum-corps-an-american-tradition", 2018): "drum-corps-an-america-tradition"
 		case ("drum-corps-an-american-tradition-2", 2018): "drum-corps-an-american-tradition"
+		case ("tour-of-champions-oklahoma", 2017): "tour-of-champions-oklahoma-presented-by-drums-of-summer"
+		case ("dci-on-the-so-cal-coast", _): "dci-on-the-socal-coast"
 		default: slug
 		}
 	}
