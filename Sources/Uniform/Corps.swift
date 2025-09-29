@@ -6,6 +6,9 @@ import struct DrumKit.Corps
 @MemberwiseInit(.public)
 public struct Corps: Equatable, Sendable {
 	public let name: String
+	public let city: String
+	public let state: String
+	public let country: String
 }
 
 // MARK: -
