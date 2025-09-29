@@ -59,6 +59,8 @@ public extension Show {
 		case ("Drums Across America", 2019): "Drums Across America – Atlanta"
 		case ("Drums of Summer", 2017): "Tour of Champions – Oklahoma"
 		case ("DCI Denton", 2017): "DCI North Texas"
+		case ("DCI Jupiter", 2017): "DCI South Florida"
+		case ("DCI Alabama", 2017): "DCI Southern Alabama"
 		case ("Innovations in Brass: Massillon", 2019): "Innovations in Brass: North Canton"
 		default: name
 		}
