@@ -109,6 +109,7 @@ public extension Show {
 			!name.contains("Education") &&
 			!name.contains("Virtual") &&
 			!name.contains("Rain") &&
-			!name.contains("Mini Corps")
+			!name.contains("Mini Corps") &&
+			!name.contains("Performers Showcase")
 	}
 }
