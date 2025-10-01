@@ -26,6 +26,7 @@ public extension Show {
 			.replacingOccurrences(of: "Southwestern Regional", with: "Southwestern Championship")
 			.replacingOccurrences(of: "SUMMER MUSIC GAMES", with: "Summer Music Games")
 			.replacingOccurrences(of: "Tradition–", with: "Tradition –")
+			.replacingOccurrences(of: "The DCI South", with: "DCI South")
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
 
@@ -41,13 +42,14 @@ public extension Show {
 		case "DCI Semifinals", "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
 		case "DCI Southeastern": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
-		case "Diablo Valley Classic", "DCI Diablo Valley Classic": "Diablo Valley Classic Pacific Open Class Championship Finals"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
+		case "Drums Corps: An American Tradition – Metro": "Drums Corps: An American Tradition – Clifton"
 		case "Drums at the Rose Bowl": "Drum Corps at the Rose Bowl"
 		case "Gold Showcase (Drum Corps at the Glen)": "Gold Showcase"
 		case "March On": "March On!"
 		case "Nightbeat", "NightBeat": "NightBEAT"
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
+		case "Tour of Champions – Chester": "Tour of Champions – PPL Park"
 		case "Tour Premiere": "Midwest Premiere"
 		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
 		default: name
@@ -66,6 +68,7 @@ public extension Show {
 		case ("DCI Jupiter", 2017): "DCI South Florida"
 		case ("DCI Alabama", 2017): "DCI Southern Alabama"
 		case ("Innovations in Brass: Massillon", 2019): "Innovations in Brass: North Canton"
+		case ("Diablo Valley Classic", let year) where [2018, 2022].contains(year): "Diablo Valley Classic Pacific Open Class Championship Finals"
 		default: name
 		}
 
@@ -89,8 +92,8 @@ public extension Show {
 			.replacingOccurrences(of: " ", with: "-")
 	}
 
-	static func scoreSlug(for slug: String, in year: Int) -> String {
-		switch (slug, year) {
+	static func scoreSlug(for slug: String, in city: String, year: Int) -> String {
+		var scoreSlug = switch (slug, year) {
 		case ("dci-open-class-world-championship-finals", 2022): "open-class-world-championship-finals"
 		case ("dci-all-age-world-championship-finals", 2025): "dci-all-age-world-championship"
 		case ("drum-corps-an-american-tradition", 2018): "drum-corps-an-america-tradition"
@@ -101,6 +104,15 @@ public extension Show {
 		case ("dci-on-the-so-cal-coast", _): "dci-on-the-socal-coast"
 		default: slug
 		}
+
+		scoreSlug = switch (slug, city, year) {
+		case ("drum-corps-an-american-tradition", "Annapolis", 2017): "drum-corps-an-american-tradition"
+		case ("drum-corps-an-american-tradition", "Allentown", 2017): "drum-corps-an-american-tradition-3"
+		case ("drum-corps-an-american-tradition", "Clifton", 2017): "drum-corps-an-american-tradition-2"
+		default: slug
+		}
+
+		return scoreSlug
 	}
 
 	static func isValid(with name: String?)  -> Bool {
