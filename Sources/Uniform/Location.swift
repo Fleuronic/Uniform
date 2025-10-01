@@ -14,10 +14,6 @@ public extension Location {
 			return ("Dadizele", "West Flanders", "Belgium")
 		} else if record.contains("Arklow") {
 			return ("Arklow", "Co. Wicklow", "Ireland")
-		} else if record.contains("Dordrecht") {
-			return ("Dordrecht", "South Holland", "Netherlands")
-		} else if record.contains("Chesterfield, Derbyshire") {
-			return ("Chesterfield", "Derbyshire", "United Kingdom")
 		}
 
 		switch record {
@@ -26,7 +22,10 @@ public extension Location {
 		}
 
 		let components = record.replacingOccurrences(of: ",", with: "").split(separator: " ")
-		let stateIndex = components.firstIndex { $0.allSatisfy(\.isUppercase) }!
+		guard let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else {
+			let components = record.components(separatedBy: ", ")
+			return (components[0], components[1], components[2])
+		}
 		
 		var city = components[0..<stateIndex].joined(separator: " ")
 		var state = String(components[stateIndex]).uppercased()
