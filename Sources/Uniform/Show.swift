@@ -8,6 +8,8 @@ public extension Show {
 			.replacingOccurrences(of: "?", with: "–")
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "&amp;", with: "&")
+			.replacingOccurrences(of: " 2018;", with: "")
+			.replacingOccurrences(of: "Barnum Festival Champions", with: "Barnum Festival: Champions")
 			.replacingOccurrences(of: "Brigadiers", with: "Brigadier’s")
 			.replacingOccurrences(of: "Drum Along", with: "Drums Along")
 			.replacingOccurrences(of: "Games Portland;", with: "Games – Portland")
