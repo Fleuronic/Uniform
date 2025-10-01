@@ -14,6 +14,8 @@ public extension Location {
 			return ("Dadizele", "West Flanders", "Belgium")
 		} else if record.contains("Arklow") {
 			return ("Arklow", "Co. Wicklow", "Ireland")
+		} else if record.contains("Barnsley England") {
+			return ("Barnsley", "South Yorkshire", "England")
 		}
 
 		switch record {

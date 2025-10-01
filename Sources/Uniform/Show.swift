@@ -41,7 +41,7 @@ public extension Show {
 		case "DCI Semifinals", "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
 		case "DCI Southeastern": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
-		case "Diablo Valley Classic": "Diablo Valley Classic Pacific Open Class Championship Finals"
+		case "Diablo Valley Classic", "DCI Diablo Valley Classic": "Diablo Valley Classic Pacific Open Class Championship Finals"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
 		case "Drums at the Rose Bowl": "Drum Corps at the Rose Bowl"
 		case "Gold Showcase (Drum Corps at the Glen)": "Gold Showcase"
