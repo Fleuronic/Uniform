@@ -25,9 +25,8 @@ public extension Location {
 		default: break
 		}
 
-		guard
-			case let components = record.replacingOccurrences(of: ",", with: "").split(separator: " "),
-			let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else { return nil }
+		let components = record.replacingOccurrences(of: ",", with: "").split(separator: " ")
+		let stateIndex = components.firstIndex { $0.allSatisfy(\.isUppercase) }!
 		
 		var city = components[0..<stateIndex].joined(separator: " ")
 		var state = String(components[stateIndex]).uppercased()
