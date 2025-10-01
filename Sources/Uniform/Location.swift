@@ -14,6 +14,10 @@ public extension Location {
 			return ("Dadizele", "West Flanders", "Belgium")
 		} else if record.contains("Arklow") {
 			return ("Arklow", "Co. Wicklow", "Ireland")
+		} else if record.contains("Dordrecht") {
+			return ("Dordrecht", "South Holland", "Netherlands")
+		} else if record.contains("Chesterfield, Derbyshire") {
+			return ("Chesterfield", "Derbyshire", "United Kingdom")
 		}
 
 		switch record {

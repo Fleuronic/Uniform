@@ -96,6 +96,8 @@ public extension Show {
 		case ("drum-corps-an-american-tradition", 2018): "drum-corps-an-america-tradition"
 		case ("drum-corps-an-american-tradition-2", 2018): "drum-corps-an-american-tradition"
 		case ("tour-of-champions-oklahoma", 2017): "tour-of-champions-oklahoma-presented-by-drums-of-summer"
+		case ("dci-open-class-world-championship-finals", 2017): "dci-open-class-world-championships-finals"
+		case ("dci-open-class-world-championship-prelims", 2017): "dci-open-class-world-championships-prelims"
 		case ("dci-on-the-so-cal-coast", _): "dci-on-the-socal-coast"
 		default: slug
 		}
