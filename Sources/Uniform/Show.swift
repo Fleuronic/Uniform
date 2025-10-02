@@ -11,7 +11,7 @@ public extension Show {
 			.replacingOccurrences(of: "&amp;", with: "&")
 			.replacingOccurrences(of: "@ the Glen", with: "at the Glen")
 			.replacingOccurrences(of: " 2018", with: "")
-			.replacingOccurrences(of: ". ", with: "")
+			.replacingOccurrences(of: ". Drum", with: "Drum")
 			.replacingOccurrences(of: "Barnum Festival Champions", with: "Barnum Festival: Champions")
 			.replacingOccurrences(of: "Brass: North", with: "Brass – North")
 			.replacingOccurrences(of: "Brass: Pitt", with: "Brass – Pitt")
