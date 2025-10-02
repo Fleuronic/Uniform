@@ -8,7 +8,9 @@ public extension Show {
 			.replacingOccurrences(of: "?", with: "–")
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "&amp;", with: "&")
+			.replacingOccurrences(of: "@ the Glen;", with: "at the Glen")
 			.replacingOccurrences(of: " 2018;", with: "")
+			.replacingOccurrences(of: ". ;", with: "")
 			.replacingOccurrences(of: "Barnum Festival Champions", with: "Barnum Festival: Champions")
 			.replacingOccurrences(of: "Brass: North", with: "Brass – North")
 			.replacingOccurrences(of: "Brass: Pitt", with: "Brass – Pitt")
@@ -26,6 +28,7 @@ public extension Show {
 			.replacingOccurrences(of: "Southwestern Regional", with: "Southwestern Championship")
 			.replacingOccurrences(of: "SUMMER MUSIC GAMES", with: "Summer Music Games")
 			.replacingOccurrences(of: "Tradition–", with: "Tradition –")
+			.replacingOccurrences(of: "Texas,", with: "Texas")
 			.replacingOccurrences(of: "The DCI South", with: "DCI South")
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
@@ -43,6 +46,7 @@ public extension Show {
 		case "DCI Southeastern": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
+		case "Drums Along The Mississippi": "Drums Along the Mississippi River"
 		case "Drums Corps: An American Tradition – Metro": "Drums Corps: An American Tradition – Clifton"
 		case "Drums at the Rose Bowl": "Drum Corps at the Rose Bowl"
 		case "Gold Showcase (Drum Corps at the Glen)": "Gold Showcase"
