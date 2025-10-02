@@ -109,7 +109,7 @@ public extension Show {
 		case ("drum-corps-an-american-tradition", "Annapolis", 2017): "drum-corps-an-american-tradition"
 		case ("drum-corps-an-american-tradition", "Allentown", 2017): "drum-corps-an-american-tradition-3"
 		case ("drum-corps-an-american-tradition", "Clifton", 2017): "drum-corps-an-american-tradition-2"
-		default: slug
+		default: scoreSlug
 		}
 
 		return scoreSlug
