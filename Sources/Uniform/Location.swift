@@ -18,6 +18,8 @@ public extension Location {
 			return ("Barnsley", "South Yorkshire", "England")
 		} else if record.contains("Widnes Cheshire") {
 			return ("Widnes", "Cheshire", "England")
+		} else if record.contains("Kerkrade") {
+			return ("Kerkrade", "Limburg", "Netherlands")
 		}
 
 		switch record {
