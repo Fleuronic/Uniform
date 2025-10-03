@@ -61,6 +61,7 @@ public extension DrumKit.Corps {
 		case "Blue Devils \"B\"": "Blue Devils B"
 		case "Blue Devils \"C\"": "Blue Devils C"
 		case "Hurricanes": "Connecticut Hurricanes"
+		case "Thunder": "Spokane Thunder"
 		default: name
 		}
 
