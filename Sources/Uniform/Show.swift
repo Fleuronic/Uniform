@@ -17,6 +17,7 @@ public extension Show {
 			.replacingOccurrences(of: "Tour of Champions:", with: "Tour of Champions –")
 			.replacingOccurrences(of: "Brigadiers", with: "Brigadier’s")
 			.replacingOccurrences(of: "Drum Along", with: "Drums Along")
+			.replacingOccurrences(of: "Capital Classic", with: "Capitol Classic")
 			.replacingOccurrences(of: "Champions,", with: "Champions")
 			.replacingOccurrences(of: "Crest San,", with: "Crest – San")
 			.replacingOccurrences(of: "Crest Los,", with: "Crest – Los")
@@ -42,14 +43,15 @@ public extension Show {
 		case "DCI Manchester, NH": "DCI New Hampshire"
 		case "DCI Masters": "The Masters of the Summer Music Games"
 		case "DCI Open Prelims": "DCI Open Class World Championship Prelims"
-		case "DCI Open Finals", "DCI Open Class Finals": "DCI Open Class World Championship Finals"
-		case "DCI Open Class Prelims": "DCI Open Class World Championship Prelims"
+		case "DCI Open Finals", "DCI Open Class Finals", "DCI Championships Open Class Championship Finals": "DCI Open Class World Championship Finals"
+		case "DCI Open Class Prelims", "DCI World Championships Open Class Championship Prelims" : "DCI Open Class World Championship Prelims"
 		case "DCI Finals", "DCI World Class Finals": "DCI World Championship Finals"
 		case "DCI Prelims", "DCI World Class Prelims": "DCI World Championship Prelims"
 		case "DCI Semifinals", "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
 		case "DCI Southeastern": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
 		case "DCI Sioux City": "DCI Morningside"
+		case "Drum Corps in Northern Virginia": "Drums in Northern Virginia"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
 		case "Drums Along The Mississippi": "Drums Along the Mississippi River"
 		case "Drums Corps: An American Tradition – Metro": "Drums Corps: An American Tradition – Clifton"
@@ -76,19 +78,30 @@ public extension Show {
 		case ("DCI Jupiter", 2017): "DCI South Florida"
 		case ("DCI Alabama", 2017): "DCI Southern Alabama"
 		case ("DCI Oklahoma", 2016): "DCI Central Oklahoma"
+		case ("DCI Central Oklahoma", 2013): "Drums in the Heartland"
 		case ("DCI Northern Kentucky", 2016): "DCI Kentucky"
+		case ("Portland Summer Music Games", 2013): "Drums of Fire"
 		case ("Innovations in Brass – Massillon", 2019): "Innovations in Brass – North Canton"
 		case ("Innovations in Brass – Akron", 2016): "Innovations in Brass – Massillon"
+		case ("Tour of Champions – New Jersey", 2013): "Tour of Champions"
 		case ("Tour of Champions – Chester", let year) where year < 2018: "Tour of Champions – PPL Park"
 		case ("Diablo Valley Classic", let year) where [2018, 2022].contains(year): "Diablo Valley Classic Pacific Open Class Championship Finals"
 		default: name
 		}
 
-		for word in ["in", "on", "the", "with", "of"] {
-			name = name.replacingOccurrences(of: " \(word.capitalized) ", with: " \(word) ")
+		name = if name.contains("Soaring Sounds") {
+			"Soaring Sounds"
+		} else if name.contains("Southwest Corps Connection") {
+			"Southwest Corps Connection"
+		} else if name.contains("2013 DCI Tour Premiere") {
+			"Innovations in Brass"
+		} else {
+			name
 		}
 
-		name = name.contains("Soaring Sounds") ? "Soaring Sounds" : name
+		for word in ["in", "on", "the", "with", "of", "de"] {
+			name = name.replacingOccurrences(of: " \(word.capitalized) ", with: " \(word) ")
+		}
 
 		return name
 	}
@@ -115,9 +128,12 @@ public extension Show {
 		case ("tour-of-champions-oklahoma", 2017): "tour-of-champions-oklahoma-presented-by-drums-of-summer"
 		case ("dci-open-class-world-championship-finals", let year) where year < 2018: "dci-open-class-world-championships-finals"
 		case ("dci-open-class-world-championship-prelims", let year) where year < 2018: "dci-open-class-world-championships-prelims"
-		case ("dci-world-championship-finals", 2016): "dci-world-championships-finals"
+		case ("dci-world-championship-finals", let year) where year < 2017: "dci-world-championships-finals"
+		case ("dci-world-championship-prelims", 2013): "dci-world-championships-prelims"
+		case ("dci-world-championship-semifinals", 2013): "dci-world-championships-semifinals"
 		case ("dci-southeastern-championship", 2016): "the-dci-atlanta-southeastern-championship"
 		case ("tour-of-champions-northern-illinois", 2016): "tour-of-champions-north-illinois"
+		case ("tour-of-champions-texas", 2013): "tour-of-championships-texas"
 		case ("dci-on-the-so-cal-coast", _): "dci-on-the-socal-coast"
 		default: slug
 		}
