@@ -15,9 +15,11 @@ public extension Show {
 			.replacingOccurrences(of: "Barnum Festival Champions", with: "Barnum Festival: Champions")
 			.replacingOccurrences(of: "Brass: North", with: "Brass – North")
 			.replacingOccurrences(of: "Brass: Pitt", with: "Brass – Pitt")
+			.replacingOccurrences(of: "Brass: Massillon", with: "Brass – Massillon")
 			.replacingOccurrences(of: "Brigadiers", with: "Brigadier’s")
 			.replacingOccurrences(of: "Drum Along", with: "Drums Along")
 			.replacingOccurrences(of: "Champions,", with: "Champions")
+			.replacingOccurrences(of: "Crest San,", with: "Crest – San")
 			.replacingOccurrences(of: "Games Portland", with: "Games – Portland")
 			.replacingOccurrences(of: "Games Seattle", with: "Games – Seattle")
 			.replacingOccurrences(of: "Jerset", with: "Jersey")
@@ -55,7 +57,6 @@ public extension Show {
 		case "March On": "March On!"
 		case "Nightbeat", "NightBeat": "NightBEAT"
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
-		case "Tour of Champions – Chester": "Tour of Champions – PPL Park"
 		case "Tour Premiere": "Midwest Premiere"
 		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
 		default: name
@@ -74,6 +75,7 @@ public extension Show {
 		case ("DCI Jupiter", 2017): "DCI South Florida"
 		case ("DCI Alabama", 2017): "DCI Southern Alabama"
 		case ("Innovations in Brass: Massillon", 2019): "Innovations in Brass: North Canton"
+		case ("Tour of Champions – Chester", let year) where year < 2018: "Tour of Champions – PPL Park"
 		case ("Diablo Valley Classic", let year) where [2018, 2022].contains(year): "Diablo Valley Classic Pacific Open Class Championship Finals"
 		default: name
 		}

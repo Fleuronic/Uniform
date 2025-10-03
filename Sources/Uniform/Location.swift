@@ -16,6 +16,8 @@ public extension Location {
 			return ("Arklow", "Co. Wicklow", "Ireland")
 		} else if record.contains("Barnsley England") {
 			return ("Barnsley", "South Yorkshire", "England")
+		} else if record.contains("Widnes Cheshire") {
+			return ("Widnes", "Cheshire", "England")
 		}
 
 		switch record {
