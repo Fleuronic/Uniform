@@ -18,10 +18,10 @@ public extension Show {
 			.replacingOccurrences(of: "Tour of Champions:", with: "Tour of Champions –")
 			.replacingOccurrences(of: "Brigadiers", with: "Brigadier’s")
 			.replacingOccurrences(of: "Drum Along", with: "Drums Along")
-			.replacingOccurrences(of: "Capital Classic", with: "Capitol Classic")
 			.replacingOccurrences(of: "Champions,", with: "Champions")
 			.replacingOccurrences(of: "Crest San,", with: "Crest – San")
 			.replacingOccurrences(of: "Crest Los,", with: "Crest – Los")
+			.replacingOccurrences(of: "Crest Walnut,", with: "Crest – Walnut")
 			.replacingOccurrences(of: "Games Portland", with: "Games – Portland")
 			.replacingOccurrences(of: "Games Seattle", with: "Games – Seattle")
 			.replacingOccurrences(of: "Shows Waukesha", with: "Shows – Waukesha")
@@ -29,6 +29,7 @@ public extension Show {
 			.replacingOccurrences(of: "LaCrosse", with: "La Crosse")
 			.replacingOccurrences(of: "Masters Summer", with: "Masters of the Summer")
 			.replacingOccurrences(of: "Rhapsody-Metamora", with: "Rhapsody – Metamora")
+			.replacingOccurrences(of: "Rhapsody-La Crosse", with: "Rhapsody – La Crosse")
 			.replacingOccurrences(of: "Mid-Cal", with: "MidCal")
 			.replacingOccurrences(of: "Northwest Music Games", with: "Northwest Youth Music Games")
 			.replacingOccurrences(of: "SoCal", with: "So Cal")
@@ -53,7 +54,7 @@ public extension Show {
 		case "DCI Finals", "DCI World Class Finals": "DCI World Championship Finals"
 		case "DCI Prelims", "DCI World Class Prelims": "DCI World Championship Prelims"
 		case "DCI Semifinals", "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
-		case "DCI Southeastern": "DCI Southeastern Championship"
+		case "DCI Southeastern", "DCI Atlanta Southeastern Championship": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
 		case "DCI Sioux City": "DCI Morningside"
 		case "Drum Corps in Northern Virginia": "Drums in Northern Virginia"
@@ -135,7 +136,7 @@ public extension Show {
 		case ("dci-open-class-world-championship-finals", 2013): "dci-championships-open-class-championship-finals"
 		case ("dci-open-class-world-championship-prelims", let year) where year < 2018: "dci-open-class-world-championships-prelims"
 		case ("dci-open-class-world-championship-finals", let year) where year < 2018: "dci-open-class-world-championships-finals"
-		case ("dci-world-championship-finals", let year) where year < 2017: "dci-world-championships-finals"
+		case ("dci-world-championship-finals", let year) where year > 2013, year < 2017: "dci-world-championships-finals"
 		case ("dci-world-championship-prelims", 2013): "dci-world-championships-prelims"
 		case ("dci-world-championship-semifinals", 2013): "dci-world-championships-semifinals"
 		case ("dci-southeastern-championship", 2016): "the-dci-atlanta-southeastern-championship"
