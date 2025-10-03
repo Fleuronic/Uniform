@@ -43,7 +43,7 @@ public extension Show {
 		case "DCI Manchester, NH": "DCI New Hampshire"
 		case "DCI Masters": "The Masters of the Summer Music Games"
 		case "DCI Open Prelims": "DCI Open Class World Championship Prelims"
-		case "DCI Open Finals", "DCI Open Class Finals", "DCI Championships Open Class Championship Finals", "DCI World Championships Open Class Championship Prelims": "DCI Open Class World Championship Finals"
+		case "DCI Open Finals", "DCI Open Class Finals", "DCI Championships Open Class Championship Finals": "DCI Open Class World Championship Finals"
 		case "DCI Open Class Prelims", "DCI World Championships Open Class Championship Prelims": "DCI Open Class World Championship Prelims"
 		case "DCI Finals", "DCI World Class Finals": "DCI World Championship Finals"
 		case "DCI Prelims", "DCI World Class Prelims": "DCI World Championship Prelims"
