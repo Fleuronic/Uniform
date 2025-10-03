@@ -14,10 +14,12 @@ public extension Show {
 			.replacingOccurrences(of: ". Drum", with: "Drum")
 			.replacingOccurrences(of: "Barnum Festival Champions", with: "Barnum Festival: Champions")
 			.replacingOccurrences(of: "Innovations in Brass:", with: "Innovations in Brass –")
+			.replacingOccurrences(of: "Tour of Champions:", with: "Tour of Champions –")
 			.replacingOccurrences(of: "Brigadiers", with: "Brigadier’s")
 			.replacingOccurrences(of: "Drum Along", with: "Drums Along")
 			.replacingOccurrences(of: "Champions,", with: "Champions")
 			.replacingOccurrences(of: "Crest San,", with: "Crest – San")
+			.replacingOccurrences(of: "Crest Los,", with: "Crest – Los")
 			.replacingOccurrences(of: "Games Portland", with: "Games – Portland")
 			.replacingOccurrences(of: "Games Seattle", with: "Games – Seattle")
 			.replacingOccurrences(of: "Jerset", with: "Jersey")
@@ -82,7 +84,7 @@ public extension Show {
 		default: name
 		}
 
-		for word in ["in", "on", "the", "with"] {
+		for word in ["in", "on", "the", "with", "of"] {
 			name = name.replacingOccurrences(of: " \(word.capitalized) ", with: " \(word) ")
 		}
 
@@ -139,6 +141,7 @@ public extension Show {
 			!name.contains("Virtual") &&
 			!name.contains("Rain") &&
 			!name.contains("Mini Corps") &&
-			!name.contains("Performers Showcase")
+			!name.contains("Performers Showcase") &&
+			!name.contains("Big, Loud") &&
 	}
 }
