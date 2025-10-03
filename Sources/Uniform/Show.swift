@@ -68,6 +68,7 @@ public extension Show {
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
 		case "Tour Premiere": "Midwest Premiere"
 		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
+		case ", The 2014 DCI Tour Premiere": ""
 		default: name
 		}
 
@@ -134,12 +135,14 @@ public extension Show {
 		case ("tour-of-champions-oklahoma", 2017): "tour-of-champions-oklahoma-presented-by-drums-of-summer"
 		case ("dci-open-class-world-championship-prelims", 2013): "dci-world-championships-open-class-championship-prelims"
 		case ("dci-open-class-world-championship-finals", 2013): "dci-championships-open-class-championship-finals"
+		case ("dci-open-class-world-championship-finals", 2014): "dci-world-championships-open-class-championship-finals/"
+		case ("dci-open-class-world-championship-prelims", 2014): "dci-world-championships-open-class-championship-prelims/"
 		case ("dci-open-class-world-championship-prelims", let year) where year < 2018: "dci-open-class-world-championships-prelims"
 		case ("dci-open-class-world-championship-finals", let year) where year < 2018: "dci-open-class-world-championships-finals"
-		case ("dci-world-championship-finals", let year) where year > 2013 && year < 2017: "dci-world-championships-finals"
+		case ("dci-world-championship-finals", let year) where year >= 2014 && year <= 2016: "dci-world-championships-finals"
 		case ("dci-world-championship-prelims", 2013): "dci-world-championships-prelims"
 		case ("dci-world-championship-semifinals", 2013): "dci-world-championships-semifinals"
-		case ("dci-southeastern-championship", 2016): "the-dci-atlanta-southeastern-championship"
+		case ("dci-southeastern-championship", let year) where year >= 2014 && year <= 2015: "dci-atlanta-southeastern-championship"
 		case ("tour-of-champions-northern-illinois", 2016): "tour-of-champions-north-illinois"
 		case ("tour-of-champions-texas", 2013): "tour-of-championships-texas"
 		case ("dci-capitol-classic", 2013): "dci-capitol-classic-corps-show"
@@ -151,6 +154,10 @@ public extension Show {
 		case ("drum-corps-an-american-tradition", "Annapolis", 2017): "drum-corps-an-american-tradition"
 		case ("drum-corps-an-american-tradition", "Allentown", 2017): "drum-corps-an-american-tradition-3"
 		case ("drum-corps-an-american-tradition", "Clifton", 2017): "drum-corps-an-american-tradition-2"
+		case ("drum-corps-an-american-tradition", "Chambersburg", 2014): "drum-corps-an-american-tradition-4"
+		case ("drum-corps-an-american-tradition", "Jackson", 2014): "drum-corps-an-american-tradition-3"
+		case ("drum-corps-an-american-tradition", "Chester", 2014): "drum-corps-an-american-tradition-2"
+		case ("drum-corps-an-american-tradition", "West Chester", 2014): "drum-corps-an-american-tradition"
 		default: scoreSlug
 		}
 
@@ -165,7 +172,9 @@ public extension Show {
 			!name.contains("Education") &&
 			!name.contains("Virtual") &&
 			!name.contains("Rain") &&
+			!name.contains("Kickoff") &&
 			!name.contains("Mini Corps") &&
+			!name.contains("Individual") &&
 			!name.contains("Performers Showcase") &&
 			!name.contains("Big, Loud")
 	}
