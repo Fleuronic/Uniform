@@ -136,7 +136,7 @@ public extension Show {
 		case ("dci-open-class-world-championship-finals", 2013): "dci-championships-open-class-championship-finals"
 		case ("dci-open-class-world-championship-prelims", let year) where year < 2018: "dci-open-class-world-championships-prelims"
 		case ("dci-open-class-world-championship-finals", let year) where year < 2018: "dci-open-class-world-championships-finals"
-		case ("dci-world-championship-finals", let year) where year > 2013, year < 2017: "dci-world-championships-finals"
+		case ("dci-world-championship-finals", let year) where year > 2013 && year < 2017: "dci-world-championships-finals"
 		case ("dci-world-championship-prelims", 2013): "dci-world-championships-prelims"
 		case ("dci-world-championship-semifinals", 2013): "dci-world-championships-semifinals"
 		case ("dci-southeastern-championship", 2016): "the-dci-atlanta-southeastern-championship"
