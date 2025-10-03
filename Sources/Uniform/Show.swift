@@ -13,9 +13,7 @@ public extension Show {
 			.replacingOccurrences(of: " 2018", with: "")
 			.replacingOccurrences(of: ". Drum", with: "Drum")
 			.replacingOccurrences(of: "Barnum Festival Champions", with: "Barnum Festival: Champions")
-			.replacingOccurrences(of: "Brass: North", with: "Brass – North")
-			.replacingOccurrences(of: "Brass: Pitt", with: "Brass – Pitt")
-			.replacingOccurrences(of: "Brass: Massillon", with: "Brass – Massillon")
+			.replacingOccurrences(of: "Innovations in Brass:", with: "Innovations in Brass –")
 			.replacingOccurrences(of: "Brigadiers", with: "Brigadier’s")
 			.replacingOccurrences(of: "Drum Along", with: "Drums Along")
 			.replacingOccurrences(of: "Champions,", with: "Champions")
@@ -49,6 +47,7 @@ public extension Show {
 		case "DCI Semifinals", "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
 		case "DCI Southeastern": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
+		case "DCI Sioux City": "DCI Morningside"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
 		case "Drums Along The Mississippi": "Drums Along the Mississippi River"
 		case "Drums Corps: An American Tradition – Metro": "Drums Corps: An American Tradition – Clifton"
@@ -74,7 +73,10 @@ public extension Show {
 		case ("DCI Denton", 2017): "DCI North Texas"
 		case ("DCI Jupiter", 2017): "DCI South Florida"
 		case ("DCI Alabama", 2017): "DCI Southern Alabama"
-		case ("Innovations in Brass: Massillon", 2019): "Innovations in Brass: North Canton"
+		case ("DCI Oklahoma", 2016): "DCI Central Oklahoma"
+		case ("DCI Northern Kentucky", 2016): "DCI Kentucky"
+		case ("Innovations in Brass – Massillon", 2019): "Innovations in Brass – North Canton"
+		case ("Innovations in Brass – Akron", 2016): "Innovations in Brass – Massillon"
 		case ("Tour of Champions – Chester", let year) where year < 2018: "Tour of Champions – PPL Park"
 		case ("Diablo Valley Classic", let year) where [2018, 2022].contains(year): "Diablo Valley Classic Pacific Open Class Championship Finals"
 		default: name
@@ -107,8 +109,11 @@ public extension Show {
 		case ("drum-corps-an-american-tradition", 2018): "drum-corps-an-america-tradition"
 		case ("drum-corps-an-american-tradition-2", 2018): "drum-corps-an-american-tradition"
 		case ("tour-of-champions-oklahoma", 2017): "tour-of-champions-oklahoma-presented-by-drums-of-summer"
-		case ("dci-open-class-world-championship-finals", 2017): "dci-open-class-world-championships-finals"
-		case ("dci-open-class-world-championship-prelims", 2017): "dci-open-class-world-championships-prelims"
+		case ("dci-open-class-world-championship-finals", let year) where year < 2018: "dci-open-class-world-championships-finals"
+		case ("dci-open-class-world-championship-prelims", let year) where year < 2018: "dci-open-class-world-championships-prelims"
+		case ("dci-world-championship-finals", 2016): "dci-world-championships-finals"
+		case ("dci-southeastern-championship", 2016): "the-dci-atlanta-southeastern-championship"
+		case ("tour-of-champions-northern-illinois", 2016): "tour-of-champions-north-illinois"
 		case ("dci-on-the-so-cal-coast", _): "dci-on-the-socal-coast"
 		default: slug
 		}
