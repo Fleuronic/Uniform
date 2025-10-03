@@ -8,6 +8,7 @@ public extension Show {
 			.replacingOccurrences(of: "?", with: "–")
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "  ", with: " ")
+			.replacingOccurrences(of: " Corps Show", with: "")
 			.replacingOccurrences(of: "&amp;", with: "&")
 			.replacingOccurrences(of: "@ the Glen", with: "at the Glen")
 			.replacingOccurrences(of: " 2018", with: "")
@@ -23,6 +24,7 @@ public extension Show {
 			.replacingOccurrences(of: "Crest Los,", with: "Crest – Los")
 			.replacingOccurrences(of: "Games Portland", with: "Games – Portland")
 			.replacingOccurrences(of: "Games Seattle", with: "Games – Seattle")
+			.replacingOccurrences(of: "Shows Waukesha", with: "Shows – Waukesha")
 			.replacingOccurrences(of: "Jerset", with: "Jersey")
 			.replacingOccurrences(of: "LaCrosse", with: "La Crosse")
 			.replacingOccurrences(of: "Masters Summer", with: "Masters of the Summer")
@@ -34,6 +36,7 @@ public extension Show {
 			.replacingOccurrences(of: "SUMMER MUSIC GAMES", with: "Summer Music Games")
 			.replacingOccurrences(of: "Tradition–", with: "Tradition –")
 			.replacingOccurrences(of: "Texas,", with: "Texas")
+			.replacingOccurrences(of: "Mississippi River,", with: "Mississippi")
 			.replacingOccurrences(of: "The DCI South", with: "DCI South")
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
@@ -136,6 +139,7 @@ public extension Show {
 		case ("dci-southeastern-championship", 2016): "the-dci-atlanta-southeastern-championship"
 		case ("tour-of-champions-northern-illinois", 2016): "tour-of-champions-north-illinois"
 		case ("tour-of-champions-texas", 2013): "tour-of-championships-texas"
+		case ("dci-capitol-classic", 2013): "dci-capitol-classic-corps-show"
 		case ("dci-on-the-so-cal-coast", _): "dci-on-the-socal-coast"
 		default: slug
 		}
