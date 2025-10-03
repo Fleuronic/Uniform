@@ -142,6 +142,6 @@ public extension Show {
 			!name.contains("Rain") &&
 			!name.contains("Mini Corps") &&
 			!name.contains("Performers Showcase") &&
-			!name.contains("Big, Loud") &&
+			!name.contains("Big, Loud")
 	}
 }
