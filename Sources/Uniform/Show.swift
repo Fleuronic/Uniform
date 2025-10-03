@@ -86,6 +86,8 @@ public extension Show {
 			name = name.replacingOccurrences(of: " \(word.capitalized) ", with: " \(word) ")
 		}
 
+		name = name.contains("Soaring Sounds") ? "Soaring Sounds" : name
+
 		return name
 	}
 
