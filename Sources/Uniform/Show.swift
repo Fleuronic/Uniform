@@ -28,7 +28,7 @@ public extension Show {
 			.replacingOccurrences(of: "Jerset", with: "Jersey")
 			.replacingOccurrences(of: "LaCrosse", with: "La Crosse")
 			.replacingOccurrences(of: "Masters Summer", with: "Masters of the Summer")
-			.replacingOccurrences(of: "Rhapsody-Metamora", with: "Rhapsody – Metamora")
+			.replacingOccurrences(of: "Rhapsody-Metamora", with: "Rhapsody – Metamora")
 			.replacingOccurrences(of: "Mid-Cal", with: "MidCal")
 			.replacingOccurrences(of: "Northwest Music Games", with: "Northwest Youth Music Games")
 			.replacingOccurrences(of: "SoCal", with: "So Cal")
