@@ -40,9 +40,9 @@ public extension Show {
 			.replacingOccurrences(of: "Tradition–", with: "Tradition –")
 			.replacingOccurrences(of: "Texas,", with: "Texas")
 			.replacingOccurrences(of: "Mississippi River,", with: "Mississippi")
-			.replacingOccurrences(of: "The DCI South", with: "DCI South"),
-			.replacingOccurrences(of: ", the 2014 DCI Tour Premiere", with ""),
-			.replacingOccurrences(of: "- A DCI/DCA split event!", with "")
+			.replacingOccurrences(of: "The DCI South", with: "DCI South")
+			.replacingOccurrences(of: ", the 2014 DCI Tour Premiere", with: "")
+			.replacingOccurrences(of: "- A DCI/DCA split event!", with: "")
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
 
