@@ -158,6 +158,8 @@ public extension Show {
 		case ("drum-corps-an-american-tradition", "Jackson", 2014): "drum-corps-an-american-tradition-3"
 		case ("drum-corps-an-american-tradition", "Chester", 2014): "drum-corps-an-american-tradition-2"
 		case ("drum-corps-an-american-tradition", "West Chester", 2014): "drum-corps-an-american-tradition"
+		case ("show-of-shows", "Rockford", 2014): "show-of-shows-2"
+		case ("show-of-shows", "Metamora", 2014): "show-of-shows"
 		default: scoreSlug
 		}
 
