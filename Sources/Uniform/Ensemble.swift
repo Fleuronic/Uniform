@@ -39,6 +39,7 @@ public extension Ensemble {
 			"Charlotte Jansky, Colts",
 			"Crossmen & Spirit of Atlanta",
 			"DrumSpirit",
+			"Drumline",
 			"Ensemble",
 			"Experience",
 			"High School",
