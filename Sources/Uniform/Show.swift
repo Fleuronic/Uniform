@@ -40,7 +40,9 @@ public extension Show {
 			.replacingOccurrences(of: "Tradition–", with: "Tradition –")
 			.replacingOccurrences(of: "Texas,", with: "Texas")
 			.replacingOccurrences(of: "Mississippi River,", with: "Mississippi")
-			.replacingOccurrences(of: "The DCI South", with: "DCI South")
+			.replacingOccurrences(of: "The DCI South", with: "DCI South"),
+			.replacingOccurrences(of: ", the 2014 DCI Tour Premiere", with ""),
+			.replacingOccurrences(of: "- A DCI/DCA split event!", with "")
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
 
@@ -51,7 +53,7 @@ public extension Show {
 		case "DCI Open Prelims": "DCI Open Class World Championship Prelims"
 		case "DCI Open Finals", "DCI Open Class Finals", "DCI World Championships Open Class Championship Finals": "DCI Open Class World Championship Finals"
 		case "DCI Open Class Prelims", "DCI World Championships Open Class Championship Prelims": "DCI Open Class World Championship Prelims"
-		case "DCI Finals", "DCI World Class Finals": "DCI World Championship Finals"
+		case "DCI Finals", "DCI World Class Finals", "DCI World Championship World Class Finals": "DCI World Championship Finals"
 		case "DCI Prelims", "DCI World Class Prelims": "DCI World Championship Prelims"
 		case "DCI Semifinals", "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
 		case "DCI Southeastern", "DCI Atlanta Southeastern Championship": "DCI Southeastern Championship"
@@ -68,12 +70,14 @@ public extension Show {
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
 		case "Tour Premiere": "Midwest Premiere"
 		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
-		case ", the 2014 DCI Tour Premiere": ""
 		default: name
 		}
 
 		name = switch (name, city, year) {
 		case ("Drum Corps: An American Tradition", "Annapolis", 2018): "Drum Corps: An American Tradition – Annapolis"
+		case ("Name TBD", "Great Bend", 2015): "March of Champions"
+		case ("Name TBD", "Bakersfield", 2015): "Resound"
+		case ("Name TBD", "St. Louis", 2015): "DCI Mid-America"
 		default: name
 		}
 
@@ -88,6 +92,8 @@ public extension Show {
 		case ("DCI Central Oklahoma", 2013): "DCI in the Heartland"
 		case ("DCI Northern Kentucky", 2016): "DCI Kentucky"
 		case ("Portland Summer Music Games", 2013): "Drums of Fire"
+		case ("Boise Summer Music Games", 2015): "Drums Along the Rockies – Boise Edition"
+		case ("Music on the Border", 2015): "Show of Shows"
 		case ("Innovations in Brass – Massillon", 2019): "Innovations in Brass – North Canton"
 		case ("Innovations in Brass – Akron", 2016): "Innovations in Brass – Massillon"
 		case ("Tour of Champions – New Jersey", 2013): "Tour of Champions"
@@ -106,7 +112,7 @@ public extension Show {
 			name
 		}
 
-		for word in ["in", "on", "the", "with", "of", "de"] {
+		for word in ["in", "on", "to", "the", "with", "of", "de"] {
 			name = name.replacingOccurrences(of: " \(word.capitalized) ", with: " \(word) ")
 		}
 
@@ -135,11 +141,12 @@ public extension Show {
 		case ("tour-of-champions-oklahoma", 2017): "tour-of-champions-oklahoma-presented-by-drums-of-summer"
 		case ("dci-open-class-world-championship-prelims", 2013): "dci-world-championships-open-class-championship-prelims"
 		case ("dci-open-class-world-championship-finals", 2013): "dci-championships-open-class-championship-finals"
-		case ("dci-open-class-world-championship-finals", 2014): "dci-world-championships-open-class-championship-finals/"
-		case ("dci-open-class-world-championship-prelims", 2014): "dci-world-championships-open-class-championship-prelims/"
+		case ("dci-open-class-world-championship-finals", year) where [2014, 2015].contains(year): "dci-world-championships-open-class-championship-finals/"
+		case ("dci-open-class-world-championship-prelims", year) where [2014, 2015].contains(year): "dci-world-championships-open-class-championship-prelims/"
 		case ("dci-open-class-world-championship-prelims", let year) where year < 2018: "dci-open-class-world-championships-prelims"
 		case ("dci-open-class-world-championship-finals", let year) where year < 2018: "dci-open-class-world-championships-finals"
-		case ("dci-world-championship-finals", let year) where year >= 2014 && year <= 2016: "dci-world-championships-finals"
+		case ("dci-world-championship-finals", let year) where [2014, 2016].contains(year): "dci-world-championships-finals"
+		case ("dci-world-championship-finals", 2015): "2015-dci-world-championship-world-class-finals"
 		case ("dci-world-championship-prelims", 2013): "dci-world-championships-prelims"
 		case ("dci-world-championship-semifinals", 2013): "dci-world-championships-semifinals"
 		case ("dci-southeastern-championship", let year) where year >= 2014 && year <= 2015: "dci-atlanta-southeastern-championship"
@@ -147,6 +154,8 @@ public extension Show {
 		case ("tour-of-champions-texas", 2013): "tour-of-championships-texas"
 		case ("dci-capitol-classic", 2013): "dci-capitol-classic-corps-show"
 		case ("dci-on-the-so-cal-coast", _): "dci-on-the-socal-coast"
+		case ("pacific-procession", 2015): "pacific-proscession"
+		case ("shoremen-brass-classic", 2015): "shoreman-brass-classic"
 		default: slug
 		}
 
@@ -154,6 +163,8 @@ public extension Show {
 		case ("drum-corps-an-american-tradition", "Annapolis", 2017): "drum-corps-an-american-tradition"
 		case ("drum-corps-an-american-tradition", "Allentown", 2017): "drum-corps-an-american-tradition-3"
 		case ("drum-corps-an-american-tradition", "Clifton", 2017): "drum-corps-an-american-tradition-2"
+		case ("drum-corps-an-american-tradition", "Allentown", 2015): "drum-corps-an-american-tradition-3"
+		case ("drum-corps-an-american-tradition", "Clifton", 2015): "drum-corps-an-american-tradition-2"
 		case ("drum-corps-an-american-tradition", "Chambersburg", 2014): "drum-corps-an-american-tradition-4"
 		case ("drum-corps-an-american-tradition", "Jackson", 2014): "drum-corps-an-american-tradition-3"
 		case ("drum-corps-an-american-tradition", "Chester", 2014): "drum-corps-an-american-tradition-2"
@@ -178,6 +189,8 @@ public extension Show {
 			!name.contains("Mini Corps") &&
 			!name.contains("Individual") &&
 			!name.contains("Performers Showcase") &&
-			!name.contains("Big, Loud")
+			!name.contains("After Party") &&
+			!name.contains("Honors") &&
+			!name.contains("Street Beat")
 	}
 }
