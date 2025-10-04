@@ -53,7 +53,7 @@ public extension Show {
 		case "DCI Open Prelims": "DCI Open Class World Championship Prelims"
 		case "DCI Open Finals", "DCI Open Class Finals", "DCI World Championships Open Class Championship Finals": "DCI Open Class World Championship Finals"
 		case "DCI Open Class Prelims", "DCI World Championships Open Class Championship Prelims": "DCI Open Class World Championship Prelims"
-		case "DCI Finals", "DCI World Class Finals", "DCI World Championship World Class Finals": "DCI World Championship Finals"
+		case "DCI Finals", "DCI World Class Finals", "DCI World Championships World Class Finals": "DCI World Championship Finals"
 		case "DCI Prelims", "DCI World Class Prelims": "DCI World Championship Prelims"
 		case "DCI Semifinals", "DCI World Class Semi-Finals": "DCI World Championship Semifinals"
 		case "DCI Southeastern", "DCI Atlanta Southeastern Championship": "DCI Southeastern Championship"
@@ -141,8 +141,8 @@ public extension Show {
 		case ("tour-of-champions-oklahoma", 2017): "tour-of-champions-oklahoma-presented-by-drums-of-summer"
 		case ("dci-open-class-world-championship-prelims", 2013): "dci-world-championships-open-class-championship-prelims"
 		case ("dci-open-class-world-championship-finals", 2013): "dci-championships-open-class-championship-finals"
-		case ("dci-open-class-world-championship-finals", year) where [2014, 2015].contains(year): "dci-world-championships-open-class-championship-finals/"
-		case ("dci-open-class-world-championship-prelims", year) where [2014, 2015].contains(year): "dci-world-championships-open-class-championship-prelims/"
+		case ("dci-open-class-world-championship-finals", year) where [2014, 2015].contains(year): "dci-world-championships-open-class-championship-finals"
+		case ("dci-open-class-world-championship-prelims", year) where [2014, 2015].contains(year): "dci-world-championships-open-class-championship-prelims"
 		case ("dci-open-class-world-championship-prelims", let year) where year < 2018: "dci-open-class-world-championships-prelims"
 		case ("dci-open-class-world-championship-finals", let year) where year < 2018: "dci-open-class-world-championships-finals"
 		case ("dci-world-championship-finals", let year) where [2014, 2016].contains(year): "dci-world-championships-finals"
@@ -189,7 +189,9 @@ public extension Show {
 			!name.contains("Mini Corps") &&
 			!name.contains("Individual") &&
 			!name.contains("Performers Showcase") &&
-			!name.contains("After Party") &&
+			!name.contains("BIG, LOUD") &&
+			!name.contains("Big, Loud") &&
+			!name.contains("After-Party") &&
 			!name.contains("Honors") &&
 			!name.contains("Street Beat")
 	}
