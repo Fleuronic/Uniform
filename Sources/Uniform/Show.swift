@@ -68,7 +68,7 @@ public extension Show {
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
 		case "Tour Premiere": "Midwest Premiere"
 		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
-		case ", The 2014 DCI Tour Premiere": ""
+		case ", the 2014 DCI Tour Premiere": ""
 		default: name
 		}
 
