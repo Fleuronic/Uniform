@@ -139,6 +139,7 @@ public extension Show {
 		case ("dci-all-age-world-championship-finals", 2025): "dci-all-age-world-championship"
 		case ("drum-corps-an-american-tradition", 2018): "drum-corps-an-america-tradition"
 		case ("drum-corps-an-american-tradition-2", 2018): "drum-corps-an-american-tradition"
+		case ("drum-corps-an-american-tradition-metro", 2017): "drum-corps-an-american-tradition-clifton"
 		case ("tour-of-champions-oklahoma", 2017): "tour-of-champions-oklahoma-presented-by-drums-of-summer"
 		case ("dci-open-class-world-championship-prelims", 2013): "dci-world-championships-open-class-championship-prelims"
 		case ("dci-open-class-world-championship-finals", 2013): "dci-championships-open-class-championship-finals"
@@ -163,7 +164,6 @@ public extension Show {
 		scoreSlug = switch (slug, city, year) {
 		case ("drum-corps-an-american-tradition", "Annapolis", 2017): "drum-corps-an-american-tradition"
 		case ("drum-corps-an-american-tradition", "Allentown", 2017): "drum-corps-an-american-tradition-3"
-		case ("drum-corps-an-american-tradition", "Clifton", 2017): "drum-corps-an-american-tradition-2"
 		case ("drum-corps-an-american-tradition", "Allentown", 2015): "drum-corps-an-american-tradition-3"
 		case ("drum-corps-an-american-tradition", "Clifton", 2015): "drum-corps-an-american-tradition-2"
 		case ("drum-corps-an-american-tradition", "Chambersburg", 2014): "drum-corps-an-american-tradition-4"
