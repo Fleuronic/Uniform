@@ -62,7 +62,6 @@ public extension Show {
 		case "Drum Corps in Northern Virginia": "Drums in Northern Virginia"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
 		case "Drums Along The Mississippi": "Drums Along the Mississippi River"
-		case "Drums Corps: An American Tradition – Metro": "Drums Corps: An American Tradition – Clifton"
 		case "Drums at the Rose Bowl": "Drum Corps at the Rose Bowl"
 		case "Gold Showcase (Drum Corps at the Glen)": "Gold Showcase"
 		case "March On": "March On!"
