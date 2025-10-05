@@ -69,6 +69,7 @@ public extension Show {
 		case "Nightbeat", "NightBeat": "NightBEAT"
 		case "Summer Music Games of Southern Virginia": "Summer Music Games of Southwest Virginia"
 		case "Tour Premiere": "Midwest Premiere"
+		case "Drum Corps: An American Tradition – Metro": "Drum Corps: An American Tradition"
 		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
 		default: name
 		}
@@ -162,7 +163,7 @@ public extension Show {
 		scoreSlug = switch (slug, city, year) {
 		case ("drum-corps-an-american-tradition", "Annapolis", 2017): "drum-corps-an-american-tradition"
 		case ("drum-corps-an-american-tradition", "Allentown", 2017): "drum-corps-an-american-tradition-3"
-		case ("drum-corps-an-american-tradition-metro", "Clifton", 2017): "drum-corps-an-american-tradition-2"
+		case ("drum-corps-an-american-tradition", "Clifton", 2017): "drum-corps-an-american-tradition-2"
 		case ("drum-corps-an-american-tradition", "Allentown", 2015): "drum-corps-an-american-tradition-3"
 		case ("drum-corps-an-american-tradition", "Clifton", 2015): "drum-corps-an-american-tradition-2"
 		case ("drum-corps-an-american-tradition", "Chambersburg", 2014): "drum-corps-an-american-tradition-4"
