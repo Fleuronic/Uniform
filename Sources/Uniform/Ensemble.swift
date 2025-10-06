@@ -51,6 +51,7 @@ public extension Ensemble {
 			"Knights Legacy",
 			"Lake Erie Sound",
 			"Lutheran Vanguard",
+			"Magnificent Brass",
 			"Marching",
 			"Paul Yoo, Madison Scouts",
 			"PHANtastic",
