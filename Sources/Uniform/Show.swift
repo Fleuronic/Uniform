@@ -91,6 +91,7 @@ public extension Show {
 		case ("DCI Oklahoma", 2016): "DCI Central Oklahoma"
 		case ("DCI Central Oklahoma", 2013): "DCI in the Heartland"
 		case ("DCI Northern Kentucky", 2016): "DCI Kentucky"
+		case ("Drum Corps Competition", 2014): "Greendale Drum Corps Show"
 		case ("Portland Summer Music Games", 2013): "Drums of Fire"
 		case ("Boise Summer Music Games", 2015): "Drums Along the Rockies – Boise Edition"
 		case ("Music on the Border", 2015): "Show of Shows"
