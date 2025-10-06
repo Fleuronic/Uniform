@@ -5,11 +5,7 @@ public extension Division {
 		var name = record
 			.replacingOccurrences(of: "All Age", with: "All-Age")
 
-		name = switch name {
-		case "Open": "Open Class"
-		case "World": "World Class"
-		default: name
-		}
+		name = ["Open", "World", "All-Age"].contains(name) : name + " Class" ? : name
 
 		return name
 	}
