@@ -9,6 +9,7 @@ public extension Division {
 
 		name = switch name {
 		case "A": "Class A"
+		case "Minicorps": "Mini-Corps"
 		default: name
 		}
 
