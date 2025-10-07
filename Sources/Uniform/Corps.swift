@@ -51,6 +51,7 @@ public extension DrumKit.Corps {
 			.replacingOccurrences(of: "New York Skyliners", with: "Skyliners")
 			.replacingOccurrences(of: "Phantom Regiment Alumni Association", with: "Phantom Regiment Alumni Corps")
 			.replacingOccurrences(of: "Sacramento Freelancers Alumni", with: "Freelancers Alumni")
+			.replacingOccurrences(of: "Reading Buccaneers Alumni Corps", with: "Buccaneers Alumni")
 			.replacingOccurrences(of: "The Colts", with: "Colts")
 			.replacingOccurrences(of: "The Muchachos", with: "Muchachos")
 			.replacingOccurrences(of: " Drum & Bugle Corps", with: "")
