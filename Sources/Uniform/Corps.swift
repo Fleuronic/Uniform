@@ -45,16 +45,7 @@ public extension DrumKit.Corps {
 			components.count == 2 else { return nil }
 		
 		var name = components[0]
-			.replacingOccurrences(of: "Blue Stars 60th Anniv. Corps", with: "Blue Stars 60th Alumni Corps")
-			.replacingOccurrences(of: "Impact of Orlando", with: "IMPACT")
-			.replacingOccurrences(of: "Inbhear Mor", with: "Inbhear Mór")
 			.replacingOccurrences(of: "New York Skyliners", with: "Skyliners")
-			.replacingOccurrences(of: "Phantom Regiment Alumni Association", with: "Phantom Regiment Alumni Corps")
-			.replacingOccurrences(of: "Sacramento Freelancers Alumni", with: "Freelancers Alumni")
-			.replacingOccurrences(of: "Reading Buccaneers Alumni Corps", with: "Buccaneers Alumni")
-			.replacingOccurrences(of: "Caballeros Alumni", with: "Hawthorne Caballeros Alumni")
-			.replacingOccurrences(of: "The Colts", with: "Colts")
-			.replacingOccurrences(of: "The Muchachos", with: "Muchachos")
 			.replacingOccurrences(of: " Drum & Bugle Corps", with: "")
 			.replacingOccurrences(of: " Drum and Bugle Corps", with: "")
 			.replacingOccurrences(of: " Minicorps", with: "")
@@ -65,6 +56,15 @@ public extension DrumKit.Corps {
 		case "Blue Devils \"C\"": "Blue Devils C"
 		case "Hurricanes": "Connecticut Hurricanes"
 		case "Thunder": "Spokane Thunder"
+		case "Blue Stars 60th Anniv. Corps": "Blue Stars 60th Alumni Corps"
+		case "Impact of Orlando": "IMPACT"
+		case "Inbhear Mor": "Inbhear Mór"
+		case "Phantom Regiment Alumni Association": "Phantom Regiment Alumni Corps"
+		case "Sacramento Freelancers Alumni": "Freelancers Alumni"
+		case "Reading Buccaneers Alumni Corps": "Buccaneers Alumni"
+		case "Caballeros Alumni": "Hawthorne Caballeros Alumni"
+		case "The Colts": "Colts"
+		case "The Muchachos": "Muchachos"
 		default: name
 		}
 

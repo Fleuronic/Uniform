@@ -42,6 +42,7 @@ public extension Ensemble {
 			"Drumline",
 			"Ensemble",
 			"Experience",
+			"Flag Line",
 			"High School",
 			"Jack Greenlee",
 			"Jose Estrada, Genesis",
