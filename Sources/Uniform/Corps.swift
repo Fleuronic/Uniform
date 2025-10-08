@@ -59,6 +59,7 @@ public extension DrumKit.Corps {
 		case "Blue Stars 60th Anniv. Corps": "Blue Stars 60th Alumni Corps"
 		case "Impact of Orlando": "IMPACT"
 		case "Inbhear Mor": "Inbhear Mór"
+		case "Phoenix (Fl)": "Phoenix"
 		case "Phantom Regiment Alumni Association": "Phantom Regiment Alumni Corps"
 		case "Sacramento Freelancers Alumni": "Freelancers Alumni"
 		case "Star United Mini-Corps": "Star United"
