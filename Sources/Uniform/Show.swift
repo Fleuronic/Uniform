@@ -60,7 +60,7 @@ public extension Show {
 		case "DCI Southwestern": "DCI Southwestern Championship"
 		case "DCI Sioux City": "DCI Morningside"
 		case "DCA World Championships – Prelims", "DCA Prelims": "DCA World Championship Prelims"
-		case "DCA World Championships – Finals", "DCI Finals": "DCA World Championship Finals"
+		case "DCA World Championships – Finals", "DCA Finals": "DCA World Championship Finals"
 		case "Mini-Corps Championships", "I&E and Mini Corps": "DCA World Championships – Mini-Corps & I&E"
 		case "Alumni Spectacular": "DCA World Championships – Alumni Spectacular"
 		case "Drum Corps in Northern Virginia": "Drums in Northern Virginia"

@@ -48,6 +48,7 @@ public extension Location {
 		case "LaCrosse": "La Crosse"
 		case "MIllbrook", "Milbrook": "Millbrook"
 		case "Winston Salem": "Winston-Salem"
+		case "Long Island": "Uniondale"
 		default: city
 		}
 
