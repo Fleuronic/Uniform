@@ -58,6 +58,7 @@ public extension Ensemble {
 			"PHANtastic",
 			"Quartet",
 			"Quintet",
+			"Percussion",
 			"RCR Street Club",
 			"Rocky Mountain Brassworks",
 			"Rosemont King Cobras",
