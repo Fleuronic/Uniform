@@ -187,7 +187,6 @@ public extension Show {
 			!name.contains("Virtual") &&
 			!name.contains("Rain") &&
 			!name.contains("Kickoff") &&
-			!name.contains("Mini Corps") &&
 			!name.contains("Individual") &&
 			!name.contains("Performers Showcase") &&
 			!name.contains("BIG, LOUD") &&
