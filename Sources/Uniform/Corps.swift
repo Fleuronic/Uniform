@@ -48,7 +48,7 @@ public extension DrumKit.Corps {
 			.replacingOccurrences(of: "New York Skyliners", with: "Skyliners")
 			.replacingOccurrences(of: " Drum & Bugle Corps", with: "")
 			.replacingOccurrences(of: " Drum and Bugle Corps", with: "")
-			.replacingOccurrences(of: " Minicorps", with: "")
+			.replacingOccurrences(of: "Minicorps", with: "Mini-Corps")
 		let location = components[1]
 
 		name = switch name {
@@ -61,7 +61,10 @@ public extension DrumKit.Corps {
 		case "Inbhear Mor": "Inbhear Mór"
 		case "Phantom Regiment Alumni Association": "Phantom Regiment Alumni Corps"
 		case "Sacramento Freelancers Alumni": "Freelancers Alumni"
+		case "Star United Mini-Corps": "Star United"
+		case "Valley Thunder Mini-Corps": "Valley Thunder"
 		case "Reading Buccaneers Alumni Corps": "Buccaneers Alumni"
+		case "Mag Brass": "Magnificent Brass"
 		case "Caballeros Alumni": "Hawthorne Caballeros Alumni"
 		case "The Colts": "Colts"
 		case "The Muchachos": "Muchachos"
