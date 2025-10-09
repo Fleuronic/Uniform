@@ -62,6 +62,7 @@ public extension DrumKit.Corps {
 		case "Phoenix (Fl)": "Phoenix"
 		case "Phantom Regiment Alumni Association": "Phantom Regiment Alumni Corps"
 		case "Sacramento Freelancers Alumni": "Freelancers Alumni"
+		case "Ghost Riders Mini-Corps": "Ghost Riders"
 		case "Star United Mini-Corps": "Star United"
 		case "Sine Wave Mini Corps": "Sine Wave"
 		case "Valley Thunder Mini-Corps": "Valley Thunder"

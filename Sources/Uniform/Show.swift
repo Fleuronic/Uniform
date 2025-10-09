@@ -37,6 +37,7 @@ public extension Show {
 			.replacingOccurrences(of: "Rhapsody-La Crosse", with: "Rhapsody – La Crosse")
 			.replacingOccurrences(of: "Mid-Cal", with: "MidCal")
 			.replacingOccurrences(of: "Northwest Music Games", with: "Northwest Youth Music Games")
+			.replacingOccurrences(of: "Mini Corps", with: "Mini-Corps")
 			.replacingOccurrences(of: "SoCal", with: "So Cal")
 			.replacingOccurrences(of: "Southeastern Regional", with: "Southeastern Championship")
 			.replacingOccurrences(of: "Southwestern Regional", with: "Southwestern Championship")
@@ -64,7 +65,7 @@ public extension Show {
 		case "DCI Southeastern", "DCI Atlanta Southeastern Championship": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
 		case "DCI Sioux City": "DCI Morningside"
-		case "DCA World Championships – Prelims", "DCA Prelims": "DCA World Championship Prelims"
+		case "DCA World Championships – Prelims", "DCA Prelims", "DCA Championship Preliminaries": "DCA World Championship Prelims"
 		case "DCA World Championships – Finals", "DCA Finals": "DCA World Championship Finals"
 		case "Mini-Corps Championships", "I&E and Mini Corps": "DCA World Championships – Mini-Corps & I&E"
 		case "Alumni Spectacular": "DCA World Championships – Alumni Spectacular"
