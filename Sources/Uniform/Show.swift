@@ -54,6 +54,7 @@ public extension Show {
 			.replacingOccurrences(of: "Texas,", with: "Texas")
 			.replacingOccurrences(of: "Mississippi River,", with: "Mississippi")
 			.replacingOccurrences(of: "Love, Drum", with: "Love, and Drum")
+			.replacingOccurrences(of: "The Marching Millionaires", with: "Marching Millionaires")
 			.replacingOccurrences(of: "The DCI South", with: "DCI South")
 			.replacingOccurrences(of: "The Kiltie Klassic", with: "Kiltie Klassic")
 			.replacingOccurrences(of: "Drum Corps Europe", with: "DCE")
