@@ -15,6 +15,7 @@ public extension Circuit {
 		case "DCA-S", "DCI-South": "DCI South"
 		case "DCI-Pacific": "DCI Pacific"
 		case "Eastern States Circuit": "ESC"
+		case "DCEurope": "DCE"
 		default: abbreviation
 		}
 	}
