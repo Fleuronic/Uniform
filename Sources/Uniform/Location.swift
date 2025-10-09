@@ -24,6 +24,10 @@ public extension Location {
 			return ("Union City", "CA", "United States")
 		} else if record.contains("Barnsley") {
 			return ("Barnsley", "South Yorkshire", "England")
+		} else if record.contains("Woking") {
+			return ("Woking", "Surrey", "England")
+		} else if record.contains("Leicester") {
+			return ("Leicester", "Leicestershire", "England")
 		}
 
 		switch record {
