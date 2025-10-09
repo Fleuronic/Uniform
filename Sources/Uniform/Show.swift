@@ -7,6 +7,7 @@ public extension Show {
 			.replacingOccurrences(of: "--", with: "–")
 			.replacingOccurrences(of: "?", with: "–")
 			.replacingOccurrences(of: "'", with: "’")
+			.replacingOccurrences(of: "... ", with: "’")
 			.replacingOccurrences(of: "  ", with: " ")
 			.replacingOccurrences(of: " Corps Show", with: "")
 			.replacingOccurrences(of: "&amp;", with: "&")
@@ -17,6 +18,12 @@ public extension Show {
 			.replacingOccurrences(of: " 2016", with: "")
 			.replacingOccurrences(of: " 2017", with: "")
 			.replacingOccurrences(of: " 2018", with: "")
+			.replacingOccurrences(of: "2013 ", with: "")
+			.replacingOccurrences(of: "2014 ", with: "")
+			.replacingOccurrences(of: "2015 ", with: "")
+			.replacingOccurrences(of: "2016 ", with: "")
+			.replacingOccurrences(of: "2017 ", with: "")
+			.replacingOccurrences(of: "2018 ", with: "")
 			.replacingOccurrences(of: ". Drum", with: "Drum")
 			.replacingOccurrences(of: "Barnum Festival Champions", with: "Barnum Festival: Champions")
 			.replacingOccurrences(of: "Innovations in Brass:", with: "Innovations in Brass –")
@@ -46,9 +53,13 @@ public extension Show {
 			.replacingOccurrences(of: "Tradition–", with: "Tradition –")
 			.replacingOccurrences(of: "Texas,", with: "Texas")
 			.replacingOccurrences(of: "Mississippi River,", with: "Mississippi")
+			.replacingOccurrences(of: "Love, Drum", with: "Love, and Drum")
 			.replacingOccurrences(of: "The DCI South", with: "DCI South")
+			.replacingOccurrences(of: "The Kiltie Klassic", with: "Kiltie Klassic")
+			.replacingOccurrences(of: "Drum Corps Europe", with: "DCE")
 			.replacingOccurrences(of: ", the 2014 DCI Tour Premiere", with: "")
 			.replacingOccurrences(of: " – A DCI/DCA split event!", with: "")
+			.replacingOccurrences(of: "OST Type keywords... ", with: "")
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
 
@@ -66,7 +77,7 @@ public extension Show {
 		case "DCI Southwestern": "DCI Southwestern Championship"
 		case "DCI Sioux City": "DCI Morningside"
 		case "DCA World Championships – Prelims", "DCA Prelims", "DCA Championship Preliminaries": "DCA World Championship Prelims"
-		case "DCA World Championships – Finals", "DCA Finals": "DCA World Championship Finals"
+		case "DCA World Championships – Finals", "DCA Finals", "DCA Championship Finals": "DCA World Championship Finals"
 		case "Mini-Corps Championships", "I&E and Mini Corps": "DCA World Championships – Mini-Corps & I&E"
 		case "Alumni Spectacular": "DCA World Championships – Alumni Spectacular"
 		case "Drum Corps in Northern Virginia": "Drums in Northern Virginia"

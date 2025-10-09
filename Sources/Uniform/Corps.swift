@@ -66,6 +66,7 @@ public extension DrumKit.Corps {
 		case "Star United Mini-Corps": "Star United"
 		case "Sine Wave Mini Corps": "Sine Wave"
 		case "Valley Thunder Mini-Corps": "Valley Thunder"
+		case "Minne Brass Mini-Corps": "Minne-Brass"
 		case "Reading Buccaneers Alumni Corps": "Buccaneers Alumni"
 		case "Mag Brass": "Magnificent Brass"
 		case "Caballeros Alumni": "Hawthorne Caballeros Alumni"
