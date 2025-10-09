@@ -79,6 +79,8 @@ public extension Show {
 		case "DCI Sioux City": "DCI Morningside"
 		case "DCA World Championships – Prelims", "DCA Prelims", "DCA Championship Preliminaries": "DCA World Championship Prelims"
 		case "DCA World Championships – Finals", "DCA Finals", "DCA Championship Finals": "DCA World Championship Finals"
+		case "Drum Corps United Kingdom Open Prelims": "DCUK Championships – Open Prelims"
+		case "Drum Corps United Kingdom Finals": "DCUK Championships – Finals"
 		case "Drum Corps Europe Championships Prelims": "European Drum Corps Championships – Prelims"
 		case "Drum Corps Europe Championships Finals": "European Drum Corps Championships – Prelims"
 		case "Mini-Corps Championships", "I&E and Mini Corps": "DCA World Championships – Mini-Corps & I&E"

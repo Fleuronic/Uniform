@@ -22,6 +22,8 @@ public extension Location {
 			return ("Kerkrade", "Limburg", "Netherlands")
 		} else if record.contains("Union City") {
 			return ("Union City", "CA", "United States")
+		} else if record.contains("Barnsley") {
+			return ("Barnsley", "South Yorkshire", "England")
 		}
 
 		switch record {
