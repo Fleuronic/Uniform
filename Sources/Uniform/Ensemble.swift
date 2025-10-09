@@ -12,6 +12,7 @@ public extension Ensemble {
 			.replacingOccurrences(of: "Community Arts Network", with: "CAN")
 			.replacingOccurrences(of: "Union School District", with: "USD")
 			.replacingOccurrences(of: "School District", with: "USD")
+			.replacingOccurrences(of: "Beeches Ensemble", with: "Beeches")
 			.replacingOccurrences(of: "Univ.", with: "University")
 			.trimmingCharacters(in: .whitespaces)
 

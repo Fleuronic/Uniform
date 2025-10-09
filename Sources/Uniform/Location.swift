@@ -54,7 +54,7 @@ public extension Location {
 		state = switch state {
 		case "DC": "D.C."
 		case "ONT": "ON"
-		case "QUE": "QC"
+		case "QUE", "QU": "QC"
 		default: state
 		}
 

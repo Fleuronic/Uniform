@@ -7,7 +7,7 @@ public extension Show {
 			.replacingOccurrences(of: "--", with: "–")
 			.replacingOccurrences(of: "?", with: "–")
 			.replacingOccurrences(of: "'", with: "’")
-			.replacingOccurrences(of: "... ", with: "’")
+			.replacingOccurrences(of: "… ", with: "’")
 			.replacingOccurrences(of: "  ", with: " ")
 			.replacingOccurrences(of: " Corps Show", with: "")
 			.replacingOccurrences(of: "&amp;", with: "&")
@@ -51,16 +51,16 @@ public extension Show {
 			.replacingOccurrences(of: "SUMMER MUSIC GAMES", with: "Summer Music Games")
 			.replacingOccurrences(of: "NATIONALS", with: "Nationals")
 			.replacingOccurrences(of: "Tradition–", with: "Tradition –")
+			.replacingOccurrences(of: "Tradition, ", with: "Tradition – ")
 			.replacingOccurrences(of: "Texas,", with: "Texas")
 			.replacingOccurrences(of: "Mississippi River,", with: "Mississippi")
 			.replacingOccurrences(of: "Love, Drum", with: "Love, and Drum")
 			.replacingOccurrences(of: "The Marching Millionaires", with: "Marching Millionaires")
 			.replacingOccurrences(of: "The DCI South", with: "DCI South")
 			.replacingOccurrences(of: "The Kiltie Klassic", with: "Kiltie Klassic")
-			.replacingOccurrences(of: "Drum Corps Europe", with: "DCE")
 			.replacingOccurrences(of: ", the 2014 DCI Tour Premiere", with: "")
 			.replacingOccurrences(of: " – A DCI/DCA split event!", with: "")
-			.replacingOccurrences(of: "OST Type keywords... ", with: "")
+			.replacingOccurrences(of: "OST Type keywords’ ", with: "")
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
 
@@ -79,8 +79,11 @@ public extension Show {
 		case "DCI Sioux City": "DCI Morningside"
 		case "DCA World Championships – Prelims", "DCA Prelims", "DCA Championship Preliminaries": "DCA World Championship Prelims"
 		case "DCA World Championships – Finals", "DCA Finals", "DCA Championship Finals": "DCA World Championship Finals"
+		case "Drum Corps Europe Championships Prelims": "European Drum Corps Championships – Prelims"
+		case "Drum Corps Europe Championships Finals": "European Drum Corps Championships – Prelims"
 		case "Mini-Corps Championships", "I&E and Mini Corps": "DCA World Championships – Mini-Corps & I&E"
-		case "Alumni Spectacular": "DCA World Championships – Alumni Spectacular"
+		case "Mini-Corps Competition": "DCA Mini-Corps Championship"
+		case "DCA Alumni Spectacular", "Alumni Spectacular": "DCA World Championships – Alumni Spectacular"
 		case "Drum Corps in Northern Virginia": "Drums in Northern Virginia"
 		case "Drums Across the Columbia": "Drums Along the Columbia"
 		case "Drums Along The Mississippi": "Drums Along the Mississippi River"
@@ -92,6 +95,7 @@ public extension Show {
 		case "Tour Premiere": "Midwest Premiere"
 		case "Drum Corps: An American Tradition – Metro": "Drum Corps: An American Tradition – Clifton"
 		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
+		case "The Everett Drum & Bugle": "Everett Drum & Bugle Corps Show"
 		default: name
 		}
 
