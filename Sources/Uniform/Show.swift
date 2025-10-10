@@ -83,7 +83,7 @@ public extension Show {
 		case "Drum Corps United Kingdom Finals": "DCUK Championships – Finals"
 		case "Drum Corps Europe Championships Prelims": "European Drum Corps Championships – Prelims"
 		case "Drum Corps Europe Championships Finals": "European Drum Corps Championships – Prelims"
-		case "Mini-Corps Championships", "I&E and Mini Corps": "DCA World Championships – Mini-Corps & I&E"
+		case "Mini-Corps Championships", "I&E and Mini-Corps": "DCA World Championships – Mini-Corps & I&E"
 		case "Mini-Corps Competition": "DCA Mini-Corps Championship"
 		case "DCA Alumni Spectacular", "Alumni Spectacular": "DCA World Championships – Alumni Spectacular"
 		case "Drum Corps in Northern Virginia": "Drums in Northern Virginia"

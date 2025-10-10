@@ -72,6 +72,7 @@ public extension Ensemble {
 			"Sound of Sun Prairie",
 			"Sparta Ignite",
 			"Spirit of Sunnyvale",
+			"Stafford Brigades",
 			"The Cavaliers and The Cavaliers Alumni",
 			"Troopers & Legacy Corps",
 			"U.S. Marine Silent Drill Platoon",
