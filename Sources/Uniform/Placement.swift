@@ -7,6 +7,7 @@ public extension Placement {
 		case "Calgary Stetson Show Band": "Calgary Stetson Showband"
 		case "Blue Devils \"B\"": "Blue Devils B"
 		case "Blue Devils \"C\"": "Blue Devils C"
+		case "Hurricanes": "Connecticut Hurricanes"
 		default: record
 		}
 	}
