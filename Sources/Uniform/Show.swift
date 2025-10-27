@@ -137,6 +137,8 @@ public extension Show {
 			"Southwest Corps Connection"
 		} else if name.contains("2013 DCI Tour Premiere") {
 			"Innovations in Brass"
+		} else if name.contains("So Cal Classic") {
+			"So Cal Classic"
 		} else {
 			name
 		}
