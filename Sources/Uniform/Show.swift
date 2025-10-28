@@ -127,7 +127,6 @@ public extension Show {
 		case ("Innovations in Brass – Akron", 2016): "Innovations in Brass – Massillon"
 		case ("Tour of Champions – New Jersey", 2013): "Tour of Champions"
 		case ("Tour of Champions – Chester", let year) where year < 2018: "Tour of Champions – PPL Park"
-		case ("Diablo Valley Classic", let year) where [2018, 2022].contains(year): "Diablo Valley Classic Pacific Open Class Championship Finals"
 		default: name
 		}
 
