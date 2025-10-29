@@ -66,7 +66,7 @@ public extension DrumKit.Corps {
 		case "Inbhear Mor": "Inbhear Mór"
 		case "Phoenix (Fl)": "Phoenix"
 		case "Phantom Regiment Alumni Association": "Phantom Regiment Alumni Corps"
-		case "Sacramento Freelancers Alumni": "Freelancers Alumni"
+		case "Sacramento Freelancers Alumni", "Sacramento Freelancers Alumni Corps": "Freelancers Alumni"
 		case "Ghost Riders Mini-Corps": "Ghost Riders"
 		case "Star United Mini-Corps": "Star United"
 		case "Sine Wave Mini Corps": "Sine Wave"
@@ -78,6 +78,7 @@ public extension DrumKit.Corps {
 		case "Caballeros Alumni": "Hawthorne Caballeros Alumni"
 		case "The Colts": "Colts"
 		case "The Muchachos": "Muchachos"
+		case "Kilties Senior Corps": "Kilties"
 		default: name
 		}
 
