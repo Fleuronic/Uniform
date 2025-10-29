@@ -10,7 +10,7 @@ public extension Division {
 
 		name = switch name {
 		case "A", "DCA A": "Class A"
-		case "DCA Open", "DCI Open": "Open Class"
+		case "DCA Open Class", "DCI Open Class": "Open Class"
 		case "Minicorps": "Mini-Corps"
 		default: name
 		}

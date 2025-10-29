@@ -80,7 +80,7 @@ public extension Ensemble {
 			"Youth"
 		]
 
-		if ensembles.contains(where: name.contains) {
+		if ensembles.contains(where: name.contains) && !name.contains("Marching Brass") {
 			let location = components.count > 1 ? components[1] : nil
 			return (name, location)
 		} else {

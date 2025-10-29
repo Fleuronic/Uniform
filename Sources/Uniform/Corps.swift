@@ -46,6 +46,7 @@ public extension DrumKit.Corps {
 		
 		var name = components[0]
 			.replacingOccurrences(of: "'", with: "’")
+			.replacingOccurrences(of: " *", with: "")
 			.replacingOccurrences(of: "New York Skyliners", with: "Skyliners")
 			.replacingOccurrences(of: " Drum & Bugle Corps", with: "")
 			.replacingOccurrences(of: " Drum and Bugle Corps", with: "")
