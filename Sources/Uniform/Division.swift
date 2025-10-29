@@ -9,11 +9,19 @@ public extension Division {
 		name = ["Open", "World", "All-Age"].contains(name) ? name + " Class" : name
 
 		name = switch name {
-		case "A": "Class A"
+		case "A", "DCA A": "Class A"
+		case "DCA Open", "DCI Open": "Open Class"
 		case "Minicorps": "Mini-Corps"
 		default: name
 		}
 
 		return name
+	}
+
+	static func circuitAbbreviation(for record: String) -> String? {
+		switch record {
+		case "DCI Open": "DCI"
+		case "DCA Open", "DCA A": "DCA"
+		}
 	}
 }
