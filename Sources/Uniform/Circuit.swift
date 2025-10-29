@@ -51,6 +51,14 @@ public extension Circuit {
 		}
 	}
 
+	static func abbreviation(forDivisionNamed record: String) -> String? {
+		switch record {
+		case "DCI Open": "DCI"
+		case "DCA Open", "DCA A": "DCA"
+		default: nil
+		}
+	}
+
 	static func isValid(with record: String?)  -> Bool {
 		guard let record else { return true }
 

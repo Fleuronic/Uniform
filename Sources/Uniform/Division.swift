@@ -17,12 +17,4 @@ public extension Division {
 
 		return name
 	}
-
-	static func circuitAbbreviation(forDivisionNamed record: String) -> String? {
-		switch record {
-		case "DCI Open": "DCI"
-		case "DCA Open", "DCA A": "DCA"
-		default: nil
-		}
-	}
 }
