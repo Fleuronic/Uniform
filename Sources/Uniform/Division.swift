@@ -22,6 +22,7 @@ public extension Division {
 		switch record {
 		case "DCI Open": "DCI"
 		case "DCA Open", "DCA A": "DCA"
+		default: nil
 		}
 	}
 }
