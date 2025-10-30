@@ -28,7 +28,7 @@ public extension Location {
 			return ("Woking", "Surrey", "England")
 		} else if record.contains("Leicester") {
 			return ("Leicester", "Leicestershire", "England")
-		} else if record.contains("Strängnäs") {
+		} else if record.contains("Strangnas") {
 			return ("Strängnäs", "Södermanland", "Sweden")
 		}
 
