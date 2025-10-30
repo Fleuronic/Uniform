@@ -28,6 +28,8 @@ public extension Location {
 			return ("Woking", "Surrey", "England")
 		} else if record.contains("Leicester") {
 			return ("Leicester", "Leicestershire", "England")
+		} else if record.contains("Strängnäs") {
+			return ("Strängnäs", "Södermanland", "Sweden")
 		}
 
 		switch record {
