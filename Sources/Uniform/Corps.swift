@@ -40,10 +40,10 @@ public extension DrumKit.Corps {
 		default: break
 		}
 
-		guard 
+		guard
 			case let components = record.components(separatedBy: " - "),
 			components.count == 2 else { return nil }
-		
+
 		var name = components[0]
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: " *", with: "")
@@ -72,6 +72,7 @@ public extension DrumKit.Corps {
 		case "Sine Wave Mini Corps": "Sine Wave"
 		case "Valley Thunder Mini-Corps": "Valley Thunder"
 		case "Minne Brass Mini-Corps": "Minne-Brass"
+		case "MBI": "Minnesota Brass"
 		case "Beeches Ensemble": "Beeches"
 		case "Reading Buccaneers Alumni Corps": "Buccaneers Alumni"
 		case "Mag Brass": "Magnificent Brass"
