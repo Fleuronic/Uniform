@@ -1,3 +1,5 @@
+// Copyright © Fleuronic LLC. All rights reserved.
+
 import struct DrumKit.Location
 
 public extension Location {
@@ -33,6 +35,7 @@ public extension Location {
 		}
 
 		switch record {
+		case "TBA, Midwest": return ("Louisville", "KY", "United States")
 		case "Washington, D.C.": return ("Washington", "D.C.", "United States")
 		default: break
 		}
@@ -42,7 +45,7 @@ public extension Location {
 			let components = record.components(separatedBy: ", ")
 			return (components[0], components[1], components[2])
 		}
-		
+
 		var city = components[0..<stateIndex].joined(separator: " ")
 		var state = String(components[stateIndex]).uppercased()
 		let country = if stateIndex == components.count - 1 {

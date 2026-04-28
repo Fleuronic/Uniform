@@ -1,3 +1,5 @@
+// Copyright © Fleuronic LLC. All rights reserved.
+
 import struct DrumKit.Address
 
 public extension Address {

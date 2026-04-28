@@ -4,7 +4,8 @@ public extension Ensemble {
 	typealias Info = (String, String?)
 
 	static func info(for record: String) -> Info? {
-		let components = record.components(separatedBy: " - ")
+		let allComponents = record.components(separatedBy: " - ")
+		let components = [allComponents.first!, allComponents.last!]
 		var name = components[0]
 			.replacingOccurrences(of: " & Drum Corps", with: "")
 			.replacingOccurrences(of: " Performance", with: "")
@@ -14,20 +15,24 @@ public extension Ensemble {
 			.replacingOccurrences(of: "School District", with: "USD")
 			.replacingOccurrences(of: "Beeches Ensemble", with: "Beeches")
 			.replacingOccurrences(of: "Univ.", with: "University")
+			.replacingOccurrences(of: "H.S.", with: "High School")
 			.trimmingCharacters(in: .whitespaces)
 
 		name = switch name {
 		case "BANDtastic Honor Band", "BANDtastic Canton Honor Band": "BANDtastic! Honor Band"
 		case "Banner Brass": "Buccaneer Banner Brass"
 		case "Black Star DrumLine": "Black Star Drum Line"
+		case "Columbus Saints Minis": "Saints Minis"
 		case "Fairfield High School Marching b": "Fairfield High School Marching Band"
 		case "High School 57": "Beijing 57 High School"
 		case "Sound Wave Sounders FC": "Sound Wave"
 		case "Spirit of Sunyvale SoundSport": "Spirit of Sunnyvale"
+		case "EN-CORPS by EN-RICH-MENT": "EN-CORPS"
 		default: name
 		}
 
 		let ensembles = [
+			" Camp",
 			"& Alumni",
 			"Alisal",
 			"Band",
@@ -42,6 +47,7 @@ public extension Ensemble {
 			"Crossmen & Spirit of Atlanta",
 			"DrumSpirit",
 			"Drumline",
+			"EN-CORPS",
 			"Ensemble",
 			"Experience",
 			"Flag Line",
@@ -66,6 +72,7 @@ public extension Ensemble {
 			"Rosemont King Cobras",
 			"Rhythm IN BLUE",
 			"Ryan Jacobs, Bluecoats",
+			"Saints Minis",
 			"Sextet",
 			"Showband",
 			"Sound Wave",
@@ -80,7 +87,7 @@ public extension Ensemble {
 			"Youth"
 		]
 
-		if ensembles.contains(where: name.contains) && !name.contains("Marching Brass") {
+		if ensembles.contains(where: name.contains) && !name.contains("Marching Brass") && !name.contains("Marching Elite") {
 			let location = components.count > 1 ? components[1] : nil
 			return (name, location)
 		} else {

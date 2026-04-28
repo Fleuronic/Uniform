@@ -1,3 +1,5 @@
+// Copyright © Fleuronic LLC. All rights reserved.
+
 import struct DrumKit.Show
 
 public extension Show {
@@ -150,12 +152,13 @@ public extension Show {
 
 	static func slug(forShowNamed name: String, in year: Int) -> String? {
 		guard isValid(with: name) else { return nil }
-		
+
 		return name
 			.lowercased()
 			.replacingOccurrences(of: ":", with: "")
 			.replacingOccurrences(of: "!", with: "")
 			.replacingOccurrences(of: ".", with: "")
+			.replacingOccurrences(of: "&", with: "")
 			.replacingOccurrences(of: "’", with: "-")
 			.replacingOccurrences(of: " – ", with: " ")
 			.replacingOccurrences(of: " ", with: "-")
@@ -209,7 +212,7 @@ public extension Show {
 	static func isValid(with name: String?)  -> Bool {
 		guard let name else { return true }
 
-		return !name.contains("SoundSport") &&
+		return
 			!name.contains("Battle") &&
 			!name.contains("Education") &&
 			!name.contains("Virtual") &&

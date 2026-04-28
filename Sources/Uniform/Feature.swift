@@ -1,3 +1,5 @@
+// Copyright © Fleuronic LLC. All rights reserved.
+
 import struct DrumKit.Feature
 
 public extension Feature {
@@ -11,7 +13,7 @@ public extension Feature {
 			return record
 				.replacingOccurrences(of: " -", with: ":")
 				.replacingOccurrences(of: "Univ.", with: "University")
-		} 
+		}
 
 		let record = record
 			.replacingOccurrences(of: "  ", with: " ")
@@ -57,7 +59,7 @@ public extension Feature {
 			"Video",
 			"Welcome"
 		]
-		
+
 		return if features.contains(where: record.contains) {
 			record
 				.replacingOccurrences(of: " and ", with: " & ")

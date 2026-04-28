@@ -1,3 +1,5 @@
+// Copyright © Fleuronic LLC. All rights reserved.
+
 import struct DrumKit.Venue
 
 public extension Venue {
@@ -124,7 +126,7 @@ public extension Venue {
 			.components(separatedBy: "-")[0]
 			.replacingOccurrences(of: "HS", with: "High School")
 			.replacingOccurrences(of: "High School Stadium", with: "High School")
-		
+
 		name = switch name {
 		case "Breitenbach Stadium": "Otto Breitenbach Stadium"
 		case "Broken Arrow Memorial Stadium": "Tiger Stadium"
@@ -182,7 +184,7 @@ public extension Venue {
 		case "Wildcat Stadium": "Indiana Wesleyan University"
 		default: host
 		}
-		
+
 		let stadiumName: String? = switch name {
 		case "Alta High School": "Alta High School Football Field"
 		case "Shelton High School": "Finn Stadium"
