@@ -16,6 +16,8 @@ public extension Ensemble {
 			.replacingOccurrences(of: "Beeches Ensemble", with: "Beeches")
 			.replacingOccurrences(of: "Univ.", with: "University")
 			.replacingOccurrences(of: "H.S.", with: "High School")
+			.replacingOccurrences(of: "Jr/Sr", with: "Jr./Sr.")
+			.replacingOccurrences(of: "Brata", with: "Bratá")
 			.trimmingCharacters(in: .whitespaces)
 
 		name = switch name {
@@ -28,7 +30,27 @@ public extension Ensemble {
 		case "Sound Wave Sounders FC": "Sound Wave"
 		case "Spirit of Sunyvale SoundSport": "Spirit of Sunnyvale"
 		case "EN-CORPS by EN-RICH-MENT": "EN-CORPS"
+		case "University of Indianapolis": "University of Indianapolis Marching Band"
+		case "University of North Georgia": "University of North Georgia Marching Band"
 		default: name
+		}
+
+		switch name {
+		case "BANDtastic! Honor Band": return (name, "Canton, OH")
+		case "Bram Bratá Steel Drums": return (name, "Tri-Cities, WA")
+		case "BKXperience": return (name, "Denver, CO")
+		case "Columbians Experience": return (name, "Pasco, WA")
+		case "Frankton-Lapel Marching Band": return (name, "Anderson, IN")
+		case "Rosemont King Cobras": return (name, "Rosemont, IL")
+		case "The Force of Winchester": return (name, "Winchester, IN")
+		case "The Force of Winchester": return (name, "North Point, Hong Kong")
+		case "IPS Combined Marching Band": return (name, "Indianapolis, IN")
+		case "Northview Marching Knights": return (name, "Brazil, IN")
+		case "Old Guard Fife and Drum Corps": return (name, "Arlington, VA")
+		case "INpact Band": return (name, "Indianapolis, IN")
+		case "Lutheran Vanguard": return (name, "Appleton, WI")
+		case "Minnesota State University Clinic Band": return (name, "Mankato, MN")
+		default: break
 		}
 
 		let ensembles = [

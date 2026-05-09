@@ -25,6 +25,8 @@ public extension Feature {
 			.replacingOccurrences(of: "INPact", with: "INpact")
 			.replacingOccurrences(of: "Givaway", with: "Giveaway")
 			.replacingOccurrences(of: "On Field", with: "On-Field")
+			.replacingOccurrences(of: "Gates open", with: "Gates Open")
+			.replacingOccurrences(of: "Prelimis", with: "Prelims")
 
 		let features = [
 			"Announcement",
