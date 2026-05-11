@@ -46,7 +46,7 @@ public extension Ensemble {
 		case "Fairfield High School Marching Band": return (name, "Fairfield, OH")
 		case "Frankton-Lapel Marching Band": return (name, "Anderson, IN")
 		case "Golden Pride Marching Band": return (name, "Washington, IN")
-		case "Joyfull Exhibition": return (name, "Winston-Salem, NC")
+		case "Joyfull": return (record, "Winston-Salem, NC")
 		case "Knights Legacy": return (name, "Geneseo, IL")
 		case "Rosemont King Cobras": return (name, "Rosemont, IL")
 		case "The Force of Winchester": return (name, "Winchester, IN")
@@ -85,7 +85,6 @@ public extension Ensemble {
 			"Jack Greenlee",
 			"Jose Estrada, Genesis",
 			"Joseph Flynn, Troopers",
-			"Joyfull",
 			"Kevin Thompson, Genesis",
 			"Knights Legacy",
 			"Lake Erie Sound",
