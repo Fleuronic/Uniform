@@ -74,6 +74,7 @@ public extension Feature {
 				.components(separatedBy: " - ")
 				.first { features.contains(where: $0.contains) }!
 				.components(separatedBy: " (").first!
+				.components(separatedBy: " Pres. ").first!
 		} else { nil }
 	}
 }

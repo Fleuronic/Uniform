@@ -36,20 +36,28 @@ public extension Ensemble {
 		}
 
 		switch name {
+		case "204th Army Band Jazz Ensemble": return (name, "Fort Snelling, MN")
+		case "Academy Summer Youth Guard": return (name, "Tempe, AZ")
 		case "BANDtastic! Honor Band": return (name, "Canton, OH")
 		case "Bram Bratá Steel Drums": return (name, "Tri-Cities, WA")
+		case "Brig Juice Brass": return (name, "Syracuse, NY")
 		case "BKXperience": return (name, "Denver, CO")
 		case "Columbians Experience": return (name, "Pasco, WA")
+		case "Fairfield High School Marching Band": return (name, "Fairfield, OH")
 		case "Frankton-Lapel Marching Band": return (name, "Anderson, IN")
+		case "Golden Pride Marching Band": return (name, "Washington, IN")
+		case "Joyfull Exhibition": return (name, "Winston-Salem, NC")
+		case "Knights Legacy": return (name, "Geneseo, IL")
 		case "Rosemont King Cobras": return (name, "Rosemont, IL")
 		case "The Force of Winchester": return (name, "Winchester, IN")
-		case "The Force of Winchester": return (name, "North Point, Hong Kong")
+		// case "The Force of Winchester": return (name, "North Point, Hong Kong")
 		case "IPS Combined Marching Band": return (name, "Indianapolis, IN")
 		case "Northview Marching Knights": return (name, "Brazil, IN")
 		case "Old Guard Fife and Drum Corps": return (name, "Arlington, VA")
 		case "INpact Band": return (name, "Indianapolis, IN")
 		case "Lutheran Vanguard": return (name, "Appleton, WI")
 		case "Minnesota State University Clinic Band": return (name, "Mankato, MN")
+		case "U.S. Marine Silent Drill Platoon": return (name, "Washington, D.C.")
 		default: break
 		}
 
