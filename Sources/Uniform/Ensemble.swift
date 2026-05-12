@@ -18,6 +18,7 @@ public extension Ensemble {
 			.replacingOccurrences(of: "H.S.", with: "High School")
 			.replacingOccurrences(of: "Jr/Sr", with: "Jr./Sr.")
 			.replacingOccurrences(of: "Brata", with: "Bratá")
+			.replacingOccurrences(of: "Marching band", with: "Marching Band")
 			.trimmingCharacters(in: .whitespaces)
 
 		name = switch name {
@@ -26,6 +27,7 @@ public extension Ensemble {
 		case "Black Star DrumLine": "Black Star Drum Line"
 		case "Columbus Saints Minis": "Saints Minis"
 		case "Fairfield High School Marching b": "Fairfield High School Marching Band"
+		case "Baby Giant/Hong Kong Drummer Festival Drumline": "HKDrumFest/Baby Giant Drumline"
 		case "High School 57": "Beijing 57 High School"
 		case "Sound Wave Sounders FC": "Sound Wave"
 		case "Spirit of Sunyvale SoundSport": "Spirit of Sunnyvale"
@@ -50,7 +52,7 @@ public extension Ensemble {
 		case "Knights Legacy": return (name, "Geneseo, IL")
 		case "Rosemont King Cobras": return (name, "Rosemont, IL")
 		case "The Force of Winchester": return (name, "Winchester, IN")
-		// case "The Force of Winchester": return (name, "North Point, Hong Kong")
+		case "HKDrumFest/Baby Giant Drumline": return (name, "North Point, Hong Kong")
 		case "IPS Combined Marching Band": return (name, "Indianapolis, IN")
 		case "Northview Marching Knights": return (name, "Brazil, IN")
 		case "Old Guard Fife and Drum Corps": return (name, "Arlington, VA")

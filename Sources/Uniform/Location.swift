@@ -32,6 +32,8 @@ public extension Location {
 			return ("Leicester", "Leicestershire", "England")
 		} else if record.contains("Strangnas") {
 			return ("Strängnäs", "Södermanland", "Sweden")
+		} else if record.contains("North Point, Hong Kong") {
+			return ("North Point", "Hong Kong", "China")
 		}
 
 		switch record {
