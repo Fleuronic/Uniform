@@ -10,6 +10,7 @@ public extension Ensemble {
 			.replacingOccurrences(of: " & Drum Corps", with: "")
 			.replacingOccurrences(of: " Performance", with: "")
 			.replacingOccurrences(of: " Exhibition", with: "")
+			.replacingOccurrences(of: " Band and Colorguard", with: "")
 			.replacingOccurrences(of: "Community Arts Network", with: "CAN")
 			.replacingOccurrences(of: "Union School District", with: "USD")
 			.replacingOccurrences(of: "School District", with: "USD")
@@ -22,6 +23,7 @@ public extension Ensemble {
 			.trimmingCharacters(in: .whitespaces)
 
 		name = switch name {
+		case "Academy Summer Youth Guard": "The Academy Summer Youth Guard"
 		case "BANDtastic Honor Band", "BANDtastic Canton Honor Band": "BANDtastic! Honor Band"
 		case "Banner Brass": "Buccaneer Banner Brass"
 		case "Black Star DrumLine": "Black Star Drum Line"
@@ -39,7 +41,7 @@ public extension Ensemble {
 
 		switch name {
 		case "204th Army Band Jazz Ensemble": return (name, "Fort Snelling, MN")
-		case "Academy Summer Youth Guard": return (name, "Tempe, AZ")
+		case "The Academy Summer Youth Guard": return (name, "Tempe, AZ")
 		case "BANDtastic! Honor Band": return (name, "Canton, OH")
 		case "Bram Bratá Steel Drums": return (name, "Tri-Cities, WA")
 		case "Brig Juice Brass": return (name, "Syracuse, NY")
@@ -50,6 +52,10 @@ public extension Ensemble {
 		case "Golden Pride Marching Band": return (name, "Washington, IN")
 		case "Joyfull": return (record, "Winston-Salem, NC")
 		case "Knights Legacy": return (name, "Geneseo, IL")
+		case "Marching Ghosts": return (name, "Calgary, AB")
+		case "Memphis Youth Arts Initiative": return (name, "Memphis, TN")
+		case "NC A&T University Drumline": return (name, "Greensboro, NC")
+		case "Normal Marching Band": return (name, "Normal, IL")
 		case "Rosemont King Cobras": return (name, "Rosemont, IL")
 		case "The Force of Winchester": return (name, "Winchester, IN")
 		case "HKDrumFest/Baby Giant Drumline": return (name, "North Point, Hong Kong")
@@ -60,6 +66,7 @@ public extension Ensemble {
 		case "Lutheran Vanguard": return (name, "Appleton, WI")
 		case "Minnesota State University Clinic Band": return (name, "Mankato, MN")
 		case "U.S. Marine Silent Drill Platoon": return (name, "Washington, D.C.")
+		case "Whitehaven High School Drumline": return (name, "Memphis, TN")
 		default: break
 		}
 

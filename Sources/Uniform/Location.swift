@@ -45,7 +45,7 @@ public extension Location {
 		let components = record.replacingOccurrences(of: ",", with: "").split(separator: " ")
 		guard let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else {
 			let components = record.components(separatedBy: ", ")
-			return (components[0], components[1], components[2])
+			return components.count == 3 ? (components[0], components[1], components[2]) : nil
 		}
 
 		var city = components[0..<stateIndex].joined(separator: " ")
@@ -61,6 +61,7 @@ public extension Location {
 		case "LaCrosse": "La Crosse"
 		case "MIllbrook", "Milbrook": "Millbrook"
 		case "Winston Salem": "Winston-Salem"
+		case "Ft. Edward/Glens Falls": "Glens Falls"
 		default: city
 		}
 
