@@ -105,6 +105,7 @@ public extension Ensemble {
 			"Quartet",
 			"Quintet",
 			"Percussion",
+			"Primary School",
 			"RCR Street Club",
 			"Rocky Mountain Brassworks",
 			"Rosemont King Cobras",

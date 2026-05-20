@@ -56,7 +56,7 @@ public extension Circuit {
 	static func abbreviation(forDivisionNamed record: String) -> String? {
 		switch record {
 		case "DCI Open": "DCI"
-		case "DCA Open", "DCA A": "DCA"
+		case "DCA Open", "DCA A", "Class A": "DCA"
 		default: nil
 		}
 	}

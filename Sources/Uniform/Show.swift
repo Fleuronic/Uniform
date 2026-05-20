@@ -26,6 +26,8 @@ public extension Show {
 			.replacingOccurrences(of: "2016 ", with: "")
 			.replacingOccurrences(of: "2017 ", with: "")
 			.replacingOccurrences(of: "2018 ", with: "")
+			.replacingOccurrences(of: "WDBJ-7 ", with: "")
+			.replacingOccurrences(of: " Drum Corps Competition", with: "")
 			.replacingOccurrences(of: ". Drum", with: "Drum")
 			.replacingOccurrences(of: "Barnum Festival Champions", with: "Barnum Festival: Champions")
 			.replacingOccurrences(of: "Innovations in Brass:", with: "Innovations in Brass –")
@@ -181,28 +183,35 @@ public extension Show {
 		case ("dci-world-championship-finals", 2015): "dci-world-championship-world-class-finals"
 		case ("dci-world-championship-prelims", 2013): "dci-world-championships-prelims"
 		case ("dci-world-championship-semifinals", 2013): "dci-world-championships-semifinals"
-		case ("dci-southeastern-championship", let year) where year >= 2014 && year <= 2015: "dci-atlanta-southeastern-championship"
+		case ("dci-southeastern-championship", let year) where year >= 2013 && year <= 2015: "dci-atlanta-southeastern-championship"
 		case ("tour-of-champions-northern-illinois", 2016): "tour-of-champions-north-illinois"
 		case ("tour-of-champions-texas", 2013): "tour-of-championships-texas"
 		case ("dci-capitol-classic", 2013): "dci-capitol-classic-corps-show"
 		case ("dci-on-the-so-cal-coast", _): "dci-on-the-socal-coast"
 		case ("pacific-procession", 2015): "pacific-proscession"
 		case ("shoremen-brass-classic", 2015): "shoreman-brass-classic"
+		case ("dci-eastern-classic", let year) where year >= 2013 && year <= 2018: "dci-eastern-classic-2"
+		case ("dci-eastern-classic-2", let year) where year >= 2013 && year <= 2018: "dci-eastern-classic"
 		default: slug
 		}
 
 		scoreSlug = switch (slug, city, year) {
-		case ("drum-corps-an-american-tradition", "Annapolis", 2017): "drum-corps-an-american-tradition"
+		case ("drum-corps-an-american-tradition-3", "Annapolis", 2017): "drum-corps-an-american-tradition"
 		case ("drum-corps-an-american-tradition", "Allentown", 2017): "drum-corps-an-american-tradition-3"
-		case ("drum-corps-an-american-tradition", "Clifton", 2017): "drum-corps-an-american-tradition-2"
+		case ("drum-corps-an-american-tradition-3", "Annapolis", 2016): "drum-corps-an-american-tradition"
+		case ("drum-corps-an-american-tradition", "Allentown", 2016): "drum-corps-an-american-tradition-3"
 		case ("drum-corps-an-american-tradition", "Allentown", 2015): "drum-corps-an-american-tradition-3"
-		case ("drum-corps-an-american-tradition", "Clifton", 2015): "drum-corps-an-american-tradition-2"
-		case ("drum-corps-an-american-tradition", "Chambersburg", 2014): "drum-corps-an-american-tradition-4"
+		case ("drum-corps-an-american-tradition-3", "Annapolis", 2015): "drum-corps-an-american-tradition"
 		case ("drum-corps-an-american-tradition", "Jackson", 2014): "drum-corps-an-american-tradition-3"
-		case ("drum-corps-an-american-tradition", "Chester", 2014): "drum-corps-an-american-tradition-2"
-		case ("drum-corps-an-american-tradition", "West Chester", 2014): "drum-corps-an-american-tradition"
+		case ("drum-corps-an-american-tradition-2", "Chambersburg", 2014): "drum-corps-an-american-tradition-4"
+		case ("drum-corps-an-american-tradition-3", "Chester", 2014): "drum-corps-an-american-tradition-2"
+		case ("drum-corps-an-american-tradition-4", "West Chester", 2014): "drum-corps-an-american-tradition"
 		case ("show-of-shows", "Rockford", 2014): "show-of-shows-2"
-		case ("show-of-shows", "Metamora", 2014): "show-of-shows"
+		case ("show-of-shows-2", "Metamora", 2014): "show-of-shows"
+		case ("show-of-shows", "Rockford", 2015): "show-of-shows-2"
+		case ("show-of-shows-2", "Waukesha", 2015): "show-of-shows"
+		case ("drum-corps-an-american-tradition", "Chambersburg", 2013): "drum-corps-an-american-tradition-2"
+		case ("drum-corps-an-american-tradition-2", "West Chester", 2013): "drum-corps-an-american-tradition"
 		default: scoreSlug
 		}
 

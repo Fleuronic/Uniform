@@ -12,6 +12,8 @@ public extension Location {
 			return ("Sherbrooke", "QC", "Canada")
 		} else if record.contains("Beijing") {
 			return ("Haidian", "Beijing", "China")
+		} else if record.contains("Shanghai") {
+			return ("Jing’an", "Shanghai", "China")
 		} else if record.contains("Dadizele") {
 			return ("Dadizele", "West Flanders", "Belgium")
 		} else if record.contains("Arklow") {
