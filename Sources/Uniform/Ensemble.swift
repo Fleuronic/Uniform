@@ -74,8 +74,8 @@ public extension Ensemble {
 
 		let ensembles = [
 			" Camp",
-			"& Les"
-			"& The"
+			"& Les",
+			"& The",
 			"& Alumni",
 			"Alisal",
 			"Band",
