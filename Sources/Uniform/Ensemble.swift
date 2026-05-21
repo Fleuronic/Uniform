@@ -9,6 +9,7 @@ public extension Ensemble {
 		var name = components[0]
 			.replacingOccurrences(of: " & Drum Corps", with: "")
 			.replacingOccurrences(of: " Performance", with: "")
+			.replacingOccurrences(of: " Joint", with: "")
 			.replacingOccurrences(of: " Exhibition", with: "")
 			.replacingOccurrences(of: " Band and Colorguard", with: "")
 			.replacingOccurrences(of: "Community Arts Network", with: "CAN")
@@ -32,6 +33,7 @@ public extension Ensemble {
 		case "Baby Giant/Hong Kong Drummer Festival Drumline": "HKDrumFest/Baby Giant Drumline"
 		case "High School 57": "Beijing 57 High School"
 		case "Sound Wave Sounders FC": "Sound Wave"
+		case "The Bluecoats and the Academy": "Bluecoats & The Academy"
 		case "Spirit of Sunyvale SoundSport": "Spirit of Sunnyvale"
 		case "EN-CORPS by EN-RICH-MENT": "EN-CORPS"
 		case "University of Indianapolis": "University of Indianapolis Marching Band"
@@ -72,6 +74,8 @@ public extension Ensemble {
 
 		let ensembles = [
 			" Camp",
+			"& Les"
+			"& The"
 			"& Alumni",
 			"Alisal",
 			"Band",
