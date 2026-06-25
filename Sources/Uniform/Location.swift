@@ -36,6 +36,8 @@ public extension Location {
 			return ("Strängnäs", "Södermanland", "Sweden")
 		} else if record.contains("North Point, Hong Kong") {
 			return ("North Point", "Hong Kong", "China")
+		} else if record.contains("Heredia") {
+			return ("Mercedes Norte", "Heredia", "Costa Rica")
 		}
 
 		switch record {

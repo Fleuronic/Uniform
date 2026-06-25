@@ -4,67 +4,71 @@ import struct DrumKit.Show
 
 public extension Show {
 	static func name(for record: String, in city: String?, year: Int) -> String {
-		var name = record
-			.replacingOccurrences(of: "- ", with: "– ")
-			.replacingOccurrences(of: "--", with: "–")
-			.replacingOccurrences(of: "?", with: "–")
-			.replacingOccurrences(of: "'", with: "’")
-			.replacingOccurrences(of: "… ", with: "’")
-			.replacingOccurrences(of: "  ", with: " ")
-			.replacingOccurrences(of: " Corps Show", with: "")
-			.replacingOccurrences(of: "&amp;", with: "&")
-			.replacingOccurrences(of: "@ the Glen", with: "at the Glen")
-			.replacingOccurrences(of: " 2013", with: "")
-			.replacingOccurrences(of: " 2014", with: "")
-			.replacingOccurrences(of: " 2015", with: "")
-			.replacingOccurrences(of: " 2016", with: "")
-			.replacingOccurrences(of: " 2017", with: "")
-			.replacingOccurrences(of: " 2018", with: "")
-			.replacingOccurrences(of: "2013 ", with: "")
-			.replacingOccurrences(of: "2014 ", with: "")
-			.replacingOccurrences(of: "2015 ", with: "")
-			.replacingOccurrences(of: "2016 ", with: "")
-			.replacingOccurrences(of: "2017 ", with: "")
-			.replacingOccurrences(of: "2018 ", with: "")
-			.replacingOccurrences(of: "WDBJ-7 ", with: "")
-			.replacingOccurrences(of: " Drum Corps Competition", with: "")
-			.replacingOccurrences(of: ". Drum", with: "Drum")
-			.replacingOccurrences(of: "Barnum Festival Champions", with: "Barnum Festival: Champions")
-			.replacingOccurrences(of: "Innovations in Brass:", with: "Innovations in Brass –")
-			.replacingOccurrences(of: "Tour of Champions:", with: "Tour of Champions –")
-			.replacingOccurrences(of: "Brigadiers", with: "Brigadier’s")
-			.replacingOccurrences(of: "Drum Along", with: "Drums Along")
-			.replacingOccurrences(of: "Champions,", with: "Champions")
-			.replacingOccurrences(of: "Crest San,", with: "Crest – San")
-			.replacingOccurrences(of: "Crest Los,", with: "Crest – Los")
-			.replacingOccurrences(of: "Crest Walnut,", with: "Crest – Walnut")
-			.replacingOccurrences(of: "Games Portland", with: "Games – Portland")
-			.replacingOccurrences(of: "Games Seattle", with: "Games – Seattle")
-			.replacingOccurrences(of: "Shows Waukesha", with: "Shows – Waukesha")
-			.replacingOccurrences(of: "Jerset", with: "Jersey")
-			.replacingOccurrences(of: "LaCrosse", with: "La Crosse")
-			.replacingOccurrences(of: "Masters Summer", with: "Masters of the Summer")
-			.replacingOccurrences(of: "Rhapsody-Metamora", with: "Rhapsody – Metamora")
-			.replacingOccurrences(of: "Rhapsody-La Crosse", with: "Rhapsody – La Crosse")
-			.replacingOccurrences(of: "Mid-Cal", with: "MidCal")
-			.replacingOccurrences(of: "Northwest Music Games", with: "Northwest Youth Music Games")
-			.replacingOccurrences(of: "Mini Corps", with: "Mini-Corps")
-			.replacingOccurrences(of: "SoCal", with: "So Cal")
-			.replacingOccurrences(of: "Southeastern Regional", with: "Southeastern Championship")
-			.replacingOccurrences(of: "Southwestern Regional", with: "Southwestern Championship")
-			.replacingOccurrences(of: "SUMMER MUSIC GAMES", with: "Summer Music Games")
-			.replacingOccurrences(of: "NATIONALS", with: "Nationals")
-			.replacingOccurrences(of: "Tradition–", with: "Tradition –")
-			.replacingOccurrences(of: "Tradition, ", with: "Tradition – ")
-			.replacingOccurrences(of: "Texas,", with: "Texas")
-			.replacingOccurrences(of: "Mississippi River,", with: "Mississippi")
-			.replacingOccurrences(of: "Love, Drum", with: "Love, and Drum")
-			.replacingOccurrences(of: "The Marching Millionaires", with: "Marching Millionaires")
-			.replacingOccurrences(of: "The DCI South", with: "DCI South")
-			.replacingOccurrences(of: "The Kiltie Klassic", with: "Kiltie Klassic")
-			.replacingOccurrences(of: ", the 2014 DCI Tour Premiere", with: "")
-			.replacingOccurrences(of: " – A DCI/DCA split event!", with: "")
-			.replacingOccurrences(of: "OST Type keywords’ ", with: "")
+		let nameReplacements = [
+			("- ", "– "),
+			("--", "–"),
+			("?", "–"),
+			("'", "’"),
+			("… ", "’"),
+			("  ", " "),
+			(" Corps Show", ""),
+			("&amp;", "&"),
+			("@ the Glen", "at the Glen"),
+			(" 2013", ""),
+			(" 2014", ""),
+			(" 2015", ""),
+			(" 2016", ""),
+			(" 2017", ""),
+			(" 2018", ""),
+			("2013 ", ""),
+			("2014 ", ""),
+			("2015 ", ""),
+			("2016 ", ""),
+			("2017 ", ""),
+			("2018 ", ""),
+			("WDBJ-7 ", ""),
+			(" Drum Corps Competition", ""),
+			(". Drum", "Drum"),
+			("Barnum Festival Champions", "Barnum Festival: Champions"),
+			("Innovations in Brass:", "Innovations in Brass –"),
+			("Tour of Champions:", "Tour of Champions –"),
+			("Brigadiers", "Brigadier’s"),
+			("Drum Along", "Drums Along"),
+			("Champions,", "Champions"),
+			("Crest San,", "Crest – San"),
+			("Crest Los,", "Crest – Los"),
+			("Crest Walnut,", "Crest – Walnut"),
+			("Games Portland", "Games – Portland"),
+			("Games Seattle", "Games – Seattle"),
+			("Shows Waukesha", "Shows – Waukesha"),
+			("Jerset", "Jersey"),
+			("LaCrosse", "La Crosse"),
+			("Masters Summer", "Masters of the Summer"),
+			("Rhapsody-Metamora", "Rhapsody – Metamora"),
+			("Rhapsody-La Crosse", "Rhapsody – La Crosse"),
+			("Mid-Cal", "MidCal"),
+			("Northwest Music Games", "Northwest Youth Music Games"),
+			("Mini Corps", "Mini-Corps"),
+			("SoCal", "So Cal"),
+			("Southeastern Regional", "Southeastern Championship"),
+			("Southwestern Regional", "Southwestern Championship"),
+			("SUMMER MUSIC GAMES", "Summer Music Games"),
+			("NATIONALS", "Nationals"),
+			("Tradition–", "Tradition –"),
+			("Tradition, ", "Tradition – "),
+			("Texas,", "Texas"),
+			("Mississippi River,", "Mississippi"),
+			("Love, Drum", "Love, and Drum"),
+			("The Marching Millionaires", "Marching Millionaires"),
+			("The DCI South", "DCI South"),
+			("The Kiltie Klassic", "Kiltie Klassic"),
+			(", the 2014 DCI Tour Premiere", ""),
+			(" – A DCI/DCA split event!", ""),
+			("OST Type keywords’ ", "")
+		]
+
+		var name = nameReplacements
+			.reduce(record) { $0.replacingOccurrences(of: $1.0, with: $1.1) }
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
 

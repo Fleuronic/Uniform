@@ -6,6 +6,8 @@ public extension Feature {
 	static func name(for record: String) -> String? {
 		switch record {
 		case "SoundSport", "SoundSport Exhibition": return "SoundSport Exhibition"
+		case "LIVE - Movie Theater Cinecast": return "Big, Loud & Live"
+		case "Loge and Terrace Levels Open": return record
 		default: break
 		}
 
@@ -28,25 +30,30 @@ public extension Feature {
 			.replacingOccurrences(of: "On Field", with: "On-Field")
 			.replacingOccurrences(of: "Gates open", with: "Gates Open")
 			.replacingOccurrences(of: "Prelimis", with: "Prelims")
+			.replacingOccurrences(of: "Championships", with: "Championship")
 
 		let features = [
 			"Announcement",
 			"Anthem",
 			"Award",
+			"Begin",
 			"Ceremony",
 			"Championship",
+			"Competition Resumes",
 			"Doors Open",
 			"Drum Jam",
 			"DrumLine Battle",
 			"DrumLine Jam",
 			"Encore",
 			"Endzone",
+			"Event",
 			"Exhibition Unit",
 			"Gates Open",
 			"Giveaway",
 			"Halftime",
 			"Hall of Fame",
 			"Intermission",
+			"Joint Performance",
 			"Kick Start",
 			"Music Stage",
 			"Opening Remarks",
@@ -56,8 +63,10 @@ public extension Feature {
 			"Recognition",
 			"Retreat",
 			"Score",
+			"Seating",
 			"Showdown",
-			"Special",			"Stadium Closed to Spectators",
+			"Special",
+			"Stadium Closed to Spectators",
 			"Standstill",
 			"Ultimate Drill Book",
 			"Video",

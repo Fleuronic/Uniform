@@ -31,13 +31,16 @@ public extension Ensemble {
 		case "Columbus Saints Minis": "Saints Minis"
 		case "Fairfield High School Marching b": "Fairfield High School Marching Band"
 		case "Baby Giant/Hong Kong Drummer Festival Drumline": "HKDrumFest/Baby Giant Drumline"
-		case "High School 57": "Beijing 57 High School"
+		case "High School 57": "Beijing 57 High School Marching Band"
 		case "Sound Wave Sounders FC": "Sound Wave"
 		case "The Bluecoats and the Academy": "Bluecoats & The Academy"
 		case "Spirit of Sunyvale SoundSport": "Spirit of Sunnyvale"
 		case "EN-CORPS by EN-RICH-MENT": "EN-CORPS"
 		case "University of Indianapolis": "University of Indianapolis Marching Band"
 		case "University of North Georgia": "University of North Georgia Marching Band"
+		case "Valley High School": "Valley High School Marching Band"
+		case "Xili Primary School": "Xili Primary School Marching Band"
+		case "High School Affiliated to BIT": "High School Affiliated to BIT Marching Band"
 		default: name
 		}
 
@@ -69,6 +72,9 @@ public extension Ensemble {
 		case "Minnesota State University Clinic Band": return (name, "Mankato, MN")
 		case "U.S. Marine Silent Drill Platoon": return (name, "Washington, D.C.")
 		case "Whitehaven High School Drumline": return (name, "Memphis, TN")
+		case "Crosstown Big Band": return (name, "Ogden, UT")
+		case "Mercedes Marching Band": return (name, "Mercedes Norte, Heredia")
+		case "Bands of America & Carolina Crown": return (name, nil)
 		default: break
 		}
 
@@ -104,6 +110,7 @@ public extension Ensemble {
 			"Lutheran Vanguard",
 			"Magnificent Brass",
 			"Marching",
+			"Orchestra",
 			"Paul Yoo, Madison Scouts",
 			"PHANtastic",
 			"Quartet",

@@ -21,14 +21,14 @@ public extension DrumKit.Corps {
 		}
 
 		switch record {
+		case "Apogee", "Latrobe Music Center": return ("APOGEE", "Latrobe, PA")
 		case "Blue Knights": return (record, "Denver, CO")
 		case "Blue Stars": return (record, "La Crosse, WI")
 		case "Bluecoats Alumni Corps": return (record, "Canton, OH")
 		case "Colts Alumni Corps": return (record, "Dubuque, IA")
 		case "Crossmen Alumni Corps": return (record, "San Antonio, TX")
 		case "Gold": return (record, "San Diego, CA")
-		case "Latrobe Music Center": return (record, "Latrobe, PA")
-		case "Legacy Drum & Bugle Corps": return ("Legacy", "Rutherford, NJ")
+		case "Legacy Drum & Bugle Corps - Rutherford": return ("Legacy", "Rutherford, NJ")
 		case "LSM Drum Corps": return (record, "Woodhaven, MI")
 		case "Madison Scouts": return (record, "Madison, WI")
 		case "Music City": return (record, "Nashville, TN")
@@ -40,6 +40,7 @@ public extension DrumKit.Corps {
 		case "The Cadets": return (record, "Erie, PA")
 		case "The Thunder of Roanoke": return (record, "Roanoke, VA")
 		case "Troopers": return (record, "Casper, WY")
+		case "CT Alumni": return (record, "Seymour, CT")
 		default: break
 		}
 
@@ -84,6 +85,8 @@ public extension DrumKit.Corps {
 		case "The Muchachos": "Muchachos"
 		case "Kilties Senior Corps": "Kilties"
 		case "Warriors": "Warriors Alumni"
+		case "The Bluecoats": "Bluecoats"
+		case "The Connexion", "The ConneXion": "Connexion"
 		default: name
 		}
 
