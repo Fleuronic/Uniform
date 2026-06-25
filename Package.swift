@@ -5,7 +5,7 @@ let package = Package(
 	name: "Uniform",
 	platforms: [
 		.iOS(.v15),
-		.macOS(.v13),
+		.macOS(.v12),
 		.tvOS(.v15),
 		.watchOS(.v8)
 	],
