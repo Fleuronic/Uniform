@@ -8,7 +8,9 @@ public extension Division {
 			.replacingOccurrences(of: "All Age", with: "All-Age")
 			.replacingOccurrences(of: "A Class", with: "Class A")
 
-		name = ["Open", "World", "All-Age", "International"].contains(name) ? name + " Class" : name
+		name = [
+			"Open", "World", "All-Age", "International", "Junior", "Premier"
+		].contains(name) ? name + " Class" : name
 
 		name = switch name {
 		case "A", "DCA A": "Class A"
