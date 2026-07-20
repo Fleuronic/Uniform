@@ -32,7 +32,7 @@ public extension Location {
 			return ("Woking", "Surrey", "England")
 		} else if record.contains("Leicester") {
 			return ("Leicester", "Leicestershire", "England")
-		} else if record.contains("Strangnas") {
+		} else if record.contains("Strangnas") || record.contains("Strängnäs") {
 			return ("Strängnäs", "Södermanland", "Sweden")
 		} else if record.contains("North Point, Hong Kong") {
 			return ("North Point", "Hong Kong", "China")

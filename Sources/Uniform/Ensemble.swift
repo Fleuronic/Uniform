@@ -74,6 +74,7 @@ public extension Ensemble {
 		case "Whitehaven High School Drumline": return (name, "Memphis, TN")
 		case "Crosstown Big Band": return (name, "Ogden, UT")
 		case "Mercedes Marching Band": return (name, "Mercedes Norte, Heredia")
+		case "World Gone Mad": return (name, "Austin, TX")
 		case "Bands of America & Carolina Crown": return (name, nil)
 		default: break
 		}
@@ -137,7 +138,11 @@ public extension Ensemble {
 			"Youth"
 		]
 
-		if ensembles.contains(where: name.contains) && !name.contains("Marching Brass") && !name.contains("Marching Elite") {
+		if
+			ensembles.contains(where: name.contains) &&
+			!name.contains("Marching Brass") &&
+			!name.contains("Marching Elite") &&
+			!name.contains("Bandits") {
 			let location = components.count > 1 ? components[1] : nil
 			return (name, location)
 		} else {
