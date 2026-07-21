@@ -34,6 +34,7 @@ public extension Circuit {
 		case "DCD": "Drum Corps Deutschland"
 		case "DCE": "Drum Corps Europe"
 		case "DCH": "Drum Corps Holland"
+		case "IMBA": "Irish Marching Bands Association"
 		case "DCJ": "Drum Corps Japan"
 		case "DCM": "Drum Corps Midwest"
 		case "DCNY": "Drum Corps New York"

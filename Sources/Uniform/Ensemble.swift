@@ -44,6 +44,22 @@ public extension Ensemble {
 		default: name
 		}
 
+		// IMBA (Irish) & allied UK marching bands are scored as bands, not drum
+		// corps. Guard on the record's country so same-named US corps (e.g. the
+		// Ravens and Vikings drum corps) keep their corps classification.
+		if
+			[
+				"Ravens",
+				"Clondalkin Youth Band",
+				"Tallaght Youth Band Cadets",
+				"Tallaght Festival Band",
+				"Atherstone YMB"
+			].contains(name),
+			let location = components.count > 1 ? components[1] : nil,
+			location.contains("Ireland") || location.contains("United Kingdom") {
+			return (name, location)
+		}
+
 		switch name {
 		case "204th Army Band Jazz Ensemble": return (name, "Fort Snelling, MN")
 		case "The Academy Summer Youth Guard": return (name, "Tempe, AZ")

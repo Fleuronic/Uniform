@@ -24,6 +24,10 @@ public extension Location {
 			return ("Widnes", "Cheshire", "England")
 		} else if record.contains("Kerkrade") {
 			return ("Kerkrade", "Limburg", "Netherlands")
+		} else if record.contains("Middelburg") {
+			return ("Middelburg", "Zeeland", "Netherlands")
+		} else if record.contains("Huizen") {
+			return ("Huizen", "North Holland", "Netherlands")
 		} else if record.contains("Union City") {
 			return ("Union City", "CA", "United States")
 		} else if record.contains("Barnsley") {
@@ -43,6 +47,7 @@ public extension Location {
 		switch record {
 		case "TBA, Midwest": return ("Louisville", "KY", "United States")
 		case "Washington, D.C.": return ("Washington", "D.C.", "United States")
+		case "Ireland": return ("Dublin", "Co. Dublin", "Ireland")
 		default: break
 		}
 

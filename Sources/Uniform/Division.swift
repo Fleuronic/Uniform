@@ -7,6 +7,7 @@ public extension Division {
 		var name = record
 			.replacingOccurrences(of: "All Age", with: "All-Age")
 			.replacingOccurrences(of: "A Class", with: "Class A")
+			.replacingOccurrences(of: "OPen", with: "Open")
 
 		name = [
 			"Open", "World", "All-Age", "International", "Junior", "Premier"

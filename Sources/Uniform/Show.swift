@@ -33,6 +33,7 @@ public extension Show {
 			("Innovations in Brass:", "Innovations in Brass –"),
 			("Tour of Champions:", "Tour of Champions –"),
 			("Brigadiers", "Brigadier’s"),
+			("Brigadier’s’", "Brigadier’s"),
 			("Drum Along", "Drums Along"),
 			("Champions,", "Champions"),
 			("Crest San,", "Crest – San"),
@@ -64,37 +65,59 @@ public extension Show {
 			("The Kiltie Klassic", "Kiltie Klassic"),
 			(", the 2014 DCI Tour Premiere", ""),
 			(" – A DCI/DCA split event!", ""),
-			("OST Type keywords’ ", "")
+			("OST Type keywords’ ", ""),
+			("Afternoon Show", "Afternoon"),
+			("Afternoon show", "Afternoon"),
+			("Evening Show", "Evening"),
+			("Evening show", "Evening"),
+			("Preliminaries", "Prelims"),
+			("Calvacade", "Cavalcade"),
+			("Starliet", "Starlite"),
+			("The Summer Music Games", "Summer Music Games")
 		]
 
 		var name = nameReplacements
 			.reduce(record) { $0.replacingOccurrences(of: $1.0, with: $1.1) }
+			.replacingOccurrences(of: "^[0-9]+(st|nd|rd|th) Annual ", with: "", options: .regularExpression)
 			.components(separatedBy: " @ ").first!
 			.components(separatedBy: " presented by ").first!
+			.components(separatedBy: " Presents: ").last!
 
 		name = switch name {
 		case "CrownBeat": "CrownBEAT"
 		case "DCI Manchester, NH": "DCI New Hampshire"
-		case "DCI Masters": "The Masters of the Summer Music Games"
-		case "DCI Open Prelims": "DCI Open Class World Championship Prelims"
-		case "DCI Open Finals", "DCI Open Class Finals", "DCI World Championships Open Class Championship Finals", "Open Class Finals": "DCI Open Class World Championship Finals"
-		case "DCI Open Class Prelims", "DCI World Championships Open Class Championship Prelims": "DCI Open Class World Championship Prelims"
-		case "Open Class Semifinals": "DCI Open Class World Championship Semifinals"
-		case "World Class Quarterfinals": "DCI World Championship Quarterfinals"
+		case "DCI Masters", "the Masters of the Summer Music Games": "The Masters of the Summer Music Games"
+		case "DCI Open Finals", "DCI Open Class Finals", "DCI World Championships Open Class Championship Finals", "DCI World Championships Open Class Finals", "Open Class Finals": "DCI Open Class World Championship Finals"
+		case "DCI Open Prelims", "DCI Open Class Prelims", "DCI World Championships Open Class Championship Prelims": "DCI Open Class World Championship Prelims"
+		case "Open Class Semifinals", "DCI World Championships Open Class Semifinals": "DCI Open Class World Championship Semifinals"
+		case "World Class Quarterfinals", "DCI World Championships World Class Quarterfinals": "DCI World Championship Quarterfinals"
 		case "DCI World Championships Open Class Quarterfinals": "DCI Open Class World Championship Quarterfinals"
 		case "DCI Finals", "DCI World Class Finals", "DCI World Championships World Class Finals", "World Class Finals": "DCI World Championship Finals"
 		case "DCI Prelims", "DCI World Class Prelims": "DCI World Championship Prelims"
-		case "DCI Semifinals", "DCI World Class Semi-Finals", "World Class Semi-Finals": "DCI World Championship Semifinals"
+		case "DCI Semifinals", "DCI World Class Semi-Finals", "World Class Semi-Finals", "DCI World Championships World Class Semifinals": "DCI World Championship Semifinals"
 		case "DCI Southeastern", "DCI Atlanta Southeastern Championship": "DCI Southeastern Championship"
 		case "DCI Southwestern": "DCI Southwestern Championship"
 		case "DCI Sioux City": "DCI Morningside"
-		case "DCA World Championships – Prelims", "DCA Prelims", "DCA Championship Preliminaries": "DCA World Championship Prelims"
-		case "DCA World Championships – Finals", "DCA Finals", "DCA Championship Finals": "DCA World Championship Finals"
+		case "Music in Motion – Maryland", "Music in Motion-New Jersey", "Music in Motion – New Jersey", "Music in Motion – Central Jersey": "Music in Motion"
+		case "Fanfare 2009": "Fanfare"
+		case "March of Champions 2009": "March of Champions"
+		case "Music City Metal III – the Southern Drumdown": "Music City Metal"
+		case "DCI at Americafest 2009": "DCI at Americafest"
+		case "Sound Explosion 2009": "Sound Explosion"
+		case "Music on the March 2": "Music on the March"
+		case "THUNDER in the DESERT": "Thunder in the Desert"
+		case "TIDEWATER Summer Music Games": "Tidewater Summer Music Games"
+		case "THE exSIGHTment OF SOUND": "The exSIGHTment of Sound"
+		case "Festival of Brass Drum": "Festival of Brass"
+		case "DCA World Championships – Prelims", "DCA Prelims", "DCA Championship Prelims": "DCA World Championship Prelims"
+		case "DCA Open Class Prelims": "DCA Open Class World Championship Prelims"
+		case "DCA Class A Prelims": "DCA Class A World Championship Prelims"
+		case "DCA World Championships – Finals", "DCA Finals", "Finals", "DCA Championship Finals", "DCA Class A & Open Class Championships": "DCA World Championship Finals"
 		case "Drum Corps United Kingdom Open Prelims": "DCUK Championships – Open Prelims"
 		case "Drum Corps United Kingdom Finals": "DCUK Championships – Finals"
 		case "Drum Corps Europe Championships Prelims": "European Drum Corps Championships – Prelims"
-		case "Drum Corps Europe Championships Finals": "European Drum Corps Championships – Prelims"
-		case "Mini-Corps Championships", "I&E and Mini-Corps": "DCA World Championships – Mini-Corps & I&E"
+		case "Drum Corps Europe Championships Finals": "European Drum Corps Championships – Finals"
+		case "Mini-Corps/I&E", "Mini-Corps Championships", "I&E and Mini-Corps": "DCA World Championships – Mini-Corps & I&E"
 		case "Mini-Corps Competition": "DCA Mini-Corps Championship"
 		case "DCA Alumni Spectacular", "Alumni Spectacular": "DCA World Championships – Alumni Spectacular"
 		case "Drum Corps in Northern Virginia": "Drums in Northern Virginia"
@@ -240,6 +263,7 @@ public extension Show {
 			!name.contains("Big, Loud") &&
 			!name.contains("After-Party") &&
 			!name.contains("Honors") &&
-			!name.contains("Street Beat")
+			!name.contains("Street Beat") &&
+			!name.contains("Bugler")
 	}
 }
