@@ -24,7 +24,7 @@ public extension Location {
 			return ("Widnes", "Cheshire", "England")
 		} else if record.contains("Kerkrade") {
 			return ("Kerkrade", "Limburg", "Netherlands")
-		} else if record.contains("Middelburg") {
+		} else if record.contains("Middelburg") || record.contains("Middleburg") {
 			return ("Middelburg", "Zeeland", "Netherlands")
 		} else if record.contains("Huizen") {
 			return ("Huizen", "North Holland", "Netherlands")
@@ -36,6 +36,8 @@ public extension Location {
 			return ("Woking", "Surrey", "England")
 		} else if record.contains("Leicester") {
 			return ("Leicester", "Leicestershire", "England")
+		} else if record.contains("Stoke") {
+			return ("Stoke-on-Trent", "Staffordshire", "England")
 		} else if record.contains("Strangnas") || record.contains("Strängnäs") {
 			return ("Strängnäs", "Södermanland", "Sweden")
 		} else if record.contains("North Point, Hong Kong") {

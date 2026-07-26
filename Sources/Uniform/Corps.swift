@@ -54,6 +54,7 @@ public extension DrumKit.Corps {
 			.replacingOccurrences(of: "New York Skyliners", with: "Skyliners")
 			.replacingOccurrences(of: " Drum & Bugle Corps", with: "")
 			.replacingOccurrences(of: " Drum and Bugle Corps", with: "")
+			.replacingOccurrences(of: " D&B Corps", with: "")
 			.replacingOccurrences(of: "Minicorps", with: "Mini-Corps")
 			.replacingOccurrences(of: "de Quebec", with: "du Québec")
 			.replacingOccurrences(of: " (UK)", with: "")
@@ -67,6 +68,7 @@ public extension DrumKit.Corps {
 		case "Thunder": "Spokane Thunder"
 		case "Blue Stars 60th Anniv. Corps": "Blue Stars 60th Alumni Corps"
 		case "Impact of Orlando": "IMPACT"
+		case "Hamilton Youth Performing Ensemble": "H.Y.P.E."
 		case "Inbhear Mor": "Inbhear Mór"
 		case "Phoenix (Fl)": "Phoenix"
 		case "Phantom Regiment Alumni Association": "Phantom Regiment Alumni Corps"

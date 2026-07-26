@@ -12,12 +12,13 @@ public extension Circuit {
 		return switch abbreviation {
 		case "", "DCI Division II & III": "DCI"
 		case "American Legion": "AL"
-		case "DCA-C", "DCA-Central": "DCA Central"
 		case "DCG": "DMG"
-		case "DCA-S", "DCI-South": "DCI South"
+		case "DCA-C", "DCA-Central", "DCA-S": "DCA"
+		case "DCI-South": "DCI South"
 		case "DCI-Pacific": "DCI Pacific"
 		case "Eastern States Circuit": "ESC"
 		case "DCEurope": "DCE"
+		case "Japan": "DCJ"
 		default: abbreviation
 		}
 	}

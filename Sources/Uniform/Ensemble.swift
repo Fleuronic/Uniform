@@ -33,12 +33,14 @@ public extension Ensemble {
 		case "Baby Giant/Hong Kong Drummer Festival Drumline": "HKDrumFest/Baby Giant Drumline"
 		case "High School 57": "Beijing 57 High School Marching Band"
 		case "Sound Wave Sounders FC": "Sound Wave"
+		case "Sound of Sun Prarie": "Sound of Sun Prairie"
 		case "The Bluecoats and the Academy": "Bluecoats & The Academy"
 		case "Spirit of Sunyvale SoundSport": "Spirit of Sunnyvale"
 		case "EN-CORPS by EN-RICH-MENT": "EN-CORPS"
 		case "University of Indianapolis": "University of Indianapolis Marching Band"
 		case "University of North Georgia": "University of North Georgia Marching Band"
 		case "Valley High School": "Valley High School Marching Band"
+		case "Oregon High School": "Oregon High School Marching Band"
 		case "Xili Primary School": "Xili Primary School Marching Band"
 		case "High School Affiliated to BIT": "High School Affiliated to BIT Marching Band"
 		default: name
@@ -50,6 +52,7 @@ public extension Ensemble {
 		if
 			[
 				"Ravens",
+				"Clonmel Bluehawks",
 				"Clondalkin Youth Band",
 				"Tallaght Youth Band Cadets",
 				"Tallaght Festival Band",
@@ -85,12 +88,15 @@ public extension Ensemble {
 		case "Old Guard Fife and Drum Corps": return (name, "Arlington, VA")
 		case "INpact Band": return (name, "Indianapolis, IN")
 		case "Lutheran Vanguard": return (name, "Appleton, WI")
+		case "Lighthouse Brigade of Racine": return ("Lighthouse Brigade", "Racine, WI")
+		case "Murphysboro HS Crimson Exp": return ("Murphysboro High School Crimson Express", "Murphysboro, IL")
+		case "Strangerettes": return (name, "Dallas, TX")
 		case "Minnesota State University Clinic Band": return (name, "Mankato, MN")
 		case "U.S. Marine Silent Drill Platoon": return (name, "Washington, D.C.")
 		case "Whitehaven High School Drumline": return (name, "Memphis, TN")
 		case "Crosstown Big Band": return (name, "Ogden, UT")
 		case "Mercedes Marching Band": return (name, "Mercedes Norte, Heredia")
-		case "World Gone Mad": return (name, "Austin, TX")
+		case "Harpe Davids": return (name, components[1])
 		case "Bands of America & Carolina Crown": return (name, nil)
 		default: break
 		}
@@ -158,6 +164,8 @@ public extension Ensemble {
 			ensembles.contains(where: name.contains) &&
 			!name.contains("Marching Brass") &&
 			!name.contains("Marching Elite") &&
+			!name.contains("Hamilton Youth Performing") &&
+			!name.contains("Preston Scout House") &&
 			!name.contains("Bandits") {
 			let location = components.count > 1 ? components[1] : nil
 			return (name, location)

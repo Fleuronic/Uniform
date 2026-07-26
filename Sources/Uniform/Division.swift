@@ -16,9 +16,16 @@ public extension Division {
 		name = switch name {
 		case "A", "DCA A": "Class A"
 		case "DCA Open", "DCA Open Class", "DCI Open Class": "Open Class"
-		case "All-age", "All age", "All age corps": "All-Age Class"
-		case "Senior": "All-Age Class"
+		case "All-age", "All age", "All age corps", "ALL-AGE", "Senior": "All-Age Class"
+		case "ALL - AGE": "All-Age Division"
 		case "Minicorps": "Mini-Corps"
+		case "I", "DIVISION I", "DIVISION 1": "Division I"
+		case "II", "DIVISION II", "DIVISION 2": "Division II"
+		case "III", "DIVISION III", "DIVISION 3": "Division III"
+		case "II/III", "II & III": "Division II/III"
+		case "JUNIOR": "Junior Class"
+		case "ASSOCIATE": "Associate Class"
+		case "CADET DIVISION": "Cadet Class"
 		default: name
 		}
 
