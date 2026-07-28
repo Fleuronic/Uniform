@@ -62,6 +62,7 @@ public extension Show {
 			("2026 ", ""),
 			("WDBJ-7 ", ""),
 			(" Drum Corps Competition", ""),
+			(" Drum Corps Competion", ""),
 			(" Drum Corps Comp", ""),
 			(". Drum", "Drum"),
 			("Barnum Festival Champions", "Barnum Festival: Champions"),
@@ -111,10 +112,17 @@ public extension Show {
 			("Evening show", "Evening"),
 			("Preliminaries", "Prelims"),
 			("Calvacade", "Cavalcade"),
+			("--RAINED OUT", ""),
+			("–RAINED OUT", ""),
+			("-RAINED OUT", ""),
+			("RAINED OUT", ""),
 			("Starliet", "Starlite"),
 			("Clasic", "Classic"),
+			("Californa", "California"),
+			("Kingson", "Kingston"),
 			("Individiual", "Individual"),
 			("CORNHUSKER", "Cornhusker"),
+			("Rockies -–", "Rockies –"),
 			("Rockies-", "Rockies – "),
 			("The Summer Music Games", "Summer Music Games")
 		]
@@ -133,14 +141,14 @@ public extension Show {
 		case "DCI Open Finals", "DCI Open Class Finals", "DCI World Championships Open Class Championship Finals", "DCI World Championships Open Class Finals", "Open Class Finals", "Open Class Championship Finals": "DCI Open Class World Championship Finals"
 		case "DCI Open Prelims", "DCI Open Class Prelims", "DCI World Championships Open Class Championship Prelims": "DCI Open Class World Championship Prelims"
 		case "Open Class Semifinals", "DCI World Championships Open Class Semifinals": "DCI Open Class World Championship Semifinals"
-		case "World Class Quarterfinals", "DCI World Championships World Class Quarterfinals", "DCI World Championships – Div I Quarterfinals": "DCI World Championship Quarterfinals"
+		case "World Class Quarterfinals", "DCI World Championships World Class Quarterfinals", "DCI World Championships – Div I Quarterfinals", "DCI World Championships – Div I Quarter Finals", "DCI Championships – Div I Quarterfinals": "DCI World Championship Quarterfinals"
 		case "Open Class Quarterfinals", "DCI World Championships Open Class Quarterfinals": "DCI Open Class World Championship Quarterfinals"
-		case "DCI Finals", "DCI World Class Finals", "DCI World Championships World Class Finals", "World Class Finals", "DCI World Championships – Div I Finals": "DCI World Championship Finals"
+		case "DCI Finals", "DCI World Class Finals", "DCI World Championships World Class Finals", "World Class Finals", "DCI World Championships – Div I Finals", "DCI Championships – Div I Finals": "DCI World Championship Finals"
 		case "DCI Prelims", "DCI World Class Prelims": "DCI World Championship Prelims"
-		case "DCI Semifinals", "DCI World Class Semi-Finals", "World Class Semi-Finals", "World Class Semifinals", "DCI World Championships World Class Semifinals", "DCI World Championships – Div I Semifinals": "DCI World Championship Semifinals"
-		case "DCI World Championships – II/III Prelims": "DCI Division II & III World Championship Prelims"
-		case "DCI World Championships – II/III Division Finals": "DCI Division II & III World Championship Semifinals"
-		case "DCI World Championships – II/III Grand Finals": "DCI Division II & III World Championship Finals"
+		case "DCI Semifinals", "DCI World Class Semi-Finals", "World Class Semi-Finals", "World Class Semifinals", "DCI World Championships World Class Semifinals", "DCI World Championships – Div I Semifinals", "DCI World Championships – Div I Semi Finals", "DCI Championships – Div I Semifinals": "DCI World Championship Semifinals"
+		case "DCI World Championships – II/III Prelims", "DCI Championships – Div II/III Prelims": "DCI Division II & III World Championship Prelims"
+		case "DCI World Championships – II/III Division Finals", "DCI Championships – Div II/III Semifinals": "DCI Division II & III World Championship Semifinals"
+		case "DCI World Championships – II/III Grand Finals", "DCI Championships – Div II/III Finals": "DCI Division II & III World Championship Finals"
 		case "DCA Open Class & Class A Prelims": "DCA World Championship Prelims"
 		case "DCA Class A & Open Class Finals": "DCA World Championship Finals"
 		case "DCI Southeastern", "DCI Atlanta Southeastern Championship": "DCI Southeastern Championship"
@@ -163,7 +171,7 @@ public extension Show {
 		case "Drum Corps Europe Championships Prelims": "DCE European Championship Prelims"
 		case "Drum Corps Europe Championships Finals": "DCE European Championship Finals"
 		case "Drum Corps Europe Championships", "DCE Championships": "DCE European Championships"
-		case "Mini-Corps/I&E", "Mini-Corps Championships", "I&E and Mini-Corps", "Mini-corps Championships & I&E": "DCA World Championships – Mini-Corps & I&E"
+		case "Mini-Corps/I&E", "Mini-Corps Championships", "I&E and Mini-Corps", "Mini-corps Championships & I&E", "DCA I&E – Mini-Corps": "DCA World Championships – Mini-Corps & I&E"
 		case "Mini-Corps Competition": "DCA Mini-Corps Championship"
 		case "DCA Alumni Spectacular", "Alumni Spectacular": "DCA World Championships – Alumni Spectacular"
 		case "Drum Corps in Northern Virginia": "Drums in Northern Virginia"
@@ -178,7 +186,9 @@ public extension Show {
 		case "Drum Corps: An American Tradition – Metro": "Drum Corps: An American Tradition – Clifton"
 		case "iablo Valley Classic Pacific Open Class Championship Finals": "D" + name
 		case "The Everett Drum & Bugle": "Everett Drum & Bugle Corps Show"
-		case "GLASSMEN All-Star Review": "Glassmen All Star Review"
+		case "GLASSMEN All-Star Review", "All Star Review": "Glassmen All Star Review"
+		case "Drums Across Garden": "Drums Across Garden City"
+		case "Phantom Regiment’s Show of Shows": "Show of Shows"
 		case "DCI West Championship": "DCI West"
 		case "Kiltie Klassic": "Kiltie Klassic Invitational"
 		case "Allstate Starlite Drum-O-Rama": "Starlite Drum-O-Rama"
@@ -204,8 +214,11 @@ public extension Show {
 		case "DCI Atlanta – the Southeastern Championships – Afternoon", "DCI Atlanta – the Southeastern Championship – Afternoon": "DCI Southeastern Championship – Afternoon"
 		case "DCI Atlanta – the Southeastern Championships – Evening", "DCI Atlanta – the Southeastern Championship – Evening": "DCI Southeastern Championship – Evening"
 		case "DCI San Antonio – the Southwestern Championship – Afternoon": "DCI Southwestern Championship – Afternoon"
-		case "DCI San Antonio – the Southwestern Championship – Evening": "DCI Southwestern Championship – Evening"
-		case "DCI San Antonio – the Southwestern Championship – Morning Show": "DCI Southwestern Championship – Morning"
+		case "DCI San Antonio – the Southwestern Championship – Evening", "Southwestern Championships-Evening", "Southwestern Championships-Evening Show", "Southwestern Championships – Evening": "DCI Southwestern Championship – Evening"
+		case "DCI San Antonio – the Southwestern Championship – Morning Show", "Southwestern Championships-Morning Show", "Southwestern Championships-Morning", "Southwestern Championships – Morning": "DCI Southwestern Championship – Morning"
+		case "DCI Midwestern Championship": "Midwestern Championship"
+		case "Midwestern Championships, Night Show", "The Midwestern Championships, Night Show": "Midwestern Championship – Night"
+		case "The Midwestern Championships, Day Show", "Midwestern Championships, Day Show": "Midwestern Championship – Day"
 		case "DCI Indianapolis – the Central Division Championships – Afternoon": "DCI Central Division Championships – Afternoon"
 		case "DCI Indianapolis – the Central Division Championships – Evening": "DCI Central Division Championships – Evening"
 		default: name

@@ -166,7 +166,8 @@ public extension Ensemble {
 			!name.contains("Marching Elite") &&
 			!name.contains("Hamilton Youth Performing") &&
 			!name.contains("Preston Scout House") &&
-			!name.contains("Bandits") {
+			!name.contains("Bandits") &&
+			!name.contains("Bandettes") {
 			let location = components.count > 1 ? components[1] : nil
 			return (name, location)
 		} else {
