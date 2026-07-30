@@ -57,6 +57,7 @@ public extension Feature {
 			"Kick Start",
 			"Music Stage",
 			"Opening Remarks",
+			"Place All-Age Corps",
 			"Pre-",
 			"Presentation",
 			"Quintet",

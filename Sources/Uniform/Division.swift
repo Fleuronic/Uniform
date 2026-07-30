@@ -15,17 +15,18 @@ public extension Division {
 		].contains(name) ? name + " Class" : name
 
 		name = switch name {
-		case "A", "DCA A": "Class A"
+		case "A", "DCA A", "CLASS A": "Class A"
 		case "DCA": "All-Age Division"
-		case "DCA Open", "DCA Open Class", "DCI Open Class": "Open Class"
-		case "All-age", "All age", "All age corps", "ALL-AGE", "Senior": "All-Age Class"
+		case "DCA Open", "DCA Open Class", "DCI Open Class", "Open CLASS": "Open Class"
+		case "All-age", "All age", "All age corps", "ALL-AGE", "Senior", "Seniors", "SENIOR": "All-Age Class"
 		case "ALL - AGE", "All-ages": "All-Age Division"
 		case "Minicorps": "Mini-Corps"
 		case "I", "1", "DIVISION I", "DIVISION 1": "Division I"
 		case "II", "2", "DIVISION II", "DIVISION 2": "Division II"
 		case "III", "3", "DIVISION III", "DIVISION 3": "Division III"
-		case "II/III", "II & III", "DIVISION II/III": "Division II/III"
-		case "JUNIOR": "Junior Class"
+		case "IV", "4", "DIVISION IV", "DIVISION 4": "Division IV"
+		case "II/III", "II & III", "DIVISION II/III", "Division II / III": "Division II/III"
+		case "JUNIOR", "Juniors": "Junior Class"
 		case "ASSOCIATE": "Associate Class"
 		case "CADET DIVISION": "Cadet Class"
 		default: name
