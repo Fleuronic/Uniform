@@ -30,6 +30,7 @@ public extension Circuit {
 		case "AL": "American Legion"
 		case "BYBA": "British Youth Band Association"
 		case "CAMQ": "Circuit des associations musicales du Québec"
+		case "CBSD": "Christelijke Bond van Show- en Drumbands"
 		case "CDCA": "Canadian Drum Corps Association"
 		case "DCI": "Drum Corps International"
 		case "DCA": "Drum Corps Associates"

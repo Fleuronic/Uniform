@@ -15,9 +15,9 @@ public extension Division {
 		].contains(name) ? name + " Class" : name
 
 		name = switch name {
-		case "A", "DCA A", "CLASS A": "Class A"
+		case "A", "DCA A", "CLASS A", "CORPS CLASS": "Class A"
 		case "DCA": "All-Age Division"
-		case "DCA Open", "DCA Open Class", "DCI Open Class", "Open CLASS": "Open Class"
+		case "DCA Open", "DCA Open Class", "DCI Open Class", "Open CLASS", "DRUM CORPS CLASS": "Open Class"
 		case "All-age", "All age", "All age corps", "ALL-AGE", "Senior", "Seniors", "SENIOR": "All-Age Class"
 		case "ALL - AGE", "All-ages": "All-Age Division"
 		case "Minicorps": "Mini-Corps"
@@ -25,10 +25,12 @@ public extension Division {
 		case "II", "2", "DIVISION II", "DIVISION 2": "Division II"
 		case "III", "3", "DIVISION III", "DIVISION 3": "Division III"
 		case "IV", "4", "DIVISION IV", "DIVISION 4": "Division IV"
-		case "II/III", "II & III", "DIVISION II/III", "Division II / III": "Division II/III"
-		case "JUNIOR", "Juniors": "Junior Class"
+		case "II/III", "II & III", "DIVISION II/III", "Division II / III", "DivisionII/III": "Division II/III"
+		case "JUNIOR", "Juniors", "JUNIOR CLASS": "Junior Class"
 		case "ASSOCIATE": "Associate Class"
-		case "CADET DIVISION": "Cadet Class"
+		case "CADET DIVISION", "CADET CLASS", "CADET": "Cadet Class"
+		case "MARCHING PERC CLASS": "Percussion Class"
+		case "US Division II": "U.S. Division II"
 		default: name
 		}
 
