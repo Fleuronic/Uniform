@@ -19,7 +19,7 @@ public extension Division {
 		case "DCA": "All-Age Division"
 		case "DCA Open", "DCA Open Class", "DCI Open Class", "Open CLASS", "DRUM CORPS CLASS": "Open Class"
 		case "All-age", "All age", "All age corps", "ALL-AGE", "Senior", "Seniors", "SENIOR": "All-Age Class"
-		case "ALL - AGE", "All-ages": "All-Age Division"
+		case "ALL - AGE", "All-ages", "Division": "All-Age Division"
 		case "Minicorps": "Mini-Corps"
 		case "I", "1", "DIVISION I", "DIVISION 1": "Division I"
 		case "II", "2", "DIVISION II", "DIVISION 2": "Division II"

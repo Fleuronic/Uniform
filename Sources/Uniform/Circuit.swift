@@ -48,7 +48,7 @@ public extension Circuit {
 		case "FAMQ": "Fédération des associations musicales du Québec"
 		case "GSC": "Garden State Circuit"
 		case "ICA": "International Corps Associates"
-		case "KNFM": "Koninklijke Federatie van Muziekverenigingen"
+		case "KNFM": "Koninklijke Nederlandse Federatie van Muziekverenigingen"
 		case "MCA": "Mini Corps Associates"
 		case "ODCA": "Ontario Drum Corps Association"
 		case "VFW": "Veterans of Foreign Wars"

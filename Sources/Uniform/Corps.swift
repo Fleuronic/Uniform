@@ -89,6 +89,16 @@ public extension DrumKit.Corps {
 		case "Warriors": "Warriors Alumni"
 		case "The Bluecoats": "Bluecoats"
 		case "The Connexion", "The ConneXion": "Connexion"
+		case "Show en Drumfanfare Vaartbroek": "Drumfanfare Vaartbroek"
+		case "3e Regiment": "3ᵉ Régiment"
+		case "Arcs-en-Ciel": "Les Arcs-en-Ciel"
+		case "Chevaliers": "Les Chevaliers"
+		case "Melomanes": "Les Mélomanes"
+		case "Pers-Clairs": "Les Pers-Clairs"
+		case "Quebec Alliance": "Québec Alliance"
+		case "Releve Musicale": "La Relève Musicale"
+		case "Les Senateurs": "Les Sénateurs (Joliette)"
+		case "Senateurs": "Les Sénateurs (L’Ancienne-Lorette)"
 		default: name
 		}
 

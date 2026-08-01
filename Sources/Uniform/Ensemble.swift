@@ -114,11 +114,11 @@ public extension Ensemble {
 			"Bram Brata Steel Drums",
 			"Brig Juice Brass",
 			"Buccaneer Banner Brass",
+			"Calgary",
 			"Central Florida Sounds of Freedom",
 			"Charlotte Jansky, Colts",
 			"Crossmen & Spirit of Atlanta",
 			"DrumSpirit",
-			"Drumfanfare",
 			"Drumline",
 			"EN-CORPS",
 			"Ensemble",
@@ -148,13 +148,11 @@ public extension Ensemble {
 			"Ryan Jacobs, Bluecoats",
 			"Saints Minis",
 			"Sextet",
-			"Showband",
 			"Sound Wave",
 			"Sound of Sun Prairie",
 			"Sparta Ignite",
 			"Spirit of Sunnyvale",
 			"Stafford Brigades",
-			"Tambourijnen",
 			"The Cavaliers and The Cavaliers Alumni",
 			"Troopers & Legacy Corps",
 			"U.S. Marine Silent Drill Platoon",
@@ -169,6 +167,7 @@ public extension Ensemble {
 			!name.contains("Hamilton Youth Performing") &&
 			!name.contains("Preston Scout House") &&
 			!name.contains("Bandits") &&
+			!name.contains("Michel") &&
 			!name.contains("Bandettes") {
 			let location = components.count > 1 ? components[1] : nil
 			return (name, location)

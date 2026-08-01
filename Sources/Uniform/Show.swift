@@ -160,18 +160,18 @@ public extension Show {
 		case "RUMBLE in the DESERT": "Rumble in the Desert"
 		case "SPIRIT of America": "Spirit of America"
 		case "SUMMER THUNDER": "Summer Thunder"
-		case "DCI World Championships Finals", "DCI World Championships – Division I Finals", "World Championships Finals": "DCI World Championship Finals"
-		case "DCI World Championships Quarterfinals", "DCI World Championships – Division I Quarter Finals", "World Championships Quarterfinals": "DCI World Championship Quarterfinals"
-		case "DCI World Championships Semifinals", "DCI World Championships – Division I Semi Finals", "World Championships Semifinals": "DCI World Championship Semifinals"
-		case "World Championship Prelims", "Open Class & Class A Prelims", "DCA Open Class World Championship Prelims", "DCA Championships and Class A Prelims": "DCA World Championship Prelims"
+		case "DCI World Championships Finals", "DCI World Championships – Division I Finals", "World Championships Finals", "DCI World Championships": "DCI World Championship Finals"
+		case "DCI World Championships Quarterfinals", "DCI World Championships – Division I Quarter Finals", "World Championships Quarterfinals", "DCI World Championships Quarter Finals": "DCI World Championship Quarterfinals"
+		case "DCI World Championships Semifinals", "DCI World Championships – Division I Semi Finals", "World Championships Semifinals", "DCI World Championships Semi Finals": "DCI World Championship Semifinals"
+		case "World Championship Prelims", "Open Class & Class A Prelims", "DCA Open Class World Championship Prelims", "DCA Championships and Class A Prelims", "DCA Championships Open Class Prelims": "DCA World Championship Prelims"
 		case "Open Class & Class A Finals", "DCA Championships – Open Class Finals": "DCA World Championship Finals"
-		case "DCI World Championships Div II & III Finals", "DCI World Championships – Division II & III Finals", "World Championships – Division II & III Finals": "DCI Division II & III World Championship Finals"
+		case "DCI World Championships Div II & III Finals", "DCI World Championships – Division II & III Finals", "World Championships – Division II & III Finals", "DCI World Championships Division II/III Finals": "DCI Division II & III World Championship Finals"
 		case "DCI World Championships Division II & III Prelims", "DCI World Championships – Division II & III Prelims", "World Championships – Division II & III Prelims": "DCI Division II & III World Championship Prelims"
 		case "DCI World Championships Division II & III Semifinals", "World Championships – Division II & III Semifinals": "DCI Division II & III World Championship Semifinals"
 		case "DCI World Championships – Division II Semi Finals": "DCI Division II World Championship Semifinals"
 		case "DCI World Championships – Division III Semi Finals": "DCI Division III World Championship Semifinals"
-		case "DCI Championships – Div II Prelims": "DCI Division II World Championship Prelims"
-		case "DCI Championships – Div III Prelims": "DCI Division III World Championship Prelims"
+		case "DCI Championships – Div II Prelims", "DCI World Championships Division II Prelims": "DCI Division II World Championship Prelims"
+		case "DCI Championships – Div III Prelims", "DCI World Championships Division III Prelims": "DCI Division III World Championship Prelims"
 		case "The DCI Division II & III Championship Preview": "DCI Division II & III Championship Preview"
 		case "DCI Atlanta – the Southeastern Championships – Afternoon", "DCI Atlanta – the Southeastern Championship – Afternoon": "DCI Southeastern Championship – Afternoon"
 		case "DCI Atlanta – the Southeastern Championships – Evening", "DCI Atlanta – the Southeastern Championship – Evening": "DCI Southeastern Championship – Evening"
@@ -191,6 +191,12 @@ public extension Show {
 		case "DCM Championships – Division III Prelims": "DCM Division III Championship Prelims"
 		case "DCM Championships – Senior Prelims": "DCM Senior Division Championship Prelims"
 		case "DCM Championships – Division III & Senior Prelims": "DCM Division III & Senior Division Championship Prelims"
+		case "DCA Championships Class A Finals": "DCA Class A World Championship Finals"
+		case "Garden State Circuit Championship": "Garden State Circuit Championships"
+		case "Drum Corps Japan Championship": "Drum Corps Japan Championships"
+		case "Corps at the Crest Los Angeles": "Corps at the Crest – Los Angeles"
+		case "US Coast Guard Open Finals": "Coast Guard Open Finals"
+		case "US Coast Guard Open Prelims": "Coast Guard Open Prelims"
 		default: name
 		}
 
@@ -203,6 +209,7 @@ public extension Show {
 		case ("Name TBD", "Great Bend", 2015): "March of Champions"
 		case ("Name TBD", "Bakersfield", 2015): "Resound"
 		case ("Name TBD", "St. Louis", 2015): "DCI Mid-America"
+		case ("DCA Championships", "Syracuse", 2000): "DCA World Championship Finals"
 		default: name
 		}
 
