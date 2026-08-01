@@ -3,13 +3,14 @@
 import struct DrumKit.Circuit
 
 public extension Circuit {
-	static func abbreviation(for record: String) -> String {
-		let abbreviation = record
+	static func circuit(for record: String) -> String {
+		let record = record
 			.components(separatedBy: "/").first!
 			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "&amp;", with: "&")
+			.replacingOccurrences(of: "DCI-", with: "DCI ")
 
-		return switch abbreviation {
+		return switch record {
 		case "", "DCI Division II & III": "DCI"
 		case "American Legion": "AL"
 		case "DCA-C", "DCA-Central", "DCA-S": "DCA"
@@ -17,13 +18,13 @@ public extension Circuit {
 		case "Eastern States Circuit": "ESC"
 		case "DCEurope": "DCE"
 		case "Japan": "DCJ"
-		default: abbreviation
+		default: record
 		}
 	}
 
 	static func name(for abbreviation: String) -> String {
 		switch abbreviation {
-		case "ADCQ": "Les amis du drum corps québécois"
+		case "ADCQ": "Les Amis du Drum Corps Québécois"
 		case "AL": "American Legion"
 		case "BYBA": "British Youth Band Association"
 		case "CAMQ": "Circuit des associations musicales du Québec"
@@ -44,21 +45,14 @@ public extension Circuit {
 		case "DMG": "Dutch Music Games"
 		case "EMass": "Eastern Massachusetts"
 		case "ESC": "Eastern States Circuit"
-		case "FAMQ": "Fédération des Associations Musicales du Québec"
+		case "FAMQ": "Fédération des associations musicales du Québec"
 		case "GSC": "Garden State Circuit"
 		case "ICA": "International Corps Associates"
+		case "KNFM": "Koninklijke Federatie van Muziekverenigingen"
 		case "MCA": "Mini Corps Associates"
 		case "ODCA": "Ontario Drum Corps Association"
 		case "VFW": "Veterans of Foreign Wars"
 		default: abbreviation
-		}
-	}
-
-	static func abbreviation(forDivisionNamed record: String) -> String? {
-		switch record {
-		case "DCI Open": "DCI"
-		case "DCA Open", "DCA A", "Class A": "DCA"
-		default: nil
 		}
 	}
 

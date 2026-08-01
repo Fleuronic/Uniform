@@ -25,10 +25,12 @@ public extension Division {
 		case "II", "2", "DIVISION II", "DIVISION 2": "Division II"
 		case "III", "3", "DIVISION III", "DIVISION 3": "Division III"
 		case "IV", "4", "DIVISION IV", "DIVISION 4": "Division IV"
-		case "II/III", "II & III", "DIVISION II/III", "Division II / III", "DivisionII/III": "Division II/III"
+		case "II/III", "II & III", "II / III", "DIVISION II/III", "Division II / III", "DivisionII/III": "Division II/III"
 		case "JUNIOR", "Juniors", "JUNIOR CLASS": "Junior Class"
 		case "ASSOCIATE": "Associate Class"
 		case "CADET DIVISION", "CADET CLASS", "CADET": "Cadet Class"
+		case "Concert": "Concert Class"
+		case "Parade": "Parade Class"
 		case "MARCHING PERC CLASS": "Percussion Class"
 		case "US Division II": "U.S. Division II"
 		default: name

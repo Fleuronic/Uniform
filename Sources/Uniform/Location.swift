@@ -61,6 +61,10 @@ public extension Location {
 			return ("Assen", "Drenthe", "Netherlands")
 		} else if record.contains("Axel") {
 			return ("Axel", "Zeeland", "Netherlands")
+		} else if record.contains("Zaandam") {
+			return ("Zaandam", "North Holland", "Netherlands")
+		} else if record.contains("Helmond") {
+			return ("Helmond", "North Brabant", "Netherlands")
 		} else if record.contains("Beverwijk") {
 			return ("Beverwijk", "North Holland", "Netherlands")
 		} else if record.contains("Yokohama") {
