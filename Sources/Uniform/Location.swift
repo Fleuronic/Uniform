@@ -106,6 +106,7 @@ public extension Location {
 		case "LaCrosse": "La Crosse"
 		case "MIllbrook", "Milbrook": "Millbrook"
 		case "Winston Salem": "Winston-Salem"
+		case "Orville": "Orrville"
 		case "Ft. Edward/Glens Falls": "Glens Falls"
 		case "Ft. Mill", "Ft Mill": "Fort Mill"
 		case "Ft. Edward": "Fort Edward"
