@@ -45,7 +45,8 @@ public extension Show {
 			("Mid-Cal", "MidCal"),
 			("Northwest Music Games", "Northwest Youth Music Games"),
 			("Mini Corps", "Mini-Corps"),
-			("SoCal", "So Cal"),
+			("So Cal", "SoCal"),
+			("So-Cal", "SoCal"),
 			("Southeastern Regional", "Southeastern Championship"),
 			("Southwestern Regional", "Southwestern Championship"),
 			("SUMMER MUSIC GAMES", "Summer Music Games"),
@@ -195,6 +196,7 @@ public extension Show {
 		case "Garden State Circuit Championship": "Garden State Circuit Championships"
 		case "Drum Corps Japan Championship": "Drum Corps Japan Championships"
 		case "Corps at the Crest Los Angeles": "Corps at the Crest – Los Angeles"
+		case "SoCal Classic: Open Class Pacific Championship Finals": "SoCal Classic Open Class Championship"
 		case "US Coast Guard Open Finals": "Coast Guard Open Finals"
 		case "US Coast Guard Open Prelims": "Coast Guard Open Prelims"
 		default: name
@@ -296,7 +298,6 @@ public extension Show {
 		case ("tour-of-champions-northern-illinois", 2016): "tour-of-champions-north-illinois"
 		case ("tour-of-champions-texas", 2013): "tour-of-championships-texas"
 		case ("dci-capitol-classic", 2013): "dci-capitol-classic-corps-show"
-		case ("dci-on-the-so-cal-coast", _): "dci-on-the-socal-coast"
 		case ("pacific-procession", 2015): "pacific-proscession"
 		case ("shoremen-brass-classic", 2015): "shoreman-brass-classic"
 		case ("dci-eastern-classic", let year) where year >= 2013 && year <= 2018: "dci-eastern-classic-2"

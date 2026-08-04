@@ -7,6 +7,7 @@ public extension Location {
 
 	// TODO: Ask claude to make sure this is complete across DCX
 	static func info(for record: String) -> Info? {
+		let record = record.replacingOccurrences(of: "'", with: "’")
 		if record.contains("Calgary") {
 			return ("Calgary", "AB", "Canada")
 		} else if record.contains("Sherbrooke") {
@@ -106,12 +107,39 @@ public extension Location {
 		case "MIllbrook", "Milbrook": "Millbrook"
 		case "Winston Salem": "Winston-Salem"
 		case "Ft. Edward/Glens Falls": "Glens Falls"
+		case "Ft. Mill", "Ft Mill": "Fort Mill"
+		case "Ft. Edward": "Fort Edward"
+		case "Ft. Monmouth": "Fort Monmouth"
+		case "Ft. Walton Beach": "Fort Walton Beach"
+		case "Ft. Wayne": "Fort Wayne"
+		case "Ft. Worth": "Fort Worth"
+		case "Mt. Olive": "Mount Olive"
+		case "St. Paul": "Saint Paul"
+		case "Saint Peter": "St. Peter"
+		case "St. Eustache": "Saint-Eustache"
+		case "St. Hyacinthe": "Saint-Hyacinthe"
+		case "St. Jean Chrysostome": "Saint-Jean-Chrysostome"
+		case "Appleton; Menasha": "Appleton"
+		case "Dallas; Fort Worth": "Dallas"
+		case "Houston; Austin": "Houston"
+		case "Mississauga; Stoney Creek": "Mississauga"
+		case "Hopkinsville; Murray": "Murray"
+		case "Grande Prairie; Dallas": "Grand Prairie"
+		case "Kitchner": "Kitchener"
+		case "Jolliette": "Joliette"
+		case "Lions Park Brantford": "Brantford"
+		case "Riviere du Loup": "Rivière-du-Loup"
+		case "Glens Falls/Ft. Edward": "Glens Falls"
+		case "Bloomington/Normal": "Bloomington–Normal"
+		case "Dallas/Fort Worth": "Dallas–Fort Worth"
 		default: city
 		}
 
 		state = switch state {
 		case "DC": "D.C."
 		case "ONT": "ON"
+		case "ALB": "AB"
+		case "SAS": "SK"
 		case "QUE", "QU": "QC"
 		default: state
 		}

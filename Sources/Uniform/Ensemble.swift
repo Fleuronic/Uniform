@@ -97,6 +97,8 @@ public extension Ensemble {
 		case "Crosstown Big Band": return (name, "Ogden, UT")
 		case "Mercedes Marching Band": return (name, "Mercedes Norte, Heredia")
 		case "Harpe Davids": return (name, components[1])
+		case "Göteborg": return (name, components[1])
+		case "Premier": return (name, components[1])
 		case "Bands of America & Carolina Crown": return (name, nil)
 		default: break
 		}
@@ -109,7 +111,7 @@ public extension Ensemble {
 			"Alisal",
 			"Band",
 			"BKXperience",
-			"Black Star Drum Line",
+			"Drum Line",
 			"Blue Stars Clinic Participants",
 			"Bram Brata Steel Drums",
 			"Brig Juice Brass",

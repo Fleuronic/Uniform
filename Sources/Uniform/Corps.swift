@@ -93,11 +93,12 @@ public extension DrumKit.Corps {
 		case "3e Regiment": "3ᵉ Régiment"
 		case "Arcs-en-Ciel": "Les Arcs-en-Ciel"
 		case "Chevaliers": "Les Chevaliers"
+		case "Etoiles", "Les Etoiles": "Les Étoiles"
 		case "Melomanes": "Les Mélomanes"
 		case "Pers-Clairs": "Les Pers-Clairs"
 		case "Quebec Alliance": "Québec Alliance"
 		case "Releve Musicale": "La Relève Musicale"
-		case "Les Senateurs": "Les Sénateurs (Joliette)"
+		case "Les Senateurs": "Les Sénateurs"
 		case "Senateurs": "Les Sénateurs (L’Ancienne-Lorette)"
 		default: name
 		}
