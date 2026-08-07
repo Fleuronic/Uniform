@@ -17,10 +17,6 @@ public extension Feature {
 				.replacingOccurrences(of: "Univ.", with: "University")
 		}
 
-		if ["Open Class", "Champion", "Encore"].allSatisfy(record.contains) {
-			return "Open Class Champion Encore"
-		}
-
 		let recordReplacements = [
 			("  ", " "),
 			("\"", ""),
