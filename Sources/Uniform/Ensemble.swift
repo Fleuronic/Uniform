@@ -6,23 +6,26 @@ public extension Ensemble {
 	static func info(for record: String) -> Info? {
 		let allComponents = record.components(separatedBy: " - ")
 		let components = [allComponents.first!, allComponents.last!]
-		var name = components[0]
-			.replacingOccurrences(of: "'", with: "’")
-			.replacingOccurrences(of: "\"", with: "")
-			.replacingOccurrences(of: " & Drum Corps", with: "")
-			.replacingOccurrences(of: " Performance", with: "")
-			.replacingOccurrences(of: " Joint", with: "")
-			.replacingOccurrences(of: " Exhibition", with: "")
-			.replacingOccurrences(of: " Band and Colorguard", with: "")
-			.replacingOccurrences(of: "Community Arts Network", with: "CAN")
-			.replacingOccurrences(of: "Union School District", with: "USD")
-			.replacingOccurrences(of: "School District", with: "USD")
-			.replacingOccurrences(of: "Beeches Ensemble", with: "Beeches")
-			.replacingOccurrences(of: "Univ.", with: "University")
-			.replacingOccurrences(of: "H.S.", with: "High School")
-			.replacingOccurrences(of: "Jr/Sr", with: "Jr./Sr.")
-			.replacingOccurrences(of: "Brata", with: "Bratá")
-			.replacingOccurrences(of: "Marching band", with: "Marching Band")
+		let nameReplacements = [
+			("'", "’"),
+			("\"", ""),
+			(" & Drum Corps", ""),
+			(" Performance", ""),
+			(" Joint", ""),
+			(" Exhibition", ""),
+			(" Band and Colorguard", ""),
+			("Community Arts Network", "CAN"),
+			("Union School District", "USD"),
+			("School District", "USD"),
+			("Beeches Ensemble", "Beeches"),
+			("Univ.", "University"),
+			("H.S.", "High School"),
+			("Jr/Sr", "Jr./Sr."),
+			("Brata", "Bratá"),
+			("Marching band", "Marching Band")
+		]
+		var name = nameReplacements
+			.reduce(components[0]) { $0.replacingOccurrences(of: $1.0, with: $1.1) }
 			.trimmingCharacters(in: .whitespaces)
 
 		name = switch name {

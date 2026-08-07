@@ -48,18 +48,20 @@ public extension DrumKit.Corps {
 			case let components = record.components(separatedBy: " - "),
 			components.count == 2 else { return nil }
 
-		var name = components[0]
-			.replacingOccurrences(of: "'", with: "’")
-			.replacingOccurrences(of: "\"", with: "")
-			.replacingOccurrences(of: " *", with: "")
-			.replacingOccurrences(of: "New York Skyliners", with: "Skyliners")
-			.replacingOccurrences(of: " Drum & Bugle Corps", with: "")
-			.replacingOccurrences(of: " Drum and Bugle Corps", with: "")
-			.replacingOccurrences(of: " D&B Corps", with: "")
-			.replacingOccurrences(of: "Minicorps", with: "Mini-Corps")
-			.replacingOccurrences(of: "de Quebec", with: "du Québec")
-			.replacingOccurrences(of: " (UK)", with: "")
-			.replacingOccurrences(of: " (Ire)", with: "")
+		let nameReplacements = [
+			("'", "’"),
+			("\"", ""),
+			(" *", ""),
+			("New York Skyliners", "Skyliners"),
+			(" Drum & Bugle Corps", ""),
+			(" Drum and Bugle Corps", ""),
+			(" D&B Corps", ""),
+			("Minicorps", "Mini-Corps"),
+			("de Quebec", "du Québec"),
+			(" (UK)", ""),
+			(" (Ire)", "")
+		]
+		var name = nameReplacements.reduce(components[0]) { $0.replacingOccurrences(of: $1.0, with: $1.1) }
 		let location = components[1]
 
 		name = switch name {

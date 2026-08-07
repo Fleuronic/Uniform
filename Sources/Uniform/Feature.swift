@@ -21,22 +21,24 @@ public extension Feature {
 			return "Open Class Champion Encore"
 		}
 
-		let record = record
-			.replacingOccurrences(of: "  ", with: " ")
-			.replacingOccurrences(of: "\"", with: "")
-			.replacingOccurrences(of: "'", with: "’")
-			.replacingOccurrences(of: "Age Out", with: "Age-Out")
-			.replacingOccurrences(of: "Drumline Battle", with: "DrumLine Battle")
-			.replacingOccurrences(of: "Drum Line Battle", with: "DrumLine Battle")
-			.replacingOccurrences(of: "Drumline Jam", with: "DrumLine Jam")
-			.replacingOccurrences(of: "FJM Endzone -", with: "FJM Endzone Performance -")
-			.replacingOccurrences(of: "Music Stage -", with: "Music Stage Performance -")
-			.replacingOccurrences(of: "INPact", with: "INpact")
-			.replacingOccurrences(of: "Givaway", with: "Giveaway")
-			.replacingOccurrences(of: "On Field", with: "On-Field")
-			.replacingOccurrences(of: "Gates open", with: "Gates Open")
-			.replacingOccurrences(of: "Prelimis", with: "Prelims")
-			.replacingOccurrences(of: "Championships", with: "Championship")
+		let recordReplacements = [
+			("  ", " "),
+			("\"", ""),
+			("'", "’"),
+			("Age Out", "Age-Out"),
+			("Drumline Battle", "DrumLine Battle"),
+			("Drum Line Battle", "DrumLine Battle"),
+			("Drumline Jam", "DrumLine Jam"),
+			("FJM Endzone -", "FJM Endzone Performance -"),
+			("Music Stage -", "Music Stage Performance -"),
+			("INPact", "INpact"),
+			("Givaway", "Giveaway"),
+			("On Field", "On-Field"),
+			("Gates open", "Gates Open"),
+			("Prelimis", "Prelims"),
+			("Championships", "Championship")
+		]
+		let record = recordReplacements.reduce(record) { $0.replacingOccurrences(of: $1.0, with: $1.1) }
 
 		let features = [
 			"Announcement",
@@ -80,19 +82,23 @@ public extension Feature {
 			"Welcome"
 		]
 
-		return if features.contains(where: record.contains) {
-			record
-				.replacingOccurrences(of: " and ", with: " & ")
-				.replacingOccurrences(of: "Award ", with: "Awards")
-				.replacingOccurrences(of: "AwardsCeremony", with: "Awards Ceremony")
-				.replacingOccurrences(of: "Encore- ", with: "Encore - ")
-				.replacingOccurrences(of: "Encore: ", with: "Encore - ")
-				.replacingOccurrences(of: "Entertainment: ", with: "Entertainment - ")
-				.replacingOccurrences(of: "Pre-show", with: "Pre-Show")
-				.components(separatedBy: " - ")
-				.first { features.contains(where: $0.contains) }!
-				.components(separatedBy: " (").first!
-				.components(separatedBy: " Pres. ").first!
-		} else { nil }
+		guard features.contains(where: record.contains) else { return nil }
+
+		let featureReplacements = [
+			(" and ", " & "),
+			("Award ", "Awards"),
+			("AwardsCeremony", "Awards Ceremony"),
+			("Encore- ", "Encore - "),
+			("Encore: ", "Encore - "),
+			("Entertainment: ", "Entertainment - "),
+			("Pre-show", "Pre-Show")
+		]
+
+		return featureReplacements
+			.reduce(record) { $0.replacingOccurrences(of: $1.0, with: $1.1) }
+			.components(separatedBy: " - ")
+			.first { features.contains(where: $0.contains) }!
+			.components(separatedBy: " (").first!
+			.components(separatedBy: " Pres. ").first!
 	}
 }
