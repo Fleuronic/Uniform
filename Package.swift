@@ -34,6 +34,13 @@ let package = Package(
 	swiftLanguageModes: [.v6]
 )
 
+package.targets.append(
+	.testTarget(
+		name: "UniformTests",
+		dependencies: ["Uniform"]
+	)
+)
+
 for target in package.targets {
 	target.swiftSettings = [
 		.enableExperimentalFeature("StrictConcurrency"),

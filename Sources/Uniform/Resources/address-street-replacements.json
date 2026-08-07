@@ -1,0 +1,20 @@
+[
+	[".", ""],
+	["'", "’"],
+	["#", ""],
+	["Drive", "Dr"],
+	["Road", "Rd"],
+	["Street", "St"],
+	["Avenue", "Ave"],
+	["Boulevard", "Blvd"],
+	["Lane", "Ln"],
+	["Highway", "Hwy"],
+	["Route", "Rte"],
+	["One ", "1 "],
+	["Lawson Rd", "9300 Lawson Rd"],
+	["Oliver Jackson Blvd", "2225 Oliver Jackson Blvd"],
+	["Millenium", "Millennium"],
+	["Rinehardt", "Reinhardt"],
+	["Stanhope Elmore High School", "4300 Main St"],
+	["SW Haverhill Rd", "400 S Haverhill Rd"]
+]
