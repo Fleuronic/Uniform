@@ -25,6 +25,9 @@ let package = Package(
 			dependencies: [
 				"DrumKit",
 				.product(name: "MemberwiseInit", package: "swift-memberwise-init-macro")
+			],
+			resources: [
+				.process("Resources")
 			]
 		)
 	],
