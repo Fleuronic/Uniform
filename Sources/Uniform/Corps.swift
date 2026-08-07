@@ -50,6 +50,7 @@ public extension DrumKit.Corps {
 
 		var name = components[0]
 			.replacingOccurrences(of: "'", with: "’")
+			.replacingOccurrences(of: "\"", with: "")
 			.replacingOccurrences(of: " *", with: "")
 			.replacingOccurrences(of: "New York Skyliners", with: "Skyliners")
 			.replacingOccurrences(of: " Drum & Bugle Corps", with: "")
@@ -62,8 +63,6 @@ public extension DrumKit.Corps {
 		let location = components[1]
 
 		name = switch name {
-		case "Blue Devils \"B\"": "Blue Devils B"
-		case "Blue Devils \"C\"": "Blue Devils C"
 		case "Hurricanes": "Connecticut Hurricanes"
 		case "Thunder": "Spokane Thunder"
 		case "Blue Stars 60th Anniv. Corps": "Blue Stars 60th Alumni Corps"

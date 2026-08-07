@@ -113,6 +113,7 @@ public extension Venue {
 		var host: String? = nil
 		let components = record
 			.replacingOccurrences(of: "  ", with: " ")
+			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "&amp;", with: "&")
 			.replacingOccurrences(of: " at the ", with: " at ")
 			.components(separatedBy: " at ")

@@ -11,6 +11,7 @@ public extension Address {
 
 		let streetReplacements = [
 			(".", ""),
+			("'", "’"),
 			("#", ""),
 			("Drive", "Dr"),
 			("Road", "Rd"),

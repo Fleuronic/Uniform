@@ -7,6 +7,8 @@ public extension Ensemble {
 		let allComponents = record.components(separatedBy: " - ")
 		let components = [allComponents.first!, allComponents.last!]
 		var name = components[0]
+			.replacingOccurrences(of: "'", with: "’")
+			.replacingOccurrences(of: "\"", with: "")
 			.replacingOccurrences(of: " & Drum Corps", with: "")
 			.replacingOccurrences(of: " Performance", with: "")
 			.replacingOccurrences(of: " Joint", with: "")

@@ -17,8 +17,14 @@ public extension Feature {
 				.replacingOccurrences(of: "Univ.", with: "University")
 		}
 
+		if ["Open Class", "Champion", "Encore"].allSatisfy(record.contains) {
+			return "Open Class Champion Encore"
+		}
+
 		let record = record
 			.replacingOccurrences(of: "  ", with: " ")
+			.replacingOccurrences(of: "\"", with: "")
+			.replacingOccurrences(of: "'", with: "’")
 			.replacingOccurrences(of: "Age Out", with: "Age-Out")
 			.replacingOccurrences(of: "Drumline Battle", with: "DrumLine Battle")
 			.replacingOccurrences(of: "Drum Line Battle", with: "DrumLine Battle")
