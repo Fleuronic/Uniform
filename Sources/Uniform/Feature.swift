@@ -30,4 +30,15 @@ public extension Feature {
 			.components(separatedBy: " (").first!
 			.components(separatedBy: " Pres. ").first!
 	}
+
+	// Lineup features that signal an event actually awarded scores. Single source of truth for
+	// both the recorded-load scores guard and the live "event finished" check.
+	static func isPossibleScoreAnnouncement(_ name: String) -> Bool {
+		[
+			"Scores Announced",
+			"Awards Ceremony",
+			"Retreat",
+			"Age-Out Ceremony"
+		].contains(name)
+	}
 }
