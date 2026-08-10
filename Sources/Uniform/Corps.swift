@@ -16,12 +16,13 @@ public extension DrumKit.Corps {
 	typealias Info = (String, String)
 
 	private static let infoMap = Resource.tuples("corps-info")
+	private static let infoKeywords = Resource.tuples("corps-info-keywords")
 	private static let nameReplacements = Resource.pairs("corps-name-replacements")
 	private static let names = Resource.map("corps-names")
 
 	static func info(for record: String) -> Info? {
-		if record.contains("Marine D") || record.contains("Marine Corps") || record == "US Marines" {
-			return ("U.S. Marine Drum & Bugle Corps", "Washington, D.C.")
+		if let info = infoKeywords.first(where: { record.contains($0.key) })?.value {
+			return info
 		}
 
 		if let info = infoMap[record] {

@@ -3,12 +3,12 @@
 import struct DrumKit.Address
 
 public extension Address {
+	private static let overrides = Resource.tuples("address-overrides")
 	private static let streetReplacements = Resource.pairs("address-street-replacements")
 
 	static func info(for records: [String]) -> (String, String) {
-		switch records {
-		case ["Apple Valley, MN"]: return ("6200 140th St W", "55124")
-		default: break
+		if records.count == 1, let info = overrides[records[0]] {
+			return info
 		}
 
 		let streetAddress = streetReplacements

@@ -9,6 +9,9 @@ public extension Ensemble {
 	private static let locations = Resource.map("ensemble-locations")
 	private static let keywords = Resource.list("ensemble-keywords")
 	private static let excludes = Resource.list("ensemble-excludes")
+	private static let infoMap = Resource.tuples("ensemble-info")
+	private static let ownLocations = Set(Resource.list("ensemble-own-locations"))
+	private static let nilLocations = Set(Resource.list("ensemble-nil-locations"))
 
 	static func info(for record: String) -> Info? {
 		let allComponents = record.components(separatedBy: " - ")
@@ -29,13 +32,16 @@ public extension Ensemble {
 			return (name, location)
 		}
 
-		switch name {
-		case "Joyfull": return (record, "Winston-Salem, NC")
-		case "Lighthouse Brigade of Racine": return ("Lighthouse Brigade", "Racine, WI")
-		case "Murphysboro HS Crimson Exp": return ("Murphysboro High School Crimson Express", "Murphysboro, IL")
-		case "Harpe Davids", "Göteborg", "Premier": return (name, components[1])
-		case "Bands of America & Carolina Crown": return (name, nil)
-		default: break
+		if let info = infoMap[name] {
+			return info
+		}
+
+		if ownLocations.contains(name) {
+			return (name, components[1])
+		}
+
+		if nilLocations.contains(name) {
+			return (name, nil)
 		}
 
 		if let location = locations[name] {
