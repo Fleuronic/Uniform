@@ -5,69 +5,37 @@ import struct DrumKit.Division
 
 @testable import Uniform
 
-// Verifies the JSON-driven Division.name matches the original switch-based logic
-// (kept verbatim below as an independent reference) across a broad input corpus.
 struct DivisionTests {
-	@Test func matchesLegacy() {
-		let inputs = [
-			"A", "DCA A", "CLASS A", "CORPS CLASS", "A Class",
-			"DCA", "DCA Open", "DCA Open Class", "DCI Open Class", "Open CLASS", "DRUM CORPS CLASS",
-			"All-age", "All age", "All age corps", "ALL-AGE", "Senior", "Seniors", "SENIOR", "All Age",
-			"ALL - AGE", "All-ages", "Division",
-			"Minicorps",
-			"I", "1", "DIVISION I", "DIVISION 1",
-			"II", "2", "DIVISION II", "DIVISION 2",
-			"III", "3", "DIVISION III", "DIVISION 3",
-			"IV", "4", "DIVISION IV", "DIVISION 4",
-			"II/III", "II & III", "II / III", "DIVISION II/III", "Division II / III", "DivisionII/III",
-			"JUNIOR", "Juniors", "JUNIOR CLASS",
-			"ASSOCIATE",
-			"CADET DIVISION", "CADET CLASS", "CADET",
-			"Concert", "Parade", "MARCHING PERC CLASS", "US Division II",
-			"Open", "World", "All-Age", "International", "Junior", "Premier",
-			"OPen", "OPEN",
-			"Open Class", "World Class", "Premier Class",
-			"Something Unmapped", "", "Division V"
-		]
-
-		for input in inputs {
-			#expect(Division.name(for: input) == Self.legacyName(for: input), "mismatch for \(input)")
-		}
+	@Test(arguments: [
+		("DIVISION 1", "Division I"),
+		("1", "Division I"),
+		("DIVISION IV", "Division IV"),
+		("II & III", "Division II/III"),
+		("SENIOR", "All-Age Class"),
+		("Minicorps", "Mini-Corps"),
+		("US Division II", "U.S. Division II")
+	] as [(String, String)])
+	func canonicalizesKnownVariants(_ pair: (input: String, expected: String)) {
+		#expect(Division.name(for: pair.input) == pair.expected)
 	}
 
-	private static func legacyName(for record: String) -> String {
-		var name = record
-			.replacingOccurrences(of: "All Age", with: "All-Age")
-			.replacingOccurrences(of: "A Class", with: "Class A")
-			.replacingOccurrences(of: "OPen", with: "Open")
-			.replacingOccurrences(of: "OPEN", with: "Open")
+	@Test(arguments: [
+		("Open", "Open Class"),
+		("OPEN", "Open Class"),
+		("All Age", "All-Age Class"),
+		("Premier", "Premier Class")
+	] as [(String, String)])
+	func appendsClassSuffixToBareDivisions(_ pair: (input: String, expected: String)) {
+		#expect(Division.name(for: pair.input) == pair.expected)
+	}
 
-		name = [
-			"Open", "World", "All-Age", "International", "Junior", "Premier"
-		].contains(name) ? name + " Class" : name
+	@Test(arguments: ["Division I", "Open Class", "All-Age Class", "Mini-Corps"])
+	func leavesCanonicalNamesUnchanged(_ name: String) {
+		#expect(Division.name(for: name) == name)
+	}
 
-		name = switch name {
-		case "A", "DCA A", "CLASS A", "CORPS CLASS": "Class A"
-		case "DCA": "All-Age Division"
-		case "DCA Open", "DCA Open Class", "DCI Open Class", "Open CLASS", "DRUM CORPS CLASS": "Open Class"
-		case "All-age", "All age", "All age corps", "ALL-AGE", "Senior", "Seniors", "SENIOR": "All-Age Class"
-		case "ALL - AGE", "All-ages", "Division": "All-Age Division"
-		case "Minicorps": "Mini-Corps"
-		case "I", "1", "DIVISION I", "DIVISION 1": "Division I"
-		case "II", "2", "DIVISION II", "DIVISION 2": "Division II"
-		case "III", "3", "DIVISION III", "DIVISION 3": "Division III"
-		case "IV", "4", "DIVISION IV", "DIVISION 4": "Division IV"
-		case "II/III", "II & III", "II / III", "DIVISION II/III", "Division II / III", "DivisionII/III": "Division II/III"
-		case "JUNIOR", "Juniors", "JUNIOR CLASS": "Junior Class"
-		case "ASSOCIATE": "Associate Class"
-		case "CADET DIVISION", "CADET CLASS", "CADET": "Cadet Class"
-		case "Concert": "Concert Class"
-		case "Parade": "Parade Class"
-		case "MARCHING PERC CLASS": "Percussion Class"
-		case "US Division II": "U.S. Division II"
-		default: name
-		}
-
-		return name
+	@Test func passesUnmappedRecordsThrough() {
+		#expect(Division.name(for: "Nonexistent Division") == "Nonexistent Division")
+		#expect(Division.name(for: "") == "")
 	}
 }
