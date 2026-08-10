@@ -5,11 +5,6 @@ import struct DrumKit.Location
 public extension Location {
 	typealias Info = (String, String, String)
 
-	private static let containsRules = Resource.rows("location-contains")
-	private static let exact = Resource.triples("location-exact")
-	private static let cities = Resource.map("location-cities")
-	private static let states = Resource.map("location-states")
-
 	static func info(for record: String) -> Info? {
 		let record = record.replacingOccurrences(of: "'", with: "’")
 
@@ -17,9 +12,7 @@ public extension Location {
 			return (rule[1], rule[2], rule[3])
 		}
 
-		if let info = exact[record] {
-			return info
-		}
+		if let info = exact[record] { return info }
 
 		let components = record.replacingOccurrences(of: ",", with: "").split(separator: " ")
 		guard let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else {
@@ -30,7 +23,7 @@ public extension Location {
 		var city = components[0..<stateIndex].joined(separator: " ")
 		var state = String(components[stateIndex]).uppercased()
 		let country = if stateIndex == components.count - 1 {
-			"United States"
+			defaultCountry
 		} else {
 			components[(stateIndex + 1)...].joined(separator: " ")
 		}
@@ -40,4 +33,13 @@ public extension Location {
 
 		return (city, state, country)
 	}
+}
+
+// MARK: -
+private extension Location {
+	static let containsRules = Resource.rows(from: "location-contains")
+	static let exact = Resource.triples(from: "location-exact")
+	static let cities = Resource.map(from: "location-cities")
+	static let states = Resource.map(from: "location-states")
+	static let defaultCountry = Resource.string(from: "location-default-country")
 }

@@ -3,13 +3,6 @@
 import struct DrumKit.Venue
 
 public extension Venue {
-	private static let venues = Resource.optionalTuples("venue-info")
-	private static let recordReplacements = Resource.pairs("venue-record-replacements")
-	private static let names = Resource.map("venue-names")
-	private static let hosts = Resource.map("venue-hosts")
-	private static let stadiums = Resource.map("venue-stadiums")
-	private static let hostFixups = Resource.map("venue-host-fixups")
-
 	static func info(for record: String, at streetAddress: String) -> (String, String?) {
 		if let venue = venues[streetAddress] {
 			return venue
@@ -45,4 +38,14 @@ public extension Venue {
 
 		return (name, host)
 	}
+}
+
+// MARK: -
+private extension Venue {
+	static let venues = Resource.optionalTuples(from: "venue-info")
+	static let recordReplacements = Resource.pairs(from: "venue-record-replacements")
+	static let names = Resource.map(from: "venue-names")
+	static let hosts = Resource.map(from: "venue-hosts")
+	static let stadiums = Resource.map(from: "venue-stadiums")
+	static let hostFixups = Resource.map(from: "venue-host-fixups")
 }

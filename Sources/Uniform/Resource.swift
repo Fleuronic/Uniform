@@ -3,35 +3,42 @@
 import Foundation
 
 enum Resource {
-	static func map(_ name: String) -> [String: String] {
+	static func map(from name: String) -> [String: String] {
 		decode(name) ?? [:]
 	}
 
-	static func list(_ name: String) -> [String] {
+	static func string(from name: String) -> String {
+		decode(name) ?? ""
+	}
+
+	static func list(from name: String) -> [String] {
 		decode(name) ?? []
 	}
 
-	static func pairs(_ name: String) -> [(String, String)] {
+	static func pairs(from name: String) -> [(String, String)] {
 		(decode(name) as [[String]]?)?.map { ($0[0], $0[1]) } ?? []
 	}
 
-	static func tuples(_ name: String) -> [String: (String, String)] {
+	static func tuples(from name: String) -> [String: (String, String)] {
 		(decode(name) as [String: [String]]?)?.mapValues { ($0[0], $0[1]) } ?? [:]
 	}
 
-	static func optionalTuples(_ name: String) -> [String: (String, String?)] {
+	static func optionalTuples(from name: String) -> [String: (String, String?)] {
 		(decode(name) as [String: [String?]]?)?.mapValues { ($0[0] ?? "", $0.count > 1 ? $0[1] : nil) } ?? [:]
 	}
 
-	static func triples(_ name: String) -> [String: (String, String, String)] {
+	static func triples(from name: String) -> [String: (String, String, String)] {
 		(decode(name) as [String: [String]]?)?.mapValues { ($0[0], $0[1], $0[2]) } ?? [:]
 	}
 
-	static func rows(_ name: String) -> [[String]] {
+	static func rows(from name: String) -> [[String]] {
 		decode(name) ?? []
 	}
+}
 
-	private static func decode<T: Decodable>(_ name: String) -> T? {
+// MARK: -
+private extension Resource {
+	static func decode<T: Decodable>(_ name: String) -> T? {
 		guard
 			let url = Bundle.module.url(forResource: name, withExtension: "json"),
 			let data = try? Data(contentsOf: url) else { return nil }

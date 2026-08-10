@@ -15,19 +15,9 @@ public struct Corps: Equatable, Sendable {
 public extension DrumKit.Corps {
 	typealias Info = (String, String)
 
-	private static let infoMap = Resource.tuples("corps-info")
-	private static let infoKeywords = Resource.tuples("corps-info-keywords")
-	private static let nameReplacements = Resource.pairs("corps-name-replacements")
-	private static let names = Resource.map("corps-names")
-
 	static func info(for record: String) -> Info? {
-		if let info = infoKeywords.first(where: { record.contains($0.key) })?.value {
-			return info
-		}
-
-		if let info = infoMap[record] {
-			return info
-		}
+		if let info = infoKeywords.first(where: { record.contains($0.key) })?.value { return info }
+		if let info = infoMap[record] { return info }
 
 		guard
 			case let components = record.components(separatedBy: " - "),
@@ -37,4 +27,12 @@ public extension DrumKit.Corps {
 		let location = components[1]
 		return (names[base] ?? base, location)
 	}
+}
+
+// MARK: -
+private extension DrumKit.Corps {
+	static let infoMap = Resource.tuples(from: "corps-info")
+	static let infoKeywords = Resource.tuples(from: "corps-info-keywords")
+	static let nameReplacements = Resource.pairs(from: "corps-name-replacements")
+	static let names = Resource.map(from: "corps-names")
 }
