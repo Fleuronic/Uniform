@@ -1,5 +1,5 @@
 {
-  "originHash" : "a601e595c3b903a3a102cddf55ff896a984e692944a99eb7aff7c21e1b438c21",
+  "originHash" : "222043951be8c1ff4e70211db5bafb76a86a8b563b222d369fff69e15f962a5a",
   "pins" : [
     {
       "identity" : "drumkit",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/Fleuronic/DrumKit",
       "state" : {
         "branch" : "main",
-        "revision" : "6014c2550d3352ec3b6d9aa8065c71bad0c870ac"
+        "revision" : "a572fdb2392134dd0a6269d21c0cce23cfbc8fe8"
       }
     },
     {
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftlang/swift-syntax",
       "state" : {
-        "revision" : "9de99a78f099e59caf2b2beec65a4c45d54b2081",
-        "version" : "603.0.1"
+        "revision" : "79e4b74a295b6eb74a8b585e3a39d29e70c1dbd1",
+        "version" : "603.0.2"
       }
     }
   ],
