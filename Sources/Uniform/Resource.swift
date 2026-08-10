@@ -4,7 +4,14 @@ import Foundation
 
 enum Resource {
 	static func map(from name: String) -> [String: String] {
-		decode(name) ?? [:]
+		if let grouped = decode(name) as [String: [String]]? {
+			return .init(
+				grouped.flatMap { value, keys in keys.map { ($0, value) } },
+				uniquingKeysWith: { first, _ in first }
+			)
+		}
+
+		return decode(name) ?? [:]
 	}
 
 	static func string(from name: String) -> String {
