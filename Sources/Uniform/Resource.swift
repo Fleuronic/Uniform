@@ -34,8 +34,7 @@ enum Resource {
 	private static func decode<T: Decodable>(_ name: String) -> T? {
 		guard
 			let url = Bundle.module.url(forResource: name, withExtension: "json"),
-			let data = try? Data(contentsOf: url)
-		else { return nil }
+			let data = try? Data(contentsOf: url) else { return nil }
 
 		return try? JSONDecoder().decode(T.self, from: data)
 	}

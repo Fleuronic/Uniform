@@ -22,9 +22,6 @@ public extension Ensemble {
 			.trimmingCharacters(in: .whitespaces)
 		let name = names[base] ?? base
 
-		// IMBA (Irish) & allied UK marching bands are scored as bands, not drum
-		// corps. Guard on the record's country so same-named US corps (e.g. the
-		// Ravens and Vikings drum corps) keep their corps classification.
 		if
 			bands.contains(name),
 			let location = components.count > 1 ? components[1] : nil,
