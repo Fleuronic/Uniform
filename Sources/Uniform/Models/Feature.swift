@@ -16,12 +16,12 @@ public extension Feature {
 
 		guard keywords.contains(where: record.contains) else { return nil }
 
-		return replacements
+		let name = replacements
 			.reduce(record) { $0.replacingOccurrences(of: $1.0, with: $1.1) }
 			.components(separatedBy: " - ")
 			.first { keywords.contains(where: $0.contains) }!
-			.components(separatedBy: " (").first!
-			.components(separatedBy: " Pres. ").first!
+
+		return truncators.reduce(name) { $0.components(separatedBy: $1).first! }
 	}
 }
 
@@ -33,4 +33,5 @@ private extension Feature {
 	static let recordReplacements = Resource.pairs(from: "feature-record-replacements")
 	static let keywords = Resource.list(from: "feature-keywords")
 	static let replacements = Resource.pairs(from: "feature-replacements")
+	static let truncators = Resource.list(from: "feature-truncators")
 }
