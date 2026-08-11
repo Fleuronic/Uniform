@@ -14,9 +14,8 @@ public extension Ensemble {
 
 		if
 			bands.contains(name),
-			let location = components.count > 1 ? components[1] : nil,
-			bandCountries.contains(where: location.contains) {
-			return (name, location)
+			bandCountries.contains(where: components[1].contains) {
+			return (name, components[1])
 		}
 
 		if let info = infoMap[name] { return info }
@@ -27,8 +26,7 @@ public extension Ensemble {
 		if
 			keywords.contains(where: name.contains) &&
 			!excludes.contains(where: name.contains) {
-			let location = components.count > 1 ? components[1] : nil
-			return (name, location)
+			return (name, components[1])
 		} else {
 			return nil
 		}

@@ -44,6 +44,13 @@ struct LocationTests {
 		#expect(info?.2 == "Canada")
 	}
 
+	@Test func takesTheCountryFromTokensAfterTheState() {
+		let info = Location.info(for: "Tokyo JP Japan")
+		#expect(info?.0 == "Tokyo")
+		#expect(info?.1 == "JP")
+		#expect(info?.2 == "Japan")
+	}
+
 	@Test func returnsNilForUnparseableRecords() {
 		#expect(Location.info(for: "JustACity") == nil)
 	}

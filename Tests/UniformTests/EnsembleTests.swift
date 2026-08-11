@@ -46,6 +46,12 @@ struct EnsembleTests {
 		#expect(Ensemble.info(for: "Marching Brass Group - Town, ST") == nil)
 	}
 
+	@Test func keepsKeywordEnsemblesWithTheirRecordLocation() {
+		let info = Ensemble.info(for: "Sound Wave - Seattle, WA")
+		#expect(info?.0 == "Sound Wave")
+		#expect(info?.1 == "Seattle, WA")
+	}
+
 	@Test func returnsNilForUnrecognizedEnsembles() {
 		#expect(Ensemble.info(for: "Random Corps - City, ST") == nil)
 	}

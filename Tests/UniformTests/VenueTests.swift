@@ -23,4 +23,22 @@ struct VenueTests {
 		#expect(name == "Alta High School Football Field")
 		#expect(host == "Alta High School")
 	}
+
+	@Test func returnsTheOverrideForAKnownStreetAddress() {
+		let (name, host) = Venue.info(for: "Ignored Record", at: "1 Bills Dr")
+		#expect(name == "New Era Field")
+		#expect(host == nil)
+	}
+
+	@Test func canonicalizesVenueNameAndResolvesItsHost() {
+		let (name, host) = Venue.info(for: "Salem Stadium", at: "999 Test Ave")
+		#expect(name == "Salem Football Stadium")
+		#expect(host == "Salem High School")
+	}
+
+	@Test func appliesHostFixups() {
+		let (name, host) = Venue.info(for: "North Field at Texas A&M", at: "998 Test Ave")
+		#expect(name == "North Field")
+		#expect(host == "Texas A&M University")
+	}
 }

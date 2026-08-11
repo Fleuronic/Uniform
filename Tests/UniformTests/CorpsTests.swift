@@ -43,4 +43,10 @@ struct CorpsTests {
 	@Test func returnsNilForMalformedMultiDashRecords() {
 		#expect(Corps.info(for: "Too - Many - Dashes - Here") == nil)
 	}
+
+	@Test func keepsAnUnmappedNameFromASplitRecord() {
+		let info = Corps.info(for: "Some Corps - Anytown, TX")
+		#expect(info?.0 == "Some Corps")
+		#expect(info?.1 == "Anytown, TX")
+	}
 }
