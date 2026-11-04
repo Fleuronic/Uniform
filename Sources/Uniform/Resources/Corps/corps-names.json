@@ -10,6 +10,7 @@
 	"Académie Musicale": ["Academie Musicale"],
 	"Phoenix (New Jersey)": ["Phoenix"],
 	"Phoenix": ["Phoenix (Fl)"],
+	"Volunteers": ["Volunteers (TN)"],
 	"Phantom Regiment Alumni": ["Phantom Regiment Alumni Association"],
 	"Freelancers Alumni": ["Sacramento Freelancers Alumni", "Sacramento Freelancers Alumni Corps", "Sacramento Freelancers Mini Corps", "Sacramento Freelancers Mini-Corps", "Freelancers Mini-Corps", "Freelancers Alumni Corps"],
 	"Star United": ["Star United Mini-Corps"],
@@ -22,7 +23,9 @@
 	"Colts": ["The Colts"],
 	"Muchachos": ["The Muchachos"],
 	"Kilties": ["Kilties Senior Corps"],
-	"Warriors Alumni": ["Warriors"],
+	"CMCC Warriors Mini-Corps": ["Warriors", "Warriors Alumni", "CMCC Warriors Senior", "CMCC Warriors Alumni Mini-Corps"],
 	"Bluecoats": ["The Bluecoats"],
-	"Connexion": ["The Connexion", "The ConneXion"]
+	"Connexion": ["The Connexion", "The ConneXion"],
+	"Mighty St. Joes Alumni": ["St. Joseph’s of Batavia Alumni", "St. Joseph's of Batavia Alumni"],
+	"Kamakura Kokusai Bunri": ["Kamakura Women’s", "Kamakura Women's"]
 }

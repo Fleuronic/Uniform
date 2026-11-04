@@ -11,6 +11,18 @@ public extension Circuit {
 		return abbreviations[record] ?? record
 	}
 
+	static func record(for record: String, showID: Int?, showNamed show: String?, in city: String?, state: String?, country: String?, year: Int) -> String {
+		rules.first { rule in
+			(rule.original ?? "") == record &&
+				(rule.showID.map { $0 == showID } ?? true) &&
+				(rule.show.map { $0 == show } ?? true) &&
+				(rule.city.map { $0 == city } ?? true) &&
+				(rule.state.map { $0 == state } ?? true) &&
+				(rule.country.map { $0 == country } ?? true) &&
+				(rule.years?.contains(year) ?? true)
+		}?.circuit ?? (record.isEmpty ? "DCI" : record)
+	}
+
 	static func name(for abbreviation: String) -> String {
 		names[abbreviation] ?? abbreviation
 	}
@@ -27,5 +39,6 @@ private extension Circuit {
 	static let replacements = Resource.pairs(from: "circuit-replacements")
 	static let abbreviations = Resource.map(from: "circuit-abbreviations")
 	static let names = Resource.map(from: "circuit-names")
+	static let rules: [Resource.CircuitRule] = Resource.entries(from: "circuit-rules")
 	static let invalid = Set(Resource.list(from: "circuit-invalid"))
 }

@@ -19,14 +19,14 @@ public extension Show {
 		name = names[name] ?? name
 
 		if let override = nameOverrides.first(
-			where: { $0[0] == name && $0[1] == city && $0[2] == String(year) }
-		)?.last {
+			where: { $0.original == name && $0.city == city && $0.year == year }
+		)?.override {
 			name = override
 		}
 
 		if let override = nameYearOverrides.first(
-			where: { $0[0] == name && yearMatches($0[1], year) }
-		)?.last {
+			where: { $0.original == name && $0.years.contains(year) }
+		)?.override {
 			name = override
 		}
 
@@ -53,11 +53,11 @@ public extension Show {
 	}
 
 	static func scoreSlug(for slug: String, in city: String?, year: Int) -> String {
-		var scoreSlug = scoreSlugYearOverrides.first { $0[0] == slug && yearMatches($0[1], year) }?.last ?? slug
+		var scoreSlug = scoreSlugYearOverrides.first { $0.original == slug && $0.years.contains(year) }?.override ?? slug
 
 		if let override = scoreSlugOverrides.first(
-			where: { $0[0] == slug && $0[1] == city && $0[2] == String(year) }
-		)?.last {
+			where: { $0.original == slug && $0.city == city && $0.year == year }
+		)?.override {
 			scoreSlug = override
 		}
 
@@ -77,24 +77,11 @@ private extension Show {
 	static let names = Resource.map(from: "show-names")
 	static let lowercaseWords = Resource.list(from: "show-lowercase-words")
 	static let invalid = Resource.list(from: "show-invalid")
-	static let nameOverrides = Resource.rows(from: "show-name-overrides")
-	static let nameYearOverrides = Resource.rows(from: "show-name-year-overrides")
+	static let nameOverrides: [Resource.CityOverride] = Resource.entries(from: "show-name-overrides")
+	static let nameYearOverrides: [Resource.YearOverride] = Resource.entries(from: "show-name-year-overrides")
 	static let nameContains = Resource.pairs(from: "show-name-contains")
 	static let finalReplacements = Resource.pairs(from: "show-final-replacements")
 	static let slugReplacements = Resource.pairs(from: "show-slug-replacements")
-	static let scoreSlugOverrides = Resource.rows(from: "show-score-slug-overrides")
-	static let scoreSlugYearOverrides = Resource.rows(from: "show-score-slug-year-overrides")
-
-	static func yearMatches(_ spec: String, _ year: Int) -> Bool {
-		if spec.hasPrefix("<") {
-			return year < Int(spec.dropFirst())!
-		} else if spec.contains(",") {
-			return spec.split(separator: ",").compactMap { Int($0) }.contains(year)
-		} else if spec.contains("-") {
-			let bounds = spec.split(separator: "-").compactMap { Int($0) }
-			return year >= bounds[0] && year <= bounds[1]
-		} else {
-			return Int(spec) == year
-		}
-	}
+	static let scoreSlugOverrides: [Resource.CityOverride] = Resource.entries(from: "show-score-slug-overrides")
+	static let scoreSlugYearOverrides: [Resource.YearOverride] = Resource.entries(from: "show-score-slug-year-overrides")
 }

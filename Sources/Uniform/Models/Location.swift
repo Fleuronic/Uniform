@@ -5,6 +5,10 @@ import struct DrumKit.Location
 public extension Location {
 	typealias Info = (String, String, String)
 
+	static func record(for record: String, in year: Int) -> String {
+		yearOverrides.first { $0.original == record && $0.years.contains(year) }?.override ?? record
+	}
+
 	static func info(for record: String) -> Info? {
 		let record = record.replacingOccurrences(of: "'", with: "’")
 
@@ -42,4 +46,5 @@ private extension Location {
 	static let cities = Resource.map(from: "location-cities")
 	static let states = Resource.map(from: "location-states")
 	static let defaultCountry = Resource.string(from: "location-default-country")
+	static let yearOverrides: [Resource.YearOverride] = Resource.entries(from: "location-year-overrides")
 }

@@ -1,0 +1,9 @@
+[
+	{"circuit": "MCA", "division": null},
+	{"circuit": "DCA", "name": "All-Age Class", "division": null},
+	{"circuit": "DCM", "name": "All-Age Class", "years": {"from": 1992, "through": 2007}, "division": "Senior Division"},
+	{"name": "All-Age Class", "years": {"from": 1992, "through": 2007}, "division": "All-Age Division"},
+	{"circuit": "DCA", "name": "Junior Class", "division": "Junior Class"},
+	{"name": "Junior Class", "years": {"from": 1992, "through": 2007}, "division": "Junior Division"},
+	{"prefix": "International", "years": {"from": 1992, "through": 2007}, "division": "International Division"}
+]

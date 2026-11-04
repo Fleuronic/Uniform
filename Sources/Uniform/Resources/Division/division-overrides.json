@@ -1,0 +1,5 @@
+[
+	{"original": "OTHER", "circuit": "ODCA", "year": 1992, "override": "IV"},
+	{"original": "OTHER", "circuit": "DCI", "city": "Grand Haven", "year": 1992, "override": "II"},
+	{"original": "OTHER", "circuit": "ODCA", "city": "Hamilton", "year": 1998, "override": "III"}
+]

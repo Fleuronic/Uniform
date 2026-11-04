@@ -1,5 +1,16 @@
 {
 	"TBA, Midwest": ["Louisville", "KY", "United States"],
 	"Washington, D.C.": ["Washington", "D.C.", "United States"],
-	"Ireland": ["Dublin", "Co. Dublin", "Ireland"]
+	"Ireland": ["Dublin", "Co. Dublin", "Ireland"],
+	"Kingston, Jamaica West Indies Jamaica": ["Kingston", "Kingston", "Jamaica"],
+	"Dordrecht": ["Dordrecht", "South Holland", "Netherlands"],
+	"Almere": ["Almere", "Flevoland", "Netherlands"],
+	"Zoutelande The Netherlands": ["Zoutelande", "Zeeland", "Netherlands"],
+	"Apledoom The Netherlands": ["Apeldoorn", "Gelderland", "Netherlands"],
+	"IJmuiden": ["IJmuiden", "North Holland", "Netherlands"],
+	"Nijmegen": ["Nijmegen", "Gelderland", "Netherlands"],
+	"Sheffield United Kingdom": ["Sheffield", "South Yorkshire", "United Kingdom"],
+	"Lelystad": ["Lelystad", "Flevoland", "Netherlands"],
+	"Hilversum The Netherlands": ["Hilversum", "North Holland", "Netherlands"],
+	"Northampton United Kingdom": ["Northampton", "Northamptonshire", "United Kingdom"]
 }

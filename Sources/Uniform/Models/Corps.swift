@@ -27,6 +27,20 @@ public extension DrumKit.Corps {
 		let location = components[1]
 		return (names[base] ?? base, location)
 	}
+
+	static func record(forID id: String, in circuit: String, year: Int) -> String? {
+		guard let id = Int(id) else { return nil }
+
+		return idOverrides.first { override in
+			override.id == id &&
+				(override.circuit.map { $0 == circuit } ?? true) &&
+				(override.years?.contains(year) ?? true)
+		}?.record
+	}
+
+	static func isValid(id: String) -> Bool {
+		Int(id).map { !invalidIDs.contains($0) } ?? true
+	}
 }
 
 // MARK: -
@@ -35,4 +49,6 @@ private extension DrumKit.Corps {
 	static let infoKeywords = Resource.tuples(from: "corps-info-keywords")
 	static let nameReplacements = Resource.pairs(from: "corps-name-replacements")
 	static let names = Resource.map(from: "corps-names")
+	static let idOverrides: [Resource.CorpsOverride] = Resource.entries(from: "corps-id-overrides")
+	static let invalidIDs: Set<Int> = Set(Resource.entries(from: "corps-invalid-ids"))
 }
