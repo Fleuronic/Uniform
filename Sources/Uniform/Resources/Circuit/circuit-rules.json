@@ -81,6 +81,7 @@
 	{"original": "DCI", "showID": 1998055, "circuit": "DCI Atlantic"},
 	{"original": "DCI", "showID": 1998111, "circuit": "DCI Atlantic"},
 	{"original": "CAMQ", "showID": 1998196, "circuit": "FAMQ"},
+	{"original": "DCI", "city": "Casper", "state": "WY", "year": 1997, "circuit": "DCI West"},
 	{"show": "Sounds of Minnesota", "circuit": "DCA"},
 	{"show": "Barnum Festival", "year": 2000, "circuit": "DCA"},
 	{"country": "Ireland", "circuit": "IMBA"},

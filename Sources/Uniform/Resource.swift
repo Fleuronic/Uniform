@@ -62,6 +62,14 @@ extension Resource {
 		let override: String
 	}
 
+	struct ShowNameOverride: Decodable {
+		let original: String?
+		let showID: Int?
+		let city: String?
+		let year: Int?
+		let override: String
+	}
+
 	struct CircuitRule {
 		let original: String?
 		let showID: Int?

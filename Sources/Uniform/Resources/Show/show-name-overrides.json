@@ -22,5 +22,11 @@
 	{"original": "DCI Open Class World Championship Finals", "city": "Helmond", "year": 1998, "override": "DCH Open Class Championship Finals"},
 	{"original": "Ontario Drum Corps Association", "city": "Hamilton", "year": 1998, "override": "International Championship"},
 	{"original": "QUEBEC CHAMPIONSHIPS", "city": "Montreal", "year": 1998, "override": "CAMQ Championships"},
-	{"original": "DCI Mid-America", "city": "Ypsilanti", "year": 1998, "override": "DCI Midwestern"}
+	{"original": "DCI Mid-America", "city": "Ypsilanti", "year": 1998, "override": "DCI Midwestern"},
+	{"showID": 1997077, "override": "DCM Division I & II Championship Prelims"},
+	{"showID": 1997073, "override": "DCM Division III & Senior Division Championship Prelims"},
+	{"original": "Prelims", "city": "Kitchener", "year": 1997, "override": "Canadian Open Prelims"},
+	{"original": "DCA World Championship Finals", "city": "Kitchener", "year": 1997, "override": "Canadian Open Finals"},
+	{"original": "DCI Open Class World Championship Finals", "city": "Utrecht", "year": 1997, "override": "DCH Open Class Championship Finals"},
+	{"original": "Class A/Corps Style Class/ Cadet Class Finals", "city": "Utrecht", "year": 1997, "override": "DCH Championship Finals"}
 ]

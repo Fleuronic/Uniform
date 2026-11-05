@@ -3,6 +3,10 @@
 import struct DrumKit.Show
 
 public extension Show {
+	static func record(for record: String, showID: Int?) -> String {
+		nameOverrides.first { $0.showID != nil && $0.showID == showID }?.override ?? record
+	}
+
 	static func name(for record: String, in city: String?, year: Int) -> String {
 		if record.range(of: "^(DCE|DCG|DCN|DCUK|DMG|IMBA) Contest", options: .regularExpression) != nil {
 			return ""
@@ -19,7 +23,7 @@ public extension Show {
 		name = names[name] ?? name
 
 		if let override = nameOverrides.first(
-			where: { $0.original == name && $0.city == city && $0.year == year }
+			where: { $0.showID == nil && $0.original == name && $0.city == city && $0.year == year }
 		)?.override {
 			name = override
 		}
@@ -77,7 +81,7 @@ private extension Show {
 	static let names = Resource.map(from: "show-names")
 	static let lowercaseWords = Resource.list(from: "show-lowercase-words")
 	static let invalid = Resource.list(from: "show-invalid")
-	static let nameOverrides: [Resource.CityOverride] = Resource.entries(from: "show-name-overrides")
+	static let nameOverrides: [Resource.ShowNameOverride] = Resource.entries(from: "show-name-overrides")
 	static let nameYearOverrides: [Resource.YearOverride] = Resource.entries(from: "show-name-year-overrides")
 	static let nameContains = Resource.pairs(from: "show-name-contains")
 	static let finalReplacements = Resource.pairs(from: "show-final-replacements")
