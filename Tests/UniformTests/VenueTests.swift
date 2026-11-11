@@ -26,7 +26,7 @@ struct VenueTests {
 
 	@Test func returnsTheOverrideForAKnownStreetAddress() {
 		let (name, host) = Venue.info(for: "Ignored Record", at: "1 Bills Dr")
-		#expect(name == "Ralph Wilson Stadium")
+		#expect(name == "Highmark Stadium")
 		#expect(host == nil)
 	}
 
