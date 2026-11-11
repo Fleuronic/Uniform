@@ -5,5 +5,10 @@
 	{"id": 120, "year": 1992, "circuit": "DCWI", "record": "Patriots (Jamaica) - Kingston, Kingston, Jamaica"},
 	{"id": 1178, "year": 1992, "circuit": "DCWI", "record": "Golden Eagles (Jamaica) - Kingston, Kingston, Jamaica"},
 	{"id": 1541, "year": 1997, "record": "Northern Lights Youth Band - Longview, WA, United States"},
-	{"id": 438, "year": 1997, "record": "General Butler Vagabonds - Butler, PA, United States"}
+	{"id": 438, "year": 1997, "record": "General Butler Vagabonds - Butler, PA, United States"},
+	{"id": 221, "years": {"from": 1996, "through": 1997}, "record": "Squires of Ontario - Peterborough, ON, Canada"},
+	{"id": 661, "year": 1996, "record": "Les Voyageurs - Longueuil, QC, Canada"},
+	{"id": 169, "year": 1996, "circuit": "GSC", "record": "First Baptist Cadets - Brooklyn, NY, United States"},
+	{"id": 169, "year": 1996, "record": "3ᵉ Régiment - Saint-Eustache, QC, Canada"},
+	{"id": 44, "record": "Emerald Knights (IA) - Cedar Rapids, IA, United States"}
 ]

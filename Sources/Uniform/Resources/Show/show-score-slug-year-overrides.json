@@ -4,6 +4,7 @@
 	{"original": "drum-corps-an-american-tradition", "year": 2018, "override": "drum-corps-an-america-tradition"},
 	{"original": "drum-corps-an-american-tradition-2", "year": 2018, "override": "drum-corps-an-american-tradition"},
 	{"original": "tour-of-champions-oklahoma", "year": 2017, "override": "tour-of-champions-oklahoma-presented-by-drums-of-summer"},
+	{"original": "tour-of-champions-chester", "years": {"from": 2016, "through": 2017}, "override": "tour-of-champions-ppl-park"},
 	{"original": "dci-open-class-world-championship-prelims", "year": 2013, "override": "dci-world-championships-open-class-championship-prelims"},
 	{"original": "dci-open-class-world-championship-finals", "year": 2013, "override": "dci-championships-open-class-championship-finals"},
 	{"original": "dci-open-class-world-championship-finals", "years": {"list": [2014, 2015]}, "override": "dci-world-championships-open-class-championship-finals"},

@@ -115,6 +115,16 @@ extension Resource {
 		let date: String
 	}
 
+	struct LocationOverride: Decodable {
+		let showID: Int
+		let location: String
+	}
+
+	struct EventMerge: Decodable {
+		let showID: Int
+		let into: Int
+	}
+
 	enum Years {
 		case year(Int)
 		case list([Int])

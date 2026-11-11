@@ -49,7 +49,8 @@ struct ShowTests {
 	}
 
 	@Test func matchesOpenEndedYearSpecsInOverrides() {
-		#expect(Show.name(for: "Tour of Champions – Chester", in: nil, year: 2017) == "Tour of Champions – PPL Park")
+		#expect(Show.name(for: "Tour of Champions – Chester", in: nil, year: 2015) == "Tour of Champions – PPL Park")
+		#expect(Show.name(for: "Tour of Champions – Chester", in: nil, year: 2017) == "Tour of Champions – Chester")
 	}
 
 	@Test func canonicalizesBySubstringMatch() {

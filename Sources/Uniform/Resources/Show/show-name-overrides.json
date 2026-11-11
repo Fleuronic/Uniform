@@ -28,5 +28,20 @@
 	{"original": "Prelims", "city": "Kitchener", "year": 1997, "override": "Canadian Open Prelims"},
 	{"original": "DCA World Championship Finals", "city": "Kitchener", "year": 1997, "override": "Canadian Open Finals"},
 	{"original": "DCI Open Class World Championship Finals", "city": "Utrecht", "year": 1997, "override": "DCH Open Class Championship Finals"},
-	{"original": "Class A/Corps Style Class/ Cadet Class Finals", "city": "Utrecht", "year": 1997, "override": "DCH Championship Finals"}
+	{"original": "Class A/Corps Style Class/ Cadet Class Finals", "city": "Utrecht", "year": 1997, "override": "DCH Championship Finals"},
+	{"original": "DCI Open Class World Championship Finals", "city": "Utrecht", "year": 1996, "override": "DCH Open Class Championship Finals"},
+	{"original": "Class A/Corps Style Class/Cadet Class Finals", "city": "Utrecht", "year": 1996, "override": "DCH Championship Finals"},
+	{"original": "Canadian Open Championships Prelims", "city": "Kitchener", "year": 1996, "override": "Canadian Open Prelims"},
+	{"original": "Canadian Open Championships", "city": "Kitchener", "year": 1996, "override": "Canadian Open Finals"},
+	{"original": "North American Open", "city": "Nashville", "year": 1996, "override": "North American Open Finals"},
+	{"original": "Glassmen Home Show", "city": "Toledo", "year": 1996, "override": "Glassmen All Star Review"},
+	{"original": "East Coast Jazz Home Show", "city": "Malden", "year": 1996, "override": "Music on Parade"},
+	{"original": "Pacific Crest Home Show", "city": "Glendora", "year": 1996, "override": "Corps at the Crest – Los Angeles"},
+	{"original": "Phantom Regiment Home Show", "city": "Rockford", "year": 1996, "override": "Show of Shows"},
+	{"original": "Vanguard Sr. Home Show", "city": "Michigan City", "year": 1996, "override": "Pageant of Drums"},
+	{"original": "Colts Home Show", "city": "Dubuque", "year": 1996, "override": "Music on the March"},
+	{"original": "Drum Corps West Championships", "city": "Stockton", "year": 1996, "override": "Moonlight Classic"},
+	{"showID": 1996086, "override": "DCM Division I & II Championship Prelims"},
+	{"showID": 1996193, "override": "Illinois State Fair"},
+	{"showID": 1999004, "override": "Illinois State Fair"}
 ]

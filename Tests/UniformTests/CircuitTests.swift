@@ -7,7 +7,7 @@ import struct DrumKit.Circuit
 
 struct CircuitTests {
 	@Test(arguments: [
-		("DCI Midwest", "DCM"),
+		("DCI-Midwest", "DCI Midwest"),
 		("DCA-Central", "DCA"),
 		("", "DCI"),
 		("American Legion", "AL")

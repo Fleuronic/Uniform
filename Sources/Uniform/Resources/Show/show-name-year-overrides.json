@@ -15,9 +15,12 @@
 	{"original": "Innovations in Brass – Massillon", "year": 2019, "override": "Innovations in Brass – North Canton"},
 	{"original": "Innovations in Brass – Akron", "year": 2016, "override": "Innovations in Brass – Massillon"},
 	{"original": "Tour of Champions – New Jersey", "year": 2013, "override": "Tour of Champions"},
-	{"original": "Tour of Champions – Chester", "years": {"through": 2017}, "override": "Tour of Champions – PPL Park"},
+	{"original": "Tour of Champions – Chester", "years": {"through": 2015}, "override": "Tour of Champions – PPL Park"},
 	{"original": "Diablo Valley Classic", "years": {"list": [2018, 2022]}, "override": "Diablo Valley Classic Pacific Open Class Championship Finals"},
 	{"original": "DCI Southwestern Championship", "year": 2001, "override": "DCI Southwestern Championship – Evening"},
+	{"original": "DCM Championships", "year": 2003, "override": "DCI Midwest Championships"},
 	{"original": "DCE Championships", "years": {"from": 1990, "through": 1996}, "override": "Drum Corps East Championships"},
-	{"original": "DCE Championships Division II Prelims", "years": {"from": 1990, "through": 1996}, "override": "Drum Corps East Division II Championship Prelims"}
+	{"original": "DCE Championships Division II Prelims", "years": {"from": 1990, "through": 1996}, "override": "Drum Corps East Division II Championship Prelims"},
+	{"original": "DCE Championships Division II/III Prelims", "years": {"from": 1990, "through": 1996}, "override": "Drum Corps East Division II/III Championship Prelims"},
+	{"original": "DCE Championships Division II/III Finals", "years": {"from": 1990, "through": 1996}, "override": "Drum Corps East Division II/III Championship Finals"}
 ]

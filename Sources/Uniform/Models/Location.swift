@@ -5,8 +5,10 @@ import struct DrumKit.Location
 public extension Location {
 	typealias Info = (String, String, String)
 
-	static func record(for record: String, in year: Int) -> String {
-		yearOverrides.first { $0.original == record && $0.years.contains(year) }?.override ?? record
+	static func record(for record: String, showID: Int?, in year: Int) -> String {
+		showOverrides.first { $0.showID == showID }?.location ??
+			yearOverrides.first { $0.original == record && $0.years.contains(year) }?.override ??
+			record
 	}
 
 	static func info(for record: String) -> Info? {
@@ -47,4 +49,5 @@ private extension Location {
 	static let states = Resource.map(from: "location-states")
 	static let defaultCountry = Resource.string(from: "location-default-country")
 	static let yearOverrides: [Resource.YearOverride] = Resource.entries(from: "location-year-overrides")
+	static let showOverrides: [Resource.LocationOverride] = Resource.entries(from: "location-show-overrides")
 }
