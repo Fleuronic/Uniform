@@ -9,6 +9,8 @@
 	{"original": "DCI", "showID": 1998096, "circuit": "DCM"},
 	{"original": "DCI", "showID": 1998097, "circuit": "DCM"},
 	{"original": "DCI", "showID": 1998121, "circuit": "DCM"},
+	{"original": "ODCA", "showID": 1999025, "circuit": "DCI"},
+	{"original": "ODCA", "showID": 1999026, "circuit": "DCI"},
 	{"original": "DCI", "showID": 2001067, "circuit": "DCM"},
 	{"original": "", "showID": 2001071, "circuit": "DCM"},
 	{"original": "", "showID": 1996236, "circuit": "DCA"},
