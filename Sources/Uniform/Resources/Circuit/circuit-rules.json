@@ -13,6 +13,7 @@
 	{"original": "", "showID": 2001071, "circuit": "DCM"},
 	{"original": "", "showID": 1996236, "circuit": "DCA"},
 	{"original": "", "showID": 1999120, "circuit": "DCA"},
+	{"original": "DCA", "showID": 2003002, "circuit": "DCI Atlantic"},
 	{"original": "DCI", "showID": 2003331, "circuit": "DCI Atlantic"},
 	{"original": "DCI", "showID": 2003345, "circuit": "DCI Midwest"},
 	{"original": "DCI", "showID": 2003460, "circuit": "DCI Pacific"},
