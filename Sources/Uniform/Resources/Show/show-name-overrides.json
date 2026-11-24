@@ -21,7 +21,7 @@
 	{"original": "Non-Open Class Finals", "city": "Helmond", "year": 1998, "override": "DCH Championship Finals"},
 	{"original": "DCI Open Class World Championship Finals", "city": "Helmond", "year": 1998, "override": "DCH Open Class Championship Finals"},
 	{"original": "Ontario Drum Corps Association", "city": "Hamilton", "year": 1998, "override": "International Championship"},
-	{"original": "QUEBEC CHAMPIONSHIPS", "city": "Montreal", "year": 1998, "override": "CAMQ Championships"},
+	{"original": "QUEBEC CHAMPIONSHIPS", "city": "Montreal", "year": 1998, "override": "Provincial Championships"},
 	{"original": "DCI Mid-America", "city": "Ypsilanti", "year": 1998, "override": "DCI Midwestern"},
 	{"showID": 1997077, "override": "DCM Division I & II Championship Prelims"},
 	{"showID": 1997073, "override": "DCM Division III & Senior Division Championship Prelims"},
@@ -40,7 +40,6 @@
 	{"original": "Phantom Regiment Home Show", "city": "Rockford", "year": 1996, "override": "Show of Shows"},
 	{"original": "Vanguard Sr. Home Show", "city": "Michigan City", "year": 1996, "override": "Pageant of Drums"},
 	{"original": "Colts Home Show", "city": "Dubuque", "year": 1996, "override": "Music on the March"},
-	{"original": "Drum Corps West Championships", "city": "Stockton", "year": 1996, "override": "Moonlight Classic"},
 	{"showID": 1996086, "override": "DCM Division I & II Championship Prelims"},
 	{"showID": 1996193, "override": "Illinois State Fair"},
 	{"showID": 1999004, "override": "Illinois State Fair"}

@@ -85,7 +85,8 @@
 	"DCM Division III Championship Prelims": ["DCM Championships – Division III Prelims"],
 	"DCM Senior Division Championship Prelims": ["DCM Championships – Senior Prelims"],
 	"DCM Division III & Senior Division Championship Prelims": ["DCM Championships – Division III & Senior Prelims"],
-	"DCM Championships": ["DCM Championships Finals", "DCM Championship Finals"],
+	"Drum Corps Midwest Championships": ["DCM Championships", "DCM Championships Finals", "DCM Championship Finals"],
+	"Drum Corps Midwest Free Concert": ["DCM Free Concert"],
 	"DCI Atlantic Division II/III Championship Finals": ["DCI Atlantic Championships Division II/III Finals", "DCI Atlantic Div II/III Championships"],
 	"DCI Atlantic Division III Championship Prelims": ["DCI Atlantic Championships Division III Prelims"],
 	"DCA Class A World Championship Finals": ["DCA Championships Class A Finals"],
@@ -106,5 +107,7 @@
 	"The Beanpot Invitational": ["Beanpot Invitational"],
 	"Drum Corps West Championships": ["DCW Championships"],
 	"Drum Corps South Championships": ["DCS Championships"],
+	"North American Championship": ["Bugler’s Hall of Fame North American Championship"],
+	"Eastern Massachusetts Circuit Championships": ["Eastern Mass Championship"],
 	"": ["Weber State College"]
 }

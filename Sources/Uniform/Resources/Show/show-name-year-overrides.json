@@ -18,9 +18,9 @@
 	{"original": "Tour of Champions – Chester", "years": {"through": 2015}, "override": "Tour of Champions – PPL Park"},
 	{"original": "Diablo Valley Classic", "years": {"list": [2018, 2022]}, "override": "Diablo Valley Classic Pacific Open Class Championship Finals"},
 	{"original": "DCI Southwestern Championship", "year": 2001, "override": "DCI Southwestern Championship – Evening"},
-	{"original": "DCM Championships", "year": 2003, "override": "DCI Midwest Championships"},
+	{"original": "Drum Corps Midwest Championships", "year": 2003, "override": "DCI Midwest Championships"},
 	{"original": "DCE Championships", "years": {"from": 1990, "through": 1996}, "override": "Drum Corps East Championships"},
-	{"original": "DCE Championships Division II Prelims", "years": {"from": 1990, "through": 1996}, "override": "Drum Corps East Division II Championship Prelims"},
-	{"original": "DCE Championships Division II/III Prelims", "years": {"from": 1990, "through": 1996}, "override": "Drum Corps East Division II/III Championship Prelims"},
-	{"original": "DCE Championships Division II/III Finals", "years": {"from": 1990, "through": 1996}, "override": "Drum Corps East Division II/III Championship Finals"}
+	{"original": "DCE Championships Division II Prelims", "years": {"from": 1990, "through": 1996}, "override": "DCE Division II Championship Prelims"},
+	{"original": "DCE Championships Division II/III Prelims", "years": {"from": 1990, "through": 1996}, "override": "DCE Division II/III Championship Prelims"},
+	{"original": "DCE Championships Division II/III Finals", "years": {"from": 1990, "through": 1996}, "override": "DCE Division II/III Championship Finals"}
 ]
