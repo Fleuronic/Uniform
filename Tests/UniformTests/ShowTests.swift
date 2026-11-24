@@ -43,6 +43,11 @@ struct ShowTests {
 		#expect(Show.name(for: "Nightbeat", in: nil, year: 2019) == "NightBEAT")
 	}
 
+	@Test(arguments: ["Prelims", "Finals"])
+	func mapsAllAgeClassTitlesToExistingShows(_ round: String) {
+		#expect(Show.name(for: "DCI All-Age Class World Championship \(round)", in: "Indianapolis", year: 2027) == "DCI All-Age World Championship \(round)")
+	}
+
 	@Test func appliesCityAndYearNameOverrides() {
 		#expect(Show.name(for: "DCA Championships", in: "Syracuse", year: 2000) == "DCA World Championship Finals")
 		#expect(Show.name(for: "DCI Denton", in: nil, year: 2017) == "DCI North Texas")
