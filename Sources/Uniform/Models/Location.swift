@@ -3,7 +3,7 @@
 import struct DrumKit.Location
 
 public extension Location {
-	typealias Info = (String, String, String)
+	typealias Info = (String?, String, String)
 
 	static func record(for record: String, showID: Int?, in year: Int) -> String {
 		showOverrides.first { $0.showID == showID }?.location ??
@@ -20,13 +20,18 @@ public extension Location {
 
 		if let info = exact[record] { return info }
 
-		let components = record.replacingOccurrences(of: ",", with: "").split(separator: " ")
+		var components = record.replacingOccurrences(of: ",", with: "").split(separator: " ")
+		let hasPlaceholderCity = components.count > 1 &&
+			placeholderCities.contains(String(components[0])) &&
+			components[1].allSatisfy(\.isUppercase)
+		if hasPlaceholderCity { components.removeFirst() }
+
 		guard let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else {
 			let components = record.components(separatedBy: ", ")
 			return components.count == 3 ? (components[0], components[1], components[2]) : nil
 		}
 
-		var city = components[0..<stateIndex].joined(separator: " ")
+		var city: String? = hasPlaceholderCity ? nil : components[0..<stateIndex].joined(separator: " ")
 		var state = String(components[stateIndex]).uppercased()
 		let country = if stateIndex == components.count - 1 {
 			defaultCountry
@@ -34,7 +39,7 @@ public extension Location {
 			components[(stateIndex + 1)...].joined(separator: " ")
 		}
 
-		city = cities[city] ?? city
+		city = city.map { cities[$0] ?? $0 }
 		state = states[state] ?? state
 
 		return (city, state, country)
@@ -46,6 +51,7 @@ private extension Location {
 	static let containsRules = Resource.rows(from: "location-contains")
 	static let exact = Resource.triples(from: "location-exact")
 	static let cities = Resource.map(from: "location-cities")
+	static let placeholderCities = Resource.list(from: "location-placeholder-cities")
 	static let states = Resource.map(from: "location-states")
 	static let defaultCountry = Resource.string(from: "location-default-country")
 	static let yearOverrides: [Resource.YearOverride] = Resource.entries(from: "location-year-overrides")

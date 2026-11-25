@@ -54,4 +54,19 @@ struct LocationTests {
 	@Test func returnsNilForUnparseableRecords() {
 		#expect(Location.info(for: "JustACity") == nil)
 	}
+
+	@Test(arguments: [("TBA, KY", "KY"), ("TBA, NH", "NH"), ("Central, OH", "OH"), ("Middle, TN", "TN"), ("Northern, IL", "IL")])
+	func treatsPlaceholderCitiesAsStateOnly(_ record: String, _ state: String) {
+		let info = Location.info(for: record)
+		#expect(info != nil)
+		#expect(info?.0 == nil)
+		#expect(info?.1 == state)
+		#expect(info?.2 == "United States")
+	}
+
+	@Test func keepsRealCitiesThatStartWithAPlaceholderWord() {
+		let info = Location.info(for: "Central Point, OR")
+		#expect(info?.0 == "Central Point")
+		#expect(info?.1 == "OR")
+	}
 }
