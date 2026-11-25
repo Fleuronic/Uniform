@@ -3,7 +3,7 @@
 import struct DrumKit.Location
 
 public extension Location {
-	typealias Info = (String?, String, String)
+	typealias Info = (String?, String?, String)
 
 	static func record(for record: String, showID: Int?, in year: Int) -> String {
 		showOverrides.first { $0.showID == showID }?.location ??
@@ -25,6 +25,9 @@ public extension Location {
 			placeholderCities.contains(String(components[0])) &&
 			components[1].allSatisfy(\.isUppercase)
 		if hasPlaceholderCity { components.removeFirst() }
+		if hasPlaceholderCity, components.count == 1, let country = countryCodes[String(components[0])] {
+			return (nil, nil, country)
+		}
 
 		guard let stateIndex = (components.firstIndex { $0.allSatisfy(\.isUppercase) }) else {
 			let components = record.components(separatedBy: ", ")
@@ -52,6 +55,7 @@ private extension Location {
 	static let exact = Resource.triples(from: "location-exact")
 	static let cities = Resource.map(from: "location-cities")
 	static let placeholderCities = Resource.list(from: "location-placeholder-cities")
+	static let countryCodes = Resource.map(from: "location-country-codes")
 	static let states = Resource.map(from: "location-states")
 	static let defaultCountry = Resource.string(from: "location-default-country")
 	static let yearOverrides: [Resource.YearOverride] = Resource.entries(from: "location-year-overrides")

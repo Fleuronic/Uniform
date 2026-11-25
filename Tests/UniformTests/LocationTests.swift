@@ -69,4 +69,12 @@ struct LocationTests {
 		#expect(info?.0 == "Central Point")
 		#expect(info?.1 == "OR")
 	}
+
+	@Test func treatsAPlaceholderCityInACountryAsCountryOnly() {
+		let info = Location.info(for: "TBA, USA")
+		#expect(info != nil)
+		#expect(info?.0 == nil)
+		#expect(info?.1 == nil)
+		#expect(info?.2 == "United States")
+	}
 }
